@@ -1,6 +1,16 @@
 # Earmilk
 Earmilk redesign project
 
+----------
+
+## Theme Changes
+
+....
+
+## SEO Work
+
+....
+
 --------
 
 ##Earmilk Duplicate Site
@@ -20,6 +30,7 @@ password:  [a truth we share]
 - https://github.com/iamandrebulatov/Earmilk
 
 ----------
+
 ##License
 
 Copyright (c) 2016 Earmilk.com
