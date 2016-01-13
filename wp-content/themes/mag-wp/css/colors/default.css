@@ -395,3 +395,257 @@ ul.footer-social li a:hover   { opacity: 0.7; color: #FFF !important;}
 /* -- Back to Top -- */
 #back-top span                { background-color: #cd2026;}
 #back-top a:hover             { opacity: 0.7; } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Andre's edits -- black to white */
+
+/* Header */
+form#searchform2 {
+    background-color: #fff;
+}
+#searchform2 #s {
+    background-color: #999;
+    color: #fff !important;
+}
+#searchform2 .buttonicon {
+    background-color: #777;
+}
+div#placeholder {
+    color: #fff;
+}
+::-webkit-input-placeholder {
+    color: #eaeaea;
+}
+body#boxed-style {
+    background: #fff;
+}
+header {
+    background: #fff;
+}
+.main-header {
+    padding: 0;
+}
+img.logo {
+    transition: all 370ms;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+img.logo:hover {
+    -webkit-filter: invert(1) drop-shadow(0px 2px 5px rgba(205, 32, 38, 0.5));
+    /* filter: url(#drop-shadow); */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+.top-social li a {
+    transition: all 370ms;
+}
+.top-social li a:hover {
+    text-shadow: 0px 0px 3px #999;
+    color: #a3032d !important;
+}
+.jquerycssmenu-right ul li a {
+    color: #000 !important;
+} 
+#myjquerymenu2 ul li.current-menu-item a {
+    color: #a3032d !important;
+}
+.top-navigation {
+    background-color: #fff !important;
+}
+a {
+    color: #000 !important;
+}
+/* Header sticky */
+header .main-header.sticky {
+    height: 85px;
+    background: #fff;
+    padding: 0;
+}
+.main-header.sticky img.logo {
+    margin: 0;
+    height: inherit;
+}
+header .sticky .jquerycssmenu-right {
+    margin: 22px -20px 0 0;
+}
+
+
+/* Body  */
+div#featured-boxes {
+    background: #fff;
+}
+.sticky div#featured-boxes {
+    margin: 85px 0 0;
+}
+.big-thing-box {
+    margin: 0 auto;
+    float: none;
+}
+.wrap-fullwidth {
+    background: #fff;
+}
+.home-content {
+    background: #fff;
+}
+a.at-recommendedTitle {
+    color: #fff !important;
+}
+
+
+
+/* Sidebar ? */
+.section-top-title h3 {
+    background: #999;
+}
+.sidebar .widget h3.title {
+    background: #999;
+}
+.widget.widget_ultimate_posts {
+    background: #fff;
+}
+.widget.youtubechannelgallery.ytccf {
+    background: #fff;
+}
+.widget.widget_socialcountplus {
+    background: #fff;
+}
+.newsletter::-webkit-input-placeholder {
+    color: #555;
+}
+
+
+
+/* Footer */
+.wrap-footer {
+    background: #fff;
+}
+.footer-section {
+    background-color: #fff !important;
+}
+footer .widget {
+    color: #777 !important;
+    background-color: #fff;
+}
+footer .widget h3.title {
+    color: #fff;
+    background-color: #777;
+}
+ul.footer-social li a {
+    color: #fff !important;
+    transition: all 370ms;
+}
+ul.footer-social li a:hover {
+    text-shadow: 0px 0px 13px #eaeaea;
+    opacity: 1;
+}
+footer .widget a {
+    color: #777 !important;
+}
+.copyright {
+    background-color: #fff !important;
+}
+.widget.widget_anthemes_subscribe {
+    background: #fff;
+    color: #777 !important;
+}
+.widget.widget_FacebookLikeBox {
+    background: #fff;
+}
+.popular-words a:hover {
+    color: #a3032d !important;
+}
+
+
+/* Archive Pages */
+.archive-header {
+    background-color: #fff;
+}
+.archive-header h3 {
+    color: #555;
+}
+
+
+
+/* Mobile */
+div#click-menu {
+    background: #777;
+    right: 0;
+    top: 26px;
+    height: 35px;
+}
+@media only screen and (max-width: 479px) {
+	header .sticky.main-header {
+	    width: 305px;
+	}
+	.sticky div#featured-boxes {
+    	margin: 0;
+	}
+}
+
+
+/* Single Post */
+.single-content h1.article-title {
+    color: #555;
+}
+.single-content {
+    background-color: #fff;
+}
+.p-first-letter p a {
+    background-color: #a3032d;
+    color: #fff !important;
+}
+ul.ts-fab-list li a {
+    background-color: #777 !important;
+    border-color: #666;
+}
+ul.ts-fab-list li.active a {
+    background-color: #ededed !important;
+    border-color: #eaeaea;
+}
+div.ts-fab-tab {
+    background-color: #ededed;
+    border: 2px solid #eaeaea;
+}
+div.ts-fab-tab .ts-fab-text .ts-fab-header h4 {
+    color: #777;
+}
+div.ts-fab-tab .ts-fab-text .ts-fab-latest li span {
+    color: #999;
+}
+h6.post-answer {
+    background: #eaeaea !important;
+    color: #777 !important;
+}
+
+
+
+/* Google ad -- also disabled in index.html line 139 */
+.home-728 {
+	display: none;
+}
+.top-leaderboard {
+    display: none;
+}
+.img-300 {
+	display: none;
+}
+
+
