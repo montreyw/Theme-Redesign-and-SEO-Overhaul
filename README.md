@@ -18,7 +18,7 @@ Earmilk redesign project
 
 --------
 
-##Earmilk Duplicate Site
+##Earmilk Development Enviornment Clone Site
 -- [allmilknoduds.com](http://allmilknoduds.com)
 
 ##Earmilk "throwaway" email account
