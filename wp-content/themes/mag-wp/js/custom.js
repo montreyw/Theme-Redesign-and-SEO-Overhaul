@@ -69,9 +69,9 @@ jQuery( document ).ready( function( $ ) {
     var scrollTop = jQuery(window).scrollTop();  
            
     if (scrollTop > stickyNavTop) {   
-        jQuery('.main-header').addClass('sticky');  
+        jQuery('.main-header, body').addClass('sticky');  
     } else {  
-        jQuery('.main-header').removeClass('sticky');   
+        jQuery('.main-header, body').removeClass('sticky');   
     }  
     };  
     stickyNav();  
