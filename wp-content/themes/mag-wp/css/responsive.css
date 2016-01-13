@@ -1,0 +1,800 @@
+  /*
+	---------------------------------------------------
+	
+	       MAG - Styles for Mobile Devices
+
+	---------------------------------------------------
+*/
+
+
+/* Big Screens Boxed style (devices) */
+@media only screen and (min-width: 1300px) { 
+
+#boxed-style  { width: 1340px !important; margin-left: auto; margin-right: auto;}
+#boxed-style #background { display: block;}
+#boxed-style .wrap-fullwidth { padding: 40px 30px !important; margin: 0px auto !important;}
+#boxed-style .wrap-fullwidth-bg  { margin: 0px auto !important; padding: 30px !important}
+#boxed-style #featured-slider   { width: 100% !important; margin: 30px 0 0 0 !important; position: absolute; display: block; z-index: 102; }
+#boxed-style .clear2            { display: block;} 
+
+}
+
+
+
+
+/* 1350px (devices and browsers) */
+@media only screen and (min-width: 1260px) and (max-width: 1300px) { 
+/*-----------------------------------------------------------------------------
+----------------------------- 1 - Layout --------------------------------------
+-----------------------------------------------------------------------------*/
+.main-header               { width: 1230px; }
+.wrap-center               { width: 1230px; }
+/* - Layout content - */
+.wrap-fullwidth            { width: 1230px; }
+.wrap-fullwidth-bg         { width: 1230px; }
+/* .page-content */
+.home-content              { width: 850px; float: left; padding: 0 24px; }
+.wrap-content              { width: 900px; float: left; }
+.single-content            { width: 898px; float: left; padding: 0 0 25px 0;}           
+#boxed-style .clear2       { display: none;} 
+
+/*-----------------------------------------------------------------------------
+----------------------------- 2 - Header --------------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Sticky Header -- */
+header .sticky .sticky-on  { width: 1230px;}
+
+    
+/*-----------------------------------------------------------------------------
+----------------------------- 3 - Home Content --------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Home banner 728x90 -- */
+.home-728                         { width: 898px; height: auto; margin: 0 0 0 -24px; }
+.img728                           { width: 728px; height: 90px; margin: 0 auto;}
+
+/* -- The next Big Thing -- 
+######################## */
+.big-thing-box  				  { width: 900px;}
+ul.big-thing                      { width: 926px;}
+
+/* ##### Blog 3 cols / classic ##### 
+################################## */
+/* blog style */
+ul.classic-blog                   { width: 875px; }
+ul.classic-blog li                { width: 266px; height: 250px; }
+ul.classic-blog li img            { width: 266px; height: 125px;}
+
+/* -- Pagination -- */
+.line-bottom                      { width: 900px; }
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 4 - Entry Content -------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Entry Banner -- */
+.entry-img-300            { margin: 20px -40px 20px 20px; }
+
+/* -- Responsive Images -- */
+.alignleft                { margin: 20px 20px 10px -40px; }
+.alignright               { margin: 20px -40px 10px 20px; }
+
+/*-----------------------------------------------------------------------------
+------------------------------ 9 - Footer -------------------------------------
+-----------------------------------------------------------------------------*/
+.wrap-footer              { width: 1230px; }
+/* -- FeedBurner -- */
+footer #newsletter-form input.newsletter-btn  { width:101%;}
+}
+
+
+
+
+
+
+
+
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 1004px) and (max-width: 1230px) {
+/*-----------------------------------------------------------------------------
+----------------------------- 1 - Layout --------------------------------------
+-----------------------------------------------------------------------------*/
+/* - Header - */
+.main-header               { width: 980px; }
+.wrap-center               { width: 980px; }
+/* - Layout content - */
+.wrap-fullwidth            { width: 980px; }
+.wrap-fullwidth-bg         { width: 980px; }
+.wrap-fullwidth-bg .entry  { width: auto; padding-left: 115px; padding-right: 115px;}
+/* .page-content */
+.home-content              { width: 930px; float: left; }
+.wrap-content              { width: 980px; float: left; }
+.single-content            { width: 948px; float: none; margin-left: auto; margin-right: auto;}           
+/* - sidebar - */
+.sidebar                   { width: 1025px; float: left; margin-left: -35px; margin-top: 30px;}
+.sidebar .widget           { width: 250px; display: block; float: left; margin-left: 35px;}
+#boxed-style .clear2       { display: none;} 
+
+/*-----------------------------------------------------------------------------
+----------------------------- 2 - Header --------------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Popular Words -- */
+#tags1                     { display: none;}
+#tags2                     { display: block;}
+
+/* -- Top Header Menu Left --
+########################## */
+.jquerycssmenu             { font-size: 13px; }
+.jquerycssmenu ul li a     { padding: 4px 5px 0px 5px !important; }
+/* -- Top Header Menu right --
+########################### */
+.jquerycssmenu-right       { font-size: 13px; }
+.jquerycssmenu-right ul li a  { padding: 4px 5px 0px 5px !important; }
+
+/* -- Sticky Header -- */
+header .sticky .sticky-on  { width: 980px;}
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 3 - Home Content --------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Home banner 728x90 -- */
+.home-728                         { width: 978px; height: auto; margin: 0 0 0 -24px; }
+.img728                           { width: 728px; height: 90px; margin: 0 auto;}
+
+/* -- The next Big Thing -- 
+######################## */
+.big-thing-box  				  { width: 650px;}
+ul.big-thing                      { width: 676px;}
+
+/* ##### Blog 3 cols / classic ##### 
+################################## */
+/* blog style */
+ul.classic-blog                   { width: 950px; }
+ul.classic-blog li                { width: 291px; height: 250px; }
+ul.classic-blog li img            { width: 291px; height: 137px;}
+
+/* -- Pagination -- */
+.line-bottom                      { width: 978px; }
+
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 4 - Entry Content -------------------------------
+-----------------------------------------------------------------------------*/
+.entry h1.page-title        { padding-top: 30px; }
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 10 - Footer -------------------------------------
+-----------------------------------------------------------------------------*/
+.wrap-footer                  { width: 980px;}
+/* -- widgets -- */
+footer .widget                { width: auto; padding: 0 25px 20px 25px; margin-bottom: 30px;}
+/* -- Article widget -- */
+footer ul.article_list { width: auto;}  
+footer ul.article_list li img.attachment-thumbnail-widget { width: 100%;}
+/* -- FeedBurner -- */
+footer #newsletter-form input.newsletter-btn  { width:101%;}
+/* -- Calendar -- */ 
+footer #wp-calendar tbody td { padding: 1px 3px;}
+/* -- Meta in two columns -- */
+footer .widget_meta ul { width: auto; }
+footer .widget_meta li { width: auto; }
+/* -- Meta in two columns -- */
+footer .widget_archive ul { width: auto; }
+footer .widget_archive li { width: auto; }
+/* -- Meta in two columns -- */
+footer .widget_anthemes_categories ul { width: auto; }
+footer .widget_anthemes_categories li { width: auto; }
+/* -- Default Search -- */
+footer div.widget_search #searchform2 #s { width: 100px;}
+footer div.widget_search #searchform2 #s:focus { width: 100px;} 
+
+}
+
+
+
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 760px) and (max-width: 1000px) {
+/*-----------------------------------------------------------------------------
+----------------------------- 1 - Layout --------------------------------------
+-----------------------------------------------------------------------------*/
+
+/* - Header - */
+.main-header               { width: 750px; }
+.wrap-center               { width: 750px; }
+/* - Layout content - */
+.wrap-fullwidth            { width: 750px; }
+.wrap-fullwidth-bg         { width: 750px; }
+.wrap-fullwidth-bg .entry  { width: auto; padding-left: 15px; padding-right: 15px;}
+/* .page-content */
+.home-content              { width: 700px; float: left; }
+.wrap-content              { width: 750px; float: left; }
+.single-content            { width: 748px; float: none; margin-left: auto; margin-right: auto;}           
+/* - sidebar - */
+.sidebar           		   { width: 750px; float: left;  margin-top: 30px; margin-left: 0px;}
+.sidebar .widget           { width: 250px; display: block; float: left; margin-right: 30px;}
+#boxed-style .clear2       { display: none;} 
+
+/*-----------------------------------------------------------------------------
+----------------------------- 2 - Header --------------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Popular Words -- */
+#tags1                     { display: none;}
+#tags2                     { display: none;}
+
+ /* -- Top social icons -- */
+ul.top-social              { float: left;}
+
+/* -- Top Header Menu --
+##################### */
+.jquerycssmenu             { display: none;}
+.jquerycssmenu-right       { display: none;}
+
+/* -- Sticky Header -- */
+header .sticky                     { position: relative; z-index: 0 !important;} 
+header .sticky .sticky-on          { width: auto; }
+header .sticky.main-header         { height: 85px;}
+header .sticky .logo               { height: auto; max-height: 85px; }
+header .sticky .jquerycssmenu      { margin-top: 12px;}
+header .sticky #searchform2        { margin-top: 27px;}
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 3 - Home Content --------------------------------
+-----------------------------------------------------------------------------*/
+
+/* -- Home banner 728x90 -- */
+.home-728                         { width: 748px; height: auto; margin: 0 0 0 -24px; }
+.img728                           { width: 728px; height: 90px; margin: 0 0 0 10px;}
+
+/* -- The next Big Thing -- 
+######################## */
+.big-thing-box  				  { width: 420px;}
+ul.big-thing                      { width: 446px;}
+
+/* ##### Blog 3 cols / classic ##### 
+################################## */
+/* blog style */
+ul.classic-blog                   { width: 750px; }
+ul.classic-blog li                { width: 336px; height: 280px; }
+ul.classic-blog li img            { width: 336px; height: 158px;}
+
+/* -- Pagination -- */
+.line-bottom                      { width: 748px; }
+
+/*----------------------------------------------------------------------------
+----------------------------- 4 - Entry Content -------------------------------
+-----------------------------------------------------------------------------*/ 
+/* -- Entry Banner -- */
+.entry-img-300            { margin: 20px 0 20px 20px; }
+
+/* -- Responsive Images -- */
+.alignleft                 { margin-left: 0px;}
+.alignright                { margin-right: 0px;} 
+
+.entry h1.page-title        { padding-top: 30px; }
+
+/* - Top entry - */
+.single-box                { width: 750px; }
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 9 - Footer -------------------------------------
+-----------------------------------------------------------------------------*/
+.wrap-footer                  { width: 750px; padding-top: 0px;}
+/* -- widgets -- */
+footer .widget                { display: none;}
+footer .one_fourth, footer .one_fourth_last { display: none;}
+/* -- Copyright -- */
+.copyright                    { width: 100%;}
+}
+
+
+
+
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 580px) and (max-width: 760px) {
+/*-----------------------------------------------------------------------------
+----------------------------- 1 - Layout --------------------------------------
+-----------------------------------------------------------------------------*/
+
+/* - Header - */
+.main-header               { width: 570px; }
+.wrap-center               { width: 570px; }
+/* - Layout content - */
+.wrap-fullwidth            { width: 570px; }
+.wrap-fullwidth-bg         { width: 570px; }
+.wrap-fullwidth-bg .entry  { width: auto; padding-left: 15px; padding-right: 15px;}
+/* .page-content */
+.home-content              { width: 520px; float: left; }
+.wrap-content              { width: 570px; float: left; }
+.single-content            { width: 568px; float: none; margin-left: auto; margin-right: auto;}           
+/* - sidebar - */
+.sidebar           		   { width: 600px; float: left;  margin-top: 30px; margin-left: 0px;}
+.sidebar .widget           { width: 250px; padding: 0 15px 20px 15px; display: block; float: left; margin-right: 10px;}
+.sidebar .widget h3.title  { margin: 0 -15px 0 -15px;}
+#boxed-style .clear2       { display: none;} 
+
+/*-----------------------------------------------------------------------------
+----------------------------- 2 - Header --------------------------------------
+-----------------------------------------------------------------------------*/
+
+/* -- Popular Words -- */
+#tags1                     { display: none;}
+#tags2                     { display: none;}
+
+ /* -- Top social icons -- */
+ul.top-social              { float: left;}
+
+/* -- Top Header Menu --
+##################### */
+.jquerycssmenu             { display: none;}
+.jquerycssmenu-right       { display: none;}
+
+/* -- Sticky Header -- */
+header .sticky                     { position: relative; z-index: 0 !important;} 
+header .sticky .sticky-on          { width: auto; }
+header .sticky.main-header         { height: 85px;}
+header .sticky .logo               { height: auto; max-height: 85px; }
+header .sticky .jquerycssmenu      { margin-top: 12px;}
+header .sticky #searchform2        { margin-top: 27px;}
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 3 - Home Content --------------------------------
+-----------------------------------------------------------------------------*/
+
+/* -- Home banner 728x90 -- */
+.home-728                         { width: 568px; height: auto; margin: 0 0 0 -24px; }
+.img728                           { width: 100%; height: auto; margin: 0px;}
+.img728 img 					  { max-width: 100%; height: auto;}
+.img728 iframe                    { max-width: 100%; height: auto;}
+.img728 script                    { max-width: 100%; height: auto;}
+
+/* -- Featured slider Top -- 
+######################### */
+#featured-slider 				  { width: 100%; height: auto;}
+#featured-slider .item 		      { height: 550px; width: 570px; float: left; margin: 6px 3px; }
+#featured-slider .item img        { height: 550px; width: 570px; opacity: 0.4; }
+#featured-slider .content         { width: 90%;}
+
+/* -- The next Big Thing -- 
+######################## */
+.big-thing-box  				  { width: 240px;}
+ul.big-thing                      { width: 266px;}
+
+/* ##### Blog 3 cols / classic ##### 
+################################## */
+/* blog style */
+ul.classic-blog                   { width: 570px; }
+ul.classic-blog li                { width: 249px; height: 240px;}
+ul.classic-blog li img            { width: 249px; height: 117px;}
+
+/* -- Pagination -- */
+.line-bottom                      { width: 568px; }
+
+/*----------------------------------------------------------------------------
+----------------------------- 4 - Entry Content -------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Entry Banner -- */
+.entry-img-300            { margin: 20px 0 20px 20px; }
+
+/* -- Responsive Images -- */
+.alignleft                 { margin-left: 0px;}
+.alignright                { margin-right: 0px;} 
+
+.entry h1.page-title       { padding-top: 30px; }
+
+/* - Top entry - */
+.entry-top                 { width: 550px;}
+.single-gallery            { width: 550px;}
+iframe.single_iframe       { width: 100%;}
+
+/* -- Related articles -- */
+.related-box               { width: 540px; height: auto; margin: -5px auto 50px auto;}
+
+/* -- Entry content style -- */
+.entry                     { width: 540px; }
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 6 - Comments Form -------------------------------
+-----------------------------------------------------------------------------*/
+ul.comment                  { width: 540px; }
+.comments                   { width: 540px; }
+/* -- Entry bottom -- */
+.entry-bottom               { width: 540px; height: auto; margin: 20px 0 10px 15px;}
+
+/*-----------------------------------------------------------------------------
+----------------------------- 7 - Contact Form --------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Contact Form -- */
+#contactform #contactName, #contactform #emaill, #contactform #subject { width:96%; }	
+#contactform #subject         { width: 98%;}
+#contactform textarea         { width: 98%; } 
+
+/*-----------------------------------------------------------------------------
+----------------------------- 8 - Custom Pages --------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Tag & Category Index -- */
+#mcTagMap .holdleft, #sc_mcTagMap .holdleft { width: 160px !important; }
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 9 - Footer -------------------------------------
+-----------------------------------------------------------------------------*/
+.wrap-footer                  { width: 570px; padding-top: 0px;}
+/* -- widgets -- */
+footer .widget                { display: none;}
+footer .one_fourth, footer .one_fourth_last { display: none;}
+/* -- Copyright -- */
+.copyright                    { width: 100%;}
+
+/* -- Footer Social Icons -- */
+ul.footer-social li           { margin: 27px 5px 0 5px; }
+ul.footer-social li a         { text-align: center; padding: 5px 5px; } 
+}
+
+
+
+
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 580px) {
+/*-----------------------------------------------------------------------------
+----------------------------- 1 - Layout --------------------------------------
+-----------------------------------------------------------------------------*/
+
+/* - Header - */
+.main-header               { width: 460px; }
+.wrap-center               { width: 460px; }
+/* - Layout content - */
+.wrap-fullwidth            { width: 460px; }
+.wrap-fullwidth-bg         { width: 460px; }
+.wrap-fullwidth-bg .entry  { width: auto; padding-left: 15px; padding-right: 15px;}
+/* .page-content */
+.home-content              { width: 410px; /*+30px*/ float: left; }
+.wrap-content              { width: 460px; float: left; }
+.single-content            { width: 458px; float: none; margin-left: auto; margin-right: auto;}           
+/* - sidebar - */
+.sidebar           		   { width: 460px; float: left;  margin-top: 30px; margin-left: 0px;}
+.sidebar .widget           { width: 250px; padding: 0 104px 20px 104px; display: block; float: left; margin-right: 0px;}
+#boxed-style .clear2       { display: none;} 
+
+/*-----------------------------------------------------------------------------
+----------------------------- 2 - Header --------------------------------------
+-----------------------------------------------------------------------------*/
+
+/* -- Popular Words -- */
+#tags1                     { display: none;}
+#tags2                     { display: none;}
+
+ /* -- Top social icons -- */
+ul.top-social              { float: left;}
+
+/* -- Top Header Menu --
+##################### */
+.jquerycssmenu             { display: none;}
+.jquerycssmenu-right       { display: none;}
+
+/* -- Sticky Header -- */
+header .sticky                     { position: relative; z-index: 0 !important;} 
+header .sticky .sticky-on          { width: auto; }
+header .sticky.main-header         { height: 85px;}
+header .sticky .logo               { height: auto; max-height: 85px; }
+header .sticky .jquerycssmenu      { margin-top: 12px;}
+header .sticky #searchform2        { margin-top: 27px;}
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 3 - Home Content --------------------------------
+-----------------------------------------------------------------------------*/
+
+/* -- Home banner 728x90 -- */
+.home-728                         { width: 458px; height: auto; margin: 0 0 0 -24px; }
+.img728                           { width: 100%; height: auto; margin: 0px;}
+.img728 img 					  { max-width: 100%; height: auto;}
+.img728 iframe                    { max-width: 100%; height: auto;}
+.img728 script                    { max-width: 100%; height: auto;}
+
+/* -- Featured slider Top -- 
+######################### */
+#featured-slider 				  { width: 100%; height: auto;}
+#featured-slider .item 		      { height: 316px; width: 440px; float: left; margin: 6px 3px; }
+#featured-slider .item img        { height: 316px; width: 440px; opacity: 0.4; }
+#featured-slider .content         { width: 90%; height: 280px; margin: -270px auto 0 auto; }
+#featured-slider .content h2      { font-size: 32px; line-height: 42px; }
+
+/* -- The next Big Thing -- 
+######################## */
+#featured-boxes .img-300 		  { width: 300px; height: 250px; float: none; margin: 0px auto 0 auto;}
+.big-thing-box  				  { margin-top: 70px; width: 460px;}
+ul.big-thing                      { width: 485px; }
+h4.header_line div.top span.gray  { background-color: #f9f9f9 !important; }
+
+/* ##### Blog 3 cols / classic ##### 
+################################## */
+/* blog style */
+ul.classic-blog                   { width: 460px; }
+ul.classic-blog li                { width: 194px; height: 240px;}
+ul.classic-blog li img            { width: 194px; height: 91px;}
+
+/* -- Pagination -- */
+.line-bottom                      { width: 458px; }
+
+/*----------------------------------------------------------------------------
+----------------------------- 4 - Entry Content -------------------------------
+-----------------------------------------------------------------------------*/ 
+
+/* -- Entry Banner -- */
+.entry-img-300             { width: 200px; height: 200px; float: right; margin: 20px 0 20px 20px; }
+.entry-img-300 img 		   { max-width: 100%; height: auto;}
+.entry-img-300 iframe      { max-width: 100%; height: auto;}
+.entry-img-300 script      { max-width: 100%; height: auto;}
+
+/* -- Responsive Images -- */
+.alignleft                 { margin-left: 0px;}
+.alignright                { margin-right: 0px;} 
+
+.entry h1.page-title       { padding-top: 30px; }
+
+/* - Top entry - */
+.entry-top                 { width: 430px;}
+.single-gallery            { width: 430px;}
+iframe.single_iframe       { width: 100%;}
+.single-gallery img        { width: 143px; height: 143px;}
+
+/* -- Entry content style -- */
+.entry                     { width: 430px; }
+
+/* -- Related articles -- */
+.related-box               { width: 430px; height: auto; margin: -5px auto 50px auto;}
+
+/* -- Single Share -- */
+#single-share a        { font-size: 11px !important; padding:4px 10px 2px 10px !important; margin-right: 3px !important;}
+#single-share a.emailbutton i { font-size: 11px; margin-right: 2px;}
+#single-share .googlebutton i,
+#single-share .pinbutton i,
+#single-share .fbbutton i, 
+#single-share .twbutton i  { font-size: 12px; margin-right: 2px; }
+
+/*-----------------------------------------------------------------------------
+----------------------------- 6 - Comments Form -------------------------------
+-----------------------------------------------------------------------------*/
+ul.comment                  { width: 430px; }
+.comments                   { width: 430px; }
+/* -- Entry bottom -- */
+.entry-bottom               { width: 430px; height: auto; margin: 20px 0 10px 15px;}
+
+/*-----------------------------------------------------------------------------
+----------------------------- 7 - Contact Form --------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Contact Form -- */
+#contactform #contactName, #contactform #emaill, #contactform #subject { width:96%; }	
+#contactform #subject         { width: 98%;}
+#contactform textarea         { width: 98%; } 
+
+/*-----------------------------------------------------------------------------
+----------------------------- 8 - Custom Pages --------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Tag & Category Index -- */
+#mcTagMap .holdleft, #sc_mcTagMap .holdleft { width: 195px !important; }
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 9 - Footer -------------------------------------
+-----------------------------------------------------------------------------*/
+.wrap-footer                  { width: 460px; padding-top: 0px;}
+/* -- widgets -- */
+footer .widget                { display: none;}
+footer .one_fourth, footer .one_fourth_last { display: none;}
+/* -- Copyright -- */
+.copyright                    { width: 100%;}
+/* -- Footer Social Icons -- */
+ul.footer-social li           { margin: 27px 5px 0 5px; }
+ul.footer-social li a         { text-align: center; padding: 5px 4px; } 
+}
+
+
+
+
+
+
+
+
+
+/* All Mobile Size (devices) */
+@media only screen and (max-width: 479px) { 
+/*-----------------------------------------------------------------------------
+----------------------------- 1 - Layout --------------------------------------
+-----------------------------------------------------------------------------*/
+
+/* - Header - */
+.main-header               { width: 305px; }
+.wrap-center               { width: 305px; }
+/* - Layout content - */
+.wrap-fullwidth            { width: 305px; }
+.wrap-fullwidth-bg         { width: 305px; }
+.wrap-fullwidth-bg .entry  { width: auto; padding-left: 15px; padding-right: 15px;}
+/* .page-content */
+.home-content              { width: 255px; /*+30px*/ float: left; }
+.wrap-content              { width: 305px; float: left; }
+.single-content            { width: 303px; float: none; margin-left: auto; margin-right: auto;}           
+/* - sidebar - */
+.sidebar           		   { width: 300px; float: left;  margin-top: 30px; margin-left: 0px;}
+.sidebar .widget           { width: 250px; display: block; float: left; margin-right: 0px;}
+.sidebar .widget { padding: 0 27px 20px 27px; }
+#boxed-style .clear2       { display: none;} 
+
+/*-----------------------------------------------------------------------------
+----------------------------- 2 - Header --------------------------------------
+-----------------------------------------------------------------------------*/
+
+/* -- Popular Words -- */
+#tags1                     { display: none;}
+#tags2                     { display: none;}
+
+/* -- Top social icons -- */
+ul.top-social              { display: none;}
+
+
+/* -- Search -- */
+#searchform2               { margin: 0px auto; float: left; }
+#s                         { width: 220px; }
+#s:focus                   { width: 220px; } 
+
+/* -- Top Header Menu --
+##################### */
+.jquerycssmenu             { display: none;}
+.jquerycssmenu-right       { display: none;}
+
+/* -- Sticky Header -- */
+header .sticky                     { position: relative; z-index: 0 !important;} 
+header .sticky .sticky-on          { width: auto; }
+header .sticky.main-header         { height: 85px;}
+header .sticky .logo               { height: auto; max-height: 85px; }
+header .sticky .jquerycssmenu      { margin-top: 12px;}
+header .sticky #searchform2        { margin-top: 27px;}
+
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 3 - Home Content --------------------------------
+-----------------------------------------------------------------------------*/
+
+/* -- Home banner 728x90 -- */
+.home-728                         { width: 303px; height: auto; margin: 0 0 0 -24px; }
+.img728                           { width: 100%; height: auto; margin: 0px;}
+.img728 img 					  { max-width: 100%; height: auto;}
+.img728 iframe                    { max-width: 100%; height: auto;}
+.img728 script                    { max-width: 100%; height: auto;}
+
+/* -- Featured slider Top -- 
+######################### */
+#featured-slider 				  { width: 100%; height: auto;}
+#featured-slider .item 		      { height: 206px; width: 300px; float: left; margin: 6px 3px; }
+#featured-slider .item img        { height: 206px; width: 300px; opacity: 0.4; }
+#featured-slider .content         { width: 90%; height: 280px; margin: -190px auto 0 auto; }
+#featured-slider .content h2      { font-size: 22px; line-height: 30px; }
+a.btn-featured                    { padding: 2px 17px 7px 17px; margin: 15px 0 0 0px; }
+
+/* -- The next Big Thing -- 
+######################## */
+#featured-boxes .img-300 		  { width: 300px; height: 250px; float: none; margin: 0px auto 0 auto;}
+.big-thing-box  				  { margin-top: 70px; width: 305px;}
+ul.big-thing                      { width: 330px; }
+h4.header_line div.top span.gray  { background-color: #f9f9f9 !important; }
+
+/* ##### Blog 3 cols / classic ##### 
+################################## */
+/* blog style */
+ul.classic-blog                   { width: 305px; }
+ul.classic-blog li                { width: 255px; height: 235px;}
+ul.classic-blog li img            { width: 255px; height: 120px;}
+
+/* -- Pagination -- */
+.line-bottom                      { width: 304px; }
+
+/*----------------------------------------------------------------------------
+----------------------------- 4 - Entry Content -------------------------------
+-----------------------------------------------------------------------------*/ 
+
+/* -- Entry Banner -- */
+.entry-img-300             { width: 250px; height: 250px; float: none; margin: 20px auto 0 auto; display: block; }
+.entry-img-300 img 		   { max-width: 100%; height: auto;}
+.entry-img-300 iframe      { max-width: 100%; height: auto;}
+.entry-img-300 script      { max-width: 100%; height: auto;}
+
+/* -- Responsive Images -- */
+.alignleft                 { margin-left: 0px;}
+.alignright                { margin-right: 0px;} 
+h1.article-title           { font-size: 26px; font-weight: 600; line-height: 34px; }
+.entry h1.page-title       { font-size: 26px; padding-top: 30px; }
+
+/* - Top entry - */
+.entry-top                 { width: 290px;}
+.single-gallery            { width: 290px;}
+iframe.single_iframe       { width: 100%;}
+.single-gallery img        { width: 145px; height: 145px;}
+
+/* -- Entry content style -- */
+.entry                     { width: 280px; }
+
+/* -- About author -- */
+.author-meta               { width: 100%;  }
+.author-meta img.avatar    { width: 60px; height: 60px; }
+.author-info               { width: auto; height: auto; margin: 0px 0 -15px 70px; }
+.author-meta .entry        { padding: 0 10px !important;}
+
+/* -- Author -- */
+.author-right-meta         { float: left; margin-left: 0px;}
+
+/* -- Related articles -- */
+.related-box               { width: 280px; height: auto; margin: -5px auto 50px auto;}
+.related-box .one_half, .related-box .one_half_last         { float:left;width:100%; margin-bottom:10px; margin-right:0; }
+.related-box .one_half_last                    { margin-right:0;}
+
+/* -- Single Share -- */
+#single-share a span { display: none;}
+#single-share a        { font-size: 11px !important; padding:4px 10px 2px 10px !important; margin-right: 3px !important;}
+#single-share a.emailbutton i { font-size: 14px; margin-right: 2px;}
+#single-share .googlebutton i,
+#single-share .pinbutton i,
+#single-share .fbbutton i, 
+#single-share .twbutton i  { font-size: 14px; margin-right: 2px; }
+
+/*-----------------------------------------------------------------------------
+----------------------------- 6 - Comments Form -------------------------------
+-----------------------------------------------------------------------------*/
+ul.comment                  { width: 285px; }
+.comments                   { width: 285px; }
+/* -- Entry bottom -- */
+.entry-bottom               { width: 285px; height: auto; margin: 20px 0 10px 10px;}
+
+/*-----------------------------------------------------------------------------
+----------------------------- 7 - Contact Form --------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Contact Form -- */
+#contactform #contactName, #contactform #emaill, #contactform #subject { width:94%; }	
+#contactform #subject         { width: 97%;}
+#contactform textarea         { width: 97%; } 
+
+/*-----------------------------------------------------------------------------
+----------------------------- 8 - Custom Pages --------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Tag & Category Index -- */
+#mcTagMap .holdleft, #sc_mcTagMap .holdleft { width: 280px !important; }
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 10 - Footer -------------------------------------
+-----------------------------------------------------------------------------*/
+.wrap-footer                  { width: 305px; padding-top: 0px;}
+.social-section               { height: auto;}
+/* -- widgets -- */
+footer .widget                { display: none;}
+footer .one_fourth, footer .one_fourth_last { display: none;}
+/* -- Copyright -- */
+.copyright                    { width: 100%;}
+/* -- Footer Social Icons -- */
+ul.footer-social li           { margin: 15px 5px 0 5px; }
+ul.footer-social li a         { text-align: center; padding: 5px 4px; } 
+
+/* -- Columns -- */
+.one_half, .one_half_last         { float:left;width:100%; margin-bottom:10px; margin-right:0; }
+.one_half_last                    { margin-right:0;}
+
+.one_third, .one_third_last       { float:left; width:100%; margin-bottom:10px; margin-right:0; }
+.one_third_last                   { margin-right:0;}
+
+.one_fourth, .one_fourth_last     { float:left; width:100%; margin-bottom:10px; margin-right:0; }
+.one_fourth_last                  { margin-right:0;}
+}

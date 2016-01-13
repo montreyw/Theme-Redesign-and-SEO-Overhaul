@@ -1,0 +1,397 @@
+/* Style MAG ( default color ) -------------------------------------------
+-----------------------------------------------------------------------------*/
+h1,h2,h3,h4,h5,h6          { color: #DDD;}
+code, pre                  { border: none; background-color: #FFF; -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1); box-shadow: 0 1px 10px rgba(0,0,0,0.1);}
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 1 - Layout --------------------------------------
+-----------------------------------------------------------------------------*/
+a:link, a:visited          { color: #DDD; text-decoration: none; }
+a:hover                    { color: #cd2026; /* - Red color */ }
+::-moz-selection           { background:#000; color: #fff; text-shadow: none; }
+::selection                { background:#000; color: #fff; text-shadow: none; }
+/* -- Header -- */
+html body                  { color: #7d7d7d; background-color: #000;}
+header, .sticky            { background-color: #0C0C0C; -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.top-navigation            { background-color: #171717; }
+/* - Layout content - */
+.wrap-fullwidth            { background-image: url(../../images/bg_body.gif); }
+.wrap-fullwidth-bg         { background-color: #FFF; none;}
+/* .page-content */ 
+.home-content              { background-color: #191919; none;}
+.single-content            { background-color: #191919; none;}
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 2 - Header --------------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Popular Words -- */
+.popular-words strong      { background-color: #cd2026; color: #FFF; }
+.popular-words a           { color: #FFF;}
+.popular-words a:hover     { color: #FFF !important;}
+.popular-words span        { color: #cd2026;}
+
+/* -- Top social icons -- */
+.top-social li a           { color: #cd2026;}
+.top-social li a:hover     { color: #FFF !important;}
+
+/* -- Search Header (menu) -- */
+#searchform2 .buttonicon   { background-color: #353535;}
+#searchform2 #s            { background-color: #353535; color: #FFF !important; opacity: 1 !important;}
+
+/* -- Live Search -- */
+ul.search_results li:hover { background-color: #f2f2f2 !important; }
+ul.search_results          { -moz-box-shadow: 0 0 5px #999 !important; -webkit-box-shadow: 0 0 5px #999 !important; box-shadow: 0 0 5px #999 !important;} 
+ul.search_results li a:hover  { color: #000 !important;}
+
+/* -- Top Header Menu Left --
+########################## */
+.jquerycssmenu i, .jquerycssmenu-right i { color: #ddd;}
+.jquerycssmenu ul li.current_page_item > a, 
+.jquerycssmenu ul li.current-menu-ancestor > a, 
+.jquerycssmenu ul li.current-menu-item > a, 
+.jquerycssmenu ul li.current-menu-parent > a { color: #cd2026; }
+.jquerycssmenu ul li ul li.current_page_item > a, 
+.jquerycssmenu ul li ul li.current-menu-ancestor > a, 
+.jquerycssmenu ul li ul li.current-menu-item > a, 
+.jquerycssmenu ul li ul li.current-menu-parent > a { /*color: #cd2026 !important; */ background: #1a1a1a !important; border-bottom: none; }
+/*Top level menu link items style*/
+.jquerycssmenu ul li a { color: #fff !important; }
+.jquerycssmenu ul li a:hover { color: #cd2026; }
+/*1st sub level menu*/
+.jquerycssmenu ul li ul { -moz-box-shadow: 0 5px 3px rgba(0,0,0,0.2); -webkit-box-shadow: 0 5px 3px rgba(0,0,0,0.2); box-shadow: 0 5px 3px rgba(0,0,0,0.2);}
+.jquerycssmenu ul li ul li ul { background-color: #1a1a1a !important;}
+.jquerycssmenu ul li ul li { background: #1a1a1a; }
+/* Sub level menu links style */
+.jquerycssmenu ul li ul li a { color: #444 !important; }
+.jquerycssmenu ul li ul li:hover { background-color: #cd2026; }
+.jquerycssmenu ul li ul li:hover a { color: #FFF !important;}
+.jquerycssmenu ul li ul li:hover ul li a { color: #94979c !important;}
+.jquerycssmenu ul li ul li:hover ul li a:hover { color: #FFF !important;}
+
+/* -- Top Header Menu right --
+########################## */
+.jquerycssmenu-right ul li.current_page_item > a, 
+.jquerycssmenu-right ul li.current-menu-ancestor > a, 
+.jquerycssmenu-right ul li.current-menu-item > a, 
+.jquerycssmenu-right ul li.current-menu-parent > a { color: #cd2026; }
+.jquerycssmenu-right ul li ul li.current_page_item > a, 
+.jquerycssmenu-right ul li ul li.current-menu-ancestor > a, 
+.jquerycssmenu-right ul li ul li.current-menu-item > a, 
+.jquerycssmenu-right ul li ul li.current-menu-parent > a { /*color: #cd2026 !important; */ background: #AAAAAA !important; border-bottom: none; }
+/*Top level menu link items style*/
+.jquerycssmenu-right ul li a { color: #fff !important; }
+.jquerycssmenu-right ul li a:hover { color: #cd2026; }
+/*1st sub level menu*/
+.jquerycssmenu-right ul li ul { background: #1a1a1a; -moz-box-shadow: 0 5px 3px rgba(0,0,0,0.2); -webkit-box-shadow: 0 5px 3px rgba(0,0,0,0.2); box-shadow: 0 5px 3px rgba(0,0,0,0.2);}
+.jquerycssmenu-right ul li ul li ul { background-color: #1a1a1a !important;}
+.jquerycssmenu-right ul li ul li { background: #1a1a1a; border-bottom: none !important; }
+/* Sub level menu links style */
+.jquerycssmenu-right ul li ul li a { color: #FFF !important; }
+.jquerycssmenu-right ul li ul li:hover { background-color: #cd2026; }
+.jquerycssmenu-right ul li ul li:hover a { color: #FFF !important;}
+.jquerycssmenu-right ul li ul li:hover ul li a { color: #94979c !important;}
+.jquerycssmenu-right ul li ul li:hover ul li a:hover { color: #FFF !important;}
+
+/* -- Sticky Posts style -- */
+ul.classic-blog .sticky           { -moz-box-shadow: 0 0 0 #999 !important; -webkit-box-shadow: 0 0 0 #999 !important; box-shadow: 0 0 0 #999 !important; }
+ul.classic-blog .sticky img       { border-top: none; background-color: #F00; }
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 3 - Home Content --------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Home banner 728x90 -- */
+.home-728                { border-top: none;}
+
+/* -- Featured slider Top -- 
+######################### */
+#featured-slider 				  { background-color: #171717;}
+#featured-slider .content h2      { color: #FFF; }
+#featured-slider .content h2 a    { color: #FFF; }
+#featured-slider .content h2 a:hover   { color: #FFF !important; }
+a.btn-featured                    { border: none; color: #FFF !important; }
+a.btn-featured:hover              { background-color: #cd2026; border-color: none; }
+
+/* -- The next Big Thing -- 
+######################## */
+#featured-boxes 				  { background-color: #151515; border-bottom: none; }
+ul.big-thing li                   { border-bottom: none; }
+ul.big-thing li h3:hover          { color: #000; }
+ul.big-thing li .an-display-author a { color: #cd2026;}
+ul.big-thing li .an-display-time   { color: #94979c;}
+ul.big-thing li .an-display-comm a { color: #94979c; }
+ul.big-thing li .an-display-comm i, #articles .an-display-time i { color: #d2d6db; }
+/* categories */
+ul.big-thing .article-category i  { border-color: none; }
+ul.big-thing .article-category    { background-color: #cd2026; }
+ul.big-thing .article-category a  { color: #FFF !important;}
+/* review */
+.review-box-nr i                  { color: #cd2026;}
+.review-box-nr                    { color: #cd2026;}
+ul.article_list .review-box-nr    { color: #cd2026;}
+ul.big-thing .an-widget-title span { color: #94979c;}
+ul.big-thing .an-widget-title span a { border-bottom: none; }
+/* date */
+.post-date                        { background-color: #171717; color: #FFF; }	
+/* arrow */
+ul.big-thing .arrow-down-cat      { border-top: none; }
+/* title line */
+.header_line                    { border-top: 1px solid rgb(255, 255, 255); border-bottom: 3px solid rgb(178, 178, 178); color: rgb(23, 23, 23); }
+.header_line h4.top span.white { background-color: #FFF; color: #171717;}    
+.header_line h4.top span.gray  { background-color: #f2f2f2; color: #171717;}
+
+/* ##### Blog 3 cols / classic ##### 
+################################## */
+/* Top Home page title */
+.section-top-title h3             { color: #FFF !important; background-color: #262626; }
+.section-top-title ul.top-social li a { color: #FFF !important;}
+/* blog style */
+ul.classic-blog .an-content span  { color: #94979c;}
+ul.classic-blog .an-content span a{ border-bottom: none; }
+/* Category ribbon */
+ul.classic-blog .article-category i { border-color: none; }
+ul.classic-blog .article-category   { background-color: #cd2026; }
+ul.classic-blog .article-category a { color: #FFF !important;}
+/* Arrow category */
+ul.classic-blog .arrow-down-cat     { }
+
+/* -- infinite scroll Pagination -- */
+#infscr-loading span       { background-color: #111; color: #FFF; }
+
+/* -- Pagination -- */
+.line-bottom               {  border-bottom: none;}
+.wp-pagenavi a, .wp-pagenavi span { background-color: #222; color: #fff !important;}
+.wp-pagenavi a:hover { color: #fff !important; background-color: #cd2026;}
+.wp-pagenavi span.current { background-color: #cd2026; color: #fff !important; }
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 4 - Entry Content -------------------------------
+-----------------------------------------------------------------------------*/
+/* -- Archive-header -- */
+.archive-header            { border: none; background-color: #202020; }
+.archive-header h3         { color: #FFF; }
+/* -- About author -- */
+.author-meta               { border: none; background-color: #202020;   }
+a.author-nrposts           { background-color: #cd2026; color: #FFF !important; }
+.author-meta img.avatar    { border: none; }
+
+/* -- Bottom banner 728x90 -- */
+.single-728                { background-color: #f9f9f9;}
+
+/* -- Related articles -- */
+.arrow-down-related        { border-top: 10px solid #171717; }
+
+/* - Top entry - */
+.entry-top span            { color: #94979c;}
+.entry-top span.time       { color: #92979c;}
+.entry-top span a          { border-bottom: none; }
+
+
+h1.article-title           { color: #fff; font-size: 30px; line-height: 1.75em; }
+h1.page-title              { color: #DDD; border-bottom: none; }
+
+.media-single-content      { background-color: #191919; }
+
+/* -- Entry bottom -- */
+.single-content h3.title   { color: #FFF !important; background-color: #171717; }
+
+/*-- Entry button -- */
+.entry-btn                 { background-color: #cd2026; color: #FFF !important;  } 
+
+/* -- Author -- */
+ul.author-social-top li a i        { color: #FFF; }
+ul.author-social-top li.facebook a { background-color: #3b59b6;} 
+ul.author-social-top li.twitter a  { background-color: #40a4ff;} 
+ul.author-social-top li.google a   { background-color: #d34836;} 
+
+/* -- Entry content style -- */
+.p-first-letter p a        { color: #FFF; background-color: #4B4B4B; }
+.p-first-letter p a:hover  { color: #000 !important; background-color: #eee;}
+
+/* -- blockquote -- */
+blockquote p               { color: #CCC; }
+
+/* -- Responsive Images -- */
+.wp-caption-text           { color: #888;}
+.wp-caption-text a         { color: #000 !important; }
+.wp-caption-text a:hover   { color: #000 !important; }
+
+/* -- Pagination entry articles -- */
+.my-paginated-posts span { background-color: #cd2026; color: #FFF;}
+.my-paginated-posts p a  { background-color: #222; color:#fff;}
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 5 - Sidebar & Widgets ---------------------------
+-----------------------------------------------------------------------------*/
+
+/* -- Sidebar -- */
+.sidebar .widget {  background-color: #191919; color: #fff !important; border: none; }
+.sidebar .widget h3.title { color: #FFF !important; background-color: #262626; }
+.arrow-down-widget {}
+
+/* -- FeedBurner -- */
+div.feed-info i        { color: #cd2026;}
+div.feed-info strong   { border-bottom: none;}
+#newsletter-form input.newsletter  { border:none; color:#333; }
+#newsletter-form input.newsletter-btn  { color: #FFF; background-color: #cd2026; }
+
+/* -- Article widget -- */
+.article_list li         { border-bottom: none; }
+.article_list li h3:hover { color: #000; }
+.article_list li .an-display-author a { color: #cd2026;}
+.article_list li .an-display-time   { color: #94979c;}
+.article_list li .an-display-comm a { color: #94979c; }
+.article_list li .an-display-comm i, #articles .an-display-time i { color: #d2d6db; }
+
+ul.article_list .article-category i { border-color: none; }
+ul.article_list .article-category   { background-color: #cd2026; }
+ul.article_list .article-category a { color: #FFF !important;}
+
+ul.article_list .an-widget-title i  { color: #cd2026; }
+ul.article_list .an-widget-title span { color: #94979c;}
+ul.article_list .an-widget-title span a { border-bottom: none; }
+
+/* Arrow category */
+ul.article_list .arrow-down-cat     { border-top: none; }
+
+/* -- Categories in two columns -- */
+.widget_anthemes_categories li { color: #cd2026; } 
+
+/* -- Widget RSS -- */
+.widget_rss h3 a         { color: #FFF;}
+
+/* -- Default Tags -- */
+div.tagcloud a:hover  { }
+div.tagcloud a        { background: #f5f5f5 !important; }
+div.tagcloud span     { color: #cd2026; }
+
+div.widget_archive select, div.widget_categories select { border-radius: 3px; border:1px solid #d5d6d8; color:#999; }
+
+/* -- Default Search -- */
+div.widget_search #searchform2 #s { background-color: #fafafa; color: #222 !important; }
+div.widget_search #searchform2 .buttonicon   { background-color: #171717; }
+
+/* -- Archives in two columns -- */
+.widget_archive li { color: #cd2026; } 
+
+/* -- Meta in two columns -- */
+.widget_meta li { color: #cd2026;} 
+
+/* -- Calendar -- */ 
+#wp-calendar tbody td#today { background-color: #222; color: #FFF;}
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 6 - Comments Form -------------------------------
+-----------------------------------------------------------------------------*/
+
+ul.comment li                 { border: none;  background-color: #FFF; -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1); box-shadow: 0 1px 10px rgba(0,0,0,0.1);  }
+ul.comment li ul.children li  { -moz-box-shadow: none; box-shadow: none; -webkit-box-shadow: none;}
+
+/* -- Comments -- */
+.comments h3.comment-reply-title  { color: #FFF !important; background-color: #222; }
+.comments h3.comment-reply-title i { border-color: none; }
+.comments h3.comment-reply-title a { color: #FFF; }
+
+/* -- comment Form -- */
+#commentform #author, #email  { }	
+#commentform textarea         { } 
+#commentform #sendemail       { background-color: #222; color: #FFF; }
+#commentform label span       { color:#F00;}
+#commentform span             { color:#F00;} 
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 7 - Contact Form --------------------------------
+-----------------------------------------------------------------------------*/
+
+/* -- Contact Form -- */
+#contactform #contactName, #contactform #emaill, #contactform #subject { border:2px solid #d5d6d8; color:#333; }	
+#contactform textarea         {  border:2px solid #d5d6d8; color:#333;} 
+#contactform .sendemail       { background-color: #cd2026; color: #FFF; }
+#contactform label span       { color:#F00;}
+#contactform span             { color:#F00;}
+#contactform label.error      { color:#F00;}
+
+/* -- Contact Form 7 Plugin -- */
+form.wpcf7-form input         { border:2px solid #d5d6d8; color:#333; }
+form.wpcf7-form textarea      { border:2px solid #d5d6d8; color:#333; }
+form.wpcf7-form input.wpcf7-submit    { background-color: #222; color: #FFF; border: none; }
+form.wpcf7-form .wpcf7-validation-errors { color: red;}
+
+
+/*-----------------------------------------------------------------------------
+----------------------------- 8 - Custom Pages --------------------------------
+-----------------------------------------------------------------------------*/
+
+/* -- Tag & Category Index -- */
+#mcTagMap .tagindex h4, #sc_mcTagMap .tagindex h4 { color: #cd2026; }
+#mcTagMap .tagindex ul li, #sc_mcTagMap .tagindex ul li { border-bottom: none; }
+
+/* --- Review Plugin --- */
+#review-box                { border: none; background-color: #FFF; -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1); box-shadow: 0 1px 10px rgba(0,0,0,0.1);}
+h2.review-box-header, .user-rating-text strong, .user-rating-text { color: #000 !important; }
+ 
+
+/*-----------------------------------------------------------------------------
+------------------------------ 9 - Footer -------------------------------------
+-----------------------------------------------------------------------------*/
+footer                        { background-color: #1e1f20;}
+.footer-section               { background-color: rgba(30, 31, 32, 0.95);}
+.social-section               { background-color: #cd2026; }
+
+/* -- widgets -- */
+footer .widget                { color: #FFF !important; background-color: #1a1a1b; }
+footer .widget a              { color: #FFF !important;}
+footer .widget h3.title       { color: #FFF !important; background-color: #171717; }
+
+/* subscribe */
+footer #newsletter-form input.newsletter  { background-color: #FFF !important; opacity: 1.0 !important; }
+/* article */
+footer .article_list li         { border-bottom: none; }
+/* archive, categories */
+footer div.widget_archive select, div.widget_categories select { border:none; }
+/* search */
+footer div.widget_search #searchform2 .buttonicon   { opacity: 1.0; background-color: #171717; }
+/* calendar */
+footer #wp-calendar tbody td#today     { background-color: #cd2026; color: #FFF;}
+footer #wp-calendar tbody td           { background: #171717; border: none; }
+footer #wp-calendar tbody td:hover     { background: #000; }
+footer #wp-calendar caption            { color: #FFF;}
+footer #wp-calendar tbody td a         { color: #FFF; }
+/* tags */
+footer div.tagcloud a         { background: #171717 !important; }
+/* meta */
+footer .widget_meta li        { border-bottom: none; }
+/* archives */
+footer .widget_archive li     { border-bottom: none; } 
+/* categories 2 cols */
+footer .widget_anthemes_categories li { border-bottom: none; }
+/* rss */
+footer .widget_rss li                 { border-bottom: none;}
+/* recent entries */
+footer .widget_recent_entries li   { }
+/* recent comments */
+footer .widget_recent_comments li  { }
+/* archives and nav default */
+footer .widget_nav_menu li    { }
+/* meta and pages default */
+footer .widget_pages li       { }
+/* categories default */
+footer .widget_categories li  { }
+
+/* -- Copyright -- */
+.copyright                    { color: #b9b9b9; background-color: rgba(26, 26, 27, 0.8);}
+.copyright a                  { color: #cd2026; border-bottom: none; }
+
+/* -- Footer Social Icons -- */     
+ul.footer-social li a         { color: #FFF; }
+ul.footer-social li a:hover   { opacity: 0.7; color: #FFF !important;}
+
+/* -- Back to Top -- */
+#back-top span                { background-color: #cd2026;}
+#back-top a:hover             { opacity: 0.7; } 

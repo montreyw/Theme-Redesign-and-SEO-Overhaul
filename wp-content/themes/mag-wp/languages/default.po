@@ -1,0 +1,495 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MAG WP\n"
+"POT-Creation-Date: 2014-11-19 20:25+0200\n"
+"PO-Revision-Date: 2014-11-19 20:26+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../mag-wp/comments.php:2
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: ../mag-wp/comments.php:24
+msgid "Comments are closed."
+msgstr ""
+
+#: ../mag-wp/comments.php:41 ../mag-wp/template-contact.php:106
+msgid "Name:"
+msgstr ""
+
+#: ../mag-wp/comments.php:48 ../mag-wp/template-contact.php:111
+msgid "Email:"
+msgstr ""
+
+#: ../mag-wp/comments.php:55
+msgid "Comment:"
+msgstr ""
+
+#: ../mag-wp/comments.php:61
+msgid "Leave a Comment"
+msgstr ""
+
+#: ../mag-wp/comments.php:62
+msgid "Submit Comment"
+msgstr ""
+
+#: ../mag-wp/functions.php:75
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../mag-wp/functions.php:211
+msgid "Article Page Options"
+msgstr ""
+
+#: ../mag-wp/functions.php:221
+msgid "Video Youtube"
+msgstr ""
+
+#: ../mag-wp/functions.php:225
+msgid "Add Youtube code ex: HIrMIeN5ttE"
+msgstr ""
+
+#: ../mag-wp/functions.php:238
+msgid "Video Vimeo"
+msgstr ""
+
+#: ../mag-wp/functions.php:242
+msgid "Add Vimeo code ex: 7449107"
+msgstr ""
+
+#: ../mag-wp/functions.php:253
+msgid "Gallery"
+msgstr ""
+
+#: ../mag-wp/functions.php:256
+msgid "Image with any size!"
+msgstr ""
+
+#: ../mag-wp/functions.php:263
+msgid "Featured Image"
+msgstr ""
+
+#: ../mag-wp/functions.php:265
+msgid "Hide Featured Image on single page for this article"
+msgstr ""
+
+#: ../mag-wp/functions.php:279
+msgid "Featured Article - Slider"
+msgstr ""
+
+#: ../mag-wp/functions.php:284
+msgid "Slider Image"
+msgstr ""
+
+#: ../mag-wp/functions.php:287
+msgid ""
+"Image recomendable size: 800x550. You can upload a bigger image, and the "
+"theme will crop the image to have the recomendable size."
+msgstr ""
+
+#: ../mag-wp/functions.php:293
+msgid "Slider Title "
+msgstr ""
+
+#: ../mag-wp/functions.php:297
+msgid "Optional, if the box is left in blank, the post title will be used. "
+msgstr ""
+
+#: ../mag-wp/functions.php:451
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:164
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../mag-wp/functions.php:452
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:165
+msgid "Install Plugins"
+msgstr ""
+
+#: ../mag-wp/functions.php:453
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:166
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../mag-wp/functions.php:454
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../mag-wp/functions.php:465
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:180
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:510
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../mag-wp/functions.php:466
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:181
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1908
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../mag-wp/functions.php:467
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../mag-wp/header.php:54 ../mag-wp/header.php:55
+msgid "<strong>Popular tags</strong>"
+msgstr ""
+
+#: ../mag-wp/header.php:60 ../mag-wp/searchform.php:2
+msgid "Live Search ..."
+msgstr ""
+
+#: ../mag-wp/header.php:118
+msgid "Read more"
+msgstr ""
+
+#: ../mag-wp/header.php:143
+msgid "The Next Big Thing"
+msgstr ""
+
+#: ../mag-wp/header.php:161 ../mag-wp/index.php:73 ../mag-wp/index.php:82
+#: ../mag-wp/template-home.php:47 ../mag-wp/template-home.php:56
+#: ../mag-wp/functions/widgets/widget-cat.php:46
+#: ../mag-wp/functions/widgets/widget-posts.php:44
+#: ../mag-wp/functions/widgets/widget-review-rand.php:43
+#: ../mag-wp/functions/widgets/widget-review-recent.php:43
+#: ../mag-wp/functions/widgets/widget-review.php:43
+#: ../mag-wp/functions/widgets/widget-top-posts.php:43
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: ../mag-wp/header.php:170 ../mag-wp/index.php:92
+#: ../mag-wp/template-home.php:66
+#: ../mag-wp/functions/widgets/widget-cat.php:56
+#: ../mag-wp/functions/widgets/widget-posts.php:54
+#: ../mag-wp/functions/widgets/widget-review-rand.php:53
+#: ../mag-wp/functions/widgets/widget-review-recent.php:53
+#: ../mag-wp/functions/widgets/widget-review.php:53
+#: ../mag-wp/functions/widgets/widget-top-posts.php:53
+msgid "Written by"
+msgstr ""
+
+#: ../mag-wp/index.php:17 ../mag-wp/template-home-2.php:20
+#: ../mag-wp/template-home.php:20
+msgid "Latest Articles"
+msgstr ""
+
+#: ../mag-wp/index.php:28
+msgid "All posts in:"
+msgstr ""
+
+#: ../mag-wp/index.php:30
+msgid "All posts tagged in:"
+msgstr ""
+
+#: ../mag-wp/index.php:32
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../mag-wp/index.php:35 ../mag-wp/index.php:53
+msgid "All posts by:"
+msgstr ""
+
+#: ../mag-wp/index.php:56
+msgid ""
+"Error 404 - Not Found. <br />Sorry, but you are looking for something that "
+"isn't here."
+msgstr ""
+
+#: ../mag-wp/index.php:125 ../mag-wp/single.php:136 ../mag-wp/single.php:173
+#: ../mag-wp/template-home-2.php:61
+#: ../mag-wp/functions/widgets/widget-cat.php:72
+#: ../mag-wp/functions/widgets/widget-posts.php:70
+#: ../mag-wp/functions/widgets/widget-review-rand.php:69
+#: ../mag-wp/functions/widgets/widget-review-recent.php:67
+#: ../mag-wp/functions/widgets/widget-review.php:69
+#: ../mag-wp/functions/widgets/widget-top-posts.php:69
+msgid "by"
+msgstr ""
+
+#: ../mag-wp/index.php:126 ../mag-wp/template-home-2.php:62
+msgid "in"
+msgstr ""
+
+#: ../mag-wp/index.php:143 ../mag-wp/template-home-2.php:77
+#: ../mag-wp/template-home.php:80
+msgid "Older Entries"
+msgstr ""
+
+#: ../mag-wp/index.php:144 ../mag-wp/template-home-2.php:78
+#: ../mag-wp/template-home.php:81
+msgid "Newer Entries"
+msgstr ""
+
+#: ../mag-wp/single.php:25
+msgid "ago"
+msgstr ""
+
+#: ../mag-wp/single.php:26
+msgid "written by"
+msgstr ""
+
+#: ../mag-wp/single.php:94
+msgid "<div class=\"entry-btn\">Article Tags:</div>"
+msgstr ""
+
+#: ../mag-wp/single.php:100
+msgid "<div class=\"entry-btn\">Article Categories:</div>"
+msgstr ""
+
+#: ../mag-wp/single.php:124
+msgid "Recent Articles"
+msgstr ""
+
+#: ../mag-wp/single.php:146
+msgid "Related Articles"
+msgstr ""
+
+#: ../mag-wp/single.php:189
+msgid "Comments to"
+msgstr ""
+
+#: ../mag-wp/template-contact.php:95
+msgid "Sorry, an error occured."
+msgstr ""
+
+#: ../mag-wp/template-contact.php:116
+msgid "Subject:"
+msgstr ""
+
+#: ../mag-wp/template-contact.php:121
+msgid "Message:"
+msgstr ""
+
+#: ../mag-wp/template-contact.php:125
+msgid "Submit Message"
+msgstr ""
+
+#: ../mag-wp/template-contact.php:125
+msgid "All Fields are mandatory!"
+msgstr ""
+
+#: ../mag-wp/admin/classes/class.options_machine.php:556
+msgid "Last Backup : "
+msgstr ""
+
+#: ../mag-wp/admin/front-end/options.php:43
+#: ../mag-wp/admin/front-end/options.php:67
+msgid "Save All Changes"
+msgstr ""
+
+#: ../mag-wp/admin/front-end/options.php:68
+msgid "Options Reset"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:167
+msgid "Something went wrong."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:182
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:537
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2120
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:565
+#, php-format
+msgid "The following plugin was activated successfully: %s."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:738
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1125
+msgid "External Link"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1130
+msgid "Private Repository"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1133
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1137
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1140
+msgid "Required"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1140
+msgid "Recommended"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1143
+msgid "Not Installed"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1145
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1147
+msgid "Not Updated"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1149
+msgid "Active"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1343
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1359
+msgid "Plugin"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1360
+msgid "Source"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1361
+msgid "Type"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1362
+msgid "Status"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1380
+msgid "Install"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1381
+msgid "Activate"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1891
+msgid "Install package not available."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1892
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1893
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1894
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1895
+msgid "Plugin install failed."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1896
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:1907
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2017
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2018
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2018
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2027
+msgid "Show Details"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2018
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2027
+msgid "Hide Details"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2019
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2020
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2024
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2025
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2026
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2027
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2028
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../mag-wp/functions/custom/class-tgm-plugin-activation.php:2029
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../mag-wp/functions/custom/comments.php:21
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../mag-wp/functions/custom/comments.php:32
+msgid "Pingback:"
+msgstr ""
+
+#: ../mag-wp/functions/widgets/widget-feedburner.php:29
+msgid "Enter your e-mail address"
+msgstr ""
+
+#: ../mag-wp/functions/widgets/widget-feedburner.php:31
+msgid "Subscribe"
+msgstr ""
