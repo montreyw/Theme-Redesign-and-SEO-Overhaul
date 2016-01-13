@@ -445,15 +445,17 @@ header {
 }
 img.logo {
     transition: all 370ms;
-    filter: invert(1);
     -webkit-filter: invert(1);
+    -ms-filter: invert(1);
+    filter: invert(1);
 }
+/*
 img.logo:hover {
-    -webkit-filter: invert(1) drop-shadow(0px 2px 5px rgba(205, 32, 38, 0.5));
-    /* filter: url(#drop-shadow); */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    -webkit-filter: invert(1);
+    -ms-filter: invert(1);
+    filter: invert(1);
 }
+*/
 .top-social li a {
     transition: all 370ms;
 }
@@ -630,9 +632,21 @@ div.ts-fab-tab .ts-fab-text .ts-fab-header h4 {
 div.ts-fab-tab .ts-fab-text .ts-fab-latest li span {
     color: #999;
 }
+.ts-fab-content {
+    color: #777;
+}
 h6.post-answer {
     background: #eaeaea !important;
     color: #777 !important;
+}
+.wb-ad-grid .wb-ad-unit a:link {
+    color: #777 !important;
+}
+.wb-ad-grid .wb-ad-unit a:visited {
+    color: #999 !important;
+}
+.wb-ad-grid .wb-ad-unit a:link:hover {
+    color: #cd2026 !important;
 }
 
 
@@ -646,6 +660,23 @@ h6.post-answer {
 }
 .img-300 {
 	display: none;
+}
+
+
+
+/* About Us page */
+span.light {
+    color: #555 !important;
+}
+
+
+
+/* Contact Us page */
+div#customer_widget_main {
+    background: #ededed;
+}
+.input .form_label {
+    color: #777;
 }
 
 
