@@ -23,12 +23,14 @@
             </div>
             <h1 class="article-title entry-title"><?php the_title(); ?></h1>
             <span class="time date updated"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
-            <span class="vcard author"><?php _e('written by', 'anthemes'); ?> <?php the_author_posts_link(); ?></span>
+            <span><?php _e('written by', 'anthemes'); ?> 
+            	<span class="vcard author"><span class="fn"><?php the_author_posts_link(); ?></span>
+            </span>
         </div><div class="clear"></div>
         <?php endwhile; endif; ?>
 
 
-        <article>
+        <article class="entry-content">
             <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
             <div <?php post_class('post') ?> id="post-<?php the_ID(); ?>">
 
