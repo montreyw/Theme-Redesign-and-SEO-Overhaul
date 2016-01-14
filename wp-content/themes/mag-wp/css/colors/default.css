@@ -532,6 +532,11 @@ a.at-recommendedTitle {
 .newsletter::-webkit-input-placeholder {
     color: #555;
 }
+#ytc-wrapper a {
+    word-break: break-word;
+    line-height: 1.37;
+    display: inherit;
+}
 
 
 
@@ -671,7 +676,7 @@ span.light {
 
 
 
-/* Contact Us page */
+/* Contact Us page -- useless code as contact widget is an iFrame -- eek! */
 div#customer_widget_main {
     background: #ededed;
 }
