@@ -9,7 +9,7 @@
 <div class="wrap-fullwidth">
 
 
-    <div class="single-content">
+    <div class="single-content hentry">
 
         <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
         <div class="entry-top">
@@ -21,9 +21,11 @@
                     <?php if(get_the_author_meta('google')) { ?><li class="google"><a target="_blank" href="//plus.google.com/<?php echo the_author_meta('google'); ?>?rel=author"><i class="fa fa-google-plus"></i></a></li><?php } ?>                            
                 </ul>
             </div>
-            <h1 class="article-title"><?php the_title(); ?></h1>
-            <span class="time"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
-            <span><?php _e('written by', 'anthemes'); ?> <?php the_author_posts_link(); ?></span>
+            <h1 class="article-title entry-title"><?php the_title(); ?></h1>
+            <span class="time date updated"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
+            <span><?php _e('written by', 'anthemes'); ?> 
+            	<span class="vcard author"><span class="fn"><?php the_author_posts_link(); ?></span>
+            </span>
         </div><div class="clear"></div>
         <?php endwhile; endif; ?>
 
@@ -76,19 +78,16 @@
             <?php } ?> 
 
                 <div class="clear"></div>
-                <div id="single-share">
-                    <div class="pw-server-widget" data-id="wid-6n09bahf"></div>
+                <div id="single-share"></div>
 				<!-- end #single-share -->
             
             </div><!-- end .media-single-content -->
 
                     <div class="entry">
                         <!-- entry content -->
+						<div class="pw-server-widget" data-id="wid-6n09bahf"></div>
                         <div class="p-first-letter">
                             <?php if (!empty($smof_data['ads_entry_top'])) { ?>
-                                <div class="entry-img-300">
-                                <?php echo get_template_part('custom/advertisement/unit/mpu'); ?>
-                                </div>
                             <?php } ?>
                             <?php if ( !empty( $post->post_excerpt ) ) : the_excerpt(); else : false; endif;  ?>                    
                             <?php the_content(''); // content ?>
@@ -116,9 +115,6 @@
         </article><!-- end article -->
 
 
-        <div class="single-728">
-            <?php echo get_template_part('custom/advertisement/unit/leaderboard2'); ?>
-        </div>
 
         <!-- Recent and related Articles -->
         <div class="related-box">
