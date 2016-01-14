@@ -251,7 +251,7 @@ function get_the_author_posts_link() {
 	}
 
 	$link = sprintf(
-		'<a href="%1$s" title="%2$s" rel="author">%3$s</a>',
+		'<a href="%1$s" title="%2$s" rel="author" class="url fn">%3$s</a>',
 		esc_url( get_author_posts_url( $authordata->ID, $authordata->user_nicename ) ),
 		esc_attr( sprintf( __( 'Posts by %s' ), get_the_author() ) ),
 		get_the_author()
