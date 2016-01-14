@@ -388,7 +388,7 @@ a.wp-img-bg-off    { background: none !important;}
 .my-paginated-posts a:hover { opacity: 0.8; }
 
 /* -- Single Share -- */
-#single-share  { width:auto; height: auto; text-align: center; float: none; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 15px 0; margin-bottom: 20px !important; }
+#single-share  { width:auto; height: auto; text-align: center; float: none; border-top: 1px solid #ddd; padding: 15px 0; margin-bottom: 15px !important; }
 #single-share a span { color: #FFF;}
 #single-share a:hover { opacity: 0.8;}
 #single-share a.fbbutton    { float: none; padding:4px 15px 2px 15px; margin-right: 10px; font-size: 13px; text-transform: uppercase; border-radius: 2px; display: inline-block; background-color: #3b5998; color: #FFF !important;}
