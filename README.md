@@ -20,7 +20,7 @@ Earmilk redesign project
 ## SEO Work
 
 ### Fixing Incomplete, Missing, or Broken hAtom hEntries
-1.  [Commented](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f739b32c3a899139df1f09f8503bb7e3b889c595) out line 481 in wp-includes/post-template.php
+1.  [Commented](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f739b32c3a899139df1f09f8503bb7e3b889c595) out line 481 in wp-includes/post-template.php *
 ```php
 	// hentry for hAtom compliance
 	$classes[] = 'hentry';
@@ -32,6 +32,15 @@ Earmilk redesign project
 6.  [Fixed/added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/9ee1ce9fad6d9873e0a89fce5949e414215239e0) hEntry tags to single-opinion_post.php for hAtom compliance
 
 
+*for a new, modern, properly coded theme, it'd be a bit cleaner to use the following PHP filter to remove hentry
+```php 
+function remove_hentry( $classes ) {
+
+	$classes = array_diff($classes, array('hentry'));	
+
+	return $classes;
+}
+```
 ....
 
 --------
