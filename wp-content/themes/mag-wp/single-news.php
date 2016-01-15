@@ -9,7 +9,7 @@
 <div class="wrap-fullwidth">
 
 
-    <div class="single-content hentry">
+    <div class="single-content hentry h-entry">
 
         <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
         <div class="entry-top">
@@ -21,16 +21,18 @@
                     <?php if(get_the_author_meta('google')) { ?><li class="google"><a target="_blank" href="//plus.google.com/<?php echo the_author_meta('google'); ?>?rel=author"><i class="fa fa-google-plus"></i></a></li><?php } ?>                            
                 </ul>
             </div>
-            <h1 class="article-title entry-title"><?php the_title(); ?></h1>
+            <h1 class="article-title entry-title p-name"><?php the_title(); ?></h1>
             <span class="time date updated"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
             <span><?php _e('written by', 'anthemes'); ?> 
-            	<span class="vcard author"><span class="fn"><?php the_author_posts_link(); ?></span>
+            	<span class="vcard author p-author h-card">
+            		<span class="fn"><?php the_author_posts_link(); ?></span>
+            	</span>
             </span>
         </div><div class="clear"></div>
         <?php endwhile; endif; ?>
 
 
-        <article>
+        <article class="entry-content">
             <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
             <div <?php post_class('post') ?> id="post-<?php the_ID(); ?>">
 
