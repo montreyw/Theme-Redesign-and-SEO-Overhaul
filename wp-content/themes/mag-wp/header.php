@@ -2,20 +2,6 @@
 <html <?php language_attributes(); ?>>
 <head>
 <link rel='stylesheet' href='/css/app.css' type='text/css' media='screen' />
-<script type='text/javascript'>
-  var googletag = googletag || {};
-  googletag.cmd = googletag.cmd || [];
-  (function() {
-    var gads = document.createElement('script');
-    gads.async = true;
-    gads.type = 'text/javascript';
-    var useSSL = 'https:' == document.location.protocol;
-    gads.src = (useSSL ? 'https:' : 'http:') +
-      '//www.googletagservices.com/tag/js/gpt.js';
-    var node = document.getElementsByTagName('script')[0];
-    node.parentNode.insertBefore(gads, node);
-  })();
-</script>
 <script type="text/javascript">
     (function () {
         var s = document.createElement('script');
@@ -26,22 +12,6 @@
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
      })();
-</script>
-<script type='text/javascript'>
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/11347700/Leaderboard', [[970, 250], [728, 90]], 'div-gpt-ad-1440098079640-0').addService(googletag.pubads());
-    googletag.defineSlot('/11347700/Leaderboard2', [970, 250], 'div-gpt-ad-1440098079640-1').addService(googletag.pubads());
-    googletag.defineSlot('/11347700/MobileBanner', [320, 100], 'div-gpt-ad-1440098079640-2').addService(googletag.pubads());
-    googletag.defineSlot('/11347700/MPU', [300, 250], 'div-gpt-ad-1440098079640-3').addService(googletag.pubads());
-    googletag.defineSlot('/11347700/MPU2', [[300, 600], [300, 250]], 'div-gpt-ad-1440098079640-4').addService(googletag.pubads());
-    googletag.defineSlot('/11347700/MPU3', [300, 250], 'div-gpt-ad-1440098079640-5').addService(googletag.pubads());
-    googletag.defineSlot('/11347700/Skyscraper', [160, 600], 'div-gpt-ad-1440098079640-6').addService(googletag.pubads());
-    googletag.defineSlot('/11347700/Wallpaper', [1, 1], 'div-gpt-ad-1440098079640-7').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.pubads().collapseEmptyDivs();
-    googletag.pubads().setTargeting('Redirect', ['false']);
-    googletag.enableServices();
-  });
 </script>
 <?php
     // Options from admin panel
@@ -79,6 +49,18 @@
 
     <!-- Custom style -->
     <?php echo get_template_part('custom-style'); ?>
+
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-1088092-11', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
 
     <!-- Theme output -->
     <?php wp_head(); ?> 
@@ -121,9 +103,6 @@
             <div class="clear"></div>           
         </div>
     </div><div class="clear"></div>
-        <div class="top-leaderboard">
-            <?php echo get_template_part('custom/advertisement/unit/leaderboard'); ?>
-        </div>
         <div class="main-header">
             <div class="sticky-on">
             <?php if ($logo_align_select == 'Center') { ?>
@@ -187,9 +166,6 @@
     <!-- The next big Thing Section -->
     <div id="featured-boxes">
         <div class="wrap-center">
-            <div class="img-300">
-                <?php echo get_template_part('custom/advertisement/unit/mpu2'); ?>
-            </div><!-- end .img-300 -->
             <?php //echo get_template_part('custom/region/left-big-thing'); ?>
 
             <div class="big-thing-box">
