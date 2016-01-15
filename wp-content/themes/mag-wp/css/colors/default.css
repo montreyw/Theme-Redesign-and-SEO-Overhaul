@@ -490,6 +490,22 @@ header .sticky .jquerycssmenu-right {
 }
 
 
+
+/* Header Nav */
+.jquerycssmenu-right ul li ul {
+    background: #fff;
+}
+.jquerycssmenu-right ul li ul li {
+    background: #fff;
+}
+.jquerycssmenu-right ul li ul li a {
+    color: #000 !important;
+}
+.jquerycssmenu-right ul li ul li.current_page_item > a, .jquerycssmenu-right ul li ul li.current-menu-ancestor > a, .jquerycssmenu-right ul li ul li.current-menu-item > a, .jquerycssmenu-right ul li ul li.current-menu-parent > a {
+    background: #ededed !important;
+}
+
+
 /* Body  */
 div#featured-boxes {
     background: #fff;
@@ -611,6 +627,10 @@ div#click-menu {
 /* Single Post */
 .single-content h1.article-title {
     color: #555;
+}
+div#single-share {
+    /* display: none; */
+    background: #fff;
 }
 .single-content {
     background-color: #fff;
