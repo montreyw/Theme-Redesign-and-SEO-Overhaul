@@ -13,9 +13,12 @@ Earmilk redesign project
 6.  Various texts, sizing, and minor spacing issues (particularly with sidebar widgets and texts) have been resolved
 7.  Footer widgets re-arranged a bit, less posts in left column, and location of language-flag changed
 8.  Main Stage centered and spacing above increased
+9.  Header navigation dropdown [changed](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/2b238ca733386d81ee469e30a536f7d302fa3fd2) from black to white
+
 
 
 --------
+
 
 ## SEO Work
 
@@ -30,6 +33,7 @@ Earmilk redesign project
 4.  [Fixed/added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a019edc974797065dc7907d668cce4cd1db23161) hEntry tags to single-gear_review.php for hAtom compliance
 5.  [Fixed/added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/85dff92be297808caad3ca5669d8df8f64fba686) hEntry tags to single-news.php for hAtom compliance
 6.  [Fixed/added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/9ee1ce9fad6d9873e0a89fce5949e414215239e0) hEntry tags to single-opinion_post.php for hAtom compliance
+7.  [Upgraded](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/428245db1b09509477f1083e7074fb6fc27b3d55) hAtom markup to h-Atom micro formats draft 2.0
 
 
 *for a new, modern, properly coded theme, it'd be a bit cleaner to use the following PHP filter to remove hentry
@@ -43,14 +47,30 @@ function remove_hentry( $classes ) {
 ```
 ....
 
+
 --------
+
+
+##Misc Work
+1.  Backups made ([Google Drive](https://drive.google.com/open?id=0B_40KgH9jS_Nckt0SW5JTFo0Qnc), [MEGA](http://mega.nz))
+2.  [GitHub Project](https://github.com/iamandrebulatov/Earmilk) set up
+3.  Clone set up at [allmilknoduds.com](http://allmilknoduds.com)
+4.  Google Analytics [hardcoded](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e1d21cade3c382300f30241dfcefe850a32d2dbd) into header.php
+5.  Yoast Google Analytics plugin deactivated
+
+
+
+--------
+
 
 ##Earmilk Development Enviornment Clone Site
 -- [allmilknoduds.com](http://allmilknoduds.com)
 
+
 ##Earmilk "throwaway" email account
 login:  allmilknoduds@gmail.com  
 password:  [a truth we share]
+
 
 ##Earmilk Asset Storage
 -- [Earmilk project assets cloud folder](https://drive.google.com/open?id=0B_40KgH9jS_Nckt0SW5JTFo0Qnc)  
@@ -58,10 +78,13 @@ password:  [a truth we share]
 ----- Mega login:  allmilknoduds@gmail.com  
 ----- Mega password:  [a truth we share]
 
+
 ##Earmilk GitHub
 - https://github.com/iamandrebulatov/Earmilk
 
+
 ----------
+
 
 ##License
 
