@@ -18,7 +18,8 @@ class PostPlanner_Widget extends WP_Widget {
 	public $statuses;
 
 	function __construct() {
-		parent::WP_Widget( 'post-planner-widget', esc_attr__( 'Post Planner', 'post-planner' ), array( 'description' => esc_attr__( 'Displays Upcoming Posts', 'post-planner' ) ) );
+        $widget_ops = array( 'description' => esc_attr__( 'Displays Upcoming Posts', 'post-planner' ) );
+		parent::__construct( 'post-planner-widget', esc_attr__( 'Post Planner', 'post-planner' ), $widget_ops );
 		include_once 'post-planner-library.class.php';
 		include_once 'post-planner-loader.class.php';
 		$general_options  = ( get_option( 'PostPlanner_general' ) ? get_option( 'PostPlanner_general' ) : array() );
