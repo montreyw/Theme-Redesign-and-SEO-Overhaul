@@ -1,0 +1,136 @@
+.post-planner-hide, #post-planner-tabs {
+	display: none;
+}
+
+.post-planner-sortable li {
+	width: 60%;
+	min-width: 300px;
+	margin: 0 5px 5px 5px;
+	padding: 3px 5px;
+	height: 20px;
+}
+
+.post-planner-sortable input.button-secondary {
+	font-size: 0.8em !important;
+	float: right;
+	padding: 2px 5px;
+	margin-top: -2px;
+}
+
+.post-planner-sortable img {
+	vertical-align: bottom;
+}
+
+.post-planner-sortable li.inserted, #post-planner-sortable-grid li.inserted {
+	background: url( "images/ui-bg_highlight-soft_75_cccccc_1x100.png" ) repeat-x scroll 50% 50% #dadada;
+}
+
+.post-planner-sortable li.error, #post-planner-sortable-grid li.error {
+	background: url( "images/ui-bg_glass_95_fef1ec_1x400.png" ) repeat-x scroll 50% 50% #dadada;
+}
+
+#post-planner-sortable-grid {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#post-planner-sortable-grid li {
+	text-align: center;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 3px 3px 3px 0;
+	padding: 1px;
+}
+
+#post-planner-sortable-grid img.planner-insert-featured {
+	background: none;
+	vertical-align: middle;
+	border: 0;
+	margin: 0 0 2px 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+#post-planner-sortable-grid img {
+	background: #fff;
+	border: 1px solid #ccc;
+	margin: 2px 0 0 0;
+	padding: 2px;
+}
+
+.post-planner-display-comment {
+	background: #f9f9f9;
+	border-radius: 3px;
+	border: 1px solid #DFDFDF;
+	padding: 8px 10px;
+}
+
+.post-planner-comment-odd {
+	background: #f4f4f4;
+}
+
+.post-planner-comment-details {
+	margin: 5px 5px 10px 5px;
+}
+
+.post-planner-avatar {
+	background: #fff;
+	float: left;
+	border-radius: 3px;
+	border: 1px solid #DFDFDF;
+	padding: 2px;
+}
+
+.post-planner-has-avatar {
+	margin-left: 35px;
+}
+
+#post-planner-checklist input {
+	vertical-align: middle;
+}
+
+#post-planner-todolist input, #post-planner-todolist-completed input {
+	vertical-align: top;
+	margin-top: 5px;
+	float: left;
+}
+
+#post-planner-todolist li div, #post-planner-todolist-completed li div {
+	margin-left: 20px;
+}
+
+#post-planner-checklist li, #post-planner-todolist li, #post-planner-todolist-completed li {
+	line-height: 1.8em;
+}
+
+#post-planner-tabs, #post-planner-tabs .ui-state-active {
+	background: #f7f7f7;
+}
+
+#post-planner-tabs .ui-tabs-panel {
+	padding: 1em;
+}
+
+.post-planner-box {
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #DFDFDF;
+	padding: 15px;
+}
+
+p.post-planner-box {
+	width: auto;
+	float: left;
+	padding: 5px 10px;
+	margin: 5px 10px 5px 0;
+}
+
+.clear, .post-planner-comment-box {
+	clear: both;
+}
+
+.floatright {
+	float: right;
+}

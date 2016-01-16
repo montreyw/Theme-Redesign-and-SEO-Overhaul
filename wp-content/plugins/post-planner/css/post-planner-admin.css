@@ -1,0 +1,130 @@
+.post-planner #ui-datepicker-div, #edit-slug-box, .hide, select[name="m"], .view-switch {
+	display: none;
+}
+
+.post-planner-meta-side-control select {
+	width: 240px;
+}
+
+select.post-planner-status {
+	width: 190px;
+}
+
+input.post-planner-datepicker, select.post-planner-assignment, select.post-planner-type {
+	width: 174px;
+}
+
+.tablenav select#plannercategories {
+	width: 170px;
+}
+
+.post-planner-module-option {
+	width: 100px;
+}
+
+.post-planner-color-picker-div {
+	float: left;
+}
+
+.post-planner-colorpicker {
+	z-index: 100;
+	position: absolute;
+	display: none;
+	left: 490px;
+	margin-top: -80px;
+}
+
+.post-planner-color-sample {
+	display: inline-block;
+	border: 1px solid #DFDFDF;
+	border-radius: 3px;
+	width: 21px;
+	height: 21px;
+	vertical-align: bottom;
+	margin-bottom: 2px;
+}
+
+.post-planner-add {
+	margin-bottom: 15px;
+	padding-top: 5px;
+}
+
+.post-planner-remove-all {
+	float: right;
+	margin: 0 10px;
+}
+
+.inline-edit-status, .inline-edit-private, inline-edit-assignment {
+	visibility: hidden;
+}
+
+#post-planner-todolist input, #post-planner-todolist-completed input {
+	vertical-align: top;
+	margin-top: 3px;
+	float: left;
+}
+
+#post-planner-todolist li div, #post-planner-todolist-completed li div {
+	margin-left: 20px;
+}
+
+#post-planner-checklist li, #post-planner-todolist li, #post-planner-todolist-completed li {
+	line-height: 1.8em;
+}
+
+.post-planner-display-comment {
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #DFDFDF;
+	padding: 8px 10px;
+}
+
+.post-planner-display-comment.post-planner-comment-new {
+	background-color: #FFFFE0;
+	border-color: #E6DB55;
+}
+
+.post-planner-comment-odd {
+	background: #fbfbfb;
+}
+
+.post-planner-comment-details {
+	margin: 5px 5px 10px 5px;
+}
+
+#wp-postplannercommenttext-wrap {
+	padding-top: 41px;
+}
+
+#post-planner-add-comment {
+	clear: both;
+}
+
+.post-planner-avatar {
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #DFDFDF;
+	padding: 2px;
+	float: left;
+}
+
+.post-planner-has-avatar {
+	margin-left: 35px;
+}
+
+#post-planner-visit-post {
+	float: right;
+}
+
+#post-planner-delete-association {
+	color: #FF0000;
+	border-bottom-color: #FF0000;
+}
+
+.clear, .post-planner-comment-box {
+	clear: both;
+}
+
+.floatright {
+	float: right;
+}

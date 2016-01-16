@@ -1,0 +1,45 @@
+table.post-planner-tablesorter {
+	text-align: left;
+	width: 100%;
+	margin: 10px 0 15px;
+}
+
+table.post-planner-tablesorter thead tr .header {
+	background-image: url( 'images/bg.gif' );
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.post-planner-tablesorter thead tr th.no-sort {
+	background-image: url('');
+}
+
+table.post-planner-tablesorter thead tr .headerSortUp {
+	background-image: url( 'images/asc.gif' );
+}
+
+table.post-planner-tablesorter thead tr .headerSortDown {
+	background-image: url( 'images/desc.gif' );
+}
+
+table.post-planner-tablesorter thead tr .headerSortDown, table.post-planner-tablesorter thead tr .headerSortUp {
+	background-color: #e1e1e1;
+}
+
+table.post-planner-tablesorter tbody td, #post_planner .dashboard-widget-control-form label.multiselect {
+	vertical-align: top;
+}
+
+.post-planner-post-type {
+	display: none;
+}
+
+.post-planner-categories, .post-planner-categories-label {
+	float: left;
+}
+
+.post-planner-categories {
+	margin-top: 0;
+	margin-left: 5px;
+}

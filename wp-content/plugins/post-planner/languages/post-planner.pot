@@ -1,0 +1,982 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Post Planner\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-06 17:47-0500\n"
+"PO-Revision-Date: 2013-04-06 17:48-0500\n"
+"Last-Translator: C.M. Kendrick <cindy@cleverness.org>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;_e;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: post-planner.php:46 includes/post-planner-loader.class.php:64
+msgid ""
+"Post Planner requires WordPress 3.3 or newer. <a href=\"http://codex."
+"wordpress.org/Upgrading_WordPress\">Please update.</a>"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:30
+#: includes/post-planner-help.class.php:67
+#: includes/post-planner-library.class.php:1544
+#: includes/post-planner-loader.class.php:568
+#: includes/post-planner-settings.class.php:444
+#: includes/post-planner-widget.class.php:21
+msgid "Post Planner"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:47
+msgid "Topic"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:48
+#: includes/post-planner-dashboard-widget.class.php:160
+#: includes/post-planner-library.class.php:326
+#: includes/post-planner-widget.class.php:106
+#: includes/post-planner.class.php:51 includes/meta/publish.php:36
+msgid "Status"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:49
+#: includes/post-planner-library.class.php:55
+#: includes/post-planner-widget.class.php:114
+#: includes/post-planner.class.php:101
+msgid "Assigned To"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:50
+#: includes/post-planner-library.class.php:56
+#: includes/post-planner-settings.class.php:87
+#: includes/post-planner-widget.class.php:116
+#: includes/post-planner.class.php:68 includes/meta/publish.php:28
+msgid "Due Date"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:52
+msgid "Associated"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:83
+msgid "No existing post planners"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:111
+#: includes/post-planner-library.class.php:87
+#: includes/post-planner-library.class.php:241
+#: includes/post-planner-widget.class.php:109
+msgid "Unassigned"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:123
+#: includes/post-planner-loader.class.php:263
+msgid "View"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:125
+#: includes/post-planner-loader.class.php:265
+#: includes/meta/associated-post.php:44
+msgid "Create"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:150
+msgid "Number of Items to Show"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:152
+msgid "1"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:153
+msgid "5"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:154
+msgid "10"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:155
+msgid "15"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:156
+#: includes/post-planner-dashboard-widget.class.php:162
+#: includes/post-planner-dashboard-widget.class.php:170
+#: includes/post-planner-widget.class.php:172
+#: includes/post-planner-widget.class.php:178
+msgid "All"
+msgstr ""
+
+#: includes/post-planner-dashboard-widget.class.php:169
+#: includes/post-planner-widget.class.php:177
+msgid "Category"
+msgstr ""
+
+#: includes/post-planner-help.class.php:26
+msgid "Plugin Support"
+msgstr ""
+
+#: includes/post-planner-help.class.php:27
+msgid "Plugin Documentation"
+msgstr ""
+
+#: includes/post-planner-help.class.php:34
+msgid "Post Planner Help"
+msgstr ""
+
+#: includes/post-planner-help.class.php:40
+msgid "FAQs"
+msgstr ""
+
+#: includes/post-planner-help.class.php:46
+msgid "Customization"
+msgstr ""
+
+#: includes/post-planner-help.class.php:89
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: includes/post-planner-help.class.php:91
+msgid "How can I change who can read/add/edit/delete Planners? "
+msgstr ""
+
+#: includes/post-planner-help.class.php:97
+msgid "Why is the checklist not showing up?"
+msgstr ""
+
+#: includes/post-planner-help.class.php:98
+msgid ""
+"You need to set up the checklist items under Settings > Post Planner > "
+"Checklist Items."
+msgstr ""
+
+#: includes/post-planner-help.class.php:101
+msgid "How do I change the Status choices?"
+msgstr ""
+
+#: includes/post-planner-help.class.php:102
+msgid ""
+"You can change the Status choices under Settings > Post Planner > Statuses. "
+"The first choice is the default choice."
+msgstr ""
+
+#: includes/post-planner-help.class.php:105
+msgid "How I export the Planners or Settings?"
+msgstr ""
+
+#: includes/post-planner-help.class.php:106
+msgid ""
+"You can export the Settings from Settings > Post Planner > Import/Export.\n"
+"\t\tYou will need to use the default WordPress import/export feature under "
+"Tools to export the Post Planners."
+msgstr ""
+
+#: includes/post-planner-help.class.php:110
+msgid "What should I do if I find a bug?"
+msgstr ""
+
+#: includes/post-planner-help.class.php:111
+msgid "Visit the ticket support system website."
+msgstr ""
+
+#: includes/post-planner-help.class.php:124
+msgid "Customizing This Plugin"
+msgstr ""
+
+#: includes/post-planner-help.class.php:135
+msgid "Cleverness To-Do List Integration"
+msgstr ""
+
+#: includes/post-planner-help.class.php:149
+#: includes/post-planner-settings.class.php:142
+msgid "Download Plugin"
+msgstr ""
+
+#: includes/post-planner-library.class.php:35
+msgid "View Associated Content"
+msgstr ""
+
+#: includes/post-planner-library.class.php:57
+#: includes/post-planner-loader.class.php:535 includes/meta/planner.php:45
+msgid "Checklist"
+msgstr ""
+
+#: includes/post-planner-library.class.php:59
+#: includes/post-planner-loader.class.php:519
+#: includes/post-planner-settings.class.php:93 includes/meta/planner.php:47
+msgid "Comments"
+msgstr ""
+
+#: includes/post-planner-library.class.php:78
+msgid "No Status"
+msgstr ""
+
+#: includes/post-planner-library.class.php:97
+msgid "No Due Date"
+msgstr ""
+
+#: includes/post-planner-library.class.php:208
+msgid "View All"
+msgstr ""
+
+#: includes/post-planner-library.class.php:218
+msgid "View All Statuses"
+msgstr ""
+
+#: includes/post-planner-library.class.php:226
+msgid "View All Assignments"
+msgstr ""
+
+#: includes/post-planner-library.class.php:254
+msgid "View All Types"
+msgstr ""
+
+#: includes/post-planner-library.class.php:388 includes/meta/publish.php:47
+msgid "Assign To"
+msgstr ""
+
+#: includes/post-planner-library.class.php:390 includes/meta/publish.php:50
+msgid "None"
+msgstr ""
+
+#: includes/post-planner-library.class.php:542
+msgid "Planner URL"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1529
+msgid "Settings"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1551
+msgid "Add New Post Planner"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1564
+msgid "Version"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1565
+msgid "Support"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1566
+msgid "Documentation"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1613
+msgid "A topic has been assigned to you"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1614
+msgid "The following topic has been assigned to you:"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1624
+msgid "Pitch"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1626
+msgid "Assigned"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1628
+msgid "In Progress"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1630
+msgid "Pending Review"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1632
+msgid "Ready for Publication"
+msgstr ""
+
+#: includes/post-planner-library.class.php:1634
+msgid "On Hold"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:229
+#: includes/post-planner.class.php:36
+msgid "View Planner"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:230
+msgid "Unable to Create New Planner"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:231
+msgid "Planner Created"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:232
+msgid ""
+"Are you sure you want to create a new Planner? \n"
+" 'Cancel' to stop, 'OK' to continue."
+msgstr ""
+
+#: includes/post-planner-loader.class.php:233
+#: includes/post-planner-loader.class.php:266
+msgid "Unable to update checklist"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:234
+msgid "Unable to insert file"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:235
+msgid "File Inserted into Content"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:236
+msgid "Unable to insert file list"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:237
+msgid "File List Inserted into Content"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:238
+msgid "Unable to insert image"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:239
+msgid "Image Inserted into Content"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:240
+msgid "Unable to insert images"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:241
+msgid "Images Inserted into Content"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:242
+msgid "Unable to set Featured Image"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:243
+msgid ""
+"Featured Image Set. It will be displayed on this page once you Save this "
+"page."
+msgstr ""
+
+#: includes/post-planner-loader.class.php:244
+#: includes/post-planner-loader.class.php:468
+#: includes/post-planner-settings.class.php:89 includes/meta/planner.php:44
+msgid "References"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:245
+msgid "Reference Inserted into Content"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:246
+msgid "Reference List Inserted into Content"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:247
+msgid "Show Details"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:248
+msgid "Hide Details"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:264
+msgid "Error"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:267
+#: includes/post-planner.class.php:415 includes/meta/comments.php:39
+msgid "edit"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:268
+#: includes/post-planner.class.php:411 includes/meta/comments.php:35
+msgid "posted by"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:269
+msgid "Unable to add comment"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:270
+msgid "Association Successful"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:271
+msgid "Association Unsuccessful"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:272
+msgid "Associated with Another Planner"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:273
+msgid "Planner Already Associated with an Entry"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:274
+msgid "Association Removed"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:275
+msgid "Unable to Remove Association"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:276
+msgid "Associated Content Created"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:277
+msgid "Unable to Create Associated Content"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:278
+msgid ""
+"Are you sure you want to create a new entry based on this Planner? \n"
+" 'Cancel' to stop, 'OK' to continue."
+msgstr ""
+
+#: includes/post-planner-loader.class.php:279
+msgid ""
+"Are you sure you want to associate this Planner? \n"
+" 'Cancel' to stop, 'OK' to continue."
+msgstr ""
+
+#: includes/post-planner-loader.class.php:280
+msgid ""
+"Are you sure you want to remove this association? \n"
+" 'Cancel' to stop, 'OK' to continue."
+msgstr ""
+
+#: includes/post-planner-loader.class.php:451
+msgid "Publish"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:485
+#: includes/post-planner-settings.class.php:90 includes/meta/planner.php:43
+msgid "Files"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:503
+#: includes/post-planner-settings.class.php:91 includes/meta/planner.php:42
+msgid "Images"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:551
+msgid "Associated Content"
+msgstr ""
+
+#: includes/post-planner-loader.class.php:584 includes/meta/planner.php:46
+msgid "To-Do List"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:53
+msgid "Choose which features you would like to be enabled."
+msgstr ""
+
+#: includes/post-planner-settings.class.php:59
+msgid "Customize your Planner"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:65
+msgid ""
+"Configure these settings to be able to email Planner assignments to assigned "
+"users."
+msgstr ""
+
+#: includes/post-planner-settings.class.php:70
+msgid ""
+"If you need less than six statuses, leave some of the fields blank. You can "
+"also assign a color to each status that will be used in the Dashboard Widget."
+msgstr ""
+
+#: includes/post-planner-settings.class.php:74
+msgid ""
+"These will be used for each Planner. If you need less than 10 items, leave "
+"some of the fields blank."
+msgstr ""
+
+#: includes/post-planner-settings.class.php:78
+#: includes/post-planner-settings.class.php:82
+msgid "Post Planner Settings"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:83
+msgid "Use for these Post Types"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:84
+msgid "Show Admin Bar Menu"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:86
+msgid "Configure Modules"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:88
+msgid "Assignments"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:92
+msgid "Post Checklist"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:119
+#: includes/post-planner-settings.class.php:136
+#: includes/post-planner-settings.class.php:152
+#: includes/post-planner-settings.class.php:207
+#: includes/post-planner-settings.class.php:221
+#: includes/post-planner-settings.class.php:231
+#: includes/post-planner-settings.class.php:241
+msgid "Yes"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:120
+#: includes/post-planner-settings.class.php:138
+#: includes/post-planner-settings.class.php:154
+#: includes/post-planner-settings.class.php:209
+#: includes/post-planner-settings.class.php:219
+#: includes/post-planner-settings.class.php:229
+#: includes/post-planner-settings.class.php:239
+msgid "No"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:127
+msgid "Disabled"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:128
+msgid "Enabled"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:163
+msgid "Advanced"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:166
+msgid "Post Planner Advanced Settings"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:167
+msgid "Date Format"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:169
+msgid "User Roles for Assignment Field"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:170
+msgid "Disable Default User Roles"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:173
+msgid "Email Settings"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:174
+msgid "Email Assignments to User"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:175
+msgid "Add Category to Subject"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:176
+msgid "Show Planner Creator in Email"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:177
+msgid "From Field"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:178
+msgid "From Email"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:179
+msgid "Subject Field"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:181
+msgid "Email Text"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:187
+msgid "Documentation on Date Formatting"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:200
+msgid "Documentation on User Roles"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:211
+msgid ""
+"If set to Yes, you must use a separate plugin to manage user role access for "
+"non-admin users.<br />By default, this plugin allows all users to have the "
+"same access.<br />\n"
+"        You can use a plugin such as <a href=\"http://wordpress.org/extend/"
+"plugins/members/\">Members</a> or <a href=\"http://wordpress.org/extend/"
+"plugins/user-role-editor/\">User Role Editor</a> to set up custom access."
+msgstr ""
+
+#: includes/post-planner-settings.class.php:271
+msgid "Statuses"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:274
+msgid "Setup Custom Planner Statuses"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:275
+msgid "Status #1"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:277
+msgid "Status #2"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:279
+msgid "Status #3"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:281
+msgid "Status #4"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:283
+msgid "Status #5"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:285
+msgid "Status #6"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:301
+msgid "Select Color"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:308
+msgid "Checklist Items"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:311
+msgid "Setup Checklist Items"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:312
+msgid "Checklist Item #1"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:313
+msgid "Checklist Item #2"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:314
+msgid "Checklist Item #3"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:315
+msgid "Checklist Item #4"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:316
+msgid "Checklist Item #5"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:317
+msgid "Checklist Item #6"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:318
+msgid "Checklist Item #7"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:319
+msgid "Checklist Item #8"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:320
+msgid "Checklist Item #9"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:321
+msgid "Checklist Item #10"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:332
+msgid "Import/Export"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:337
+msgid "Settings Imported"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:340
+msgid "Invalid Settings File"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:343
+msgid "No Settings File Selected"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:490
+msgid "Import/Export Settings"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:492
+msgid "Export Settings"
+msgstr ""
+
+#: includes/post-planner-settings.class.php:496
+msgid "Import Settings"
+msgstr ""
+
+#: includes/post-planner-widget.class.php:21
+msgid "Displays Upcoming Posts"
+msgstr ""
+
+#: includes/post-planner-widget.class.php:77
+msgid "None found"
+msgstr ""
+
+#: includes/post-planner-widget.class.php:149
+msgid "Upcoming Posts"
+msgstr ""
+
+#: includes/post-planner-widget.class.php:158
+msgid "Title"
+msgstr ""
+
+#: includes/post-planner-widget.class.php:164
+msgid "Number of Items to Display"
+msgstr ""
+
+#: includes/post-planner-widget.class.php:186
+msgid "Show Status"
+msgstr ""
+
+#: includes/post-planner-widget.class.php:191
+msgid "Show Assigned To"
+msgstr ""
+
+#: includes/post-planner-widget.class.php:196
+msgid "Show Due Date"
+msgstr ""
+
+#: includes/post-planner.class.php:25
+msgid "Create Planner"
+msgstr ""
+
+#: includes/post-planner.class.php:123
+msgid ""
+"Organize the references in the order you want them to appear by dragging and "
+"dropping the items.\n"
+"\t\t\tUse the Insert button to add a reference notation for that item. Use "
+"Insert List to add a list of all the references."
+msgstr ""
+
+#: includes/post-planner.class.php:136 includes/post-planner.class.php:190
+#: includes/post-planner.class.php:248
+msgid "Insert"
+msgstr ""
+
+#: includes/post-planner.class.php:144
+msgid "Insert References List"
+msgstr ""
+
+#: includes/post-planner.class.php:148
+msgid "No references found"
+msgstr ""
+
+#: includes/post-planner.class.php:174
+msgid ""
+"Organize the files in the order you want them to appear by dragging and "
+"dropping the items."
+msgstr ""
+
+#: includes/post-planner.class.php:198
+msgid "Insert File List"
+msgstr ""
+
+#: includes/post-planner.class.php:203
+msgid "No files found"
+msgstr ""
+
+#: includes/post-planner.class.php:229
+msgid ""
+"Organize the images in the order you want them to appear by dragging and "
+"dropping the items."
+msgstr ""
+
+#: includes/post-planner.class.php:230
+msgid "Use the Insert button to add only that specific image."
+msgstr ""
+
+#: includes/post-planner.class.php:231
+msgid "Use the Star icon to set the image as the Featured Image."
+msgstr ""
+
+#: includes/post-planner.class.php:232
+msgid "Use Insert All Images to add all of the images."
+msgstr ""
+
+#: includes/post-planner.class.php:260
+msgid "Insert All Images"
+msgstr ""
+
+#: includes/post-planner.class.php:265
+msgid "No images found"
+msgstr ""
+
+#: includes/post-planner.class.php:343 includes/meta/todolist.php:40
+msgid "There are no items to do."
+msgstr ""
+
+#: includes/post-planner.class.php:353 includes/meta/todolist.php:53
+msgid "Add New To-Do Item"
+msgstr ""
+
+#: includes/post-planner.class.php:375 includes/meta/todolist.php:76
+msgid "There are no completed items."
+msgstr ""
+
+#: includes/post-planner.class.php:412 includes/meta/comments.php:36
+msgid "ago"
+msgstr ""
+
+#: includes/meta/associated-post.php:43
+msgid "Create a New"
+msgstr ""
+
+#: includes/meta/associated-post.php:48
+msgid "Select an Existing"
+msgstr ""
+
+#: includes/meta/associated-post.php:49
+msgid "Associate"
+msgstr ""
+
+#: includes/meta/associated-post.php:66
+msgid "Select"
+msgstr ""
+
+#: includes/meta/associated-post.php:79 includes/meta/files.php:37
+#: includes/meta/images.php:42 includes/meta/references.php:42
+msgid "Remove"
+msgstr ""
+
+#: includes/meta/associated-post.php:81
+msgid "View Associated"
+msgstr ""
+
+#: includes/meta/associated-post.php:84
+msgid "Associated Post belongs to"
+msgstr ""
+
+#: includes/meta/comments.php:20
+msgid "Add New Comment"
+msgstr ""
+
+#: includes/meta/comments.php:49
+msgid "Add Comment"
+msgstr ""
+
+#: includes/meta/files.php:17
+msgid "Add New File"
+msgstr ""
+
+#: includes/meta/files.php:25
+msgid "File Title"
+msgstr ""
+
+#: includes/meta/files.php:28
+msgid "File URL"
+msgstr ""
+
+#: includes/meta/files.php:30
+msgid "Insert File"
+msgstr ""
+
+#: includes/meta/files.php:35
+msgid "Upload File"
+msgstr ""
+
+#: includes/meta/files.php:46 includes/meta/images.php:51
+#: includes/meta/references.php:49
+msgid "Remove All"
+msgstr ""
+
+#: includes/meta/images.php:17
+msgid "Add New Image"
+msgstr ""
+
+#: includes/meta/images.php:26
+msgid "Image Title"
+msgstr ""
+
+#: includes/meta/images.php:30
+msgid "Image Alt"
+msgstr ""
+
+#: includes/meta/images.php:33
+msgid "Image URL"
+msgstr ""
+
+#: includes/meta/images.php:35
+msgid "Insert Image"
+msgstr ""
+
+#: includes/meta/images.php:40
+msgid "Upload Image"
+msgstr ""
+
+#: includes/meta/planner.php:41
+msgid "Details"
+msgstr ""
+
+#: includes/meta/publish.php:76
+msgid "Post Type"
+msgstr ""
+
+#: includes/meta/publish.php:120
+msgid "Schedule"
+msgstr ""
+
+#: includes/meta/publish.php:125
+msgid "Save"
+msgstr ""
+
+#: includes/meta/publish.php:131
+msgid "Submit for Review"
+msgstr ""
+
+#: includes/meta/publish.php:138 includes/meta/publish.php:140
+msgid "Update"
+msgstr ""
+
+#: includes/meta/references.php:15
+msgid "Add New Reference"
+msgstr ""
+
+#: includes/meta/references.php:24
+msgid "Link Title"
+msgstr ""
+
+#: includes/meta/references.php:27
+msgid "URL"
+msgstr ""
+
+#: includes/meta/references.php:30
+msgid "Target"
+msgstr ""
+
+#: includes/meta/references.php:40
+msgid "Use"
+msgstr ""
