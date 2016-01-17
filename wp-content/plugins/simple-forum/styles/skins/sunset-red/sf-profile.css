@@ -1,0 +1,26 @@
+<style type="text/css">
+
+/* =============================================================
+Simple:Press Forum
+Profile CSS (Profile Display)
+$LastChangedDate: 2009-07-04 22:42:58 +0100 (Sat, 04 Jul 2009) $
+$Rev: 2159 $
+============================================================= */
+
+#sforum .sfprofileblock { padding: 8px; margin: 0 0 8px 0; border: 1px solid #CCCCCC !important; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+#sfprofileheadtable { width: 100%; border-collapse: separate; border-spacing: 5px 0px !important; }
+#sfprofileheadtable td { font-family: Tahoma, Verdana, Arial, san-serif; height: auto; padding: 6px; vertical-align: middle; background: #78A1FF; border: 3px solid #78A1FF; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+#sfprofileheadtable td h3 { margin: 0; padding: 0; font-size: 120%; color: #000000; line-height: 1.1em; }
+#sfprofileheadtable td p { margin: 0; padding: 0; font-weight: bold; font-size: 90%; }
+#sfprofileheadtable td img { padding: 0; margin: 0; }
+#sforum #sfprofilephotos { padding: 0 0 0 0; margin: 0 0 0 0; }
+#sforum #sfprofilephotos img { margin: 0 5px; }
+.sfprofilemaintable { margin: 0 0 5px 0 !important; padding: 0px !important; background-color: #FFFFFF !important; border-collapse: separate; border-spacing: 4px !important; width: 100% !important; text-align: left !important; font-weight: normal !important; font-size: 90% !important; }
+.sfprofilemaintable td { font-size: 95% !important; line-height: 1.2em  !important; padding: 5px 10px  !important; margin: 2px 4px  !important; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.sfprofilemaintable td.sfstandardlabel { background: #BBBBBB !important; width: 20% !important; }
+.sfprofilemaintable td.sfidlabel { background: #FFFFFF !important; border: 1px solid #BBBBBB; width: 10% !important; }
+.sfprofilemaintable td.sfcustomlabel { background: #BBBBBB !important; width: 20% !important; }
+.sfprofilemaintable td.sfsystemlabel { background: #BBBBBB !important; width: 25% !important; }
+.sfprofilemaintable td.sfdata { background: #A7C1FF !important; font-weight: bold !important; }
+
+</style>
