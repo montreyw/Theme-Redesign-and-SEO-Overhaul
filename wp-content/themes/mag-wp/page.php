@@ -6,16 +6,16 @@ Template Name: Template - Default with Sidebar
 <?php get_header(); // add header ?>  
 
 <!-- Begin Content -->
-<div class="wrap-fullwidth">
+<div class="wrap-fullwidth hfeed h-feed">
 
-    <div class="single-content">
+    <div class="single-content hentry h-entry">
         <article>
             <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
             <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">             
 
                         <div class="entry">
-                          <h1 class="page-title"><?php the_title(); ?></h1>
-                          <div class="p-first-letter">
+                          <h1 class="page-title entry-title"><?php the_title(); ?></h1>
+                          <div class="p-first-letter entry-content">
                               <?php the_content(''); // content ?>
                           </div><!-- end .p-first-letter -->
                           <?php wp_link_pages(); // content pagination ?>

@@ -11,7 +11,7 @@ Template Name: VOICES - Archive
 
 
 <!-- Begin Wrap Content -->
-<div class="wrap-fullwidth">
+<div class="wrap-fullwidth hfeed h-feed">
 
   <!-- Begin Main Home Content 950px -->
   <div class="home-content">
