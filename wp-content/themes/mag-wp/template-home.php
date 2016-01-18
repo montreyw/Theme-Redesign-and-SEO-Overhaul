@@ -11,7 +11,7 @@ Template Name: Template - Home Grid
 
 
 <!-- Begin Wrap Content -->
-<div class="wrap-fullwidth">
+<div class="wrap-fullwidth hfeed h-feed">
 
   <!-- Begin Main Home Content 950px -->
   <div class="home-content">
@@ -34,7 +34,7 @@ Template Name: Template - Home Grid
             if (have_posts()) : while (have_posts()) : the_post();
         ?>
         
-        <li <?php post_class('') ?> id="post-<?php the_ID(); ?>">
+        <li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>">
 
           <?php if ( has_post_thumbnail()) { ?> 
             <div class="post-date">

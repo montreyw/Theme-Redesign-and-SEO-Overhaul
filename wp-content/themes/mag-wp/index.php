@@ -8,7 +8,7 @@
 
 
 <!-- Begin Wrap Content -->
-<div class="wrap-fullwidth">
+<div class="wrap-fullwidth hfeed h-feed">
 
   <!-- Begin Main Home Content 950px -->
   <div class="home-content">
@@ -25,14 +25,14 @@
 
 
         <?php if (is_category()) { ?> 
-            <div class="archive-header"><h3><?php _e( 'All posts in:', 'anthemes' ); ?> <strong><?php single_cat_title(''); ?></strong></h3><?php echo category_description(); ?></div>
+            <div class="archive-header"><h3><?php _e( 'All posts in:', 'anthemes' ); ?> <strong rel="tag"><?php single_cat_title(''); ?></strong></h3><?php echo category_description(); ?></div>
         <?php } elseif (is_tag()) { ?>
-            <div class="archive-header"><h3><?php _e( 'All posts tagged in:', 'anthemes' ); ?> <strong><?php single_tag_title(''); ?></strong></h3></div>
+            <div class="archive-header"><h3><?php _e( 'All posts tagged in:', 'anthemes' ); ?> <strong rel="tag"><?php single_tag_title(''); ?></strong></h3></div>
         <?php } elseif (is_search()) { ?>
-            <div class="archive-header"><h3><?php printf( __( 'Search Results for: %s', 'anthemes' ), '<strong>' . get_search_query() . '</strong>' ); ?></h3></div>
+            <div class="archive-header"><h3><?php printf( __( 'Search Results for: %s', 'anthemes' ), '<strong rel="tag">' . get_search_query() . '</strong>' ); ?></h3></div>
         <?php } elseif (is_author()) { ?>
             <?php if(get_the_author_meta('description') ): ?>
-            <div class="archive-header"><h3><?php _e( 'All posts by:', 'anthemes' ); ?> <strong><?php the_author(); ?></strong></h3></div>
+            <div class="archive-header"><h3><?php _e( 'All posts by:', 'anthemes' ); ?> <strong rel="tag"><?php the_author(); ?></strong></h3></div>
             <div class="author-meta">
                 <div class="entry">
                     <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" class="author-nrposts"><?php echo number_format_i18n( get_the_author_posts() ); ?></a>
@@ -50,7 +50,7 @@
                 <div class="clear"></div>
             </div><!-- end .author-meta -->
             <?php else: ?>
-                <div class="archive-header"><h3><?php _e( 'All posts by:', 'anthemes' ); ?> <strong><?php the_author(); ?></strong></h3></div>
+                <div class="archive-header"><h3><?php _e( 'All posts by:', 'anthemes' ); ?> <strong rel="tag"><?php the_author(); ?></strong></h3></div>
             <?php endif; ?>
         <?php } elseif (is_404()) { ?> 
             <div class="archive-header"><h3><?php _e('Error 404 - Not Found. <br />Sorry, but you are looking for something that isn\'t here.', 'anthemes'); ?></h3></div>
@@ -60,36 +60,42 @@
 <?php if ($home_select == 'Grid Style') { ?>
     <ul class="classic-blog">  
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <li <?php post_class('') ?> id="post-<?php the_ID(); ?>">
+        <li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>">
 
           <?php if ( has_post_thumbnail()) { ?> 
-            <div class="post-date">
+            <div class="post-date date updated">
               <span class="month"><?php the_time('M', '', '', true); ?></span> 
               <span class="day"><?php the_time('d', '', '', true); ?></span>
             </div><!-- end .post-date -->
                 
             <a href="<?php the_permalink(); ?>"> <?php echo the_post_thumbnail('thumbnail-blog'); ?></a> 
             <div class="article-category"><i></i> <?php $category = get_the_category(); if ($category) 
-              { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" ' . '>' . $category[0]->name.'</a> ';}  ?>
+              { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  ?>
             </div><div class="arrow-down-cat"></div><!-- end .article-category --> 
           <?php } else { ?>
-            <div class="post-date">
+            <div class="post-date date updated">
               <span class="month"><?php the_time('M', '', '', true); ?></span> 
               <span class="day"><?php the_time('d', '', '', true); ?></span>
             </div><!-- end .post-date -->          
             <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/article-img.png" alt="article image" /></a> 
             <div class="article-category"><i></i> <?php $category = get_the_category(); if ($category) 
-              { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" ' . '>' . $category[0]->name.'</a> ';}  ?>
+              { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  ?>
             </div><div class="arrow-down-cat"></div><!-- end .article-category -->                 
           <?php } // Post Thumbnail ?> <div class="clear"></div> 
 
           <div class="an-content">
-            <h2 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <h2 class="article-title entry-title">
+	            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+	        </h2>
 
             <?php if(function_exists('taqyeem_get_score')) { ?>
               <?php taqyeem_get_score(); ?>
             <?php } ?>                   
-            <span><?php _e('Written by', 'anthemes'); ?> <?php the_author_posts_link(); ?></span>
+            <span><?php _e('written by', 'anthemes'); ?> 
+            	<span class="vcard author p-author h-card">
+            		<span class="fn"><?php the_author_posts_link(); ?></span>
+            	</span>
+            </span>
           </div><!-- end .an-content -->
 
         </li>
@@ -99,17 +105,17 @@
 <?php } else { ?>
     <ul id="masonry_list" class="classic-blog js-masonry"  data-masonry-options='{ "columnWidth": 1 }'>  
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <li <?php post_class('') ?> id="post-<?php the_ID(); ?>">
+        <li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>">
 
           <?php if ( has_post_thumbnail()) { ?> 
-            <div class="post-date">
+            <div class="post-date date updated">
               <span class="month"><?php the_time('M', '', '', true); ?></span> 
               <span class="day"><?php the_time('d', '', '', true); ?></span>
             </div><!-- end .post-date -->
                 
             <a href="<?php the_permalink(); ?>"> <?php echo the_post_thumbnail('thumbnail-masonry'); ?></a> 
           <?php } else { ?>
-            <div class="post-date">
+            <div class="post-date date updated">
               <span class="month"><?php the_time('M', '', '', true); ?></span> 
               <span class="day"><?php the_time('d', '', '', true); ?></span>
             </div><!-- end .post-date -->          
@@ -117,13 +123,19 @@
           <?php } // Post Thumbnail ?> <div class="clear"></div> 
 
           <div class="an-content">
-            <h2 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <h2 class="article-title entry-title">
+	            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+	        </h2>
 
             <?php if(function_exists('taqyeem_get_score')) { ?>
               <?php taqyeem_get_score(); ?>
             <?php } ?>                    
-            <span><?php _e('by', 'anthemes'); ?> <?php the_author_posts_link(); ?></span>
-            <span><?php _e('in', 'anthemes'); ?> <?php $category = get_the_category(); if ($category) { echo '<a href="' . get_category_link( $category[0]->term_id ) . '">' . $category[0]->name.'</a> ';}  ?></span>
+            <span><?php _e('written by', 'anthemes'); ?> 
+            	<span class="vcard author p-author h-card">
+            		<span class="fn"><?php the_author_posts_link(); ?></span>
+            	</span>
+            </span>
+            <span><?php _e('in', 'anthemes'); ?> <?php $category = get_the_category(); if ($category) { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" rel="tag" >' . $category[0]->name.'</a> ';}  ?></span>
             <p><?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 105); ?></p>
           </div><!-- end .an-content -->
 
@@ -146,9 +158,6 @@
       <?php } ?>
       <!-- pagination -->
 
-      <div class="home-728" style="margin-left:-1.5em">
-          <?php echo get_template_part('custom/advertisement/unit/leaderboard2'); ?>
-      </div>
   </div><!-- end .home-content -->
 
 
