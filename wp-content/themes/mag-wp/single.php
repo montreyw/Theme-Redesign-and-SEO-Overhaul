@@ -87,7 +87,6 @@
 
                     <div class="entry">
                         <!-- entry content -->
-						<div class="pw-server-widget" data-id="wid-6n09bahf"></div>
                         <div class="p-first-letter">
                             <?php if (!empty($smof_data['ads_entry_top'])) { ?>
                             <?php } ?>
