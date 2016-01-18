@@ -6,7 +6,7 @@
 
 
 <!-- Begin Content -->
-<div class="wrap-fullwidth">
+<div class="wrap-fullwidth hfeed h-feed">
 
 
     <div class="single-content hentry h-entry">
