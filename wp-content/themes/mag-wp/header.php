@@ -1,3 +1,18 @@
+<?php
+	/*-----------------------------------------------------------------------------------*/
+	/* Start Header
+	/*-----------------------------------------------------------------------------------*/
+	/**
+	 *
+	 * The template for displaying the header
+	 *
+	 * Displays all of the <head> section and everything up till 
+	 *
+	 * @package WordPress
+	 * @subpackage Profile
+	 * @since Earmilk ...
+	 */
+?>
 <!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
 <head>
@@ -30,6 +45,9 @@
 ?>
 	<!-- Meta Tags -->
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(); ?>" hreflang="x-default">
+	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en">
+	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en-us">
 	
     <!-- Title -->
     <?php if ( ! function_exists( '_wp_render_title_tag' ) ) { function theme_slug_render_title() { ?>
@@ -168,7 +186,7 @@
         <div class="wrap-center">
             <?php //echo get_template_part('custom/region/left-big-thing'); ?>
 
-            <div class="big-thing-box">
+            <div class="big-thing-box hfeed h-feed">
                 <div class="line-box">
                     <div class="header_line">
                      <h4 class="top"><span class="gray"><?php _e('Main Stage', 'anthemes'); ?></span></h4>
@@ -179,9 +197,9 @@
                   <?php  query_posts( array( 'post_type' => 'post', 'category_name' => 'mainstage', 'posts_per_page' => $smof_data['current-posts'] ) );  ?> 
                   <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
 
-                  <li><?php if ( has_post_thumbnail()) { ?> 
+                  <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
 
-                            <div class="post-date">
+                            <div class="post-date date updated">
                                 <span class="month"><?php the_time('M', '', '', true); ?></span> 
                                 <span class="day"><?php the_time('d', '', '', true); ?></span>
                             </div><!-- end .post-date -->
@@ -189,16 +207,22 @@
                         <a href="<?php the_permalink(); ?>"> <?php echo the_post_thumbnail('thumbnail-widget'); ?> </a> 
 
                         <div class="article-category"><i></i> <?php $category = get_the_category(); if ($category) 
-                          { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" ' . '>' . $category[0]->name.'</a> ';}  ?>
+                          { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  ?>
                         </div><div class="arrow-down-cat"></div><!-- end .article-category -->  
                       <?php } ?> <div class="clear"></div>  
 
                       <div class="an-widget-title">
-                        <h3 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <h3 class="article-title entry-title">
+	                        <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+	                    </h3>
                           <?php if(function_exists('taqyeem_get_score')) { ?>
                             <?php taqyeem_get_score(); ?>
                           <?php } ?>                    
-                        <span><?php _e('Written by', 'anthemes'); ?> <?php the_author_posts_link(); ?></span>
+			            <span><?php _e('written by', 'anthemes'); ?> 
+			            	<span class="vcard author p-author h-card">
+			            		<span class="fn"><?php the_author_posts_link(); ?></span>
+			            	</span>
+			            </span>
                       </div>
                   </li>
 
