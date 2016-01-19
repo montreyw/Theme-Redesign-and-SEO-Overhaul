@@ -23,11 +23,7 @@ Earmilk redesign project
 ## SEO Work
 
 ### Fixing Incomplete, Missing, or Broken hAtom hEntries
-1.  [Commented](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f739b32c3a899139df1f09f8503bb7e3b889c595) out line 481 in wp-includes/post-template.php *
-```php
-	// hentry for hAtom compliance
-	$classes[] = 'hentry';
-```
+1.  [Commented](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f739b32c3a899139df1f09f8503bb7e3b889c595) out line 481 in wp-includes/post-template.php * **
 2.  [Fixed/added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ee7a6f878ce6059e7928fb035c7097e1c8af71af) hEntry tags to single.php for hAtom compliance 
 3.  [Fixed/added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a8d43e50ff6e36abbb060696bdd341c515830e96) hEntry tags to single-album_review.php for hAtom compliance
 4.  [Fixed/added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a019edc974797065dc7907d668cce4cd1db23161) hEntry tags to single-gear_review.php for hAtom compliance
@@ -39,7 +35,13 @@ Earmilk redesign project
 10.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/13444148516b57421122eebdcd23801f8a397721) hAtom to main index.php file, which affects most posts  
 
 
-*for a new, modern, properly coded theme, it'd be a bit cleaner to use the following PHP filter to remove hentry
+*
+```php
+	// hentry for hAtom compliance
+	$classes[] = 'hentry';
+```
+
+**for a new, modern, properly coded theme, it'd be a bit cleaner to use the following PHP filter to remove hentry
 ```php 
 function remove_hentry( $classes ) {
 
