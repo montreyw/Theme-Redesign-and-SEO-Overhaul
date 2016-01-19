@@ -35,7 +35,7 @@ Earmilk redesign project
 10.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/13444148516b57421122eebdcd23801f8a397721) hAtom to main index.php file, which affects most posts  
 
 
-*
+*this is the line that was commented out
 ```php
 	// hentry for hAtom compliance
 	$classes[] = 'hentry';
