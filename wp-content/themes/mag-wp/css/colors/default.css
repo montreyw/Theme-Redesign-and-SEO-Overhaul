@@ -428,6 +428,16 @@ form#searchform2 {
 #searchform2 .buttonicon {
     background-color: #777;
 }
+ul.dwls_search_results.search_results li {
+    background-color: #fff !important;
+    border: 1px solid #eaeaea;
+}
+ul.search_results li:hover {
+    background-color: #f2f2f2 !important;
+}
+ul.dwls_search_results .clearfix.search_footer {
+    background-color: #fff;
+}
 div#placeholder {
     color: #fff;
 }
@@ -526,6 +536,16 @@ div#featured-boxes {
 a.at-recommendedTitle {
     color: #fff !important;
 }
+/* Facebook comments */
+.pluginSkinDark a, .pluginSkinDark .uiHeader h3 {
+    color: #4c67a1;
+}
+span._5mdd {
+    color: #555;
+}
+.pluginSkinDark ._2vq9 a {
+    color: #777;
+}
 
 
 
@@ -553,6 +573,12 @@ a.at-recommendedTitle {
     line-height: 1.37;
     display: inherit;
 }
+.widget.widget_text {
+    height: 214px;
+}
+
+
+
 
 
 
@@ -674,7 +700,13 @@ h6.post-answer {
     color: #cd2026 !important;
 }
 
-
+/* Author Writer Page */
+.author-meta {
+    background-color: #fff;
+}
+.author-meta .entry p {
+    color: #777;
+}
 
 /* Google ad -- also disabled in index.html line 139 */
 .home-728 {
