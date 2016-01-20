@@ -48,6 +48,41 @@
 	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(); ?>" hreflang="x-default">
 	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en">
 	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en-us">
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://www.earmilk.com",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://www.earmilk.com/about/"
+        },
+        "name" : "DankStop",
+        "alternateName" : "EARMILK",
+        "description": "EARMILK is an online music publication that straddles the line between underground and mainstream. Covering Hip-Hop, Electronic, Indie and the in between. All Milk. No Duds.",
+        "brand" : "EARMILK",
+        "logo": "http://www.earmilk.com/wp-content/uploads/2015/05/2.0-Logo-Transparent-Cropped.png",
+        "sameAs": [
+            "https://facebook.com/earmilk",
+            "https://twitter.com/earmilk",
+            "https://plus.google.com/+earmilk",
+            "https://instagram.com/earmilkdotcom",
+            "https://www.youtube.com/c/earmilk"
+        ],
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "San Francisco",
+			"addressRegion": "CA",
+			"postalCode": "94115",
+			"streetAddress": "2443 Fillmore St #242"
+		},
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://www.earmilk.com/?s={search_query}",
+            "query-input": "required name=search_query"
+        }
+    }
+    </script>  
 	
     <!-- Title -->
     <?php if ( ! function_exists( '_wp_render_title_tag' ) ) { function theme_slug_render_title() { ?>
@@ -84,7 +119,16 @@
     <?php wp_head(); ?> 
 <!-- <script type="text/javascript" src="/js/jquery.tipTip.minified.js"></script> -->
 </head>
-<body <?php if ($boxed_version_select == 'Yes') { ?>id="boxed-style"<?php } ?> <?php body_class(); ?>>
+<body <?php if ($boxed_version_select == 'Yes') { ?>id="boxed-style"<?php } ?> <?php body_class(); ?>
+	itemscope itemtype="http://schema.org/<?php 
+	if (is_page(array(48, 'about', 'About'))) { 
+		echo 'AboutPage'; 
+	} elseif (is_page(array(52, 'contact', 'Contact'))) {
+		echo 'ContactPage'; 
+	} else {
+		echo 'WebPage';
+	} 
+	?>">
 <?php if (!empty($smof_data['background_img'])) { ?>    
     <img id="background" src="<?php echo esc_url($smof_data['background_img']); ?>" alt="background img" />
 <?php } // background image ?>
