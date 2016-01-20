@@ -134,7 +134,11 @@
 <?php } // background image ?>
 
 <!-- Begin Header -->
-<header> 
+<header role="banner" 
+	itemprop="hasPart" itemscope itemtype="http://schema.org/WPHeader"> 
+	<meta itemprop="name" content="EARMILK Site Header" />
+	<meta itemprop="headline" content="EARMILK.com -- All milk. No duds." />
+	<meta itemprop="description" content="This is the masthead / banner / header for EARMILK.com" />
     <div class="top-navigation">
         <div class="wrap-center">
             <!-- popular words -->
