@@ -1,11 +1,29 @@
 <?php
+	/*-----------------------------------------------------------------------------------*/
+	/* Start Footer
+	/*-----------------------------------------------------------------------------------*/
+	/**
+	 *
+	 * The template for displaying the footer
+	 *
+	 * Displays all of the <head> section and everything up till <div id="main">
+	 *
+	 * @package WordPress
+	 * @subpackage Earmilk Theme
+	 * @since Earmilk ...
+	 */
+?>
+<?php
     // Options from admin panel
     global $smof_data;
 
 ?> 
 
 <!-- Begin Footer -->
-<footer>
+<footer  role="contentinfo" 
+	itemprop="hasPart" itemscope itemtype="http://schema.org/WPFooter">
+	<meta itemprop="name" content="EARMILK Site Footer" />
+	<meta itemprop="description" content="This is the footer for EARMILK.com" />
   <div class="footer-section"> 
 	<div class="social-section">
 	    <!-- footer social icons. -->
@@ -29,7 +47,7 @@
         </div><div class="clear"></div> 
     </div>
 
-    <div class="copyright">
+    <div class="copyright" itemprop="creator copyrightHolder copyrightYear" itemscope itemtype="http://schema.org/Organization">
         <?php if (!empty($smof_data['copyright_footer'])) { ?>
             <?php echo stripslashes($smof_data['copyright_footer']); ?>
         <?php } ?>  
