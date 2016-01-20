@@ -45,6 +45,10 @@
 ?>
 	<!-- Meta Tags -->
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<!-- <title><?php wp_title(''); ?></title> -->
+	<!-- <meta name="description" content=""> -->
+	<!-- <link rel="publisher" href="https://plus.google.com/+earmilk/"> -->
+	<!-- <?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink() . '" />'; ?> -->
 	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(); ?>" hreflang="x-default">
 	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en">
 	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en-us">
@@ -138,7 +142,7 @@
 	itemprop="hasPart" itemscope itemtype="http://schema.org/WPHeader"> 
 	<meta itemprop="name" content="EARMILK Site Header" />
 	<meta itemprop="headline" content="EARMILK.com -- All milk. No duds." />
-	<meta itemprop="description" content="This is the masthead / banner / header for EARMILK.com" />
+	<meta itemprop="description" content="This is the masthead for EARMILK.com" />
     <div class="top-navigation">
         <div class="wrap-center">
             <!-- popular words -->
