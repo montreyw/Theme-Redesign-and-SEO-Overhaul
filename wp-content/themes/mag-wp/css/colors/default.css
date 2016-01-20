@@ -595,7 +595,7 @@ footer .widget {
 }
 footer .widget h3.title {
     color: #fff;
-    background-color: #777;
+    background-color: #999;
 }
 ul.footer-social li a {
     color: #fff !important;
@@ -621,6 +621,43 @@ footer .widget a {
 .popular-words a:hover {
     color: #a3032d !important;
 }
+#flags {
+    margin: 0 auto;
+}
+/*
+#flags ul {
+	padding: 10px;
+}
+#flags li {
+    margin-bottom: 10px !important;
+}
+#flags li + li {
+    margin-left: 33px;
+}
+a.notranslate.flag:after {
+    content: attr(title);
+    display: block;
+    color: #000;
+    position: absolute;
+    top: 10px;
+    font-size: 10px;
+    left: -9px;
+}
+*/
+
+
+
+/* Jobs Page */
+.post-248999 h3 {
+    color: #A3032D;
+}
+.post-249009 .entry h1.page-title {
+    color: #A3032D;
+}
+h3 {
+    color: #A3032D;
+}
+
 
 
 /* Archive Pages */
@@ -665,6 +702,9 @@ div#single-share {
     background-color: #a3032d;
     color: #fff !important;
 }
+.entry strong {
+    color: #555;
+}
 ul.ts-fab-list li a {
     background-color: #777 !important;
     border-color: #666;
@@ -700,13 +740,21 @@ h6.post-answer {
     color: #cd2026 !important;
 }
 
-/* Author Writer Page */
+
+
+
+
+/* Author Writer Page */
 .author-meta {
     background-color: #fff;
 }
 .author-meta .entry p {
     color: #777;
 }
+
+
+
+
 
 /* Google ad -- also disabled in index.html line 139 */
 .home-728 {
