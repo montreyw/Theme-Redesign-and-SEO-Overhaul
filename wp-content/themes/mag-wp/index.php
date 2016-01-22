@@ -128,9 +128,9 @@
 			</div>
 
 
-            <?php if(function_exists('taqyeem_get_score')) { ?>
-              <?php taqyeem_get_score(); ?>
-            <?php } ?>                   
+			<?php if(function_exists('taqyeem_get_score')) { ?>
+				<?php taqyeem_get_score(); ?>
+			<?php } ?>                   
 <!--
             <span><?php _e('written by', 'anthemes'); ?> 
             	<span class="vcard author p-author h-card">
