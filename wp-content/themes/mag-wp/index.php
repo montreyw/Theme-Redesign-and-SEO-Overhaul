@@ -63,15 +63,44 @@
         <li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>">
 
           <?php if ( has_post_thumbnail()) { ?> 
-            <div class="post-date date updated">
+            <!--
+<div class="post-date date updated">
               <span class="month"><?php the_time('M', '', '', true); ?></span> 
               <span class="day"><?php the_time('d', '', '', true); ?></span>
-            </div><!-- end .post-date -->
+            </div>
+--><!-- end .post-date -->
                 
-            <a href="<?php the_permalink(); ?>"> <?php echo the_post_thumbnail('thumbnail-blog'); ?></a> 
+			<div class="entry-thumb-cont">
+	            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
+		            <?php echo the_post_thumbnail('thumbnail-blog'); ?>
+	            </a> 
+				<div class="article-category">
+					<div class="post-date date updated">
+						<span class="month"><?php the_time('M', '', '', true); ?></span> 
+						<span class="day"><?php the_time('d', '', '', true); ?></span>
+					</div>
+					<span class="vcard author p-author h-card">
+						<span class="fn">
+							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+								<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
+								<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
+							</a>
+						</span>
+					</span>
+					<?php 
+						$category = get_the_category(); 
+						if ($category) { 
+			            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
+					?>
+				</div>
+			</div>
+		
+<!--
             <div class="article-category"><i></i> <?php $category = get_the_category(); if ($category) 
               { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  ?>
-            </div><div class="arrow-down-cat"></div><!-- end .article-category --> 
+            </div>
+-->
+            <!-- <div class="arrow-down-cat"></div> --><!-- end .article-category --> 
           <?php } else { ?>
             <div class="post-date date updated">
               <span class="month"><?php the_time('M', '', '', true); ?></span> 
@@ -87,15 +116,28 @@
             <h2 class="article-title entry-title">
 	            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 	        </h2>
+            <p class="article-summary entry-summary"><?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 105); ?></p>
+			<div class="entry-footer">
+				<p class="entry-comment-count">
+					Comments: (<?php comments_number( '0', '1', '%' ); ?>)
+				</p>
+				<p class="entry-read-more">
+					<a href="<?php the_permalink(); ?>" title="Read the whole article.">Read More...</a>
+				</p>
+				<div class="entry-empty-box">&nbsp;</div>
+			</div>
+
 
             <?php if(function_exists('taqyeem_get_score')) { ?>
               <?php taqyeem_get_score(); ?>
             <?php } ?>                   
+<!--
             <span><?php _e('written by', 'anthemes'); ?> 
             	<span class="vcard author p-author h-card">
             		<span class="fn"><?php the_author_posts_link(); ?></span>
             	</span>
             </span>
+-->
           </div><!-- end .an-content -->
 
         </li>

@@ -471,13 +471,13 @@ img.logo:hover {
 }
 .top-social li a:hover {
     text-shadow: 0px 0px 3px #999;
-    color: #a3032d !important;
+    color: #e34848 !important;
 }
 .jquerycssmenu-right ul li a {
     color: #000 !important;
 } 
 #myjquerymenu2 ul li.current-menu-item a {
-    color: #a3032d !important;
+    color: #e34848 !important;
 }
 .top-navigation {
     background-color: #fff !important;
@@ -500,7 +500,6 @@ header .sticky .jquerycssmenu-right {
 }
 
 
-
 /* Header Nav */
 .jquerycssmenu-right ul li ul {
     background: #fff;
@@ -514,6 +513,7 @@ header .sticky .jquerycssmenu-right {
 .jquerycssmenu-right ul li ul li.current_page_item > a, .jquerycssmenu-right ul li ul li.current-menu-ancestor > a, .jquerycssmenu-right ul li ul li.current-menu-item > a, .jquerycssmenu-right ul li ul li.current-menu-parent > a {
     background: #ededed !important;
 }
+
 
 
 /* Body  */
@@ -573,11 +573,145 @@ span._5mdd {
     line-height: 1.37;
     display: inherit;
 }
+/*
 .widget.widget_text {
     height: 214px;
 }
-
-
+*/
+/* Album review - Sidebar widget */
+.upw-posts .album_review {
+    width: 47%;
+    display: inline-block;
+    vertical-align: top;
+}
+.upw-posts .album_review:nth-child(odd) {
+    margin-right: 11px;
+}
+.upw-posts .album_review .entry-title a {
+    font-size: 12px;
+    line-height: 14px;
+    display: inline-flex;
+}
+.upw-posts .album_review .entry-meta {
+    font-size: 10px;
+}
+/* Post listing */
+ul.classic-blog li.post {
+    height: auto;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    /* width: 260px; */
+    margin: 0 0 50px 23px;
+	background: rgba(245, 245, 245, 0.42);
+}
+ul.classic-blog li.post .entry-thumb-cont {
+	position: relative;	
+}
+ul.classic-blog li.post .entry-thumbnail {
+	display: block;
+	position: relative;
+}
+ul.classic-blog li.post .entry-thumbnail img {
+	display: block;
+}
+ul.classic-blog li.post .article-category {
+	background: none !important;
+	padding: 0;
+	font-size: 0;
+	margin: 0 0 0 10px;
+	-webkit-transform: skewX(-10deg);
+	-o-transform: skewX(-7deg);
+	-ms-transform: skewX(-7deg);
+	transform: skewX(-10deg);
+	bottom: 0;
+	display: inline-flex;
+}
+ul.classic-blog li.post .article-category .post-date,
+ul.classic-blog li.post .article-category .author,
+ul.classic-blog li.post .article-category .tiptipBlog {
+	padding: 1px 11px;
+	font-size: 10px;
+	display: inline-block;
+	text-transform: none;
+}
+ul.classic-blog li.post .article-category .post-date {
+    color: #FFF;
+    float: none;
+    width: auto;
+    height: auto;
+    text-align: center;
+    position: relative;
+    z-index: 101;
+    margin: 0 !important;
+	background-color: #373737;
+	display: inline-block;
+}
+ul.classic-blog li.post .article-category .post-date span.month {
+    font-size: inherit;
+    text-transform: initial;
+    display: initial;
+    position: relative;
+    top: inherit;
+}
+ul.classic-blog li.post .article-category .post-date span.day {
+	font-size: inherit;
+	font-weight: inherit;
+	position: relative;
+	top: inherit;
+}
+ul.classic-blog li.post .article-category .author {
+	background-color: #4b4b4b;
+}
+ul.classic-blog li.post .article-category .entry-author-last {
+	display: none;
+}
+ul.classic-blog li.post .article-category .tiptipBlog {
+	background-color: #e34848;
+}
+ul.classic-blog li.post h2.article-title.entry-title {
+	min-height: 66px;
+	text-align: center;
+	display: table;
+	vertical-align: middle;
+	margin: 5px 0 0 0;
+}
+ul.classic-blog li.post h2.article-title.entry-title a {
+    line-height: 16px;
+	display: table-cell;
+	vertical-align: middle;
+}
+ul.classic-blog li.post .article-summary {
+	line-height: 15px;
+	min-height: 60px;
+	vertical-align: middle;
+	margin-bottom: 10px;
+}
+ul.classic-blog li.post .entry-footer {
+	background: #fff;
+	width: 108%;
+	margin-left: -4%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+ul.classic-blog li.post .entry-read-more,
+ul.classic-blog li.post .entry-comment-count,
+ul.classic-blog li.post .entry-empty-box {
+	background: #f2f2f2;
+	padding: 2px 7px;
+	display: inline-block;
+	margin: 2px 0 0;
+}
+ul.classic-blog li.post .entry-comment-count {
+	margin: 0;
+}
+ul.classic-blog li.post .entry-read-more a {
+	color: #94979c !important;
+}
+ul.classic-blog li.post .entry-empty-box {
+	width: 100%;
+	background: rgba(245, 245, 245, 0.75);
+}
 
 
 
@@ -608,9 +742,6 @@ ul.footer-social li a:hover {
 footer .widget a {
     color: #777 !important;
 }
-.copyright {
-    background-color: #fff !important;
-}
 .widget.widget_anthemes_subscribe {
     background: #fff;
     color: #777 !important;
@@ -619,22 +750,25 @@ footer .widget a {
     background: #fff;
 }
 .popular-words a:hover {
-    color: #a3032d !important;
+    color: #e34848 !important;
 }
-#flags {
+div#flags {
+    width: 250px;
     margin: 0 auto;
 }
-/*
-#flags ul {
+div#flags ul {
 	padding: 10px;
 }
-#flags li {
+div#flags li {
     margin-bottom: 10px !important;
 }
-#flags li + li {
+div#flags li + li {
     margin-left: 33px;
 }
-a.notranslate.flag:after {
+div#flags li a {
+	position: relative;
+}
+div#flags li a.notranslate.flag:after {
     content: attr(title);
     display: block;
     color: #000;
@@ -643,20 +777,28 @@ a.notranslate.flag:after {
     font-size: 10px;
     left: -9px;
 }
-*/
+.copyright {
+    background-color: #fff !important;
+}
+img#earmilky {
+    width: 43px;
+    vertical-align: middle;
+}
+
 
 
 
 /* Jobs Page */
 .post-248999 h3 {
-    color: #A3032D;
+    color: #e34848;
 }
 .post-249009 .entry h1.page-title {
-    color: #A3032D;
+    color: #e34848;
 }
 h3 {
-    color: #A3032D;
+    color: #e34848;
 }
+
 
 
 
@@ -667,6 +809,7 @@ h3 {
 .archive-header h3 {
     color: #555;
 }
+
 
 
 
@@ -687,7 +830,12 @@ div#click-menu {
 }
 
 
+
+
 /* Single Post */
+.author-left-meta {
+    margin-top: 22px;
+}
 .single-content h1.article-title {
     color: #555;
 }
@@ -699,7 +847,7 @@ div#single-share {
     background-color: #fff;
 }
 .p-first-letter p a {
-    background-color: #a3032d;
+    background-color: #e34848;
     color: #fff !important;
 }
 .entry strong {
@@ -752,6 +900,16 @@ h6.post-answer {
     color: #777;
 }
 
+
+
+
+/* Album reviews */
+.single-content .review .review_info h2 {
+    color: #e34848;
+}
+.single-content .review .review_info h3 {
+    color: #555;
+}
 
 
 
