@@ -109,13 +109,13 @@
                         <!-- tags -->
                         <?php $tags = get_the_tags(); 
                         if ($tags): ?>
-                            <div class="ct-size"><?php the_tags(__('<div class="entry-btn">Article Tags:</div>', 'anthemes'),' &middot; '); // tags ?></div><div class="clear"></div>
+                            <div class="ct-size"><?php the_tags(__('<div class="entry-btn">Tags:</div>', 'anthemes'),' &middot; '); // tags ?></div><div class="clear"></div>
                         <?php endif; ?>
 
                         <!-- categories -->
                         <?php $categories = get_the_category(); 
                         if ($categories): ?>
-                            <div class="ct-size"><?php _e( '<div class="entry-btn">Article Categories:</div>', 'anthemes' ); ?> <?php the_category(' &middot; '); // categories ?></div><div class="clear"></div>
+                            <div class="ct-size"><?php _e( '<div class="entry-btn">Categories:</div>', 'anthemes' ); ?> <?php the_category(' &middot; '); // categories ?></div><div class="clear"></div>
                         <?php endif; ?>
 
                         <div class="clear"></div>                        
