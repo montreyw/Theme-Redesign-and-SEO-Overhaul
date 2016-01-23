@@ -417,12 +417,21 @@ ul.footer-social li a:hover   { opacity: 0.7; color: #FFF !important;}
 
 /* Andre's edits -- black to white */
 
+/* Gray bars */
+#searchform2 #s, 
+.section-top-title h3, 
+.sidebar .widget h3.title, 
+footer .widget h3.title {
+/*     color: #fff; */
+    background-color: #555;
+    background: #555;
+}
+
 /* Header */
 form#searchform2 {
     background-color: #fff;
 }
 #searchform2 #s {
-    background-color: #999;
     color: #fff !important;
 }
 #searchform2 .buttonicon {
@@ -517,16 +526,6 @@ header .sticky .jquerycssmenu-right {
 
 
 
-
-/* Gray bars */
-
-.section-top-title h3, 
-.sidebar .widget h3.title, 
-footer .widget h3.title {
-/*     color: #fff; */
-    background-color: #555;
-    background: #555;
-}
 
 
 /* Body  */
