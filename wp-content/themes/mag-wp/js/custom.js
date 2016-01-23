@@ -95,7 +95,7 @@ jQuery( document ).ready( function( $ ) {
 		function y(){if(window.pageYOffset){return window.pageYOffset}
 		return Math.max(document.documentElement.scrollTop,document.body.scrollTop)}
 		function E(e){var t=m(e);return t>=w&&t<=b+w}
-		function S(){var e=document.createElement("audio");e.setAttribute("class",l);e.src=i;e.loop=false;e.addEventListener("canplay",function(){setTimeout(function(){x(k)},500);setTimeout(function(){N();p();for(var e=0;e<O.length;e++){T(O[e])}},14850)},true);e.addEventListener("ended",function(){N();h()},true);e.innerHTML=" <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";document.body.appendChild(e);e.play()}
+		function S(){var e=document.createElement("audio");e.setAttribute("class",l);e.src=i;e.loop=false;e.addEventListener("canplay",function(){setTimeout(function(){var k = document.getElementById('earmilk-logo');x(k);console.log(k);},500);setTimeout(function(){N();p();for(var e=0;e<O.length;e++){T(O[e])}},14850)},true);e.addEventListener("ended",function(){N();h()},true);e.innerHTML=" <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";document.body.appendChild(e);e.play()}
 		function x(e){e.className+=" "+s+" "+o}
 		function T(e){e.className+=" "+s+" "+u[Math.floor(Math.random()*u.length)]}
 		function N(){var e=document.getElementsByClassName(s);var t=new RegExp("\\b"+s+"\\b");for(var n=0;n<e.length;){e[n].className=e[n].className.replace(t,"")}}
