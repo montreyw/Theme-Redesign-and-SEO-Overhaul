@@ -536,65 +536,6 @@ div#featured-boxes {
 a.at-recommendedTitle {
     color: #fff !important;
 }
-/* Facebook comments */
-.pluginSkinDark a, .pluginSkinDark .uiHeader h3 {
-    color: #4c67a1;
-}
-span._5mdd {
-    color: #555;
-}
-.pluginSkinDark ._2vq9 a {
-    color: #777;
-}
-
-
-
-/* Sidebar ? */
-.section-top-title h3 {
-    background: #999;
-}
-.sidebar .widget h3.title {
-    background: #999;
-}
-.widget.widget_ultimate_posts {
-    background: #fff;
-}
-.widget.youtubechannelgallery.ytccf {
-    background: #fff;
-}
-.widget.widget_socialcountplus {
-    background: #fff;
-}
-.newsletter::-webkit-input-placeholder {
-    color: #555;
-}
-#ytc-wrapper a {
-    word-break: break-word;
-    line-height: 1.37;
-    display: inherit;
-}
-/*
-.widget.widget_text {
-    height: 214px;
-}
-*/
-/* Album review - Sidebar widget */
-.upw-posts .album_review {
-    width: 47%;
-    display: inline-block;
-    vertical-align: top;
-}
-.upw-posts .album_review:nth-child(odd) {
-    margin-right: 11px;
-}
-.upw-posts .album_review .entry-title a {
-    font-size: 12px;
-    line-height: 14px;
-    display: inline-flex;
-}
-.upw-posts .album_review .entry-meta {
-    font-size: 10px;
-}
 /* Post listing */
 ul.classic-blog li.post {
     height: auto;
@@ -671,7 +612,6 @@ ul.classic-blog li.post .article-category .tiptipBlog {
 }
 ul.classic-blog li.post h2.article-title.entry-title {
 	min-height: 66px;
-	text-align: center;
 	display: table;
 	vertical-align: middle;
 	margin: 5px 0 0 0;
@@ -712,6 +652,76 @@ ul.classic-blog li.post .entry-empty-box {
 	width: 100%;
 	background: rgba(245, 245, 245, 0.75);
 }
+
+
+
+
+
+/* Facebook comments */
+.pluginSkinDark a, .pluginSkinDark .uiHeader h3 {
+    color: #4c67a1;
+}
+span._5mdd {
+    color: #555;
+}
+.pluginSkinDark ._2vq9 a {
+    color: #777;
+}
+
+
+
+
+
+
+
+/* Sidebar ? */
+.section-top-title h3 {
+    background: #999;
+}
+.sidebar .widget h3.title {
+    background: #999;
+}
+.widget.widget_ultimate_posts {
+    background: #fff;
+}
+.widget.youtubechannelgallery.ytccf {
+    background: #fff;
+}
+.widget.widget_socialcountplus {
+    background: #fff;
+}
+.newsletter::-webkit-input-placeholder {
+    color: #555;
+}
+#ytc-wrapper a {
+    word-break: break-word;
+    line-height: 1.37;
+    display: inherit;
+}
+/*
+.widget.widget_text {
+    height: 214px;
+}
+*/
+/* Album review - Sidebar widget */
+.upw-posts .album_review {
+    width: 47%;
+    display: inline-block;
+    vertical-align: top;
+}
+.upw-posts .album_review:nth-child(odd) {
+    margin-right: 11px;
+}
+.upw-posts .album_review .entry-title a {
+    font-size: 12px;
+    line-height: 14px;
+    display: inline-flex;
+}
+.upw-posts .album_review .entry-meta {
+    font-size: 10px;
+}
+
+
 
 
 
