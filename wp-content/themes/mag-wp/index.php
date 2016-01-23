@@ -14,7 +14,7 @@
   <div class="home-content">
 
     <div class="section-top-title">
-      <h3><?php _e('Latest Articles', 'anthemes'); ?></h3>
+      <h3><?php _e('Freshest Content', 'anthemes'); ?></h3>
       <!-- Top social icons. -->
       <?php if (!empty($smof_data['top_icons'])) { ?>
         <?php echo stripslashes($smof_data['top_icons']); ?>
@@ -63,13 +63,6 @@
         <li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>">
 
           <?php if ( has_post_thumbnail()) { ?> 
-            <!--
-<div class="post-date date updated">
-              <span class="month"><?php the_time('M', '', '', true); ?></span> 
-              <span class="day"><?php the_time('d', '', '', true); ?></span>
-            </div>
---><!-- end .post-date -->
-                
 			<div class="entry-thumb-cont">
 	            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
 		            <?php echo the_post_thumbnail('thumbnail-blog'); ?>
@@ -95,12 +88,6 @@
 				</div>
 			</div>
 		
-<!--
-            <div class="article-category"><i></i> <?php $category = get_the_category(); if ($category) 
-              { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  ?>
-            </div>
--->
-            <!-- <div class="arrow-down-cat"></div> --><!-- end .article-category --> 
           <?php } else { ?>
             <div class="post-date date updated">
               <span class="month"><?php the_time('M', '', '', true); ?></span> 
@@ -116,7 +103,7 @@
             <h2 class="article-title entry-title">
 	            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 	        </h2>
-            <p class="article-summary entry-summary"><?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 105); ?></p>
+            <p class="article-summary entry-summary"><?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 137); ?></p>
 			<div class="entry-footer">
 				<p class="entry-comment-count">
 					Comments: (<?php comments_number( '0', '1', '%' ); ?>)
@@ -131,13 +118,6 @@
 			<?php if(function_exists('taqyeem_get_score')) { ?>
 				<?php taqyeem_get_score(); ?>
 			<?php } ?>                   
-<!--
-            <span><?php _e('written by', 'anthemes'); ?> 
-            	<span class="vcard author p-author h-card">
-            		<span class="fn"><?php the_author_posts_link(); ?></span>
-            	</span>
-            </span>
--->
           </div><!-- end .an-content -->
 
         </li>
