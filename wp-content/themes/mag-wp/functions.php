@@ -423,4 +423,17 @@ function my_theme_register_required_plugins() {
 
 }
 
+// ------------------------------------------------------------------------------ 
+// Disable Yoast schema meta -- Andre custom, to turn off Yoast meta/schema.org 
+// ------------------------------------------------------------------------------ 
+function amt_schemaorg_skip_front_page( $default ) {
+    if ( is_front_page() || is_home() ) {
+        return array();
+    }
+    return $default;
+}
+add_filter( 'disable_wpseo_json_ld_output', '__return_true' );
+add_filter( 'wpseo_json_ld_output', '__return_false' );
+
+
 ?>
