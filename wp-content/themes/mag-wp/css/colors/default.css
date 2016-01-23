@@ -426,7 +426,8 @@ form#searchform2 {
     color: #fff !important;
 }
 #searchform2 .buttonicon {
-    background-color: #777;
+	background-color: #444;
+	opacity: 1;
 }
 ul.dwls_search_results.search_results li {
     background-color: #fff !important;
@@ -516,7 +517,21 @@ header .sticky .jquerycssmenu-right {
 
 
 
+
+/* Gray bars */
+
+.section-top-title h3, 
+.sidebar .widget h3.title, 
+footer .widget h3.title {
+/*     color: #fff; */
+    background-color: #555;
+    background: #555;
+}
+
+
 /* Body  */
+.section-top-title h3 {
+}
 div#featured-boxes {
     background: #fff;
 }
@@ -625,7 +640,7 @@ ul.classic-blog li.post .article-summary {
 	line-height: 15px;
 	min-height: 60px;
 	vertical-align: middle;
-	margin-bottom: 10px;
+	margin-bottom: 17px;
 }
 ul.classic-blog li.post .entry-footer {
 	background: #fff;
@@ -675,11 +690,7 @@ span._5mdd {
 
 
 /* Sidebar ? */
-.section-top-title h3 {
-    background: #999;
-}
 .sidebar .widget h3.title {
-    background: #999;
 }
 .widget.widget_ultimate_posts {
     background: #fff;
@@ -739,7 +750,6 @@ footer .widget {
 }
 footer .widget h3.title {
     color: #fff;
-    background-color: #999;
 }
 ul.footer-social li a {
     color: #fff !important;
