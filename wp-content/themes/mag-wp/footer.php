@@ -47,10 +47,12 @@
         </div><div class="clear"></div> 
     </div>
 
-    <div class="copyright" itemprop="creator copyrightHolder copyrightYear" itemscope itemtype="http://schema.org/Organization">
+
+    <div class="copyright">
         <?php if (!empty($smof_data['copyright_footer'])) { ?>
             <?php echo stripslashes($smof_data['copyright_footer']); ?>
         <?php } ?>  
+		<img id="earmilky" src="/wp-content/uploads/Milky-V1-shadow-73px.png" title="Click me! Weee!" alt="Milky form Blur's Coffee and TV" >
     </div>
 
 	<p id="back-top" style="display: block;"><a href="#top"><span></span></a></p>
