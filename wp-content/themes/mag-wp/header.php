@@ -46,7 +46,7 @@
 	<!-- Meta Tags -->
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<!-- <title><?php wp_title(''); ?></title> -->
-	<!-- <meta name="description" content=""> -->
+	<!-- <me  ta name="description" content=""> -->
 	<!-- <link rel="publisher" href="https://plus.google.com/+earmilk/"> -->
 	<!-- <?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink() . '" />'; ?> -->
 	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(); ?>" hreflang="x-default">
@@ -56,16 +56,16 @@
     {
         "@context": "http://schema.org",
         "@type": "Organization",
-        "url": "http://www.earmilk.com",
+        "url": "http://earmilk.com",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http://www.earmilk.com/about/"
+            "@id": "http://earmilk.com/about/"
         },
         "name" : "DankStop",
         "alternateName" : "EARMILK",
         "description": "EARMILK is an online music publication that straddles the line between underground and mainstream. Covering Hip-Hop, Electronic, Indie and the in between. All Milk. No Duds.",
         "brand" : "EARMILK",
-        "logo": "http://www.earmilk.com/wp-content/uploads/2015/05/2.0-Logo-Transparent-Cropped.png",
+        "logo": "http://earmilk.com/wp-content/uploads/2015/05/2.0-Logo-Transparent-Cropped.png",
         "sameAs": [
             "https://facebook.com/earmilk",
             "https://twitter.com/earmilk",
@@ -82,7 +82,7 @@
 		},
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "http://www.earmilk.com/?s={search_query}",
+            "target": "http://earmilk.com/?s={search_query}",
             "query-input": "required name=search_query"
         }
     }
@@ -187,7 +187,7 @@
                 </nav><!-- end #myjquerymenu -->
 
                 <!-- logo middle -->
-                <a href="<?php echo esc_url(home_url( '/' )); ?>"><img <?php if ($logo_align_select == 'Left') { ?>style="float: left;"<?php } ?> class="logo" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" /></a>
+                <a class="" href="<?php echo esc_url(home_url( '/' )); ?>"><img id="earmilk-logo" <?php if ($logo_align_select == 'Left') { ?>style="float: left;"<?php } ?> class="logo" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" /></a>
 
             </div><!-- end .sticky-on -->
             <div class="clear"></div>
