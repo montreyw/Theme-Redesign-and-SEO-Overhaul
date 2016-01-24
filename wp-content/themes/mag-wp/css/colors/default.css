@@ -803,7 +803,22 @@ img#earmilky {
     width: 43px;
     vertical-align: middle;
 }
-
+/* Footer - left Trending latest post widget */
+.wpp-list li {
+	margin: 0 0 10px;
+}	
+.wpp-list li a.wpp-post-title {
+	line-height: 15px;
+	display: block;
+	font-size: 13px;
+	font-style: italic;
+	font-family: sans-serif;
+}
+.wpp-list li span.wpp-date {
+	float: right;
+	font-size: 10px;
+/* 	color: #E34848; */
+}
 
 
 
