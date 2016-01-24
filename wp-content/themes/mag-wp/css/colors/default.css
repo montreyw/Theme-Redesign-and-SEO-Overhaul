@@ -689,6 +689,9 @@ span._5mdd {
 
 
 /* Sidebar ? */
+.sidebar .widget {
+	background: #fff;
+}
 .sidebar .widget h3.title {
 }
 .widget.widget_ultimate_posts {
@@ -713,6 +716,11 @@ span._5mdd {
     height: 214px;
 }
 */
+.fb-page.fb_iframe_widget {
+	height: 214px;
+	min-height: 214px;
+	display: block;
+}
 /* Album review - Sidebar widget */
 .upw-posts .album_review {
     width: 47%;
@@ -730,7 +738,6 @@ span._5mdd {
 .upw-posts .album_review .entry-meta {
     font-size: 10px;
 }
-
 
 
 
