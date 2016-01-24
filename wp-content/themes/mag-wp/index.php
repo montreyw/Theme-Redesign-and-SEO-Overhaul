@@ -58,9 +58,9 @@
 
     
 <?php if ($home_select == 'Grid Style') { ?>
-    <ul class="classic-blog">  
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>">
+	<ul class="classic-blog">  
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>">
 
           <?php if ( has_post_thumbnail()) { ?> 
 			<div class="entry-thumb-cont">
@@ -89,15 +89,18 @@
 			</div>
 		
           <?php } else { ?>
+<!--
             <div class="post-date date updated">
               <span class="month"><?php the_time('M', '', '', true); ?></span> 
               <span class="day"><?php the_time('d', '', '', true); ?></span>
-            </div><!-- end .post-date -->          
+            </div>
             <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/article-img.png" alt="article image" /></a> 
             <div class="article-category"><i></i> <?php $category = get_the_category(); if ($category) 
               { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  ?>
-            </div><div class="arrow-down-cat"></div><!-- end .article-category -->                 
-          <?php } // Post Thumbnail ?> <div class="clear"></div> 
+            </div><div class="arrow-down-cat"></div>
+-->
+          <?php } // Post Thumbnail ?> 
+          <div class="clear"></div> 
 
           <div class="an-content">
             <h2 class="article-title entry-title">
