@@ -625,7 +625,7 @@ ul.classic-blog li.post .article-category .tiptipBlog {
 	background-color: #e34848;
 }
 ul.classic-blog li.post h2.article-title.entry-title {
-	min-height: 66px;
+	height: 66px;
 	display: table;
 	vertical-align: middle;
 	margin: 5px 0 0 0;
