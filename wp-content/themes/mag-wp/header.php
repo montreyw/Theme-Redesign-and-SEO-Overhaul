@@ -49,7 +49,7 @@
 	<!-- <me  ta name="description" content=""> -->
 	<!-- <link rel="publisher" href="https://plus.google.com/+earmilk/"> -->
 	<!-- <?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink() . '" />'; ?> -->
-	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(); ?>" hreflang="x-default">
+	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="x-default">
 	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en">
 	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en-us">
 	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en-gb">
