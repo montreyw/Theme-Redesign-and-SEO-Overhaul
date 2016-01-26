@@ -67,6 +67,8 @@ Earmilk redesign project
 3.  Implemented WWW to non-WWW ([nginx conf file](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4a8542f3e97eb5bbc1284fcaacf6fd9703c35d45) and [wp-config.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/53677c65e5cc31da7501774d5cdd86dcc0f1c38c))
 4.  Disabled [Yoast Schema](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/d301eb3407232d5b013cca4d4cb0a49a3216740d) and some metas
 5.  Fixed W3TC and nginx settings conflict ([issue #9](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/issues/9)) which resulted in vrious bugs ([1st attempt](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/052036f4d05161d8517bd753301017d95a527a0d), [removed faulty code](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/9dab1576dd21e8abb28171c09ad41d750f73aa22), [pre-re-installed W3TC nginx.conf](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/19563ceb9adb83931704c66386d7201cad678782), [new nginx.conf after re-install](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/726bec3e5e0ca09a04b82222f384d5ac1dcd4f57), [proper include to W3TC WP-root nginx.conf](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f00971312eb2af3849e50f8bb73412ca2faa5744))
+6.  Fixed Sitemap (several plugin issues were resolved to make it work)
+7.  Added robot.txt to `mooks.` and `file2.` subdomains to prevent caching unnecessary files (Montrey)
 
 
 
