@@ -19,7 +19,8 @@ Earmilk redesign project
 12.  Milky Harlem Shake Easter Egg! ([uploaded](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c4def416f5cbfe6b85892275aa9f64ab191108a7), [initialized](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/30dd4a130a6853e4cc22767904c770d0d4031ef5), [customized](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4299872c04786433a892952af7c290aa1776e767))
 13.  Made the color of the [various title bars](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f3eb88b5eca4e0e1528313411e9ba332c1017d06) and the [search field](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/bd9b43708e82a8ed9df30ad0b27c209678dc2bf5) a bit darker
 14.  Fixed up footer: [left Trending posts widget](Fixed up latest posts left Footer widget), Google Translator plugin, Music Vibes links and Music Magazine Subscription text
-15.  ...
+15.  Applied New ["Quantum Paper Input Style" to Search](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/bb457e91b08bfd7a71cec4422062272358cb615a)
+16.  ...
 
 
 
