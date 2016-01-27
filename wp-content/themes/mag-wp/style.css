@@ -204,6 +204,7 @@ a.btn-featured i                  { padding-left: 10px; font-size: 14px; }
 
 /* -- The next Big Thing -- 
 ######################## */
+/*
 #featured-boxes 				  { width: 100%; height: 300px; padding: 40px 0; }
 #featured-boxes .img-300 		  { width: 300px; height: 250px; float: left; margin: 0px 30px 0 0;}
 .big-thing-box  				  { width: 950px; height: auto; float: left; }
@@ -211,26 +212,22 @@ ul.big-thing                      { width: 976px; height: auto; float: left; mar
 ul.big-thing li                   { width: 219px; height: auto; margin-left: 25px; float: left;  }
 ul.big-thing li img               { width: 100%; height: auto;}
 ul.big-thing li h3                { font-size: 14px; line-height: 20px; margin-top: 5px;}
-/* categories */
 ul.big-thing .article-category i  { float: right;  border-style: solid; border-width: 11px 5px 11px 10px; margin: -1px -15px -3px 0px; height: 1px; width: 0px; }
 ul.big-thing .article-category    { position: absolute;  margin: -23px 0 0 0px; font-size: 12px; text-transform: uppercase;  padding: 1px 10px 0px 10px;}
 ul.big-thing .article-category:hover { opacity: 0.9;}
 ul.big-thing .article-category:hover i { opacity: 0.9;}
-/* review */
 ul.big-thing .review-box-nr       { font-size: 12px; float: left; margin-right: 10px;}
 ul.big-thing .an-widget-title span{ font-size: 11px; }
-/* date */
 .post-date                        { float: left; width:30px; height:30px; text-align:center; position: relative; z-index: 101; margin: 10px 0 -60px 10px !important; padding: 2px 1px; }	
 .post-date span.month             { font-size:9px; text-transform:uppercase; display:block; position:relative; top:-3px;}	
 .post-date span.day               { font-size:14px; font-weight:bold; position:relative; top:-11px; }
-/* arrow */
 ul.big-thing .arrow-down-cat      { margin: -3px 0 8px 10px; position: relative; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; }
-/* title line */
 .line-box                         { margin-top: 20px;  margin-bottom: 25px; }
 .header_line                      { height: 3px; text-align: center; text-transform: uppercase; }
 .header_line h4.top               { width: auto; height: 30px; font-size: 16px; margin-top: -10px;}
 .header_line h4.top span.white    { display: inline-block; padding: 0 20px;}    
 .header_line h4.top span.gray     { display: inline-block; padding: 0 20px; } 
+*/
  
 /* ##### Blog 3 cols / classic ##### 
 ################################## */

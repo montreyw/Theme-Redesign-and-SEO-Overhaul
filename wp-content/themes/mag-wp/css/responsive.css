@@ -54,8 +54,10 @@ header .sticky .sticky-on  { width: 1230px;}
 
 /* -- The next Big Thing -- 
 ######################## */
+/*
 .big-thing-box  				  { width: 900px;}
 ul.big-thing                      { width: 926px;}
+*/
 
 /* ##### Blog 3 cols / classic ##### 
 ################################## */
@@ -145,8 +147,10 @@ header .sticky .sticky-on  { width: 980px;}
 
 /* -- The next Big Thing -- 
 ######################## */
+/*
 .big-thing-box  				  { width: 650px;}
 ul.big-thing                      { width: 676px;}
+*/
 
 /* ##### Blog 3 cols / classic ##### 
 ################################## */
@@ -254,8 +258,10 @@ header .sticky #searchform2        { margin-top: 27px;}
 
 /* -- The next Big Thing -- 
 ######################## */
+/*
 .big-thing-box  				  { width: 420px;}
 ul.big-thing                      { width: 446px;}
+*/
 
 /* ##### Blog 3 cols / classic ##### 
 ################################## */
@@ -367,8 +373,10 @@ header .sticky #searchform2        { margin-top: 27px;}
 
 /* -- The next Big Thing -- 
 ######################## */
+/*
 .big-thing-box  				  { width: 240px;}
 ul.big-thing                      { width: 266px;}
+*/
 
 /* ##### Blog 3 cols / classic ##### 
 ################################## */
@@ -515,10 +523,12 @@ header .sticky #searchform2        { margin-top: 27px;}
 
 /* -- The next Big Thing -- 
 ######################## */
+/*
 #featured-boxes .img-300 		  { width: 300px; height: 250px; float: none; margin: 0px auto 0 auto;}
 .big-thing-box  				  { margin-top: 70px; width: 460px;}
 ul.big-thing                      { width: 485px; }
 h4.header_line div.top span.gray  { background-color: #f9f9f9 !important; }
+*/
 
 /* ##### Blog 3 cols / classic ##### 
 ################################## */
@@ -688,10 +698,12 @@ a.btn-featured                    { padding: 2px 17px 7px 17px; margin: 15px 0 0
 
 /* -- The next Big Thing -- 
 ######################## */
+/*
 #featured-boxes .img-300 		  { width: 300px; height: 250px; float: none; margin: 0px auto 0 auto;}
 .big-thing-box  				  { margin-top: 70px; width: 305px;}
 ul.big-thing                      { width: 330px; }
 h4.header_line div.top span.gray  { background-color: #f9f9f9 !important; }
+*/
 
 /* ##### Blog 3 cols / classic ##### 
 ################################## */
