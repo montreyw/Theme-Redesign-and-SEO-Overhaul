@@ -3,6 +3,18 @@ Earmilk redesign project
 
 ----------
 
+## To Do
+1.  Implement new header
+2.  Normalize posts on Videos, Album Reviews and others
+3.  Site wide persistent MP3 player
+4.  Ability to play a post's first video or first song right from the posts grid
+5.  AJAX site navigation engine
+6.  Remove all MP3 links from posts
+7.  Finish Schema.org markup
+8.  ...
+
+----------
+
 ## Theme Changes
 
 1.  All ads have been removed -- the list of ads and their respective code can be found [in this file](https://github.com/iamandrebulatov/Earmilk/blob/master/google_ad_code_removed.html)
