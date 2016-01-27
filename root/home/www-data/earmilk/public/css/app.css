@@ -1,0 +1,278 @@
+html body {
+  background: #0c0c0c;
+  color: #e6e6e6;
+}
+header .advertisement {
+  background-color: #171717;
+}
+#myjquerymenu2 ul li.current-menu-item a {
+  color: #fefefe !important;
+}
+#top-menu li {
+  float: left;
+  display: inline-block;
+  margin-right: 1.5em;
+}
+.main-header .jquerycssmenu-right {
+  font-weight: 1200;
+  font-size: 1.5em;
+}
+.main-header .logo-container {
+  width: 16em;
+  float: left;
+}
+.main-header .logo-container a {
+  float: left;
+  margin: 0;
+  display: block;
+}
+.main-header .logo-container a img.logo {
+  max-height: 3em;
+}
+.main-header .logo-container .slugline {
+  font-size: 1em;
+  display: block;
+}
+.main-header .follow-bar {
+  width: auto;
+  float: left;
+  margin: 0;
+  margin-left: 1em;
+  margin-top: 0.2em;
+}
+.main-header.sticky {
+  padding: 1em 0;
+}
+.main-header.sticky img.logo {
+  margin: 0;
+  margin-top: 0.5em;
+}
+.main-header.sticky .slugline {
+  float: right;
+}
+@media screen and (min-width: 768px) {
+  .main-header {
+    padding: 2em 0;
+  }
+  .main-header .slugline {
+    margin: 0.25em;
+  }
+}
+.top-navigation {
+  height: 5em;
+  line-height: 2em;
+}
+.top-navigation .popular-words {
+  margin-top: 0.5em;
+}
+.post .media-single-content img {
+  width: 100%;
+}
+.masonry_list .article-category {
+  margin: -3em 0 0 -1em;
+}
+.entry .inline-content img,
+.entry .inline-content iframe {
+  max-width: 100%;
+}
+.entry .inline-content .vvqbox.vvqyoutube {
+  display: inline-block;
+  max-width: 100%;
+}
+.entry .entry-content {
+  display: inline;
+}
+.entry .entry-content p {
+  font-size: 1.15em;
+  line-height: 1.75em;
+}
+@media screen and (min-width: 768px) {
+  .entry .inline-content img,
+  .entry .inline-content iframe {
+    max-width: 480px;
+  }
+  .entry .vvqbox.vvqyoutube {
+    display: inline-block;
+    max-width: 480px;
+  }
+}
+.single-content {
+  /**
+	 * Inline Review, used for album details a lot
+	 */
+}
+.single-content .review-box-nr {
+  font-size: 1.5em;
+}
+.single-content .review-left-cover {
+  float: left;
+  width: 30%;
+}
+.single-content .review-left-cover img {
+  width: 100%;
+}
+.single-content .article-title {
+  padding: 0.25em;
+}
+.single-content .review-box-header,
+.single-content .review-item,
+.single-content h5 {
+  text-transform: uppercase;
+}
+.single-content .review-right-meta {
+  float: left;
+  max-width: 100%;
+  padding: 1em;
+  padding-top: 0;
+}
+.single-content .review-right-meta ul,
+.single-content .review-right-meta ul li {
+  list-style: none;
+  line-height: 1em;
+}
+.single-content .review-right-meta ul label,
+.single-content .review-right-meta ul li label {
+  font-size: 0.65em;
+  font-weight: normal;
+  text-transform: uppercase;
+  display: block;
+}
+.single-content .review-right-meta ul li {
+  margin-bottom: 1em;
+}
+.single-content .review-right-meta .album-name {
+  font-size: 3em;
+  font-weight: 1200;
+}
+.single-content .review-right-meta .artist-name {
+  font-size: 2em;
+  font-weight: 800;
+}
+.single-content .review-right-meta .release-date,
+.single-content .review-right-meta .release-type {
+  font-size: 1em;
+  color: #ddd;
+}
+.single-content .review ul,
+.single-content .review li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.single-content .review .review_cover,
+.single-content .review .review_info {
+  float: left;
+}
+.single-content .review .review_cover {
+  margin-right: 1.5em;
+}
+.single-content .review .review_info h2,
+.single-content .review .review_info h3 {
+  margin: 0;
+  text-decoration: none;
+  color: #e6e6e6;
+}
+.single-content .review .review_info h3 {
+  font-size: 1.25em;
+  color: #d6d6d6;
+  borer-bottom: 1px solid #989898;
+  margin-bottom: 0em;
+  padding-bottom: 0.5em;
+}
+.single-content .review .review_notes,
+.single-content .review .review_links {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.single-content .review .review_notes li,
+.single-content .review .review_links li {
+  line-height: 1.5em;
+  list-style-type: circle;
+  margin-left: 1.5em;
+}
+.single-content .review .review_notes a,
+.single-content .review .review_links a {
+  color: #7f1313;
+  text-decoration: underline;
+}
+.single-content .entry-img-300 {
+  height: auto;
+  float: right;
+  width: 100%;
+}
+.single-content .at-above-post {
+  float: left;
+  width: 100%;
+}
+@media screen and (min-width: 641px) {
+  .single-content .at-above-post {
+    max-width: 50%;
+    width: auto;
+  }
+  .single-content .entry-img-300 {
+    width: auto;
+  }
+}
+@media screen and (min-width: 991px) {
+  .single-content .at-above-post {
+    max-width: 66%%;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .single-content .at-above-post {
+    max-width: 65%;
+  }
+}
+ul.classic-blog li h2 {
+  font-size: 1.25em;
+  line-height: 1.25em;
+  margin-top: 0.1em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+footer {
+  background-color: transparent;
+}
+footer.bottom {
+  background-color: #1e1f20;
+}
+.big-thing.owl-carousel .article-title {
+  color: #fefefe;
+}
+.big-thing.owl-carousel .article-title a {
+  color: #fefefe;
+}
+#featured-boxes {
+  padding: 4em 0;
+  padding-top: 0;
+  height: 250px;
+}
+#featured-boxes .img-300 {
+  margin-top: 3.5em;
+}
+.entry-content .review.review- {
+  display: block;
+  width: 100%;
+  height: 18em;
+  margin-top: 4em;
+}
+.entry-content .review.review- .review_cover img {
+  max-height: 300px;
+  width: auto;
+  margin-bottom: 1em;
+}
+.entry-content #sexy-author-bio {
+  border: 0;
+}
+.single-728 {
+  background: transparent;
+}
+.top-leaderboard {
+  float: right;
+}
+.widget-mpu {
+  padding: 0;
+}
+.line-bottom {
+  margin-top: 2em;
+}
