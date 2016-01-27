@@ -164,7 +164,11 @@
 
             <!-- search form get_search_form(); -->
             <form id="searchform2" method="get" action="<?php echo esc_url( home_url( '/' )); ?>">
-                <input placeholder="<?php _e('Live Search ...', 'anthemes'); ?>" type="text" name="s" id="s" /><input type="submit" value="Search" class="buttonicon" />
+	            <div class="inputLabel">Live Search ...</div>
+                <input type="text" name="s" id="s" /><input type="submit" value="Search" class="buttonicon" />
+                <!-- placeholder="<?php _e('Live Search ...', 'anthemes'); ?>" -->
+				<div class="inputUnderline"></div>
+				<div class="animatedUnderline"></div>
             </form>
 
             <!-- Top social icons. -->

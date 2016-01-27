@@ -2,6 +2,27 @@ jQuery( document ).ready( function( $ ) {
 "use strict";
 
     /////////////////////////////////
+    // New Input Style - Andre
+    /////////////////////////////////
+	function newInputSty() {
+		console.log('hello!')
+		$('#s').focus(function(){
+			$(this).parents('#searchform2').addClass('isFocused');
+		}).blur(function(){
+			$(this).parents('#searchform2').removeClass('isFocused');
+		});
+		$('#s').on('keyup', function(e){
+			if ($(this).val() != '') {
+				$(this).parents('#searchform2').addClass('hasValue');
+			} else {
+				$(this).parents('#searchform2').removeClass('hasValue');
+			}
+		});
+	}
+	newInputSty();
+
+
+    /////////////////////////////////
     // Slider Featured Articles
     /////////////////////////////////
     jQuery("#featured-slider, .big-thing").hide().css({'left' : "0px"}).fadeIn(1000); // fade effect for images, lovely.

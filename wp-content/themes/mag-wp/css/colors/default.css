@@ -427,17 +427,143 @@ footer .widget h3.title {
     background: #555;
 }
 
+
+
 /* Header */
 form#searchform2 {
     background-color: #fff;
+    position: relative;
 }
 #searchform2 #s {
-    color: #fff !important;
+    font-family: futura, Tahoma, Geneva, sans-serif;
+	width: auto;
+	color: rgba(0,0,0,0.55) !important;
+	background-color: transparent;
+	/* margin: 0 40px 0 0; */
+	padding: 0;
+	font-size: 19px;
+	font-weight: lighter;
+	line-height: 19px;
+	position: relative;
+	top: 10px;
+}
+#searchform2 #s:focus {
+	width: inherit;
 }
 #searchform2 .buttonicon {
-	background-color: #444;
-	opacity: 1;
+	opacity: 0.5;
+	background-color: #E34848;
 }
+#searchform2 .inputLabel {
+    color: rgba(0,0,0,0.38);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transition: all .3s cubic-bezier(0.4,0,0.2,1);
+    transition: all .3s cubic-bezier(0.4,0,0.2,1);
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+    color: rgba(0,0,0,0.38);
+    font-family: futura, Tahoma, Geneva, sans-serif;
+    font-size: 21px;
+    font-weight: 100;
+    pointer-events: none;
+    position: absolute;
+    top: 17px;
+}
+#searchform2 #s::-webkit-input-placeholder,
+#searchform2 #s:-moz-placeholder,
+#searchform2 #s::-moz-placeholder,
+#searchform2 #s:-ms-input-placeholder {  
+    display: none !important;
+}
+#searchform2 .inputUnderline,
+#searchform2 .animatedUnderline {
+    position: absolute;
+    width: 85%;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+#searchform2 .inputUnderline {
+    height: 1px;
+    background-color: rgba(0,0,0,0.37);
+}
+#searchform2 .animatedUnderline {
+    background-color: #E34848;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    height: 2px;
+    -webkit-animation: quantumWizPaperInputRemoveUnderline .3s cubic-bezier(0.4,0,0.2,1);
+    animation: quantumWizPaperInputRemoveUnderline .3s cubic-bezier(0.4,0,0.2,1);
+    transform-origin: 232px 50% 0px;
+}
+#searchform2.hasValue .inputLabel {
+    -webkit-transform: scale(0.57);
+    transform: scale(0.57);
+    top: 7px;
+    color: rgba(0,0,0,0.54);
+}
+#searchform2.isFocused .inputLabel {
+    -webkit-transform: scale(0.57);
+    transform: scale(0.57);
+	color: #E34848;
+	top: 4px;
+}
+#searchform2.isFocused .animatedUnderline {
+    -webkit-animation: quantumWizPaperInputAddUnderline .3s cubic-bezier(0.4,0,0.2,1);
+    animation: quantumWizPaperInputAddUnderline .3s cubic-bezier(0.4,0,0.2,1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+}
+@keyframes quantumWizPaperInputRemoveUnderline {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 0
+    }
+}
+@-webkit-keyframes quantumWizPaperInputRemoveUnderline {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 0
+    }
+}
+@keyframes quantumWizPaperInputAddUnderline {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0)
+    }
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}
+@-webkit-keyframes quantumWizPaperInputAddUnderline {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0)
+    }
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}
+
+
 ul.dwls_search_results.search_results li {
     background-color: #fff !important;
     border: 1px solid #eaeaea;
