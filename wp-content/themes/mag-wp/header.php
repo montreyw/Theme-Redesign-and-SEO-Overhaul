@@ -144,40 +144,6 @@
 	<meta itemprop="name" content="EARMILK Site Header" />
 	<meta itemprop="headline" content="EARMILK.com -- All milk. No duds." />
 	<meta itemprop="description" content="This is the masthead for EARMILK.com" />
-    <div class="top-navigation">
-        <div class="wrap-center">
-            <!-- popular words -->
-            <div class="popular-words">
-                <div id="top-menu">
-                    <?php wp_nav_menu( array( 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'theme_location' =>   'top-menu' ) ); ?>
-                </div>
-                <div id="tags2">
-                </div>
-                <?php /*if (!empty($smof_data['popular-tags-2'])) { ?>
-                <div id="tags1">
-                    <?php _e('<strong>Popular tags</strong>', 'anthemes'); ?>
-                    <?php wp_tag_cloud('number=' .$smof_data['popular-tags-2']. '&orderby=count&order=DESC'); ?>
-                </div>
-                <?php }*/ ?>
-                <?php /*if (!empty($smof_data['popular-tags-3'])) { ?><div id="tags2"><?php _e('<strong>Popular tags</strong>', 'anthemes'); ?> <?php wp_tag_cloud('number=' .$smof_data['popular-tags-3']. '&orderby=count&order=DESC'); ?></div><?php }  */ ?>
-            </div>
-
-            <!-- search form get_search_form(); -->
-            <form id="searchform2" method="get" action="<?php echo esc_url( home_url( '/' )); ?>">
-	            <div class="inputLabel">Live Search ...</div>
-                <input type="text" name="s" id="s" /><input type="submit" value="Search" class="buttonicon" />
-                <!-- placeholder="<?php _e('Live Search ...', 'anthemes'); ?>" -->
-				<div class="inputUnderline"></div>
-				<div class="animatedUnderline"></div>
-            </form>
-
-            <!-- Top social icons. -->
-            <?php if (!empty($smof_data['top_icons'])) { ?>
-                <?php echo stripslashes($smof_data['top_icons']); ?>
-            <?php } ?>
-            <div class="clear"></div>           
-        </div>
-    </div><div class="clear"></div>
         <div class="main-header">
             <div class="sticky-on">
             <?php if ($logo_align_select == 'Center') { ?>
@@ -193,6 +159,16 @@
 
                 <!-- logo middle -->
                 <a class="" href="<?php echo esc_url(home_url( '/' )); ?>"><img id="earmilk-logo" <?php if ($logo_align_select == 'Left') { ?>style="float: left;"<?php } ?> class="logo" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" /></a>
+
+            <!-- search form get_search_form(); -->
+            <form id="searchform" method="get" action="<?php echo esc_url( home_url( '/' )); ?>">
+	            <div class="inputLabel">Search for...</div>
+                <input type="text" name="s" id="s" />
+                <button type="submit" value="Search" class="buttonicon"><i class="fa fa-search"></i></button>
+                <!-- placeholder="<?php _e('Live Search ...', 'anthemes'); ?>" -->
+				<div class="inputUnderline"></div>
+				<div class="animatedUnderline"></div>
+            </form>
 
             </div><!-- end .sticky-on -->
             <div class="clear"></div>
@@ -255,33 +231,37 @@
                   <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
 
                   <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
-
-                            <div class="post-date date updated">
-                                <span class="month"><?php the_time('M', '', '', true); ?></span> 
-                                <span class="day"><?php the_time('d', '', '', true); ?></span>
-                            </div><!-- end .post-date -->
-                    
-                        <a href="<?php the_permalink(); ?>"> <?php echo the_post_thumbnail('thumbnail-widget'); ?> </a> 
-
-                        <div class="article-category"><i></i> <?php $category = get_the_category(); if ($category) 
-                          { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  ?>
-                        </div><div class="arrow-down-cat"></div><!-- end .article-category -->  
-                      <?php } ?> <div class="clear"></div>  
-
-                      <div class="an-widget-title">
-                        <h3 class="article-title entry-title">
-	                        <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-	                    </h3>
-                          <?php if(function_exists('taqyeem_get_score')) { ?>
-                            <?php taqyeem_get_score(); ?>
-                          <?php } ?>                    
-			            <span><?php _e('written by', 'anthemes'); ?> 
-			            	<span class="vcard author p-author h-card">
-			            		<span class="fn"><?php the_author_posts_link(); ?></span>
-			            	</span>
-			            </span>
-                      </div>
-                  </li>
+						<div class="entry-thumb-cont">
+				            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
+					            <?php echo the_post_thumbnail('thumbnail-widget'); ?>
+				            </a> 
+							<div class="article-category">
+								<div class="post-date date updated">
+									<span class="month"><?php the_time('M', '', '', true); ?></span> 
+									<span class="day"><?php the_time('d', '', '', true); ?></span>
+								</div>
+								<span class="vcard author p-author h-card">
+									<span class="fn">
+										<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+											<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
+											<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
+										</a>
+									</span>
+								</span>
+								<?php 
+									$category = get_the_category(); 
+									if ($category) { 
+						            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
+								?>
+							</div>
+						</div>
+						<div class="an-widget-title">
+							<h3 class="article-title entry-title">
+								<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+							</h3>
+						</div>
+						<?php } ?> <div class="clear"></div>  
+					</li>
 
                 <?php endwhile; endif; wp_reset_query();  ?> 
                 </ul><!-- end .big-thing -->
