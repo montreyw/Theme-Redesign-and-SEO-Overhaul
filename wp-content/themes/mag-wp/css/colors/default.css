@@ -770,6 +770,8 @@ ul.big-thing div.owl-item li .entry-thumb-cont {
 ul.big-thing div.owl-item li .entry-thumbnail {
 	display: block;
 	position: relative;
+	max-height: 368px;
+	overflow: hidden;
 }
 ul.big-thing div.owl-item li .entry-thumbnail img {
 	display: block;
