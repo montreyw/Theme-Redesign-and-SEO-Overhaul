@@ -11,7 +11,8 @@ Earmilk redesign project
 5.  AJAX site navigation engine
 6.  Remove all MP3 links from posts
 7.  Finish Schema.org markup
-8.  ...
+8.  Changes "archives" to "crates" for archive links of tags/categories
+9.  ...
 
 ----------
 
