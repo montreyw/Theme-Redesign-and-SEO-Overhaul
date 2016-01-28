@@ -15,6 +15,7 @@ Earmilk redesign project
 - [ ] New Theme / PHP Infrastructure
 - [ ] AJAX site navigation engine
 - [ ] Site wide persistent MP3 player
+- [ ] iOS App 
 - [ ] ...
 
 ----------
