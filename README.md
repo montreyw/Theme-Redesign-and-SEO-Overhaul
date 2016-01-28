@@ -16,6 +16,7 @@ Earmilk redesign project
 - [ ] AJAX site navigation engine
 - [ ] Site wide persistent MP3 player
 - [ ] iOS App 
+- [ ] Implement a solution for Hreflang tags for indexing in foreign languages
 - [ ] ...
 
 ----------
