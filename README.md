@@ -4,16 +4,17 @@ Earmilk redesign project
 ----------
 
 ## To Do
-- [x] 1.  Implement new header
-- [ ] 2.  Normalize posts on Videos, Album Reviews and others
-- [ ] 3.  Site wide persistent MP3 player
-- [ ] 4.  Ability to play a post's first video or first song right from the posts grid
-- [ ] 5.  AJAX site navigation engine
-- [ ] 6.  Remove all MP3 links from posts
-- [ ] 7.  Finish Schema.org markup
-- [ ] 8.  Changes "archives" to "crates" for archive links of tags/categories
-- [ ] 9.  Implement Colorful Genre Bar from old.V2
-- [ ] 10. ...
+- [x] Implement new header
+- [ ] Normalize posts on Videos, Album Reviews and others
+- [ ] Implement Colorful Genre Bar from old.V2
+- [ ] Remove all MP3 links from posts
+- [ ] Ability to play a post's first video or first song right from the posts grid
+- [ ] Finish Schema.org markup
+- [ ] Changes "archives" to "crates" for archive links of tags/categories
+- [ ] New Theme / PHP Infrastructure
+- [ ] Site wide persistent MP3 player
+- [ ] AJAX site navigation engine
+- [ ] ...
 
 ----------
 
