@@ -1778,6 +1778,12 @@ div#click-menu {
 		font-size: 17px;
 		padding: 5px 20px;
 	}
+	ul.big-thing div.owl-item li .entry-thumbnail {
+		max-height: 137px;
+	}
+	ul.big-thing div.owl-item li h3.article-title.entry-title {
+		font-size: 17px;
+	}
 	.owl-theme .owl-controls .owl-buttons .owl-prev, 
 	.owl-theme .owl-controls .owl-buttons .owl-next {
 		top: 21%;
