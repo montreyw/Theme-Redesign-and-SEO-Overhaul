@@ -5,6 +5,8 @@ Earmilk redesign project
 
 ## To Do
 - [x] Implement new header
+- [ ] Restructure new header further to remove unnecessary actions and make more compatible with all pages
+- [ ] Remove Main Stage from all pages but the Front
 - [ ] Normalize posts on Videos, Album Reviews and others
 - [ ] Implement Colorful Genre Bar from old.V2
 - [ ] Remove all MP3 links from posts
