@@ -233,7 +233,7 @@
                   <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
 						<div class="entry-thumb-cont">
 				            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
-					            <?php echo the_post_thumbnail('thumbnail-widget'); ?>
+					            <?php echo the_post_thumbnail('full'); ?>
 				            </a> 
 							<div class="article-category">
 								<div class="post-date date updated">
