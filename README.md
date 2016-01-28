@@ -12,8 +12,8 @@ Earmilk redesign project
 - [ ] Finish Schema.org markup
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
 - [ ] New Theme / PHP Infrastructure
-- [ ] Site wide persistent MP3 player
 - [ ] AJAX site navigation engine
+- [ ] Site wide persistent MP3 player
 - [ ] ...
 
 ----------
