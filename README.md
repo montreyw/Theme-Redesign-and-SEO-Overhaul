@@ -8,7 +8,8 @@ Earmilk redesign project
 - [ ] Normalize posts on Videos, Album Reviews and others
 - [ ] Implement Colorful Genre Bar from old.V2
 - [ ] Remove all MP3 links from posts
-- [ ] Ability to play a post's first video or first song right from the posts grid
+- [ ] Ability to play a post's first song right from the posts grid
+- [ ] Ability to play a post's first video right from the posts grid
 - [ ] Finish Schema.org markup
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
 - [ ] New Theme / PHP Infrastructure
