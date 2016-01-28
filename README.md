@@ -4,7 +4,7 @@ Earmilk redesign project
 ----------
 
 ## To Do
-- [ ] 1.  Implement new header
+- [x] 1.  Implement new header
 - [ ] 2.  Normalize posts on Videos, Album Reviews and others
 - [ ] 3.  Site wide persistent MP3 player
 - [ ] 4.  Ability to play a post's first video or first song right from the posts grid
