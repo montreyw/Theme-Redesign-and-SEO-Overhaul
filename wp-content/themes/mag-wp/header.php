@@ -173,6 +173,7 @@
             </div><!-- end .sticky-on -->
             <div class="clear"></div>
         </div><!-- end .main-header --><div class="clear"></div>
+        <div class="header-filler"></div><div class="clear"></div>
 </header><!-- end #header -->
 
 <?php if ( term_exists( 'featured', 'post_tag' ) ) { ?>
@@ -233,6 +234,7 @@
                   <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
 						<div class="entry-thumb-cont">
 				            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
+								<span class="vertical-height-helper"></span>
 					            <?php echo the_post_thumbnail('full'); ?>
 				            </a> 
 							<div class="article-category">

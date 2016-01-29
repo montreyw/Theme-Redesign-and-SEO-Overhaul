@@ -428,32 +428,55 @@ footer .widget h3.title {
     background: #555;
 }
 
-/* Header */
-header {
+body#boxed-style {
     background: #fff;
 }
+a {
+    color: #000 !important;
+}
+
+/* Header */
+body > header {
+}
 .main-header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 999999 !important;
+	border: 0;
+	height: 85px;
+	background: #fff;
+	padding: 0;
+	margin: 0 auto;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+header .main-header.sticky {
+    height: 85px;
+    background: #fff;
     padding: 0;
 }
-img.logo {
+header .main-header .sticky-on {
+    width: 1280px;
+    height: 85px;
+    margin: 0 auto;
+}
+header .main-header .sticky-on a img.logo {
     transition: all 370ms;
     -webkit-filter: invert(1);
     -ms-filter: invert(1);
     filter: invert(1);
 }
-/*
-img.logo:hover {
-    -webkit-filter: invert(1);
-    -ms-filter: invert(1);
-    filter: invert(1);
+header .main-header.sticky img.logo {
+    margin: 0;
+    height: inherit;
 }
-*/
-header .sticky .sticky-on {
+header .header-filler {
+	display: block;
+	width: 100%;
 	height: 85px;
-/*
-	width: 1280px;
-	margin: 0 auto;
-*/
 }
 form#searchform {
     background-color: #fff;
@@ -642,40 +665,12 @@ div#placeholder {
 ::-webkit-input-placeholder {
     color: #eaeaea;
 }
-body#boxed-style {
-    background: #fff;
-}
-.top-social li a {
-    transition: all 370ms;
-}
-.top-social li a:hover {
-    text-shadow: 0px 0px 3px #999;
-    color: #e34848 !important;
-}
 .jquerycssmenu-right ul li a {
     color: #000 !important;
 } 
 #myjquerymenu2 ul li.current-menu-item a {
     color: #e34848 !important;
 }
-a {
-    color: #000 !important;
-}
-/* Header sticky */
-header .top-navigation {
-    background-color: #fff !important;
-/* 	display: none; */
-}
-header .main-header.sticky {
-    height: 85px;
-    background: #fff;
-    padding: 0;
-}
-.main-header.sticky img.logo {
-    margin: 0;
-    height: inherit;
-}
-
 
 /* Header Nav */
 header .sticky .jquerycssmenu-right {
@@ -694,6 +689,9 @@ header .sticky .jquerycssmenu-right {
     background: #ededed !important;
 }
 
+
+
+
 /* Main Stage */
 .wrap-center {
 	padding: 10px 0 0;
@@ -702,8 +700,7 @@ div#featured-boxes {
     background: #fff;
 }
 .sticky div#featured-boxes {
-/*     margin: 132px 0 0; */
-    margin: 85px 0 0;
+/*     margin: 85px 0 0; */
 }
 .big-thing-box {
     margin: 0 auto;
@@ -716,7 +713,7 @@ div.big-thing-box {
 	margin: 0 auto;
 	float: none;
 	width: 70%;
-	height: 484px;
+	height: 528px;
 }
 .line-box                       { 
 	margin-top: 50px;  
@@ -1277,20 +1274,25 @@ img#earmilky {
     vertical-align: middle;
 }
 /* Footer - left Trending latest post widget */
-.wpp-list li {
+footer .wpp-list li {
 	margin: 0 0 10px;
+	position: relative;
 }	
-.wpp-list li a.wpp-post-title {
+footer .wpp-list li a.wpp-post-title {
 	line-height: 15px;
 	display: block;
 	font-size: 13px;
 	font-style: italic;
 	font-family: sans-serif;
 }
-.wpp-list li span.wpp-date {
-	float: right;
-	font-size: 10px;
-/* 	color: #E34848; */
+footer .wpp-list li span.wpp-date {
+	/* float: right; */
+	font-size: 0.73em;
+	/* color: #E34848; */
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-family: sans-serif;
 }
 
 
@@ -1327,6 +1329,7 @@ div#click-menu {
 	left: 0;
 	right: initial;
 	top: 0;
+	z-index: 999999;
 }
 @media only screen and (max-width: 1000px) and (min-width: 760px) {
 	header div.top-navigation {
@@ -1352,19 +1355,18 @@ div#click-menu {
 		margin: 0 auto 0 0;
 		padding: 0 0 0 48px;
 	}
+	header div.main-header .sticky-on {
+		height: 45px;
+		width: auto;
+	}
 	header div.main-header .sticky-on > a {
 		display: inline-block;
 		max-height: 45px;
 	}
-	header div.main-header img.logo {
+	header div.main-header .sticky-on > a img.logo {
 		float: none !important;
 		margin: 0;
 		max-height: 45px;
-/*
-		-webkit-transform: scale(0.5);
-		-o-transform: scale(0.5);
-		transform: scale(0.5);
-*/
 	}
 	header div.sticky.main-header {
 		position: fixed;
@@ -1373,9 +1375,6 @@ div#click-menu {
 		padding: 0 0 0 48px;
 		z-index: 13 !important;
 	}
-	header div.sticky.main-header .sticky-on {
-		height: 45px;
-	}
 	header div.main-header form#searchform {
 		vertical-align: top;
 		margin: 12px 0 0 auto;
@@ -1383,6 +1382,9 @@ div#click-menu {
 		width: 50%;
 		float: right;
 		position: relative;
+	}
+	header .header-filler {
+		height: 45px;
 	}
 	#searchform .inputLabel {
 		top: 4px;
@@ -1408,15 +1410,12 @@ div#click-menu {
 	#searchform .inputUnderline, #searchform .animatedUnderline {
 		width: 50%;
 	}
-
-	body.sticky div#featured-boxes {
-    	margin: 45px 0 0;
-	}
 	#featured-boxes .wrap-center {
 		width: 100%;
 	}
 	#featured-boxes div.big-thing-box {
 		width: 100%;
+		height: 527px;
 	}
 	#featured-boxes .header_line h4.top span.gray {
 		padding: 10px 23px;
@@ -1447,126 +1446,6 @@ div#click-menu {
 		padding: 4px 7px;
 	}
 }
-
-@media only screen and (max-width: 580px) and (min-width: 480px) {
-	header div.top-navigation {
-		display: none;
-	}
-	div#click-menu div.threeLines {
-		width: 33px !important;
-		margin: 5px auto 0 !important;
-	}
-	div#click-menu div.threeLines .line {
-		height: 3px !important;
-		width: 70% !important;
-		margin: 0 auto 2px !important;
-	}
-	div#click-menu div#click-menu-label {
-		font-size: 8px;
-		position: relative;
-		top: -8px;
-	}
-	header div.main-header {
-		width: 100%;
-		height: 45px;
-		margin: 0 auto 0 0;
-		padding: 0 0 0 48px;
-	}
-	header div.main-header .sticky-on > a {
-		display: inline-block;
-		max-height: 45px;
-	}
-	header div.main-header img.logo {
-		float: none !important;
-		margin: 0;
-		max-height: 45px;
-/*
-		-webkit-transform: scale(0.5);
-		-o-transform: scale(0.5);
-		transform: scale(0.5);
-*/
-	}
-	header div.sticky.main-header {
-		position: fixed;
-		width: 100%;
-		height: 45px;
-		padding: 0 0 0 48px;
-		z-index: 13 !important;
-	}
-	header div.sticky.main-header .sticky-on {
-		height: 45px;
-	}
-	header div.main-header form#searchform {
-		vertical-align: top;
-		margin: 12px 0 0 auto;
-		display: inline-block;
-		width: 50%;
-		float: right;
-		position: relative;
-	}
-	#searchform .inputLabel {
-		top: 4px;
-		font-size: 13px;
-		line-height: 15px;
-	}
-	#searchform.hasValue .inputLabel {
-		top: -2px;
-	}
-	#searchform.isFocused .inputLabel {
-		top: -5px;
-	}
-	#searchform #s {
-		font-size: 13px;
-		top: 2px;
-		width: 50%;
-	}
-	#searchform .buttonicon {
-		height: 20px;
-		width: 20px;
-		font-size: 8px;
-	}
-	#searchform .inputUnderline, #searchform .animatedUnderline {
-		width: 50%;
-	}
-	body.sticky div#featured-boxes {
-    	margin: 45px 0 0;
-	}
-	#featured-boxes .wrap-center {
-		width: 100%;
-	}
-	#featured-boxes div.big-thing-box {
-		width: 100%;
-	}
-	#featured-boxes .header_line h4.top span.gray {
-		padding: 10px 23px;
-		font-size: 17px;
-		padding: 5px 20px;
-	}
-	.owl-theme .owl-controls .owl-buttons .owl-prev, 
-	.owl-theme .owl-controls .owl-buttons .owl-next {
-		top: 21%;
-		font-size: 40px;
-	}
-	.owl-theme .owl-controls .owl-buttons .owl-prev {
-		left: -50px;
-	}
-	.owl-theme .owl-controls .owl-buttons .owl-next {
-		right: -50px;
-	}
-	#featured-boxes ul.big-thing.owl-carousel {
-		width: 77%;
-	}
-	#featured-boxes ul.big-thing div.owl-item li .article-category {
-		margin: 0 0 0 17px;
-	}
-	#featured-boxes ul.big-thing div.owl-item li .article-category .post-date, 
-	#featured-boxes ul.big-thing div.owl-item li .article-category .author, 
-	#featured-boxes ul.big-thing div.owl-item li .article-category .tiptipBlog {
-		font-size: 13px;
-		padding: 4px 7px;
-	}
-}
-
 @media only screen and (max-width: 760px) and (min-width: 580px) {
 	header div.top-navigation {
 		display: none;
@@ -1591,19 +1470,18 @@ div#click-menu {
 		margin: 0 auto 0 0;
 		padding: 0 0 0 48px;
 	}
+	header div.main-header .sticky-on {
+		height: 45px;
+		width: auto;
+	}
 	header div.main-header .sticky-on > a {
 		display: inline-block;
 		max-height: 45px;
 	}
-	header div.main-header img.logo {
+	header div.main-header .sticky-on > a img.logo {
 		float: none !important;
 		margin: 0;
 		max-height: 45px;
-/*
-		-webkit-transform: scale(0.5);
-		-o-transform: scale(0.5);
-		transform: scale(0.5);
-*/
 	}
 	header div.sticky.main-header {
 		position: fixed;
@@ -1612,9 +1490,6 @@ div#click-menu {
 		padding: 0 0 0 48px;
 		z-index: 13 !important;
 	}
-	header div.sticky.main-header .sticky-on {
-		height: 45px;
-	}
 	header div.main-header form#searchform {
 		vertical-align: top;
 		margin: 12px 0 0 auto;
@@ -1622,6 +1497,9 @@ div#click-menu {
 		width: 50%;
 		float: right;
 		position: relative;
+	}
+	header .header-filler {
+		height: 45px;
 	}
 	#searchform .inputLabel {
 		top: 4px;
@@ -1647,14 +1525,127 @@ div#click-menu {
 	#searchform .inputUnderline, #searchform .animatedUnderline {
 		width: 50%;
 	}
-	body.sticky div#featured-boxes {
-    	margin: 45px 0 0;
+	#featured-boxes .wrap-center {
+		width: 100%;
+	}
+	#featured-boxes div.big-thing-box {
+		width: 100%;
+		height: 473px;
+	}
+	#featured-boxes .header_line h4.top span.gray {
+		padding: 10px 23px;
+		font-size: 17px;
+		padding: 5px 20px;
+	}
+	.owl-theme .owl-controls .owl-buttons .owl-prev, 
+	.owl-theme .owl-controls .owl-buttons .owl-next {
+		top: 21%;
+		font-size: 40px;
+	}
+	.owl-theme .owl-controls .owl-buttons .owl-prev {
+		left: -50px;
+	}
+	.owl-theme .owl-controls .owl-buttons .owl-next {
+		right: -50px;
+	}
+	#featured-boxes ul.big-thing.owl-carousel {
+		width: 77%;
+	}
+	#featured-boxes ul.big-thing div.owl-item li .article-category {
+		margin: 0 0 0 17px;
+	}
+	#featured-boxes ul.big-thing div.owl-item li .article-category .post-date, 
+	#featured-boxes ul.big-thing div.owl-item li .article-category .author, 
+	#featured-boxes ul.big-thing div.owl-item li .article-category .tiptipBlog {
+		font-size: 13px;
+		padding: 4px 7px;
+	}
+}
+@media only screen and (max-width: 580px) and (min-width: 480px) {
+	header div.top-navigation {
+		display: none;
+	}
+	div#click-menu div.threeLines {
+		width: 33px !important;
+		margin: 5px auto 0 !important;
+	}
+	div#click-menu div.threeLines .line {
+		height: 3px !important;
+		width: 70% !important;
+		margin: 0 auto 2px !important;
+	}
+	div#click-menu div#click-menu-label {
+		font-size: 8px;
+		position: relative;
+		top: -8px;
+	}
+	header div.main-header {
+		width: 100%;
+		height: 45px;
+		margin: 0 auto 0 0;
+		padding: 0 0 0 48px;
+	}
+	header div.main-header .sticky-on {
+		height: 45px;
+		width: auto;
+	}
+	header div.main-header .sticky-on > a {
+		display: inline-block;
+		max-height: 45px;
+	}
+	header div.main-header .sticky-on > a img.logo {
+		float: none !important;
+		margin: 0;
+		max-height: 45px;
+	}
+	header div.sticky.main-header {
+		position: fixed;
+		width: 100%;
+		height: 45px;
+		padding: 0 0 0 48px;
+		z-index: 13 !important;
+	}
+	header div.main-header form#searchform {
+		vertical-align: top;
+		margin: 12px 0 0 auto;
+		display: inline-block;
+		width: 50%;
+		float: right;
+		position: relative;
+	}
+	header .header-filler {
+		height: 45px;
+	}
+	#searchform .inputLabel {
+		top: 4px;
+		font-size: 13px;
+		line-height: 15px;
+	}
+	#searchform.hasValue .inputLabel {
+		top: -2px;
+	}
+	#searchform.isFocused .inputLabel {
+		top: -5px;
+	}
+	#searchform #s {
+		font-size: 13px;
+		top: 2px;
+		width: 50%;
+	}
+	#searchform .buttonicon {
+		height: 20px;
+		width: 20px;
+		font-size: 8px;
+	}
+	#searchform .inputUnderline, #searchform .animatedUnderline {
+		width: 50%;
 	}
 	#featured-boxes .wrap-center {
 		width: 100%;
 	}
 	#featured-boxes div.big-thing-box {
 		width: 100%;
+		height: inherit;
 	}
 	#featured-boxes .header_line h4.top span.gray {
 		padding: 10px 23px;
@@ -1709,19 +1700,18 @@ div#click-menu {
 		margin: 0 auto 0 0;
 		padding: 0 0 0 48px;
 	}
+	header div.main-header .sticky-on {
+		height: 45px;
+		width: auto;
+	}
 	header div.main-header .sticky-on > a {
 		display: inline-block;
 		max-height: 45px;
 	}
-	header div.main-header img.logo {
+	header div.main-header .sticky-on > a img.logo {
 		float: none !important;
 		margin: 0;
 		max-height: 45px;
-/*
-		-webkit-transform: scale(0.5);
-		-o-transform: scale(0.5);
-		transform: scale(0.5);
-*/
 	}
 	header div.sticky.main-header {
 		position: fixed;
@@ -1730,9 +1720,6 @@ div#click-menu {
 		padding: 0 0 0 48px;
 		z-index: 13 !important;
 	}
-	header div.sticky.main-header .sticky-on {
-		height: 45px;
-	}
 	header div.main-header form#searchform {
 		vertical-align: top;
 		margin: 12px 0 0 auto;
@@ -1740,6 +1727,9 @@ div#click-menu {
 		width: 50%;
 		float: right;
 		position: relative;
+	}
+	header .header-filler {
+		height: 45px;
 	}
 	#searchform .inputLabel {
 		top: 4px;
@@ -1764,9 +1754,6 @@ div#click-menu {
 	}
 	#searchform .inputUnderline, #searchform .animatedUnderline {
 		width: 50%;
-	}
-	body.sticky div#featured-boxes {
-    	margin: 45px 0 0;
 	}
 	#featured-boxes .wrap-center {
 		width: 100%;
