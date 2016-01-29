@@ -215,9 +215,6 @@
 
 
 
-<?php if ( is_front_page() ) { ?>
-<?php }; ?>
-
 <?php if ( is_home() ) { ?>
     <?php if ( term_exists( 'current', 'post_tag' ) ) { ?>
     <!-- The next big Thing Section -->
