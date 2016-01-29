@@ -17,7 +17,7 @@ a:hover                    { color: #cd2026; /* - Red color */ }
 ::selection                { background:#000; color: #fff; text-shadow: none; }
 /* -- Header -- */
 html body                  { color: #7d7d7d; background-color: #000;}
-header, .sticky            { background-color: #0C0C0C; -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+/* header, .sticky            { background-color: #0C0C0C; -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1); box-shadow: 0 1px 3px rgba(0,0,0,0.1); } */
 .top-navigation            { background-color: #171717; }
 /* - Layout content - */
 .wrap-fullwidth            { background-image: url(../../images/bg_body.gif); }
