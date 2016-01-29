@@ -2008,8 +2008,11 @@ h6.post-answer {
 }
 
 
-
-
+/* Voices -- opinion post */
+ul#masonry_list li.opinion_post a.entry-thumbnail {
+	width: 266px;
+	height: 122px !important;
+}
 /* Album reviews */
 .single-content .review .review_info h2 {
     color: #e34848;
@@ -2038,7 +2041,7 @@ ul#masonry_list li a.entry-thumbnail {
 	position: relative;
 }
 ul#masonry_list li a.entry-thumbnail img {
-	height: 100% !important;
+	height: auto !important;
 	width: 100%;
 	position: absolute;
 	top: -100%;
