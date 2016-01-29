@@ -683,6 +683,18 @@ div#placeholder {
 header .sticky .jquerycssmenu-right {
     margin: 22px -20px 0 0;
 }
+.jquerycssmenu-right ul li.menu-item-has-children a:after {
+	display: block;
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #E34848;
+	left: 41%;
+	position: relative;
+	top: -6px;
+}
 .jquerycssmenu-right ul li ul {
     background: #fff;
 }
@@ -692,7 +704,10 @@ header .sticky .jquerycssmenu-right {
 .jquerycssmenu-right ul li ul li a {
     color: #000 !important;
 }
-.jquerycssmenu-right ul li ul li.current_page_item > a, .jquerycssmenu-right ul li ul li.current-menu-ancestor > a, .jquerycssmenu-right ul li ul li.current-menu-item > a, .jquerycssmenu-right ul li ul li.current-menu-parent > a {
+.jquerycssmenu-right ul li ul li.current_page_item > a, 
+.jquerycssmenu-right ul li ul li.current-menu-ancestor > a, 
+.jquerycssmenu-right ul li ul li.current-menu-item > a, 
+.jquerycssmenu-right ul li ul li.current-menu-parent > a {
     background: #ededed !important;
 }
 
@@ -777,8 +792,8 @@ ul.big-thing div.owl-item li .entry-thumbnail {
 	display: block;
 	position: relative;
 	overflow: hidden;
-	max-height: 410px;
-	min-height: 410px;
+	max-height: 409px;
+	min-height: 409px;
 }
 ul.big-thing div.owl-item li .entry-thumbnail img {
 	display: block;
