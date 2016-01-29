@@ -15,6 +15,7 @@ Earmilk redesign project
 - [ ] Ability to play a post's first video right from the posts grid
 - [ ] Finish Schema.org markup
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
+- [ ] Album Review Details custom widget
 - [ ] New Theme / PHP Infrastructure
 - [ ] AJAX site navigation engine
 - [ ] Site wide persistent MP3 player
