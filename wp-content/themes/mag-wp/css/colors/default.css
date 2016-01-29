@@ -1354,6 +1354,257 @@ h3 {
 
 
 
+
+/* Single Post */
+.author-left-meta {
+    margin-top: 22px;
+}
+.single-content h1.article-title {
+    color: #555;
+}
+div#single-share {
+    /* display: none; */
+    background: #fff;
+}
+.single-content {
+    background-color: #fff;
+}
+.p-first-letter p a {
+    background-color: #e34848;
+    color: #fff !important;
+}
+.entry strong {
+    color: #555;
+}
+ul.ts-fab-list li a {
+    background-color: #777 !important;
+    border-color: #666;
+}
+ul.ts-fab-list li.active a {
+    background-color: #ededed !important;
+    border-color: #eaeaea;
+}
+div.ts-fab-tab {
+    background-color: #ededed;
+    border: 2px solid #eaeaea;
+}
+div.ts-fab-tab .ts-fab-text .ts-fab-header h4 {
+    color: #777;
+}
+div.ts-fab-tab .ts-fab-text .ts-fab-latest li span {
+    color: #999;
+}
+.ts-fab-content {
+    color: #777;
+}
+h6.post-answer {
+    background: #eaeaea !important;
+    color: #777 !important;
+}
+.wb-ad-grid .wb-ad-unit a:link {
+    color: #777 !important;
+}
+.wb-ad-grid .wb-ad-unit a:visited {
+    color: #999 !important;
+}
+.wb-ad-grid .wb-ad-unit a:link:hover {
+    color: #cd2026 !important;
+}
+
+
+
+
+
+/* Author Writer Page */
+.author-meta {
+    background-color: #fff;
+}
+.author-meta .entry p {
+    color: #777;
+}
+
+
+/* Gear */
+ul#masonry_list li.gear_post a.entry-thumbnail {
+	width: 266px;
+	height: 215px !important;
+}
+/* Voices -- opinion post */
+ul#masonry_list li.opinion_post a.entry-thumbnail {
+	width: 266px;
+	height: 122px !important;
+}
+/* Album reviews */
+.single-content .review .review_info h2 {
+    color: #e34848;
+}
+.single-content .review .review_info h3 {
+    color: #555;
+}
+ul#masonry_list li {
+	height: auto;
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+	margin: 0 0 50px 23px !important;
+	background: rgba(245, 245, 245, 0.42);
+}
+ul#masonry_list li .entry-thumb-cont {
+	position: relative;	
+}
+ul#masonry_list li a.entry-thumbnail {
+	width: 266px;
+	height: 266px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+}
+ul#masonry_list li a.entry-thumbnail img {
+	height: auto !important;
+	width: 100%;
+	position: absolute;
+	top: -100%;
+	bottom: -100%;
+	left: -100%;
+	right: -100%;
+	margin: auto;
+}
+ul#masonry_list li .article-category {
+	background: none !important;
+	padding: 0;
+	font-size: 0;
+	margin: 0 0 0 20px;
+	-webkit-transform: skewX(-10deg);
+	-o-transform: skewX(-7deg);
+	-ms-transform: skewX(-7deg);
+	transform: skewX(-10deg);
+	bottom: 0;
+	display: inline-flex;
+}
+ul#masonry_list li .article-category .post-date,
+ul#masonry_list li .article-category .author,
+ul#masonry_list li .article-category .tiptipBlog {
+	padding: 1px 11px;
+	font-size: 10px;
+	display: inline-block;
+	text-transform: none;
+}
+ul#masonry_list li .article-category .post-date {
+    color: #FFF;
+    float: none;
+    width: auto;
+    height: auto;
+    text-align: center;
+    position: relative;
+    z-index: 101;
+    margin: 0 !important;
+	background-color: #373737;
+	display: inline-block;
+}
+ul#masonry_list li .article-category .post-date span.month {
+    font-size: inherit;
+    text-transform: initial;
+    display: initial;
+    position: relative;
+    top: inherit;
+}
+ul#masonry_list li .article-category .post-date span.day {
+	font-size: inherit;
+	font-weight: inherit;
+	position: relative;
+	top: inherit;
+}
+ul#masonry_list li .article-category .author {
+	background-color: #4b4b4b;
+}
+ul#masonry_list li .article-category .entry-author-last {
+	display: none;
+}
+ul#masonry_list li .article-category .tiptipBlog {
+	background-color: #e34848;
+}
+ul#masonry_list li h2.article-title.entry-title {
+	height: 66px;
+	display: table;
+	vertical-align: middle;
+	margin: 5px 0 0 0;
+}
+ul#masonry_list li h2.article-title.entry-title a {
+    line-height: 16px;
+	display: table-cell;
+	vertical-align: middle;
+}
+ul#masonry_list li .article-summary {
+	line-height: 15px;
+	min-height: 60px;
+	vertical-align: middle;
+	margin-bottom: 17px;
+}
+ul#masonry_list li .entry-footer {
+	background: #fff;
+	width: 108%;
+	margin-left: -4%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+ul#masonry_list li .entry-read-more,
+ul#masonry_list li .entry-comment-count,
+ul#masonry_list li .entry-empty-box {
+	background: #f2f2f2;
+	padding: 2px 7px;
+	display: inline-block;
+	margin: 2px 0 0;
+}
+ul#masonry_list li .entry-comment-count {
+	margin: 0;
+}
+ul#masonry_list li .entry-read-more a {
+	color: #94979c !important;
+}
+ul#masonry_list li .entry-empty-box {
+	width: 100%;
+	background: rgba(245, 245, 245, 0.75);
+}
+
+
+
+
+
+/* Google ad -- also disabled in index.html line 139 */
+.home-728 {
+	display: none;
+}
+.top-leaderboard {
+    display: none;
+}
+.img-300 {
+	display: none;
+}
+
+
+
+/* About Us page */
+span.light {
+    color: #555 !important;
+}
+
+
+
+/* Contact Us page -- useless code as contact widget is an iFrame -- eek! */
+div#customer_widget_main {
+    background: #ededed;
+}
+.input .form_label {
+    color: #777;
+}
+
+
+
+
+
+
+
 /* Mobile */
 div#click-menu {
 	background: #E34848;
@@ -1774,9 +2025,12 @@ div#click-menu {
 		font-size: 13px;
 		padding: 4px 7px;
 	}
+	ul#masonry_list li.gear_post a.entry-thumbnail {
+		width: 100%;
+	}
 }
 @media only screen and (max-width: 479px) {
-	div.wrap-fullwidth.hfeed.h-feed {
+	div.wrap-fullwidth {
 		width: 100%;
 		float: none;
 	}
@@ -1928,260 +2182,28 @@ div#click-menu {
 		font-size: 13px;
 		padding: 4px 7px;
 	}
+	ul#masonry_list li {
+/*
+		height: auto;
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+		background: rgba(245, 245, 245, 0.42);
+*/
+		margin: 0 auto 50px !important;
+		position: relative !important;
+		left: 0 !important;
+		top: 0 !important;
+	}
+	ul#masonry_list li.album_review a.entry-thumbnail {
+		width: 323px;
+		height: 323px;
+	}
+	ul#masonry_list li.opinion_post a.entry-thumbnail {
+		width: 323px;
+		height: 148px;
+	}
+	ul#masonry_list li.gear_post a.entry-thumbnail {
+		width: 100%;
+	}
 }
-
-
-
-
-
-
-
-
-
-
-/* Single Post */
-.author-left-meta {
-    margin-top: 22px;
-}
-.single-content h1.article-title {
-    color: #555;
-}
-div#single-share {
-    /* display: none; */
-    background: #fff;
-}
-.single-content {
-    background-color: #fff;
-}
-.p-first-letter p a {
-    background-color: #e34848;
-    color: #fff !important;
-}
-.entry strong {
-    color: #555;
-}
-ul.ts-fab-list li a {
-    background-color: #777 !important;
-    border-color: #666;
-}
-ul.ts-fab-list li.active a {
-    background-color: #ededed !important;
-    border-color: #eaeaea;
-}
-div.ts-fab-tab {
-    background-color: #ededed;
-    border: 2px solid #eaeaea;
-}
-div.ts-fab-tab .ts-fab-text .ts-fab-header h4 {
-    color: #777;
-}
-div.ts-fab-tab .ts-fab-text .ts-fab-latest li span {
-    color: #999;
-}
-.ts-fab-content {
-    color: #777;
-}
-h6.post-answer {
-    background: #eaeaea !important;
-    color: #777 !important;
-}
-.wb-ad-grid .wb-ad-unit a:link {
-    color: #777 !important;
-}
-.wb-ad-grid .wb-ad-unit a:visited {
-    color: #999 !important;
-}
-.wb-ad-grid .wb-ad-unit a:link:hover {
-    color: #cd2026 !important;
-}
-
-
-
-
-
-/* Author Writer Page */
-.author-meta {
-    background-color: #fff;
-}
-.author-meta .entry p {
-    color: #777;
-}
-
-
-/* Voices -- opinion post */
-ul#masonry_list li.opinion_post a.entry-thumbnail {
-	width: 266px;
-	height: 122px !important;
-}
-/* Album reviews */
-.single-content .review .review_info h2 {
-    color: #e34848;
-}
-.single-content .review .review_info h3 {
-    color: #555;
-}
-}
-ul#masonry_list li {
-    height: auto;
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-    /* width: 260px; */
-    margin: 0 0 50px 23px;
-	background: rgba(245, 245, 245, 0.42);
-}
-ul#masonry_list li .entry-thumb-cont {
-	position: relative;	
-}
-ul#masonry_list li a.entry-thumbnail {
-	width: 266px;
-	height: 266px;
-	display: block;
-	overflow: hidden;
-	position: relative;
-}
-ul#masonry_list li a.entry-thumbnail img {
-	height: auto !important;
-	width: 100%;
-	position: absolute;
-	top: -100%;
-	bottom: -100%;
-	left: -100%;
-	right: -100%;
-	margin: auto;
-}
-ul#masonry_list li .article-category {
-	background: none !important;
-	padding: 0;
-	font-size: 0;
-	margin: 0 0 0 10px;
-	-webkit-transform: skewX(-10deg);
-	-o-transform: skewX(-7deg);
-	-ms-transform: skewX(-7deg);
-	transform: skewX(-10deg);
-	bottom: 0;
-	display: inline-flex;
-}
-ul#masonry_list li .article-category .post-date,
-ul#masonry_list li .article-category .author,
-ul#masonry_list li .article-category .tiptipBlog {
-	padding: 1px 11px;
-	font-size: 10px;
-	display: inline-block;
-	text-transform: none;
-}
-ul#masonry_list li .article-category .post-date {
-    color: #FFF;
-    float: none;
-    width: auto;
-    height: auto;
-    text-align: center;
-    position: relative;
-    z-index: 101;
-    margin: 0 !important;
-	background-color: #373737;
-	display: inline-block;
-}
-ul#masonry_list li .article-category .post-date span.month {
-    font-size: inherit;
-    text-transform: initial;
-    display: initial;
-    position: relative;
-    top: inherit;
-}
-ul#masonry_list li .article-category .post-date span.day {
-	font-size: inherit;
-	font-weight: inherit;
-	position: relative;
-	top: inherit;
-}
-ul#masonry_list li .article-category .author {
-	background-color: #4b4b4b;
-}
-ul#masonry_list li .article-category .entry-author-last {
-	display: none;
-}
-ul#masonry_list li .article-category .tiptipBlog {
-	background-color: #e34848;
-}
-ul#masonry_list li h2.article-title.entry-title {
-	height: 66px;
-	display: table;
-	vertical-align: middle;
-	margin: 5px 0 0 0;
-}
-ul#masonry_list li h2.article-title.entry-title a {
-    line-height: 16px;
-	display: table-cell;
-	vertical-align: middle;
-}
-ul#masonry_list li .article-summary {
-	line-height: 15px;
-	min-height: 60px;
-	vertical-align: middle;
-	margin-bottom: 17px;
-}
-ul#masonry_list li .entry-footer {
-	background: #fff;
-	width: 108%;
-	margin-left: -4%;
-	white-space: nowrap;
-	overflow: hidden;
-}
-ul#masonry_list li .entry-read-more,
-ul#masonry_list li .entry-comment-count,
-ul#masonry_list li .entry-empty-box {
-	background: #f2f2f2;
-	padding: 2px 7px;
-	display: inline-block;
-	margin: 2px 0 0;
-}
-ul#masonry_list li .entry-comment-count {
-	margin: 0;
-}
-ul#masonry_list li .entry-read-more a {
-	color: #94979c !important;
-}
-ul#masonry_list li .entry-empty-box {
-	width: 100%;
-	background: rgba(245, 245, 245, 0.75);
-}
-
-
-
-
-
-/* Google ad -- also disabled in index.html line 139 */
-.home-728 {
-	display: none;
-}
-.top-leaderboard {
-    display: none;
-}
-.img-300 {
-	display: none;
-}
-
-
-
-/* About Us page */
-span.light {
-    color: #555 !important;
-}
-
-
-
-/* Contact Us page -- useless code as contact widget is an iFrame -- eek! */
-div#customer_widget_main {
-    background: #ededed;
-}
-.input .form_label {
-    color: #777;
-}
-
-
-
-
-
-
-
