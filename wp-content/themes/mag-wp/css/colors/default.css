@@ -2017,6 +2017,133 @@ h6.post-answer {
 .single-content .review .review_info h3 {
     color: #555;
 }
+}
+ul#masonry_list li {
+    height: auto;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    /* width: 260px; */
+    margin: 0 0 50px 23px;
+	background: rgba(245, 245, 245, 0.42);
+}
+ul#masonry_list li .entry-thumb-cont {
+	position: relative;	
+}
+ul#masonry_list li a.entry-thumbnail {
+	width: 266px;
+	height: 266px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+ul#masonry_list li a.entry-thumbnail img {
+	height: 100% !important;
+	width: 100%;
+	position: absolute;
+	top: -100%;
+	bottom: -100%;
+	left: -100%;
+	right: -100%;
+	margin: auto;
+}
+ul#masonry_list li .article-category {
+	background: none !important;
+	padding: 0;
+	font-size: 0;
+	margin: 0 0 0 10px;
+	-webkit-transform: skewX(-10deg);
+	-o-transform: skewX(-7deg);
+	-ms-transform: skewX(-7deg);
+	transform: skewX(-10deg);
+	bottom: 0;
+	display: inline-flex;
+}
+ul#masonry_list li .article-category .post-date,
+ul#masonry_list li .article-category .author,
+ul#masonry_list li .article-category .tiptipBlog {
+	padding: 1px 11px;
+	font-size: 10px;
+	display: inline-block;
+	text-transform: none;
+}
+ul#masonry_list li .article-category .post-date {
+    color: #FFF;
+    float: none;
+    width: auto;
+    height: auto;
+    text-align: center;
+    position: relative;
+    z-index: 101;
+    margin: 0 !important;
+	background-color: #373737;
+	display: inline-block;
+}
+ul#masonry_list li .article-category .post-date span.month {
+    font-size: inherit;
+    text-transform: initial;
+    display: initial;
+    position: relative;
+    top: inherit;
+}
+ul#masonry_list li .article-category .post-date span.day {
+	font-size: inherit;
+	font-weight: inherit;
+	position: relative;
+	top: inherit;
+}
+ul#masonry_list li .article-category .author {
+	background-color: #4b4b4b;
+}
+ul#masonry_list li .article-category .entry-author-last {
+	display: none;
+}
+ul#masonry_list li .article-category .tiptipBlog {
+	background-color: #e34848;
+}
+ul#masonry_list li h2.article-title.entry-title {
+	height: 66px;
+	display: table;
+	vertical-align: middle;
+	margin: 5px 0 0 0;
+}
+ul#masonry_list li h2.article-title.entry-title a {
+    line-height: 16px;
+	display: table-cell;
+	vertical-align: middle;
+}
+ul#masonry_list li .article-summary {
+	line-height: 15px;
+	min-height: 60px;
+	vertical-align: middle;
+	margin-bottom: 17px;
+}
+ul#masonry_list li .entry-footer {
+	background: #fff;
+	width: 108%;
+	margin-left: -4%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+ul#masonry_list li .entry-read-more,
+ul#masonry_list li .entry-comment-count,
+ul#masonry_list li .entry-empty-box {
+	background: #f2f2f2;
+	padding: 2px 7px;
+	display: inline-block;
+	margin: 2px 0 0;
+}
+ul#masonry_list li .entry-comment-count {
+	margin: 0;
+}
+ul#masonry_list li .entry-read-more a {
+	color: #94979c !important;
+}
+ul#masonry_list li .entry-empty-box {
+	width: 100%;
+	background: rgba(245, 245, 245, 0.75);
+}
+
 
 
 
