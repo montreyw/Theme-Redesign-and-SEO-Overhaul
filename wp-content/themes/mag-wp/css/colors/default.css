@@ -850,6 +850,7 @@ ul.big-thing div.owl-item li .article-category .tiptipBlog {
 }
 ul.big-thing div.owl-item li .an-widget-title {
 	min-height: 86px;
+	height: 86px;
 	width: 90%;
 	display: table;
 	bottom: 0;
