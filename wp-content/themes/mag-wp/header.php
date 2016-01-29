@@ -28,6 +28,11 @@
         x.parentNode.insertBefore(s, x);
      })();
 </script>
+<script type="text/javascript">
+var addthis_config = addthis_config||{};
+    addthis_config.data_track_addressbar = false;
+    addthis_config.data_track_clickback = false;
+</script>
 <?php
     // Options from admin panel
     global $smof_data;
