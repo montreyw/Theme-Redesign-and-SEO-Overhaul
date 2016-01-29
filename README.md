@@ -6,7 +6,7 @@ Earmilk redesign project
 ## To Do
 - [x] Implement new header
 - [x] Restructure new header further to remove unnecessary actions and make more compatible with all pages
-- [ ] Remove Main Stage from all pages but the Front
+- [x] Remove Main Stage from all pages but the Front
 - [ ] Normalize posts on Videos, Album Reviews and others
 - [ ] Implement Colorful Genre Bar from old.V2
 - [ ] Remove all MP3 links from posts
@@ -43,7 +43,8 @@ Earmilk redesign project
 16.  Header Overhaul ([strucutre](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4a20c510c1dd740cfc7445d8216d5929f8d6771b), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/2097af47067b36670ef11db1268e621210aef968))
 17.  "Main Stage" Overhaul ([strucutre](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4a20c510c1dd740cfc7445d8216d5929f8d6771b), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/2097af47067b36670ef11db1268e621210aef968))
 18.  Restructured new header further to [remove unnecessary actions](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/6ae1a7ce8cde345982acfc416943b790d855e4fb) and make more compatible with all pages
-19.  ...
+19.  Main Stage [removed](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/6560cb4b35fc0610dff64dd6e01536849126eeb7) from all pages but the Home
+20.  ...
 
 
 
