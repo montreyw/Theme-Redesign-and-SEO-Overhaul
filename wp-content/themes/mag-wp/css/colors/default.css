@@ -683,7 +683,7 @@ div#placeholder {
 header .sticky .jquerycssmenu-right {
     margin: 22px -20px 0 0;
 }
-.jquerycssmenu-right ul li.menu-item-has-children a:after {
+.jquerycssmenu-right ul li.menu-item-has-children > a:after {
 	display: block;
 	content: "";
 	width: 0;
@@ -1364,6 +1364,16 @@ div#click-menu {
 	z-index: 999999;
 }
 @media only screen and (max-width: 1230px) and (min-width: 1004px) {
+	.home-content {
+		width: 86%;
+		float: none;
+		padding: 0 7%;
+	}
+	ul.classic-blog {
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+	}
 	header .sticky.main-header .sticky-on {
 		width: 1230px;
 	}
@@ -1766,6 +1776,37 @@ div#click-menu {
 	}
 }
 @media only screen and (max-width: 479px) {
+	div.wrap-fullwidth.hfeed.h-feed {
+		width: 100%;
+		float: none;
+	}
+	div.wrap-fullwidth div.home-content {
+		width: 100%;
+		float: none;
+		padding: 0;
+		margin: 0 auto;
+	}
+	div.wrap-fullwidth div.home-content .section-top-title {
+		text-align: center;
+	}
+	div.wrap-fullwidth div.home-content .section-top-title h3 {
+		font-size: 17px;
+		padding: 10px;
+	}
+	div.wrap-fullwidth div.home-content ul.classic-blog {
+		float: none;
+		margin: 0 auto;
+		width: 86%;
+		padding: 0 7%;
+	}
+	div.wrap-fullwidth div.home-content ul.classic-blog li img {
+		width: 100%;
+		height: auto;
+	}
+	div.wrap-fullwidth div.home-content ul.classic-blog li {
+		margin: 0 auto 30px;
+		width: 100%;
+	}
 	header div.top-navigation {
 		display: none;
 	}
