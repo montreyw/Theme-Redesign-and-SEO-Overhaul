@@ -1351,6 +1351,10 @@ footer .wpp-list li span.wpp-date {
 	bottom: 0;
 	font-family: sans-serif;
 }
+img#wpstats {
+	display: none;
+}
+
 
 
 
