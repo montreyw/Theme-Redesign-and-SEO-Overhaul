@@ -497,6 +497,24 @@ form#searchform {
 	display: inline-block;
 	margin: 28px 0 0 30px;
 }
+#searchform .inputLabel {
+	z-index: 1;
+    color: #ccc;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transition: all .3s cubic-bezier(0.4,0,0.2,1);
+    transition: all .3s cubic-bezier(0.4,0,0.2,1);
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    font-family: futura, Tahoma, Geneva, sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    pointer-events: none;
+    position: absolute;
+    top: 6px;
+}
 #searchform #s {
 	border: 0;
     font-family: futura, Tahoma, Geneva, sans-serif;
@@ -505,11 +523,11 @@ form#searchform {
 	background-color: transparent;
 	/* margin: 0 40px 0 0; */
 	padding: 0;
-	font-size: 19px;
+	font-size: 17px;
 	font-weight: lighter;
-	line-height: 19px;
+	line-height: 1;
 	position: relative;
-	top: 6px;
+	top: 5px;
 }
 #searchform #s:focus {
 /* 	width: inherit; */
@@ -552,23 +570,6 @@ form#searchform {
     content: "\f002";
 }
 */
-#searchform .inputLabel {
-    color: #ccc;
-    -webkit-transform-origin: top left;
-    transform-origin: top left;
-    -webkit-transition: all .3s cubic-bezier(0.4,0,0.2,1);
-    transition: all .3s cubic-bezier(0.4,0,0.2,1);
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    font-family: futura, Tahoma, Geneva, sans-serif;
-    font-size: 17px;
-    font-weight: 100;
-    pointer-events: none;
-    position: absolute;
-    top: 8px;
-}
 #searchform #s::-webkit-input-placeholder,
 #searchform #s:-moz-placeholder,
 #searchform #s::-moz-placeholder,
@@ -600,14 +601,14 @@ form#searchform {
 #searchform.hasValue .inputLabel {
     -webkit-transform: scale(0.57);
     transform: scale(0.57);
-    top: 0px;
+    top: -4px;
     color: rgba(0,0,0,0.54);
 }
 #searchform.isFocused .inputLabel {
     -webkit-transform: scale(0.57);
     transform: scale(0.57);
 	color: #E34848;
-	top: -2px;
+	top: -7px;
 }
 #searchform.isFocused .animatedUnderline {
     -webkit-animation: quantumWizPaperInputAddUnderline .3s cubic-bezier(0.4,0,0.2,1);
@@ -1771,7 +1772,7 @@ body #responsive-menu #responsive-menu-title {
 	#searchform .inputLabel {
 		top: 4px;
 		font-size: 13px;
-		line-height: 15px;
+		line-height: 17px;
 	}
 	#searchform.hasValue .inputLabel {
 		top: -2px;
@@ -1900,7 +1901,7 @@ body #responsive-menu #responsive-menu-title {
 	#searchform .inputLabel {
 		top: 4px;
 		font-size: 13px;
-		line-height: 15px;
+		line-height: 17px;
 	}
 	#searchform.hasValue .inputLabel {
 		top: -2px;
@@ -2008,7 +2009,7 @@ body #responsive-menu #responsive-menu-title {
 	#searchform .inputLabel {
 		top: 4px;
 		font-size: 13px;
-		line-height: 15px;
+		line-height: 17px;
 	}
 	#searchform.hasValue .inputLabel {
 		top: -2px;
@@ -2150,7 +2151,7 @@ body #responsive-menu #responsive-menu-title {
 	#searchform .inputLabel {
 		top: 4px;
 		font-size: 13px;
-		line-height: 15px;
+		line-height: 17px;
 	}
 	#searchform.hasValue .inputLabel {
 		top: -2px;
