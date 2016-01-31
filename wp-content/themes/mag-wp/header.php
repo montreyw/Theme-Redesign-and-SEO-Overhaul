@@ -28,11 +28,6 @@
         x.parentNode.insertBefore(s, x);
      })();
 </script>
-<script type="text/javascript">
-var addthis_config = addthis_config||{};
-    addthis_config.data_track_addressbar = false;
-    addthis_config.data_track_clickback = false;
-</script>
 <?php
     // Options from admin panel
     global $smof_data;
@@ -54,10 +49,10 @@ var addthis_config = addthis_config||{};
 	<!-- <me  ta name="description" content=""> -->
 	<!-- <link rel="publisher" href="https://plus.google.com/+earmilk/"> -->
 	<!-- <?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink() . '" />'; ?> -->
-	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="x-default">
-	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en">
-	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en-us">
-	<link rel="alternate" href="<?php echo site_url().'/'.get_page_uri(get_the_ID()); ?>" hreflang="en-gb">
+	<link rel="alternate" href="<?php echo get_permalink(); ?>" hreflang="x-default">
+	<link rel="alternate" href="<?php echo get_permalink(); ?>" hreflang="en">
+	<link rel="alternate" href="<?php echo get_permalink(); ?>" hreflang="en-us">
+	<link rel="alternate" href="<?php echo get_permalink(); ?>" hreflang="en-gb">
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
