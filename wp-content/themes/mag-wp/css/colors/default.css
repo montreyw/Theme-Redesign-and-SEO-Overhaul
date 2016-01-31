@@ -1385,11 +1385,39 @@ h3 {
 
 
 /* Single Post */
-.author-left-meta {
-    margin-top: 22px;
+.single-content .entry-top {
+	padding: 0 0 30px;
 }
-.single-content h1.article-title {
-    color: #555;
+.single-content .entry-top h1.article-title {
+	color: #555;
+	padding: 0;
+	line-height: 1.25;
+	text-align: center;
+	font-size: 45px;
+}	
+.single-content .entry-top .entry-author-meta {
+	float: none;
+	vertical-align: middle;
+	margin: 13px auto 0;
+	width: auto;
+	text-align: center;
+}
+.single-content .entry-top .entry-author-meta span.time.date,
+.single-content .entry-top .entry-author-meta span.author-meta-byline,
+.single-content .entry-top .entry-author-meta a.author-photo,
+.single-content .entry-top .entry-author-meta ul.author-social-inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+.single-content .entry-top .entry-author-meta a.author-photo {
+	line-height: initial;
+	display: inline-flex;
+	margin: 0 3px;
+}
+.single-content .entry-top .entry-author-meta a.author-photo img {
+    border-radius: 50%;	
+	width: 20px;
+	height: 20px;
 }
 div#single-share {
     background: #fff;

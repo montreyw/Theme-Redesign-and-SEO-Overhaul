@@ -13,21 +13,23 @@
 
         <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
         <div class="entry-top">
-            <div class="author-left-meta">
-                <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php echo get_avatar( get_the_author_meta( 'user_email' ), 70 ); ?></a>
-                <ul class="author-social-top">
+            <h1 class="article-title entry-title p-name"><?php the_title(); ?></h1>
+            <div class="entry-author-meta">
+	            <span class="time date updated"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
+	            <span class="author-meta-byline"><?php _e('by', 'anthemes'); ?> 
+	            	<span class="vcard author p-author h-card">
+	            		<span class="fn"><?php the_author_posts_link(); ?></span>
+	            	</span>
+	            </span>
+                <a class="author-photo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+	                <?php echo get_avatar( get_the_author_meta( 'user_email' ), 70 ); ?>
+	            </a>
+                <ul class="author-social-inline">
                     <?php if(get_the_author_meta('facebook')) { ?><li class="facebook"><a target="_blank" href="//facebook.com/<?php echo the_author_meta('facebook'); ?>"><i class="fa fa-facebook"></i></a></li><?php } ?>
                     <?php if(get_the_author_meta('twitter')) { ?><li class="twitter"><a target="_blank" href="//twitter.com/<?php echo the_author_meta('twitter'); ?>"><i class="fa fa-twitter"></i></a></li><?php } ?>
                     <?php if(get_the_author_meta('google')) { ?><li class="google"><a target="_blank" href="//plus.google.com/<?php echo the_author_meta('google'); ?>?rel=author"><i class="fa fa-google-plus"></i></a></li><?php } ?>                            
                 </ul>
             </div>
-            <h1 class="article-title entry-title p-name"><?php the_title(); ?></h1>
-            <span class="time date updated"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
-            <span><?php _e('written by', 'anthemes'); ?> 
-            	<span class="vcard author p-author h-card">
-            		<span class="fn"><?php the_author_posts_link(); ?></span>
-            	</span>
-            </span>
         </div><div class="clear"></div>
         <?php endwhile; endif; ?>
 
