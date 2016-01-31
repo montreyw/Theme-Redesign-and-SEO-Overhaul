@@ -422,6 +422,7 @@ ul.footer-social li a:hover   { opacity: 0.7; color: #FFF !important;}
 html body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font: 14px/22px Helvetica, Arial, sans-serif;
 }
 body#boxed-style {
     background: #fff;
@@ -494,7 +495,7 @@ form#searchform {
 	width: 17%;
 	float: none;
 	display: inline-block;
-	margin: 22px 0 0 30px;
+	margin: 28px 0 0 30px;
 }
 #searchform #s {
 	border: 0;
@@ -508,7 +509,7 @@ form#searchform {
 	font-weight: lighter;
 	line-height: 19px;
 	position: relative;
-	top: 10px;
+	top: 6px;
 }
 #searchform #s:focus {
 /* 	width: inherit; */
@@ -518,7 +519,7 @@ form#searchform {
 	border: 0;
 	float: none;
 	width: 30px;
-	height: 40px;
+	height: 30px;
 	-webkit-transition: all 137ms;
 	-moz-transition: all 137ms;
 	transition: all 137ms;
@@ -566,7 +567,7 @@ form#searchform {
     font-weight: 100;
     pointer-events: none;
     position: absolute;
-    top: 10px;
+    top: 8px;
 }
 #searchform #s::-webkit-input-placeholder,
 #searchform #s:-moz-placeholder,
@@ -599,14 +600,14 @@ form#searchform {
 #searchform.hasValue .inputLabel {
     -webkit-transform: scale(0.57);
     transform: scale(0.57);
-    top: 7px;
+    top: 0px;
     color: rgba(0,0,0,0.54);
 }
 #searchform.isFocused .inputLabel {
     -webkit-transform: scale(0.57);
     transform: scale(0.57);
 	color: #E34848;
-	top: 4px;
+	top: -2px;
 }
 #searchform.isFocused .animatedUnderline {
     -webkit-animation: quantumWizPaperInputAddUnderline .3s cubic-bezier(0.4,0,0.2,1);
@@ -677,6 +678,7 @@ div#placeholder {
 }
 .jquerycssmenu-right ul li a {
     color: #000 !important;
+	font-size: 17px;
 } 
 #myjquerymenu2 ul li.current-menu-item a {
     color: #e34848 !important;
