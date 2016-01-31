@@ -1518,17 +1518,8 @@ h6.post-answer {
 }
 
 
-/* Gear */
-ul#masonry_list li.gear_post a.entry-thumbnail {
-	width: 266px;
-	height: 215px !important;
-}
-/* Voices -- opinion post */
-ul#masonry_list li.opinion_post a.entry-thumbnail {
-	width: 266px;
-	height: 122px !important;
-}
-/* Album reviews */
+
+/* Post grid types */
 .single-content .review .review_info h2 {
     color: #e34848;
 }
@@ -1659,6 +1650,26 @@ ul#masonry_list li .entry-read-more a {
 ul#masonry_list li .entry-empty-box {
 	width: 100%;
 	background: rgba(245, 245, 245, 0.75);
+}
+/* Album reviews */
+ul#masonry_list li.album_review a.entry-thumbnail {
+	width: 266px;
+	height: 266px !important;
+}
+/* Gear */
+ul#masonry_list li.gear_post a.entry-thumbnail {
+	width: 266px;
+	height: 215px !important;
+}
+/* Voices -- opinion post */
+ul#masonry_list li.opinion_post a.entry-thumbnail {
+	width: 266px;
+	height: 122px !important;
+}
+/* News grid */
+ul#masonry_list li.news a.entry-thumbnail {
+	width: 266px;
+	height: 127px;
 }
 
 
