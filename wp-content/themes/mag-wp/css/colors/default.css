@@ -433,6 +433,14 @@ a {
 	-o-transition: all 137ms;
 	transition: all 137ms;
 }
+blockquote {
+	margin: 0 7% 7%;
+	border-left: 4px solid #e34848;
+	background: none;
+}
+blockquote p {
+	background: none;
+}
 
 /* Gray bars */
 #searchform #s, 
@@ -2101,37 +2109,6 @@ body #responsive-menu #responsive-menu-title {
 	}
 }
 @media only screen and (max-width: 479px) {
-	div.wrap-fullwidth {
-		width: 100%;
-		float: none;
-	}
-	div.wrap-fullwidth div.home-content {
-		width: 100%;
-		float: none;
-		padding: 0;
-		margin: 0 auto;
-	}
-	div.wrap-fullwidth div.home-content .section-top-title {
-		text-align: center;
-	}
-	div.wrap-fullwidth div.home-content .section-top-title h3 {
-		font-size: 17px;
-		padding: 10px;
-	}
-	div.wrap-fullwidth div.home-content ul.classic-blog {
-		float: none;
-		margin: 0 auto;
-		width: 86%;
-		padding: 0 7%;
-	}
-	div.wrap-fullwidth div.home-content ul.classic-blog li img {
-		width: 100%;
-		height: auto;
-	}
-	div.wrap-fullwidth div.home-content ul.classic-blog li {
-		margin: 0 auto 30px;
-		width: 100%;
-	}
 	header div.top-navigation {
 		display: none;
 	}
@@ -2239,14 +2216,38 @@ body #responsive-menu #responsive-menu-title {
 		font-size: 13px;
 		padding: 4px 7px;
 	}
-	ul#masonry_list li {
-/*
-		height: auto;
-		display: inline-block;
+	div.wrap-fullwidth {
+		width: 100%;
 		float: none;
-		vertical-align: top;
-		background: rgba(245, 245, 245, 0.42);
-*/
+	}
+	div.wrap-fullwidth div.home-content {
+		width: 100%;
+		float: none;
+		padding: 0;
+		margin: 0 auto;
+	}
+	div.wrap-fullwidth div.home-content .section-top-title {
+		text-align: center;
+	}
+	div.wrap-fullwidth div.home-content .section-top-title h3 {
+		font-size: 17px;
+		padding: 10px;
+	}
+	div.wrap-fullwidth div.home-content ul.classic-blog {
+		float: none;
+		margin: 0 auto;
+		width: 86%;
+		padding: 0 7%;
+	}
+	div.wrap-fullwidth div.home-content ul.classic-blog li img {
+		width: 100%;
+		height: auto;
+	}
+	div.wrap-fullwidth div.home-content ul.classic-blog li {
+		margin: 0 auto 30px;
+		width: 100%;
+	}
+	ul#masonry_list li {
 		margin: 0 auto 50px !important;
 		position: relative !important;
 		left: 0 !important;
@@ -2267,8 +2268,17 @@ body #responsive-menu #responsive-menu-title {
 		float: none;
 		margin: 30px auto 0;
 	}
-	.single-content .entry-top h1.article-title {
+	div.wrap-fullwidth .single-content {
+		width: 100%;
+	}
+	div.wrap-fullwidth .single-content .entry-top h1.article-title {
 		/* line-height: 1; */
 		font-size: 33px;
+	}
+	div.wrap-fullwidth .single-content .entry-content .entry {
+		width: 80%;
+	}
+	div.wrap-fullwidth .single-content .entry-content .entry .p-first-letter p {
+		font-size: 17px;
 	}
 }
