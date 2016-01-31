@@ -22,6 +22,9 @@ Earmilk redesign project
 - [ ] Site wide persistent MP3 player
 - [ ] iOS App 
 - [ ] Implement a solution for Hreflang tags for indexing in foreign languages
+- [ ] Look into Facebook native comments solution
+- [ ] Backend/Front end widget to give photographers credit for their photos
+- [ ] A solution for photo sourcing (possible a community effort or a filtering functionality plugn)
 - [ ] ...
 
 ----------
