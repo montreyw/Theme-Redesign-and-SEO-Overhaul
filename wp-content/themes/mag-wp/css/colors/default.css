@@ -704,6 +704,9 @@ header .sticky .jquerycssmenu-right {
     background: #fff;
 }
 .jquerycssmenu-right ul li ul li {
+	-webkit-transition: background 137ms;
+	-moz-transition: background 137ms;
+	transition: background 137ms;
     background: #fff;
 }
 .jquerycssmenu-right ul li ul li a {
