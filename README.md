@@ -21,6 +21,7 @@ Earmilk redesign project
 - [ ] AJAX site navigation engine
 - [ ] Site wide persistent MP3 player
 - [ ] iOS App 
+- [ ] Implement backend templating capability for Events
 - [ ] Implement a solution for Hreflang tags for indexing in foreign languages
 - [ ] Look into Facebook native comments solution
 - [ ] Backend/Front end widget to give photographers credit for their photos
