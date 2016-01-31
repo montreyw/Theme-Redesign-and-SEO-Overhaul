@@ -108,12 +108,12 @@
 	        </h2>
             <p class="article-summary entry-summary"><?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 137); ?></p>
 			<div class="entry-footer">
-				<p class="entry-comment-count">
+				<div class="entry-comment-count">
 					Comments: (<?php comments_number( '0', '1', '%' ); ?>)
-				</p>
-				<p class="entry-read-more">
+				</div>
+				<div class="entry-read-more">
 					<a href="<?php the_permalink(); ?>" title="Read the whole article.">Read More...</a>
-				</p>
+				</div>
 				<div class="entry-empty-box">&nbsp;</div>
 			</div>
 
