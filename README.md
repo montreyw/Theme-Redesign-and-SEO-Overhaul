@@ -10,6 +10,7 @@ Earmilk redesign project
 - [x] Normalize posts on Videos, Album Reviews and others
 - [x] Widen Latest Posts on mobile view
 - [ ] Implement Colorful Genre Bar from old.V2
+- [ ] Add unique headers to individual category pages
 - [ ] Remove all MP3 links from posts
 - [ ] Ability to play a post's first song right from the posts grid
 - [ ] Ability to play a post's first video right from the posts grid
@@ -48,10 +49,11 @@ Earmilk redesign project
 19.  Main Stage [removed](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/6560cb4b35fc0610dff64dd6e01536849126eeb7) from all pages but the Home
 20.  Removed Main Srage [from all pages](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/6560cb4b35fc0610dff64dd6e01536849126eeb7) but Home
 21.  Widened [front page posts](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/220644980edf6d4fa9c1dfba2c176a1aba6d9b98) on mobile
-22.  Purrtied up and normalized [Album Review](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/92fefc630cbcbdc4b51e23a8896afca533aa443d), [VOICES](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/06f704e4df608f38d7fba7378999709ed5922686), and [Gear](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8c37de1f60429aa6e68b09205317f9024e708358) custom post types 
+22.  Purrtied up and normalized [Album Review](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/92fefc630cbcbdc4b51e23a8896afca533aa443d), [VOICES](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/06f704e4df608f38d7fba7378999709ed5922686),  [Gear](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8c37de1f60429aa6e68b09205317f9024e708358), and [News](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/3f7c5e7a990efe851e81765a114e7ea82e57c63c) post type grids 
 23.  Prettied and restructured single post's [Title and Author Meta](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/86f4d24bbf749956ae1225728aa7cc93161af5c4)
 24.  Changed [site-wide font to Helvetica](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/3ebecc827ab4a8de65f0c4e574a76611211de7c2) for aesthetics and better readibility
-25.  ...
+25.  Improved [single post view on mobile](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a6fb8c94025b5a23b1acdc3610ed7356ea5764a1)
+26.  ...
 
 
 
