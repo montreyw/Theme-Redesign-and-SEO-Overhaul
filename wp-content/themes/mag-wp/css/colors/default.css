@@ -440,6 +440,11 @@ blockquote {
 }
 blockquote p {
 	background: none;
+	color: #777;
+}
+.single-content .p-first-letter blockquote p {
+	background: none;
+	color: #777;
 }
 
 /* Gray bars */
@@ -1457,12 +1462,15 @@ div#single-share {
 	text-decoration: none;
 	color: initial;
 }
-.p-first-letter p a {
+.single-content .p-first-letter p {
+	color: #555;
+}
+.single-content .p-first-letter p a {
 	background-color: transparent;
 	color: #e34848 !important;
 	font-size: inherit;
 }
-.p-first-letter p a:hover {
+.single-content .p-first-letter p a:hover {
 	text-decoration: none;
 	background-color: transparent;
 	color: #000 !important;
