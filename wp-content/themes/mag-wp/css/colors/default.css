@@ -1770,11 +1770,12 @@ body #responsive-menu #responsive-menu-title {
 }
 
 @media only screen and (max-width: 1230px) and (min-width: 1004px) {
-	.wrap-fullwidth .home-content {
-		float: none;
-		width: 100%;
-		margin: 0 auto;
-		padding: 0;
+	header .sticky.main-header .sticky-on {
+		width: 1230px;
+	}
+	header .main-header .jquerycssmenu-right {
+		font-size: 15px;
+		margin: 22px 10px 0 0;
 	}
 	#searchform .inputLabel {
 		top: 8px;
@@ -1792,17 +1793,16 @@ body #responsive-menu #responsive-menu-title {
 	.jquerycssmenu-right ul li a {
 		font-size: 13px;
 	}
+	.wrap-fullwidth .home-content {
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
 	ul.classic-blog {
 		float: none;
 		width: 100%;
 		margin: 0 auto;
-	}
-	header .sticky.main-header .sticky-on {
-		width: 1230px;
-	}
-	header .main-header .jquerycssmenu-right {
-		font-size: 15px;
-		margin: 22px 10px 0 0;
 	}
 	div.big-thing-box {
 		height: 505px;
@@ -1936,13 +1936,22 @@ body #responsive-menu #responsive-menu-title {
 		font-size: 13px;
 		padding: 4px 7px;
 	}
-	.wrap-fullwidth {
+	body div.wrap-fullwidth {
 		width: 100%;
 	}
-	div.wrap-fullwidth aside.sidebar {
-/* 		float: none; */
-		margin: 30px auto 0;
+	body div.wrap-fullwidth .home-content {
+		float: none;
+		margin: 0 auto;
+		padding: 0;
 	}
+	body div.wrap-fullwidth aside.sidebar {
+		float: none;
+		margin: 30px auto 0;
+		width: 660px;
+	}
+	body div.wrap-fullwidth aside.sidebar .widget {
+		margin: 0 15px;
+	}	
 }
 @media only screen and (max-width: 760px) and (min-width: 580px) {
 	header div.top-navigation {
