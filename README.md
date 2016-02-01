@@ -9,6 +9,8 @@ Earmilk redesign project
 - [x] Remove Main Stage from all pages but the Front
 - [x] Normalize posts on Videos, Album Reviews and others
 - [x] Widen Latest Posts on mobile view
+- [ ] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
+- [ ] Look into Facebook native comments solution
 - [ ] Implement Colorful Genre Bar from old.V2
 - [ ] Add unique headers to individual category pages
 - [ ] Remove all MP3 links from posts
@@ -23,7 +25,6 @@ Earmilk redesign project
 - [ ] iOS App 
 - [ ] Implement backend templating capability for Events
 - [ ] Implement a solution for Hreflang tags for indexing in foreign languages
-- [ ] Look into Facebook native comments solution
 - [ ] Backend/Front end widget to give photographers credit for their photos
 - [ ] A solution for photo sourcing (possible a community effort or a filtering functionality plugn)
 - [ ] ...
