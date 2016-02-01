@@ -1770,10 +1770,27 @@ body #responsive-menu #responsive-menu-title {
 }
 
 @media only screen and (max-width: 1230px) and (min-width: 1004px) {
-	.home-content {
-		width: 86%;
+	.wrap-fullwidth .home-content {
 		float: none;
-		padding: 0 7%;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	#searchform .inputLabel {
+		top: 8px;
+	}
+	#searchform .inputLabel,
+	#searchform #s {
+		font-size: 13px;
+	}
+	#searchform.hasValue .inputLabel {
+		top: 1px;
+	}
+	#searchform.isFocused .inputLabel {
+		top: -2px;
+	}
+	.jquerycssmenu-right ul li a {
+		font-size: 13px;
 	}
 	ul.classic-blog {
 		float: none;
@@ -1923,7 +1940,7 @@ body #responsive-menu #responsive-menu-title {
 		width: 100%;
 	}
 	div.wrap-fullwidth aside.sidebar {
-		float: none;
+/* 		float: none; */
 		margin: 30px auto 0;
 	}
 }
