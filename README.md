@@ -9,6 +9,7 @@ Earmilk redesign project
 - [x] Remove Main Stage from all pages but the Front
 - [x] Normalize posts on Videos, Album Reviews and others
 - [x] Widen Latest Posts on mobile view
+- [ ] Improve layout of Author Pages
 - [ ] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
 - [ ] Look into Facebook native comments solution
 - [ ] Implement Colorful Genre Bar from old.V2
