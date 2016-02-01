@@ -1410,6 +1410,7 @@ h3 {
 /* Single Post */
 .single-content .entry-top {
 	padding: 0 0 30px;
+	width: 100%;
 }
 .single-content .entry-top h1.article-title {
 	color: #555;
@@ -1417,6 +1418,8 @@ h3 {
 	line-height: 1.25;
 	text-align: center;
 	font-size: 45px;
+	width: 80%;
+	margin: 0 auto;
 }	
 .single-content .entry-top .entry-author-meta {
 	float: none;
@@ -1443,8 +1446,8 @@ h3 {
 }
 .single-content .entry-top .entry-author-meta a.author-photo img {
     border-radius: 50%;	
-	width: 30px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
 }
 div#single-share {
 	background: #fff;
@@ -1503,16 +1506,32 @@ h6.post-answer {
     background: #eaeaea !important;
     color: #777 !important;
 }
-.wb-ad-grid .wb-ad-unit a:link {
+.single-content .entry-bottom {
+	margin: 0 auto;
+}
+.single-content .entry-bottom .wb-ad-grid .wb-ad-grid-header {
+	text-align: center !important;
+}
+.single-content .entry-bottom .wb-ad-grid .wb-ad-grid-header .wb-ad-grid-header-icon {
+	-webkit-filter: invert(1);
+	-moz-filter: invert(1);
+	filter: invert(1);
+}
+.single-content .entry-bottom .wb-ad-grid .wb-ad-grid-header .wb-ad-grid-header-title {
+	color: #555 !important;
+}
+.single-content .entry-bottom .wb-ad-grid .wb-ad-unit a:link {
     color: #777 !important;
 }
-.wb-ad-grid .wb-ad-unit a:visited {
+.single-content .entry-bottom .wb-ad-grid .wb-ad-unit a:visited {
     color: #999 !important;
 }
-.wb-ad-grid .wb-ad-unit a:link:hover {
+.single-content .entry-bottom .wb-ad-grid .wb-ad-unit a:link:hover {
     color: #cd2026 !important;
 }
-
+.single-content .entry-bottom .comments {
+	display: none;
+}
 
 
 
