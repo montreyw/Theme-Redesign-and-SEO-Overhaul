@@ -148,14 +148,16 @@
             <div class="sticky-on">
             <?php if ($logo_align_select == 'Center') { ?>
                 <!-- Navigation Menu Left -->
-                <nav id="myjquerymenu" class="jquerycssmenu">
+                <nav id="myjquerymenu" class="jquerycssmenu" 
+					role="navigation" itemprop="hasPart" itemscope itemtype="http://schema.org/SiteNavigationElement">
                     <?php  wp_nav_menu( array( 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'theme_location' =>   'primary-menu' ) ); ?>
                 </nav><!-- end #myjquerymenu -->
             <?php } ?>
                 <!-- Navigation Menu Right -->
-                <nav id="myjquerymenu2" class="jquerycssmenu-right">
-                    <?php  wp_nav_menu( array( 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'theme_location' =>   'secondary-menu' ) ); ?>
-                </nav><!-- end #myjquerymenu -->
+				<nav id="myjquerymenu2" class="jquerycssmenu-right" 
+					role="navigation" itemprop="hasPart" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php  wp_nav_menu( array( 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'theme_location' =>   'secondary-menu' ) ); ?>
+				</nav><!-- end #myjquerymenu -->
 
                 <!-- logo middle -->
                 <a class="" href="<?php echo esc_url(home_url( '/' )); ?>"><img id="earmilk-logo" <?php if ($logo_align_select == 'Left') { ?>style="float: left;"<?php } ?> class="logo" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" /></a>
@@ -230,7 +232,7 @@
                 </div><!-- end .line-box -->
 
                 <ul class="big-thing" style="display:none;">
-                  <?php  query_posts( array( 'post_type' => 'post', 'category_name' => 'mainstage', 'posts_per_page' => $smof_data['current-posts'] ) );  ?> 
+                  <?php  query_posts( array( 'post_type' => array( 'post', 'opinion_post', 'news'), 'category_name' => 'mainstage', 'posts_per_page' => $smof_data['current-posts'] ) );  ?> 
                   <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
 
                   <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
@@ -273,5 +275,5 @@
         </div><!-- end .wrap-center -->
     </div><!-- end #featured-boxes -->
     <div class="clear"></div>
-    <?php } ?>
+	<?php } ?>
 <?php } ?>
