@@ -74,7 +74,7 @@ Template Name: Gear - Archive
             <p class="article-summary entry-summary"><?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 130); ?></p>
 			<div class="entry-footer">
 				<div class="entry-comment-count">
-					Comments: (<?php comments_number( '0', '1', '%' ); ?>)
+					<i class="fa fa-comments-o"></i>  (<?php comments_number( '0', '1', '%' ); ?>)
 				</div>
 				<div class="entry-read-more">
 					<a href="<?php the_permalink(); ?>" title="Read the whole article.">Read More...</a>
