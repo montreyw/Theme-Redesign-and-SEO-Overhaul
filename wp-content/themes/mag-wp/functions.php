@@ -435,5 +435,13 @@ function amt_schemaorg_skip_front_page( $default ) {
 add_filter( 'disable_wpseo_json_ld_output', '__return_true' );
 add_filter( 'wpseo_json_ld_output', '__return_false' );
 
+function registerCustomAdminCss() {
+	$src = "/wp-content/themes/mag-wp/css/custom-admin-css.css";
+	$handle = "customAdminCss";
+	wp_register_script($handle, $src);
+	wp_enqueue_style($handle, $src, array(), false, false);
+}
+add_action('admin_head', 'registerCustomAdminCss');
+
 
 ?>

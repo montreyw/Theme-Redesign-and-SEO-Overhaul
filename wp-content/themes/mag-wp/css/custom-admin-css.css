@@ -1,0 +1,6 @@
+/* Fixes alignment of fields for Album Review Details */
+#acf_124862 .required,
+.acf_postbox .required,
+.acf_postbox .field.required {
+	margin-left: 0;
+}
