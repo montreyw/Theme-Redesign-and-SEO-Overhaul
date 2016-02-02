@@ -36,7 +36,7 @@
 									<?php echo number_format_i18n( get_the_author_posts() ); ?>
 								</a>
 								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" class="author-photo-anchor">
-									<?php echo get_avatar( get_the_author_meta( 'user_email' ), 100 ); ?>
+									<?php echo get_avatar( get_the_author_meta( 'user_email' ), 300 ); ?>
 								</a>
 							</div>
 							<div class="author-info">
@@ -51,7 +51,7 @@
 										<a target="_blank" href="//plus.google.com/<?php echo the_author_meta('google'); ?>?rel=author">
 											<i class="fa fa-google-plus"></i></a></li><?php } ?>                            
 								</ul>
-								 &rsaquo; <a class="author-link" href="<?php the_author_meta('url'); ?>" target="_blank"><?php the_author_meta('url'); ?></a><br />
+								<a class="author-link" href="<?php the_author_meta('url'); ?>" target="_blank"><?php the_author_meta('url'); ?></a><br />
 								<p><?php the_author_meta('description'); ?></p>
 							</div><!-- end .autor-info -->
 						</div><!-- end .entry -->
@@ -70,17 +70,21 @@
 <!-- Begin Wrap Content -->
 <div class="wrap-fullwidth hfeed h-feed">
 
-  <!-- Begin Main Home Content 950px -->
-  <div class="home-content">
-
-    <div class="section-top-title">
-      <h3><?php _e('Freshest Content', 'anthemes'); ?></h3>
-      <!-- Top social icons. -->
-      <?php if (!empty($smof_data['top_icons'])) { ?>
-        <?php echo stripslashes($smof_data['top_icons']); ?>
-      <?php } ?>
-    </div><div class="arrow-down-widget"></div>
-    <div class="clear"></div><!-- end .section-top-title -->
+	<!-- Begin Main Home Content 950px -->
+	<div class="home-content">
+		<div class="section-top-title">
+			<?php if (is_author()): ?> 
+				<h3>Freshest Pieces by <?php the_author(); ?></h3>
+			<?php else: ?>
+				<h3><?php _e('Freshest Content', 'anthemes'); ?></h3>
+			<?php endif ?>
+			<!-- Top social icons. -->
+			<?php if (!empty($smof_data['top_icons'])) { ?>
+				<?php echo stripslashes($smof_data['top_icons']); ?>
+			<?php } ?>
+		</div>
+	<div class="arrow-down-widget"></div>
+	<div class="clear"></div><!-- end .section-top-title -->
 
 
     

@@ -433,6 +433,9 @@ a {
 	-o-transition: all 137ms;
 	transition: all 137ms;
 }
+h1, h2, h3, h4, h5, h6 {
+	color: #555;
+}
 blockquote {
 	margin: 0 7% 7%;
 	border-left: 4px solid #e34848;
@@ -1170,6 +1173,7 @@ div.big-thing-box ul.big-thing.owl-carousel div.owl-stage div.owl-item.active:nt
 }
 .home-content ul.classic-blog li .entry-comment-count {
 	margin: 0;
+	padding: 2px 17px;
 }
 .home-content ul.classic-blog li .entry-read-more a {
 	color: #94979c !important;
@@ -1540,13 +1544,83 @@ h6.post-answer {
 
 
 /* Author Writer Page */
+.author-meta,
+.author-meta img.avatar,
+.author-meta a.author-nrposts,
+.author-meta ul.author-social-top,
+.author-meta ul.author-social-top li,
+.author-meta .author-info a.author-link,
+.author-meta .author-info {
+	float: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+.archive-header {
+	margin: 20px 0 30px;
+}
+.archive-header h1 {
+	text-transform: uppercase;
+	font-size: 37px;
+	margin: 0 0 30px;
+}
 .author-meta {
     background-color: #fff;
 }
-.author-meta .entry p {
+.author-meta .entry {
+	max-width: 730px;
+}
+.author-meta .entry .author-photo-cont {
+	display: block;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto 20px;
+	position: relative;
+}
+.author-meta .entry a.author-photo-cont {
+	display: block;
+}
+.author-meta .entry .author-photo-cont a.author-nrposts {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-top-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	width: auto;
+	padding: 0 3px;
+	min-width: 17px;
+}
+.author-meta .entry .author-photo-cont a.author-photo-anchor {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+.author-meta .entry .author-photo-cont img {
+	height: 100%;
+	width: 100%;
+	border-radius: 3px;
+}
+.author-meta .entry .author-info ul.author-social-top {
+	margin: 0 10px 0 0;
+}
+.author-meta .entry .author-info ul.author-social-top li a {
+	border-radius: 50%;
+}
+.author-meta .entry .author-info ul.author-social-top li a i {
+	padding: 0;
+}
+.author-meta .entry .author-info a.author-link {
+	text-decoration: none;
+}
+.author-meta .entry .author-info p {
     color: #777;
 }
-
+/* Voices */
+.archive-header img.earmilk-voices {
+	background: #f5f5f5;
+	padding: 10px;
+	border-radius: 13px;
+}
 
 
 /* Post grid types */
@@ -2300,19 +2374,19 @@ body #responsive-menu #responsive-menu-title {
 		font-size: 17px;
 		padding: 10px;
 	}
-	div.wrap-fullwidth div.home-content .home-content ul.classic-blog {
+	div.wrap-fullwidth div.home-content ul.classic-blog {
 		float: none;
 		margin: 0 auto;
 		width: 86%;
 		padding: 0 7%;
 	}
-	div.wrap-fullwidth div.home-content .home-content ul.classic-blog li img {
-		width: 100%;
-		height: auto;
-	}
-	div.wrap-fullwidth div.home-content .home-content ul.classic-blog li {
+	div.wrap-fullwidth div.home-content ul.classic-blog li {
 		margin: 0 auto 30px;
 		width: 100%;
+	}
+	div.wrap-fullwidth div.home-content ul.classic-blog li img {
+		width: 100%;
+		height: auto;
 	}
 	ul#masonry_list li {
 		margin: 0 auto 50px !important;
