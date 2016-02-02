@@ -443,5 +443,3 @@ function registerCustomAdminCss() {
 }
 add_action('admin_head', 'registerCustomAdminCss');
 
-
-?>
