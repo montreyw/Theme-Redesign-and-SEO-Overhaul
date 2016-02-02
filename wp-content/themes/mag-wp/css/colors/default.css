@@ -1478,8 +1478,11 @@ div#single-share {
 	background-color: transparent;
 	color: #000 !important;
 }
-.entry strong {
-    color: #555;
+.entry strong,
+.single-content .p-first-letter .entry strong {
+	color: #555;
+	font-variant: normal;
+	font-size: inherit;
 }
 ul.ts-fab-list li a {
     background-color: #777 !important;
