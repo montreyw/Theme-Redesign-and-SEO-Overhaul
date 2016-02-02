@@ -9,6 +9,11 @@ Earmilk redesign project
 - [x] Remove Main Stage from all pages but the Front
 - [x] Normalize posts on Videos, Album Reviews and others
 - [x] Widen Latest Posts on mobile view
+- [ ] Fix sitemap
+- [ ] Place ads
+- [ ] Show year of post if not current year
+- [ ] Make YouTube embed size more responsive to different screen sizes
+- [ ] Look into Google indexing post attachments / robots.txt
 - [ ] Improve layout of Author Pages
 - [ ] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
 - [ ] Look into Facebook native comments solution
