@@ -7,6 +7,66 @@
 ?>
 
 
+
+		<?php if (is_category()) { ?> 
+			<div class="archive-header">
+				<h1><strong rel="tag"><?php single_cat_title(''); ?></strong></h1><?php echo category_description(); ?>
+			</div>
+		<?php } elseif (is_tag()) { ?>
+			<div class="archive-header">
+				<h1><strong rel="tag"><?php single_tag_title(''); ?></strong></h1>
+			</div>
+		<?php } elseif (is_search()) { ?>
+			<div class="archive-header">
+				<h1><?php printf( __( 'Search Results for: %s', 'anthemes' ), '<strong rel="tag">' . get_search_query() . '</strong>' ); ?></h1>
+			</div>
+		<?php } elseif (is_author()) { ?>
+			<?php  query_posts( 
+				array( 
+				'post_type' => array( 'post', 'opinion_post', 'gear_post', 'album_review', 'news'),
+				'author__in'=> get_the_author_meta( 'ID' )
+				) );  ?> 
+				<?php if(get_the_author_meta('description') ): ?>
+				<div class="archive-header">
+					<h1 rel="tag"><?php the_author_posts_link(); ?></h1>
+					<div class="author-meta">
+						<div class="entry">
+							<div class="author-photo-cont">
+								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" class="author-nrposts">
+									<?php echo number_format_i18n( get_the_author_posts() ); ?>
+								</a>
+								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" class="author-photo-anchor">
+									<?php echo get_avatar( get_the_author_meta( 'user_email' ), 100 ); ?>
+								</a>
+							</div>
+							<div class="author-info">
+								<ul class="author-social-top">
+									<?php if(get_the_author_meta('facebook')) { ?><li class="facebook">
+										<a target="_blank" href="//facebook.com/<?php echo the_author_meta('facebook'); ?>">
+											<i class="fa fa-facebook"></i></a></li><?php } ?>
+									<?php if(get_the_author_meta('twitter')) { ?><li class="twitter">
+										<a target="_blank" href="//twitter.com/<?php echo the_author_meta('twitter'); ?>">
+											<i class="fa fa-twitter"></i></a></li><?php } ?>
+									<?php if(get_the_author_meta('google')) { ?><li class="google">
+										<a target="_blank" href="//plus.google.com/<?php echo the_author_meta('google'); ?>?rel=author">
+											<i class="fa fa-google-plus"></i></a></li><?php } ?>                            
+								</ul>
+								 &rsaquo; <a class="author-link" href="<?php the_author_meta('url'); ?>" target="_blank"><?php the_author_meta('url'); ?></a><br />
+								<p><?php the_author_meta('description'); ?></p>
+							</div><!-- end .autor-info -->
+						</div><!-- end .entry -->
+						<div class="clear"></div>
+					</div><!-- end .author-meta -->
+				</div>
+				<?php else: ?>
+                <div class="archive-header"><h3><?php _e( 'All posts by:', 'anthemes' ); ?> <strong rel="tag"><?php the_author(); ?></strong></h3></div>
+            <?php endif; ?>
+        <?php } elseif (is_404()) { ?> 
+            <div class="archive-header"><h3><?php _e('Error 404 - Not Found. <br />Sorry, but you are looking for something that isn\'t here.', 'anthemes'); ?></h3></div>
+        <?php } ?> 
+
+
+
 <!-- Begin Wrap Content -->
 <div class="wrap-fullwidth hfeed h-feed">
 
@@ -22,39 +82,6 @@
     </div><div class="arrow-down-widget"></div>
     <div class="clear"></div><!-- end .section-top-title -->
 
-
-
-        <?php if (is_category()) { ?> 
-            <div class="archive-header"><h3><?php _e( 'All posts in:', 'anthemes' ); ?> <strong rel="tag"><?php single_cat_title(''); ?></strong></h3><?php echo category_description(); ?></div>
-        <?php } elseif (is_tag()) { ?>
-            <div class="archive-header"><h3><?php _e( 'All posts tagged in:', 'anthemes' ); ?> <strong rel="tag"><?php single_tag_title(''); ?></strong></h3></div>
-        <?php } elseif (is_search()) { ?>
-            <div class="archive-header"><h3><?php printf( __( 'Search Results for: %s', 'anthemes' ), '<strong rel="tag">' . get_search_query() . '</strong>' ); ?></h3></div>
-        <?php } elseif (is_author()) { ?>
-            <?php if(get_the_author_meta('description') ): ?>
-            <div class="archive-header"><h3><?php _e( 'All posts by:', 'anthemes' ); ?> <strong rel="tag"><?php the_author(); ?></strong></h3></div>
-            <div class="author-meta">
-                <div class="entry">
-                    <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" class="author-nrposts"><?php echo number_format_i18n( get_the_author_posts() ); ?></a>
-                    <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php echo get_avatar( get_the_author_meta( 'user_email' ), 100 ); ?></a>
-                    <div class="author-info">
-                        <strong><?php the_author_posts_link(); ?></strong> &rsaquo; <a class="author-link" href="<?php the_author_meta('url'); ?>" target="_blank"><?php the_author_meta('url'); ?></a><br />
-                        <p><?php the_author_meta('description'); ?></p>
-                        <ul class="author-social-top">
-                            <?php if(get_the_author_meta('facebook')) { ?><li class="facebook"><a target="_blank" href="//facebook.com/<?php echo the_author_meta('facebook'); ?>"><i class="fa fa-facebook"></i></a></li><?php } ?>
-                            <?php if(get_the_author_meta('twitter')) { ?><li class="twitter"><a target="_blank" href="//twitter.com/<?php echo the_author_meta('twitter'); ?>"><i class="fa fa-twitter"></i></a></li><?php } ?>
-                            <?php if(get_the_author_meta('google')) { ?><li class="google"><a target="_blank" href="//plus.google.com/<?php echo the_author_meta('google'); ?>?rel=author"><i class="fa fa-google-plus"></i></a></li><?php } ?>                            
-                        </ul><div class="clear"></div>
-                    </div><!-- end .autor-info -->
-                </div><!-- end .entry -->
-                <div class="clear"></div>
-            </div><!-- end .author-meta -->
-            <?php else: ?>
-                <div class="archive-header"><h3><?php _e( 'All posts by:', 'anthemes' ); ?> <strong rel="tag"><?php the_author(); ?></strong></h3></div>
-            <?php endif; ?>
-        <?php } elseif (is_404()) { ?> 
-            <div class="archive-header"><h3><?php _e('Error 404 - Not Found. <br />Sorry, but you are looking for something that isn\'t here.', 'anthemes'); ?></h3></div>
-        <?php } ?> 
 
     
 <?php if ($home_select == 'Grid Style') { ?>
@@ -109,7 +136,7 @@
             <p class="article-summary entry-summary"><?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 137); ?></p>
 			<div class="entry-footer">
 				<div class="entry-comment-count">
-					Comments: (<?php comments_number( '0', '1', '%' ); ?>)
+					<i class="fa fa-comments-o"></i>  (<?php comments_number( '0', '1', '%' ); ?>)
 				</div>
 				<div class="entry-read-more">
 					<a href="<?php the_permalink(); ?>" title="Read the whole article.">Read More...</a>
