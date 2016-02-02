@@ -9,16 +9,16 @@ Earmilk redesign project
 - [x] Remove Main Stage from all pages but the Front
 - [x] Normalize posts on Videos, Album Reviews and others
 - [x] Widen Latest Posts on mobile view
-- [ ] Fix sitemap
+- [x] Improve layout of Author Pages
+- [ ] Add unique headers to individual category pages
+- [x] Fix sitemap (fixed but how?)
 - [ ] Place ads
 - [ ] Show year of post if not current year
 - [ ] Make YouTube embed size more responsive to different screen sizes
 - [ ] Look into Google indexing post attachments / robots.txt
-- [ ] Improve layout of Author Pages
 - [ ] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
 - [ ] Look into Facebook native comments solution
 - [ ] Implement Colorful Genre Bar from old.V2
-- [ ] Add unique headers to individual category pages
 - [ ] Remove all MP3 links from posts
 - [ ] Ability to play a post's first song right from the posts grid
 - [ ] Ability to play a post's first video right from the posts grid
@@ -64,7 +64,9 @@ Earmilk redesign project
 23.  Prettied and restructured single post's [Title and Author Meta](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/86f4d24bbf749956ae1225728aa7cc93161af5c4)
 24.  Changed [site-wide font to Helvetica](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/3ebecc827ab4a8de65f0c4e574a76611211de7c2) for aesthetics and better readibility
 25.  Improved [single post view on mobile](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a6fb8c94025b5a23b1acdc3610ed7356ea5764a1)
-26.  ...
+26.  Jazzed up and updated [structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a9050e0ebf33a15d482164d4ae2648c2d394552b) and [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/fec9fcc7313f605d20e5812b06e8a81622a52be3) of Author Pages
+27.  Slicked up and pdated [structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a9050e0ebf33a15d482164d4ae2648c2d394552b) and [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/fec9fcc7313f605d20e5812b06e8a81622a52be3) of Archive Pages
+28.  ...
 
 
 
@@ -129,6 +131,8 @@ Earmilk redesign project
 3.  Clone set up at [allmilknoduds.com](http://allmilknoduds.com)
 4.  Google Analytics [hardcoded](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e1d21cade3c382300f30241dfcefe850a32d2dbd) into header.php
 5.  Yoast Google Analytics plugin deactivated
+6.  Fixed a CSS alignment of fields bug in [ALbum Review Details](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c1aa8d1a4d10f8d75ef0ae884eb337c03690587c) backend plugin (Resolved [Issue #16](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/issues/16))
+7.  ...
 
 
 
