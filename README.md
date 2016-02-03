@@ -7,7 +7,7 @@ Earmilk redesign project
 3. [SEO Work](#seo-work-sec)
   *  [Fixing Incomplete, Missing, or Broken hAtom hEntries](#seo-hatom-sec)
   *  [Schema.org Markup](#seo-schema-sec)
-  *  [Other SEO Improvements](#seo-schema-sec)
+  *  [Other SEO Improvements](#seo-other-sec)
 4. [Miscellaneous Work](#misc-work-sec)
 5. [EARMILK Links](#earmilk-links)
 6. [EARMILK License](#earmilk-license)
