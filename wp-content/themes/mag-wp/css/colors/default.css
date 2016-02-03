@@ -1243,6 +1243,27 @@ span._5mdd {
 }
 .sidebar .widget h3.title {
 }
+.sidebar .widget #custom-social-like-btns {
+	margin: -20px auto 0;
+	width: 100%;
+	display: block;
+}
+.sidebar .widget #facebook-like-btn {
+	margin: 0 13px 0 5px;
+	width: 58%;
+	display: inline-block;
+	height: 22px;
+}
+.sidebar .widget #googleplus-like-btn {
+	width: 33%;
+	height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.sidebar .widget #googleplus-like-btn > div {
+	float: right !important;
+	width: 80px !important;
+}
 .widget.widget_ultimate_posts {
     background: #fff;
 }
