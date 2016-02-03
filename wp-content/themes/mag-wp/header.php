@@ -184,7 +184,7 @@
 				</nav><!-- end #myjquerymenu -->
 
                 <!-- logo middle -->
-                <a class="" href="<?php echo esc_url(home_url( '/' )); ?>"><img id="earmilk-logo" <?php if ($logo_align_select == 'Left') { ?>style="float: left;"<?php } ?> class="logo" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" /></a>
+                <a class="logo-cont" href="<?php echo esc_url(home_url( '/' )); ?>"><img id="earmilk-logo" class="logo" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" /></a> <!-- <?php if ($logo_align_select == 'Left') { ?>style="float: left;"<?php } ?> -->
 
             <!-- search form get_search_form(); -->
             <form id="searchform" method="get" action="<?php echo esc_url( home_url( '/' )); ?>">

@@ -490,13 +490,17 @@ header .main-header .sticky-on {
 	width: 100% !Important;
 	max-width: 1230px;
 }
-header .main-header .sticky-on a img.logo {
+header .main-header .sticky-on a.logo-cont {
+	float: left;
+	display: block;
+}
+header .main-header .sticky-on a.logo-cont img.logo {
     transition: all 370ms;
     -webkit-filter: invert(1);
     -ms-filter: invert(1);
     filter: invert(1);
 }
-header .main-header.sticky img.logo {
+header .main-header.sticky a.logo-cont img.logo {
     margin: 0;
     height: inherit;
 }
@@ -1085,9 +1089,11 @@ div.big-thing-box ul.big-thing.owl-carousel div.owl-stage div.owl-item.active:nt
 .home-content ul.classic-blog li .entry-thumbnail {
 	display: block;
 	position: relative;
+	width: 100%;
 }
 .home-content ul.classic-blog li .entry-thumbnail img {
 	display: block;
+	width: 100%;
 }
 /*
 .home-content ul.classic-blog li .article-category {
@@ -1466,7 +1472,7 @@ ul#masonry_list li .entry-thumb-cont {
 	position: relative;	
 }
 ul#masonry_list li a.entry-thumbnail {
-	width: 266px;
+/* 	width: 266px; */
 	height: 266px;
 	display: block;
 	overflow: hidden;
@@ -1496,7 +1502,6 @@ ul#masonry_list li .article-category {
 	display: inline-flex;
 }
 ul#masonry_list li .article-category .post-date,
-ul#masonry_list li .article-category .author,
 ul#masonry_list li .article-category .tiptipBlog {
 	padding: 1px 11px;
 	font-size: 10px;
@@ -1581,22 +1586,22 @@ ul#masonry_list li .entry-empty-box {
 }
 /* Album reviews */
 ul#masonry_list li.album_review a.entry-thumbnail {
-	width: 266px;
+/* 	width: 266px; */
 	height: 266px !important;
 }
 /* Gear */
 ul#masonry_list li.gear_post a.entry-thumbnail {
-	width: 266px;
+/* 	width: 266px; */
 	height: 215px !important;
 }
 /* Voices -- opinion post */
 ul#masonry_list li.opinion_post a.entry-thumbnail {
-	width: 266px;
+/* 	width: 266px; */
 	height: 122px !important;
 }
 /* News grid */
 ul#masonry_list li.news a.entry-thumbnail {
-	width: 266px;
+/* 	width: 266px; */
 	height: 127px;
 }
 
@@ -1876,13 +1881,21 @@ body #responsive-menu #responsive-menu-title {
 	font-size: 1em !important;
 }
 
-@media only screen and (max-width: 1230px) and (min-width: 1004px) {
+@media only screen and (max-width: 1230px) and (min-width: 1001px) {
 	header .sticky.main-header .sticky-on {
 		width: 1230px;
 	}
+	header .main-header .sticky-on a.logo-cont {
+		transform: scale(0.9);
+		margin: 0 -20px;
+	}
 	header .main-header .jquerycssmenu-right {
 		font-size: 15px;
-		margin: 22px 10px 0 0;
+		margin: 22px 0 0;
+	}
+	form#searchform {
+		width: 170px;
+		margin-left: 2%;
 	}
 	#searchform .inputLabel {
 		top: 8px;
@@ -2062,6 +2075,10 @@ body #responsive-menu #responsive-menu-title {
 	body div.wrap-fullwidth aside.sidebar .widget {
 		margin: 0 15px;
 	}	
+	ul#masonry_list li.news a.entry-thumbnail {
+		width: 100%;
+		height: 125px;
+	}
 }
 @media only screen and (max-width: 760px) and (min-width: 580px) {
 	header div.top-navigation {
@@ -2446,6 +2463,10 @@ body #responsive-menu #responsive-menu-title {
 	}
 	ul#masonry_list li.gear_post a.entry-thumbnail {
 		width: 100%;
+	}
+	ul#masonry_list li.news a.entry-thumbnail {
+		width: 100%;
+		height: 120px;
 	}
 	div.wrap-fullwidth aside.sidebar {
 		float: none;
