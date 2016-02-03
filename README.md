@@ -12,6 +12,7 @@ Earmilk redesign project
 - [x] Improve layout of Author Pages
 - [ ] Add unique headers to individual category pages
 - [x] Fix sitemap (fixed but how?)
+- [ ] Add Facebook Like Button to Social Sidebar
 - [ ] Place ads
 - [ ] Show year of post if not current year
 - [ ] Make YouTube embed size more responsive to different screen sizes
