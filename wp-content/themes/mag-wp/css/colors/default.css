@@ -1754,6 +1754,9 @@ div#customer_widget_main {
 
 
 /* Footer */
+footer {
+	background-color: #fff;
+}
 .wrap-footer {
     background: #fff;
 }
@@ -2100,6 +2103,9 @@ body #responsive-menu #responsive-menu-title {
 		width: 100%;
 		height: 125px;
 	}
+	footer {
+		padding-bottom: 64px;
+	}
 }
 @media only screen and (max-width: 760px) and (min-width: 580px) {
 	header div.top-navigation {
@@ -2210,6 +2216,9 @@ body #responsive-menu #responsive-menu-title {
 	#featured-boxes ul.big-thing div.owl-item li .article-category .author a {
 		font-size: 13px;
 		padding: 4px 7px;
+	}
+	footer {
+		padding-bottom: 64px;
 	}
 }
 @media only screen and (max-width: 580px) and (min-width: 480px) {
@@ -2324,6 +2333,9 @@ body #responsive-menu #responsive-menu-title {
 	}
 	ul#masonry_list li.gear_post a.entry-thumbnail {
 		width: 100%;
+	}
+	footer {
+		padding-bottom: 64px;
 	}
 }
 @media only screen and (max-width: 479px) {
@@ -2505,5 +2517,8 @@ body #responsive-menu #responsive-menu-title {
 	}
 	div.wrap-fullwidth .single-content .entry-content .entry .p-first-letter p {
 		font-size: 17px;
+	}
+	footer {
+		padding-bottom: 64px;
 	}
 }
