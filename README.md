@@ -1,9 +1,22 @@
 # Earmilk
 Earmilk redesign project
 
+## Table of Contents
+1. [To Do](#to-do-sec)
+2. [Theme Changes](#theme-changes-sec)
+3. [SEO Work](#seo-work-sec)
+  *  [Fixing Incomplete, Missing, or Broken hAtom hEntries](#seo-hatom-sec)
+  *  [Schema.org Markup](#seo-schema-sec)
+  *  [Other SEO Improvements](#seo-schema-sec)
+4. [Miscellaneous Work](#misc-work-sec)
+5. [EARMILK Links](#earmilk-links)
+6. [EARMILK License](#earmilk-license)
+
+
+
 ----------
 
-## To Do
+<h2 id="to-do-sec">To Do</h2>
 - [x] Implement new header
 - [x] Restructure new header further to remove unnecessary actions and make more compatible with all pages
 - [x] Remove Main Stage from all pages but the Front
@@ -12,7 +25,8 @@ Earmilk redesign project
 - [x] Improve layout of Author Pages
 - [ ] Add unique headers to individual category pages
 - [x] Fix sitemap (fixed but how?)
-- [ ] Add Facebook Like Button to Social Sidebar
+- [x] Add Facebook Like Buttons to Social Sidebar
+- [x] Add Google+ Buttons to Social Sidebar
 - [ ] Place ads
 - [ ] Show year of post if not current year
 - [ ] Make YouTube embed size more responsive to different screen sizes
@@ -38,7 +52,7 @@ Earmilk redesign project
 
 ----------
 
-## Theme Changes
+<h2 id="theme-changes-sec">Theme Changes</h2>
 
 1.  All ads have been removed -- the list of ads and their respective code can be found [in this file](https://github.com/iamandrebulatov/Earmilk/blob/master/google_ad_code_removed.html)
 2.  Black to White -- style [code has been added](https://github.com/iamandrebulatov/Earmilk/commit/76d8365db5bd6f39aee36620a45ac9f06ee1eb23) to default.css, in wp-mag > css > colors
@@ -74,9 +88,10 @@ Earmilk redesign project
 --------
 
 
-## SEO Work
+<h2 id="seo-work-sec">SEO Work</h2>
 
-### Fixing Incomplete, Missing, or Broken hAtom hEntries
+<h3 id="seo-hatom-sec">Fixing Incomplete, Missing, or Broken hAtom hEntries</h2>
+
 1.  [Commented](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f739b32c3a899139df1f09f8503bb7e3b889c595) out line 481 in wp-includes/post-template.php * **
 	*this is the line that was commented out
 	```php
@@ -103,13 +118,17 @@ Earmilk redesign project
 9.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/650f67978b9d55bf8d4ffbe4318096a73909161a) hAtom to Main Stage  
 10.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/13444148516b57421122eebdcd23801f8a397721) hAtom to main index.php file, which affects most posts  
 
-### Schema.org Markup
+
+<h3 id="seo-schema-sec">Schema.org Markup</h2>
+
 1.  Added [Organization](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a2bf2a07e859375ba648f950fbb9191dba17ddb9) to header.php `<head>` 
 2.  Added [WPHeader](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/3050ed60394655363ed560486c89b06cade8370e) to header.php 
 3.  Added [WPFooter](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/27d372ccd87769f519af096f281c88e1140f6b22) to footer.php
 4.  ...  
 
-### Other SEO Improvements
+
+<h3 id="seo-other-sec">Other SEO Improvements</h2>
+
 1.  Fixed [several SEO meta tags](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e1c3ea5b8bec65dfd01133c80fed9b6ac2bc64fb) in the `<head>`
 2.  Properly implemented [non-WWW to WWW](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/b8cf6d709cdbd301c313d19446f7e60b6babc4b9), fixing [a major issue](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/issues/7)
 3.  Implemented WWW to non-WWW ([nginx conf file](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4a8542f3e97eb5bbc1284fcaacf6fd9703c35d45) and [wp-config.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/53677c65e5cc31da7501774d5cdd86dcc0f1c38c))
@@ -125,8 +144,8 @@ Earmilk redesign project
 
 --------
 
+<h2 id="misc-work-sec">Misc Work</h2>
 
-##Misc Work
 1.  Backups made ([Google Drive](https://drive.google.com/open?id=0B_40KgH9jS_Nckt0SW5JTFo0Qnc), [MEGA](http://mega.nz))
 2.  [GitHub Project](https://github.com/iamandrebulatov/Earmilk) set up
 3.  Clone set up at [allmilknoduds.com](http://allmilknoduds.com)
@@ -139,6 +158,7 @@ Earmilk redesign project
 
 --------
 
+<h2 id="earmilk-links">EARMILK Links</h2>
 
 ##Earmilk Development Enviornment Clone Site
 -- [allmilknoduds.com](http://allmilknoduds.com)
@@ -162,7 +182,6 @@ password:  [a truth we share]
 
 ----------
 
-
-##License
+<h2 id="earmilk-license">EARMILK License</h2>
 
 Copyright (c) 2016 Earmilk.com
