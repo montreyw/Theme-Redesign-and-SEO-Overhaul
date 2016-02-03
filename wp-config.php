@@ -1,15 +1,10 @@
 <?php
 /** Enable W3 Total Cache */
 define('WP_CACHE', true); // Added by W3 Total Cache
-
-
-
- //Added by WP-Cache Manager
-define( 'WPCACHEHOME', '/home/www-data/earmilk/public/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
-/*$domain = 'http://'.$_SERVER['HTTP_HOST'].'/wp'; */
 define('WP_HOME', 'http://earmilk.com');
 define('WP_SITEURL', 'http://earmilk.com');
 define('WP_ALLOW_REPAIR', true);
+define('WP_POST_REVISIONS', true);
 /* var_dump($_SERVER); */
 /**
  * The base configurations of the WordPress.

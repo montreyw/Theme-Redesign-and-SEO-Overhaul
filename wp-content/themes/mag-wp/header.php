@@ -6,7 +6,7 @@
 	 *
 	 * The template for displaying the header
 	 *
-	 * Displays all of the <head> section and everything up till 
+	 * Displays all of the <head> section and everything up till
 	 *
 	 * @package WordPress
 	 * @subpackage Profile
@@ -31,13 +31,10 @@
 <?php
     // Options from admin panel
     global $smof_data;
-    
     $favicon = $smof_data['custom_favicon'];
     if (empty($favicon)) { $favicon = get_template_directory_uri().'/images/web-icon.png'; }
-    
     $site_logo = $smof_data['site_logo'];
     if (empty($site_logo)) { $site_logo = get_template_directory_uri().'/images/logo.png'; }
-
     if (empty($smof_data['featured-posts'])) { $smof_data['featured-posts'] = '4'; }
     if (empty($smof_data['current-posts'])) { $smof_data['current-posts'] = '8'; }
     $boxed_version_select = (isset($smof_data['boxed_version_select'])) ? $smof_data['boxed_version_select'] : 'Yes';
@@ -87,60 +84,50 @@
             "query-input": "required name=search_query"
         }
     }
-    </script>  
-	
+    </script>
     <!-- Title -->
     <?php if ( ! function_exists( '_wp_render_title_tag' ) ) { function theme_slug_render_title() { ?>
     <title><?php wp_title( '|', true, 'right' ); ?></title>
-    <?php } add_action( 'wp_head', 'theme_slug_render_title' ); } // Backwards compatibility for older versions. ?>  
-
+    <?php } add_action( 'wp_head', 'theme_slug_render_title' ); } // Backwards compatibility for older versions. ?>
     <!-- Mobile Device Meta -->
-    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui' /> 
-    
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui' />
     <!-- The HTML5 Shim for older browsers (mostly older versions of IE). -->
-	<!--[if IE]> <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script> <![endif]--><!--[if IE 9]><style type="text/css">.logo, header .sticky .logo  { margin-top: 0 !important; } </style><![endif]--> <!--[if IE 8]><style type="text/css">.logo, header .sticky .logo  { margin-top: 0 !important; } #searchform2  { margin-top: -5px !important;} #searchform2 .buttonicon { margin-top: 5px !important;} </style><![endif]--> 
-
+	<!--[if IE]> <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script> <![endif]--><!--[if IE 9]><style type="text/css">.logo, header .sticky .logo  { margin-top: 0 !important; } </style><![endif]--> <!--[if IE 8]><style type="text/css">.logo, header .sticky .logo  { margin-top: 0 !important; } #searchform2  { margin-top: -5px !important;} #searchform2 .buttonicon { margin-top: 5px !important;} </style><![endif]-->
 	<!-- Favicons and rss / pingback -->
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php esc_url(bloginfo('rss2_url')); ?>" />
     <link rel="pingback" href="<?php esc_url(bloginfo('pingback_url')); ?>" />
-    <link rel="shortcut icon" type="image/png" href="<?php echo esc_url($favicon); ?>"/>  
-
+    <link rel="shortcut icon" type="image/png" href="<?php echo esc_url($favicon); ?>"/>
     <!-- Custom style -->
     <?php echo get_template_part('custom-style'); ?>
-
 	<!-- Google Analytics -->
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
 	  ga('create', 'UA-1088092-11', 'auto');
 	  ga('send', 'pageview');
-	
 	</script>
-
     <!-- Theme output -->
-    <?php wp_head(); ?> 
+    <?php wp_head(); ?>
 <!-- <script type="text/javascript" src="/js/jquery.tipTip.minified.js"></script> -->
 </head>
 <body <?php if ($boxed_version_select == 'Yes') { ?>id="boxed-style"<?php } ?> <?php body_class(); ?>
-	itemscope itemtype="http://schema.org/<?php 
-	if (is_page(array(48, 'about', 'About'))) { 
-		echo 'AboutPage'; 
+	itemscope itemtype="http://schema.org/<?php
+	if (is_page(array(48, 'about', 'About'))) {
+		echo 'AboutPage';
 	} elseif (is_page(array(52, 'contact', 'Contact'))) {
-		echo 'ContactPage'; 
+		echo 'ContactPage';
 	} else {
 		echo 'WebPage';
-	} 
+	}
 	?>">
-<?php if (!empty($smof_data['background_img'])) { ?>    
+<?php if (!empty($smof_data['background_img'])) { ?>
     <img id="background" src="<?php echo esc_url($smof_data['background_img']); ?>" alt="background img" />
 <?php } // background image ?>
-
 <!-- Begin Header -->
-<header role="banner" 
-	itemprop="hasPart" itemscope itemtype="http://schema.org/WPHeader"> 
+<header role="banner"
+	itemprop="hasPart" itemscope itemtype="http://schema.org/WPHeader">
 	<meta itemprop="name" content="EARMILK Site Header" />
 	<meta itemprop="headline" content="EARMILK.com -- All milk. No duds." />
 	<meta itemprop="description" content="This is the masthead for EARMILK.com" />
@@ -148,20 +135,18 @@
             <div class="sticky-on">
             <?php if ($logo_align_select == 'Center') { ?>
                 <!-- Navigation Menu Left -->
-                <nav id="myjquerymenu" class="jquerycssmenu" 
+                <nav id="myjquerymenu" class="jquerycssmenu"
 					role="navigation" itemprop="hasPart" itemscope itemtype="http://schema.org/SiteNavigationElement">
                     <?php  wp_nav_menu( array( 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'theme_location' =>   'primary-menu' ) ); ?>
                 </nav><!-- end #myjquerymenu -->
             <?php } ?>
                 <!-- Navigation Menu Right -->
-				<nav id="myjquerymenu2" class="jquerycssmenu-right" 
+				<nav id="myjquerymenu2" class="jquerycssmenu-right"
 					role="navigation" itemprop="hasPart" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php  wp_nav_menu( array( 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'theme_location' =>   'secondary-menu' ) ); ?>
 				</nav><!-- end #myjquerymenu -->
-
                 <!-- logo middle -->
                 <a class="" href="<?php echo esc_url(home_url( '/' )); ?>"><img id="earmilk-logo" <?php if ($logo_align_select == 'Left') { ?>style="float: left;"<?php } ?> class="logo" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" /></a>
-
             <!-- search form get_search_form(); -->
             <form id="searchform" method="get" action="<?php echo esc_url( home_url( '/' )); ?>">
 	            <div class="inputLabel">Search for...</div>
@@ -171,27 +156,23 @@
 				<div class="inputUnderline"></div>
 				<div class="animatedUnderline"></div>
             </form>
-
             </div><!-- end .sticky-on -->
             <div class="clear"></div>
         </div><!-- end .main-header --><div class="clear"></div>
         <div class="header-filler"></div><div class="clear"></div>
 </header><!-- end #header -->
-
 <?php if ( term_exists( 'featured', 'post_tag' ) ) { ?>
     <?php if ( is_page_template( 'template-home.php' ) || is_page_template( 'template-home-2.php' ) ) { ?>
-    <?php if ( function_exists( 'rwmb_meta' ) ) {  
+    <?php if ( function_exists( 'rwmb_meta' ) ) {
     // If Meta Box plugin is activate ?>
     <!-- Featured Slider Section -->
     <div id="featured-slider" style="display:none;">
-      <?php  query_posts( array( 'post_type' => 'post', 'tag' => 'featured', 'posts_per_page' => $smof_data['featured-posts'] ) );  ?> 
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-
+      <?php  query_posts( array( 'post_type' => 'post', 'tag' => 'featured', 'posts_per_page' => $smof_data['featured-posts'] ) );  ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php
             $fullslider = rwmb_meta('anthemes_fullslider', true );
             $slider_title = rwmb_meta('anthemes_slider_title', true );
-        ?> 
-
+        ?>
         <div class="item">
             <?php
             $images = rwmb_meta( 'anthemes_fullslider', 'type=image&size=thumbnail-featured-slider' );
@@ -199,7 +180,7 @@
             <img src="<?php echo $fullslider['url']; ?>" width="<?php echo $fullslider['width']; ?>" height="<?php echo $fullslider['height']; ?>" alt="<?php echo $fullslider['alt']; ?>" />
             <?php } ?>
             <div class="content">
-              <?php if(!empty($slider_title) ) { ?> 
+              <?php if(!empty($slider_title) ) { ?>
                 <h2><a href="<?php the_permalink(); ?>"><?php echo stripslashes_deep($slider_title); ?></a></h2>
                 <?php } else { ?>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -207,43 +188,36 @@
               <a href="<?php the_permalink(); ?>" class="btn-featured"> <?php _e('Read more', 'anthemes'); ?> <i class="fa fa-chevron-right"></i></a>
             </div><!-- end .conten -->
         </div><!-- end .item -->
-
-      <?php endwhile; endif; wp_reset_query();  ?>    
+      <?php endwhile; endif; wp_reset_query();  ?>
     </div><!-- end #featured-slider -->
     <?php if ($boxed_version_select == 'Yes') { ?><div class="clear2" style="margin-bottom: 620px;"></div><?php } ?>
-    <?php } // Meta Box Plugin 
+    <?php } // Meta Box Plugin
     } // Template Home ?>
 <?php } ?>
-
-
-
 <?php if ( is_home() ) { ?>
     <?php if ( term_exists( 'current', 'post_tag' ) ) { ?>
     <!-- The next big Thing Section -->
     <div id="featured-boxes">
         <div class="wrap-center">
             <?php //echo get_template_part('custom/region/left-big-thing'); ?>
-
             <div class="big-thing-box hfeed h-feed">
                 <div class="line-box">
                     <div class="header_line">
                      <h4 class="top"><span class="gray"><?php _e('Main Stage', 'anthemes'); ?></span></h4>
                     </div>
                 </div><!-- end .line-box -->
-
                 <ul class="big-thing" style="display:none;">
-                  <?php  query_posts( array( 'post_type' => array( 'post', 'opinion_post', 'news'), 'category_name' => 'mainstage', 'posts_per_page' => $smof_data['current-posts'] ) );  ?> 
-                  <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-
-                  <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
+                  <?php  query_posts( array( 'post_type' => array( 'post', 'opinion_post', 'news'), 'category_name' => 'mainstage', 'posts_per_page' => $smof_data['current-posts'] ) );  ?>
+                  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                  <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?>
 						<div class="entry-thumb-cont">
-				            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
+				            <a href="<?php the_permalink(); ?>" class="entry-thumbnail">
 								<span class="vertical-height-helper"></span>
 					            <?php echo the_post_thumbnail('full'); ?>
-				            </a> 
+				            </a>
 							<div class="article-category">
 								<div class="post-date date updated">
-									<span class="month"><?php the_time('M', '', '', true); ?></span> 
+									<span class="month"><?php the_time('M', '', '', true); ?></span>
 									<span class="day"><?php the_time('d', '', '', true); ?></span>
 								</div>
 								<span class="vcard author p-author h-card">
@@ -254,10 +228,10 @@
 										</a>
 									</span>
 								</span>
-								<?php 
-									$category = get_the_category(); 
-									if ($category) { 
-						            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
+								<?php
+									$category = get_the_category();
+									if ($category) {
+						            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}
 								?>
 							</div>
 						</div>
@@ -266,10 +240,9 @@
 								<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 							</h3>
 						</div>
-						<?php } ?> <div class="clear"></div>  
+						<?php } ?> <div class="clear"></div>
 					</li>
-
-                <?php endwhile; endif; wp_reset_query();  ?> 
+                <?php endwhile; endif; wp_reset_query();  ?>
                 </ul><!-- end .big-thing -->
             </div><!-- end .big-thing-box -->
         </div><!-- end .wrap-center -->
