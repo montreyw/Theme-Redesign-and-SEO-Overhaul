@@ -62,8 +62,8 @@
 	<meta name="contact" content="businessv@earmilk.com" />
 	<meta name="copyright" content="Copyright (c) 2009-2016 EARMILK Inc. All Rights Reserved." />
     <!-- Mobile Device Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui"> 
-	<meta name="theme-color" content="#e34848">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+	<meta name="theme-color" content="#e34848" />	
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
