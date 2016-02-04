@@ -29,6 +29,7 @@ Earmilk redesign project
 - [x] Add Google+ Buttons to Social Sidebar
 - [ ] Add Funtime Out Events Festivals to the nav menu
 - [ ] Place ads
+- [ ] Pull share count to posts grid
 - [ ] Show year of post if not current year
 - [ ] Make YouTube embed size more responsive to different screen sizes
 - [ ] Look into and stop Google indexing post attachments / robots.txt
