@@ -1332,7 +1332,10 @@ span._5mdd {
 .addthis-smartlayers .at4-recommended .at4-recommended-horizontal-logo {
 	display: none;
 }
-
+/* Bottom of post sharing buttons of Add This */
+.at4-jumboshare a .at-label {
+	color: #fff;
+}
 
 
 
@@ -1419,8 +1422,8 @@ div#single-share {
 	font-size: inherit;
 }
 ul.ts-fab-list li a {
-    background-color: #777 !important;
-    border-color: #666;
+    background-color: #bbb !important;
+    border-color: #aaa;
 }
 ul.ts-fab-list li.active a {
     background-color: #ededed !important;
@@ -1591,7 +1594,7 @@ ul#masonry_list li .entry-read-more,
 ul#masonry_list li .entry-comment-count,
 ul#masonry_list li .entry-empty-box {
 	background: #f2f2f2;
-	padding: 2px 7px;
+	padding: 2px 7%;
 	display: inline-block;
 	margin: 2px 0 0;
 }
@@ -2469,8 +2472,8 @@ body #responsive-menu #responsive-menu-title {
 	div.wrap-fullwidth div.home-content ul.classic-blog {
 		float: none;
 		margin: 0 auto;
-		width: 86%;
-		padding: 0 7%;
+		width: 90%;
+		padding: 0 5%;
 	}
 	div.wrap-fullwidth div.home-content ul.classic-blog li {
 		margin: 0 auto 30px;
@@ -2491,7 +2494,7 @@ body #responsive-menu #responsive-menu-title {
 		height: 323px;
 	}
 	ul#masonry_list li.opinion_post a.entry-thumbnail {
-		width: 323px;
+/* 		width: 323px; */
 		height: 148px;
 	}
 	ul#masonry_list li.gear_post a.entry-thumbnail {
@@ -2500,6 +2503,9 @@ body #responsive-menu #responsive-menu-title {
 	ul#masonry_list li.news a.entry-thumbnail {
 		width: 100%;
 		height: 120px;
+	}
+	.archive-header img.earmilk-voices {
+		width: 87%;
 	}
 	div.wrap-fullwidth aside.sidebar {
 		float: none;
