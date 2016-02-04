@@ -451,28 +451,3 @@ function registerCustomAdminCss() {
 	wp_enqueue_style($handle, $src, array(), false, false);
 }
 add_action('admin_head', 'registerCustomAdminCss');
-
-add_filter( 'embed_oembed_html', 'tdd_oembed_filter', 10, 4 ) ;
-function tdd_oembed_filter($html, $url, $attr, $post_ID) {
-	$return = '<figure class="video-container">'.$html.'</figure>';
-	return $return;
-}
-
-/*  Add responsive container to embeds
-/* ------------------------------------ */ 
-function yt_embed_html( $html ) {
-    return '<div class="video-container">' . $html . '</div>';
-}
- 
-add_filter( 'embed_oembed_html', 'yt_embed_html', 10, 3 );
-add_filter( 'video_embed_html', 'yt_embed_html' ); // Jetpack
-
-function mycustom_embed_defaults($embed_size){
-
-    $embed_size['width'] = 100; // Adjust values to your needs
-    $embed_size['height'] = 100; 
-
-    return $embed_size; // Return new size 
-}
-
-add_filter('embed_defaults', 'mycustom_embed_defaults');
