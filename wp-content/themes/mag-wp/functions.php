@@ -435,6 +435,15 @@ function amt_schemaorg_skip_front_page( $default ) {
 add_filter( 'disable_wpseo_json_ld_output', '__return_true' );
 add_filter( 'wpseo_json_ld_output', '__return_false' );
 
+// ------------------------------------------------------------------------------ 
+// Suppress Yoast's Spammy notices and wrnings - Andre
+// ------------------------------------------------------------------------------ 
+remove_action( 'admin_notices', array( Yoast_Notification_Center::get(), 'display_notifications' ) );
+remove_action( 'all_admin_notices', array( Yoast_Notification_Center::get(), 'display_notifications' ) );
+
+// ------------------------------------------------------------------------------ 
+// Register and initialize Custom Admin CSS file - Andre
+// ------------------------------------------------------------------------------ 
 function registerCustomAdminCss() {
 	$src = "/wp-content/themes/mag-wp/css/custom-admin-css.css";
 	$handle = "customAdminCss";
@@ -443,3 +452,27 @@ function registerCustomAdminCss() {
 }
 add_action('admin_head', 'registerCustomAdminCss');
 
+add_filter( 'embed_oembed_html', 'tdd_oembed_filter', 10, 4 ) ;
+function tdd_oembed_filter($html, $url, $attr, $post_ID) {
+	$return = '<figure class="video-container">'.$html.'</figure>';
+	return $return;
+}
+
+/*  Add responsive container to embeds
+/* ------------------------------------ */ 
+function yt_embed_html( $html ) {
+    return '<div class="video-container">' . $html . '</div>';
+}
+ 
+add_filter( 'embed_oembed_html', 'yt_embed_html', 10, 3 );
+add_filter( 'video_embed_html', 'yt_embed_html' ); // Jetpack
+
+function mycustom_embed_defaults($embed_size){
+
+    $embed_size['width'] = 100; // Adjust values to your needs
+    $embed_size['height'] = 100; 
+
+    return $embed_size; // Return new size 
+}
+
+add_filter('embed_defaults', 'mycustom_embed_defaults');
