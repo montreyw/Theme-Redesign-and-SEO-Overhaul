@@ -43,6 +43,12 @@
     $boxed_version_select = (isset($smof_data['boxed_version_select'])) ? $smof_data['boxed_version_select'] : 'Yes';
     $logo_align_select = (isset($smof_data['logo_align_select'])) ? $smof_data['logo_align_select'] : 'Left';
 ?>
+	
+    <!-- Title -->
+    <?php if ( ! function_exists( '_wp_render_title_tag' ) ) { function theme_slug_render_title() { ?>
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <?php } add_action( 'wp_head', 'theme_slug_render_title' ); } // Backwards compatibility for older versions. ?>  
+
 	<!-- Meta Tags -->
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<!-- <title><?php wp_title(''); ?></title> -->
@@ -53,6 +59,11 @@
 	<link rel="alternate" href="<?php echo get_permalink(); ?>" hreflang="en">
 	<link rel="alternate" href="<?php echo get_permalink(); ?>" hreflang="en-us">
 	<link rel="alternate" href="<?php echo get_permalink(); ?>" hreflang="en-gb">
+	<meta name="contact" content="businessv@earmilk.com" />
+	<meta name="copyright" content="Copyright (c) 2009-2016 EARMILK Inc. All Rights Reserved." />
+    <!-- Mobile Device Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui"> 
+	<meta name="theme-color" content="#e34848">	
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -88,14 +99,6 @@
         }
     }
     </script>  
-	
-    <!-- Title -->
-    <?php if ( ! function_exists( '_wp_render_title_tag' ) ) { function theme_slug_render_title() { ?>
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
-    <?php } add_action( 'wp_head', 'theme_slug_render_title' ); } // Backwards compatibility for older versions. ?>  
-
-    <!-- Mobile Device Meta -->
-    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui' /> 
     
     <!-- The HTML5 Shim for older browsers (mostly older versions of IE). -->
 	<!--[if IE]> <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script> <![endif]--><!--[if IE 9]><style type="text/css">.logo, header .sticky .logo  { margin-top: 0 !important; } </style><![endif]--> <!--[if IE 8]><style type="text/css">.logo, header .sticky .logo  { margin-top: 0 !important; } #searchform2  { margin-top: -5px !important;} #searchform2 .buttonicon { margin-top: 5px !important;} </style><![endif]--> 
