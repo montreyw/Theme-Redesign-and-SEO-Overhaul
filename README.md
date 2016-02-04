@@ -27,6 +27,7 @@ Earmilk redesign project
 - [x] Fix sitemap (fixed but how?)
 - [x] Add Facebook Like Buttons to Social Sidebar
 - [x] Add Google+ Buttons to Social Sidebar
+- [ ] Add Funtime Out Events Festivals to the nav menu
 - [ ] Place ads
 - [ ] Show year of post if not current year
 - [ ] Make YouTube embed size more responsive to different screen sizes
