@@ -1486,10 +1486,27 @@ h6.post-answer {
 .single-content .entry-bottom .wb-ad-grid .wb-ad-unit a:link:hover {
     color: #cd2026 !important;
 }
-.single-content .entry-bottom .comments {
-	display: none;
+.single-content .comments {
+	min-height: 270px;
+/* 	display: none; */
 }
-body.logged-in .single-content .entry-bottom .comments {
+.single-content .comments h3.title {
+	color: #000 !important;
+	background-color: #fff;
+	text-align: left;
+	margin: 20px 0;
+	font-weight: bold;
+	font-size: 19px;
+	padding-left: 0;
+	text-transform: none;
+}
+.single-content .comments h3.title > span {
+    background: rgba(227, 72, 72, 1.75);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #fff;
+}
+body.logged-in .single-content .comments {
 	display: initial;
 }
 
