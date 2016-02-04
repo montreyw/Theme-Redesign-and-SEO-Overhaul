@@ -9,6 +9,9 @@ Template Name: Album Reviews - Archive
     global $smof_data;
 ?>
 
+<div class="archive-header">
+	<h1>Album Reviews</h1>
+</div>
 
 <!-- Begin Wrap Content -->
 <div class="wrap-fullwidth hfeed h-feed">
@@ -74,12 +77,12 @@ Template Name: Album Reviews - Archive
 	        </h2>
             <p class="article-summary entry-summary"><?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 130); ?></p>
 			<div class="entry-footer">
-				<p class="entry-comment-count">
-					<i class="fa fa-comments-o"></i>  (<?php comments_number( '0', '1', '%' ); ?>)
-				</p>
-				<p class="entry-read-more">
+				<div class="entry-comment-count">
+					<i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;<div class="facebook-comment-count"><fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count></div>
+				</div>
+				<div class="entry-read-more">
 					<a href="<?php the_permalink(); ?>" title="Read the whole article.">Read More...</a>
-				</p>
+				</div>
 				<div class="entry-empty-box">&nbsp;
 					<?php if(function_exists('taqyeem_get_score')) { ?>
 						<?php taqyeem_get_score(); ?>

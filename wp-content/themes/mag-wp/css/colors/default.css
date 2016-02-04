@@ -1202,6 +1202,23 @@ div.big-thing-box ul.big-thing.owl-carousel div.owl-stage div.owl-item.active:nt
 	margin: 0;
 	padding: 2px 17px;
 }
+.home-content ul.classic-blog li .entry-comment-count i {
+	
+}
+.home-content ul.classic-blog li .entry-comment-count div.facebook-comment-count {
+	display: inline-block;
+	height: 16px;
+}
+.home-content ul.classic-blog li .entry-comment-count .facebook-comment-count > * {
+	
+}
+.home-content ul.classic-blog li .entry-comment-count .facebook-comment-count span.fb_comments_count {
+	font-size: 14px;
+}
+.home-content ul.classic-blog li .entry-comment-count {
+	margin: 0;
+	padding: 2px 17px;
+}
 .home-content ul.classic-blog li .entry-read-more a {
 	color: #94979c !important;
 }
@@ -1471,6 +1488,9 @@ h6.post-answer {
 }
 .single-content .entry-bottom .comments {
 	display: none;
+}
+body.logged-in .single-content .entry-bottom .comments {
+	display: initial;
 }
 
 

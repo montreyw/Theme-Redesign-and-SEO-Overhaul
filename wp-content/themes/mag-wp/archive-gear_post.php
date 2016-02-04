@@ -9,6 +9,9 @@ Template Name: Gear - Archive
     global $smof_data;
 ?>
 
+<div class="archive-header">
+	<h1>Gear Reviews</h1>
+</div>
 
 <!-- Begin Wrap Content -->
 <div class="wrap-fullwidth">
@@ -74,7 +77,7 @@ Template Name: Gear - Archive
             <p class="article-summary entry-summary"><?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 130); ?></p>
 			<div class="entry-footer">
 				<div class="entry-comment-count">
-					<i class="fa fa-comments-o"></i>  (<?php comments_number( '0', '1', '%' ); ?>)
+					<i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;<div class="facebook-comment-count"><fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count></div>
 				</div>
 				<div class="entry-read-more">
 					<a href="<?php the_permalink(); ?>" title="Read the whole article.">Read More...</a>
