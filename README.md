@@ -32,6 +32,7 @@ Earmilk redesign project
 - [ ] Show year of post if not current year
 - [ ] Make YouTube embed size more responsive to different screen sizes
 - [ ] Look into Google indexing post attachments / robots.txt
+- [x] Make all facebook comment count reflect in the posts-grid comment count
 - [ ] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
 - [ ] Look into Facebook native comments solution
 - [ ] Implement Colorful Genre Bar from old.V2
