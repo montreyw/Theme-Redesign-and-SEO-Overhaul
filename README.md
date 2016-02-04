@@ -31,10 +31,11 @@ Earmilk redesign project
 - [ ] Place ads
 - [ ] Show year of post if not current year
 - [ ] Make YouTube embed size more responsive to different screen sizes
-- [ ] Look into Google indexing post attachments / robots.txt
+- [ ] Look into and stop Google indexing post attachments / robots.txt
+- [x] Look into Facebook native comments solution
 - [x] Make all facebook comment count reflect in the posts-grid comment count
 - [ ] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
-- [ ] Look into Facebook native comments solution
+- [ ] Add Extra AUthor Disclosure info to author meta
 - [ ] Implement Colorful Genre Bar from old.V2
 - [ ] Remove all MP3 links from posts
 - [ ] Ability to play a post's first song right from the posts grid
