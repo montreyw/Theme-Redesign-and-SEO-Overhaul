@@ -2500,6 +2500,9 @@ body #responsive-menu #responsive-menu-title {
 		width: 100%;
 		float: none;
 	}
+	.section-top-title h3 {
+		margin: 0;
+	}
 	div.wrap-fullwidth div.home-content {
 		width: 100%;
 		float: none;
