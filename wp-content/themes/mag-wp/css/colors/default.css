@@ -507,7 +507,7 @@ body > #header-filler {
 	display: inline-block;
 	width: auto;
 	max-height: 85px;
-	margin: 17px 17px 0 37px;
+	margin: 22px 1% 0 10%;
 }
 /* Header Logo */
 #fixed-header #inner-header #logo-header #earmilk-logo {
@@ -524,6 +524,8 @@ body > #header-filler {
     filter: invert(1);
     margin: 0;
 	height: auto;
+	width: 90%;
+    float: right;
 }
 /* Header Nav */
 #fixed-header #inner-header #myjquerymenu {
@@ -536,7 +538,7 @@ body > #header-filler {
 }
 #fixed-header #inner-header #myjquerymenu ul li a {
     color: #000;
-	font-size: 17px;
+	font-size: 15px;
 } 
 #fixed-header #inner-header #myjquerymenu ul li.current-menu-item a {
     color: #e34848 !important;
@@ -591,7 +593,7 @@ form#searchform {
     background-color: #fff;
     position: relative;
 	display: inline-block;
-	margin: 28px 20px 0 30px;
+	margin: 28px 3% 0 7%;
 }
 #searchform .inputLabel {
 	z-index: 1;
@@ -742,7 +744,11 @@ form#searchform {
         transform: scaleX(1)
     }
 }
-
+ul.dwls_search_results {
+	left: auto !important;
+	right: 20px !important;
+/*     top: 580px !important; */
+}
 ul.dwls_search_results.search_results li {
     background-color: #fff !important;
     border: 1px solid #eaeaea;
@@ -1524,7 +1530,22 @@ h6.post-answer {
 body.logged-in .single-content .comments {
 	display: initial;
 }
-
+/* YouTube video Embeds */
+.entry .vvqbox.vvqyoutube {
+	min-width: 100%;
+	display: block;
+	width: 100% !important;
+	height: auto !important;
+}
+.entry .vvqbox.vvqyoutube span {
+	min-width: 100%;
+	display: block;
+	width: 100% !important;
+	height: auto !important;
+}
+.entry .vvqyoutube span img {
+	height: auto;
+}
 
 
 
@@ -1703,6 +1724,7 @@ ul#masonry_list li.news a.entry-thumbnail {
 	text-transform: uppercase;
 	font-size: 37px;
 	margin: 0 0 30px;
+	line-height: 37px;
 }
 .author-meta {
     background-color: #fff;
@@ -1990,7 +2012,7 @@ body #responsive-menu #responsive-menu-title {
 		top: -2px;
 	}
 	#fixed-header #inner-header #myjquerymenu ul li a {
-		font-size: 13px;
+		font-size: 11px;
 	}
 	.wrap-fullwidth .home-content {
 		float: none;
@@ -2478,6 +2500,7 @@ body #responsive-menu #responsive-menu-title {
 	}
 	ul.big-thing div.owl-item li h3.article-title.entry-title {
 		font-size: 17px;
+		margin: 0;
 	}
 	.owl-theme .owl-controls .owl-buttons .owl-prev, 
 	.owl-theme .owl-controls .owl-buttons .owl-next {
@@ -2505,6 +2528,9 @@ body #responsive-menu #responsive-menu-title {
 	div.wrap-fullwidth {
 		width: 100%;
 		float: none;
+	}
+	.section-top-title h3 {
+		margin: 0;
 	}
 	div.wrap-fullwidth div.home-content {
 		width: 100%;
