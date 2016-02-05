@@ -1,7 +1,7 @@
 # Earmilk
 Earmilk redesign project
 
-## Table of Contents
+<h2 id="table-of-contents">Table of Contents</h2>
 1. [To Do](#to-do-sec)
 2. [Theme Changes](#theme-changes-sec)
 3. [SEO Work](#seo-work-sec)
@@ -53,7 +53,11 @@ Earmilk redesign project
 - [ ] Implement a solution for Hreflang tags for indexing in foreign languages
 - [ ] Backend/Front end widget to give photographers credit for their photos
 - [ ] A solution for photo sourcing (possible a community effort or a filtering functionality plugn)
+- [ ] Remove all `&quot;`s from posts in `src="&quot;http...`
+- [ ] LazyLoader for SoundCloud embeds
 - [ ] ...
+
+- [Back to top ^](#table-of-contents)  
 
 ----------
 
@@ -90,6 +94,7 @@ Earmilk redesign project
 29.  ...
 
 
+- [Back to top ^](#table-of-contents)  
 
 --------
 
@@ -145,8 +150,7 @@ Earmilk redesign project
 
 
 
-....
-
+- [Back to top ^](#table-of-contents)  
 
 --------
 
@@ -161,6 +165,7 @@ Earmilk redesign project
 7.  ...
 
 
+- [Back to top ^](#table-of-contents)  
 
 --------
 
@@ -185,6 +190,7 @@ password:  [a truth we share]
 ##Earmilk GitHub
 - https://github.com/iamandrebulatov/Earmilk
 
+- [Back to top ^](#table-of-contents)  
 
 ----------
 
