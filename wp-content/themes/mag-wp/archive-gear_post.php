@@ -51,8 +51,14 @@ Template Name: Gear - Archive
 
 				<div class="article-category">
 					<div class="post-date date updated">
-						<span class="month"><?php the_time('M', '', '', true); ?></span> 
-						<span class="day"><?php the_time('d', '', '', true); ?></span>
+						<?php if ( get_the_time('Y') == date('Y')) { ?> 
+							<span class="month"><?php the_time('M', '', '', true); ?></span> 
+							<span class="day"><?php the_time('d', '', '', true); ?></span>
+						<?php } else { ?> 
+							<span class="month"><?php the_time('M', '', '', true); ?></span> 
+							<span class="day"><?php the_time('d', '', '', true); ?></span>
+							<span class="year">'<?php the_time('y', '', '', true); ?></span>
+						<?php } ?>
 					</div>
 					<span class="vcard author p-author h-card">
 						<span class="fn">
