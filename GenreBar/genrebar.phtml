@@ -1,0 +1,39 @@
+<!-- start genrebar -->
+<div class="genrebar clearfix">
+  <ul class="mainmenu">
+    <?php
+    foreach ($this->genres as $key => $label) :
+      $url = '/'.($key ? $this->options['url_base'].'/'.$key : $this->options['view_all']);
+
+    if ($this->options['url_suffix']) {
+      $url .= $this->options['url_suffix'];
+    }
+    ?>
+    <li class="<?=$key?> maingenre <?=($this->active == $key ? 'default' : '');?>">
+      <a class="<?=($this->active == $key ? 'default' : '');?> maingenre" href="<?=$url?>" data-key="<?=$key?>"><?=$label?></a>
+      <?php if ($label != 'VIEW ALL') : ?>
+      <div class="<?=$key?>-submenu subgenres <?=($this->active == $key ? 'selected' : '');?>">
+        <ul>
+          <?php
+          if (!empty($this->subgenres[$key]) && is_array($this->subgenres[$key])) {
+            foreach ($this->subgenres[$key] as $term) :
+              $url = '/'.($term->slug ? $this->options['url_base'].'/'.$term->slug : ''); ?>
+              <li class="<?=$key?>">
+                <a href="<?=$url?>"><?=strtoupper($term->name)?></a>
+              </li>
+          <?php
+            endforeach;
+          }
+          ?>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <?php endif; ?>
+    </li>
+    <?php
+    endforeach;
+    ?>
+  </ul>
+  <div class="clear"></div>
+</div>
+<!-- end genrebar -->

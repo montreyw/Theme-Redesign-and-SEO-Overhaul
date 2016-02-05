@@ -1,0 +1,33 @@
+<?php
+  $this->headTitle()->append('All Milk. No Duds.');
+?>
+<div class="visible-xs">
+	<h1>Latest Music</h1>
+</div>
+<div id="showcase">
+<?php echo $this->mainstage(); ?>
+</div>
+<div id="container" style="background-color: #111111 !important;">
+	<?php
+		 if ($this->page <= 1) {
+	 		echo $this->getHelper('HomeMultibox')->render();
+			// echo $this->partial('partial/affiliates.phtml');
+		 }
+	?>
+	<div class="col-lg-12">
+		<?php echo $this->genreBar(null, array('url_base' => 'genre')); ?>
+	</div>
+	<?php
+
+		echo $this->partial('article/post-grid.phtml', array(
+			'breadcrumb' => false,
+			'focus' => null,
+			'base_path' => '/',
+			'page_next' => $this->page_next,
+			'posts' => $this->posts,
+			'page' => $this->page,
+			'mpu' => false
+		));
+		
+	?>
+</div>
