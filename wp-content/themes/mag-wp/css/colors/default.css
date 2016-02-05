@@ -2608,3 +2608,369 @@ body #responsive-menu #responsive-menu-title {
 
 
 
+
+/* Genre Bar */
+.genrebar {
+    margin-top: 15px;
+    position: relative;
+    width: 100%
+}
+.genrebar {
+    display: none;
+    min-height: 54px
+}
+.genrebar .mainmenu {
+    position: relative;
+    height: 33px
+}
+.genrebar ul {
+    display: table;
+    width: 100%;
+    table-layout: fixed
+}
+.genrebar .mainmenu li.options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #090909;
+    padding: 0 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease
+}
+.genrebar .mainmenu li.options .this-popover {
+    display: none
+}
+.genrebar .mainmenu li.options .icon-gears {
+    width: 20px;
+    height: auto;
+    opacity: .2;
+    margin: 4px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease
+}
+.genrebar .mainmenu li.options:hover,.genrebar .mainmenu li.options .is_hover {
+    background: #232323
+}
+.genrebar .mainmenu li.options:hover .icon-gears,.genrebar .mainmenu li.options .is_hover .icon-gears {
+    opacity: .5
+}
+@media(min-width: 735px) {
+    .genrebar {
+        display:block
+    }
+}
+.genrebar ul li {
+    display: table-cell
+}
+.genrebar ul li a {
+    font-size: 12px;
+    margin: 0 2px 0 0;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    border-bottom: solid 8px #a3a3a3;
+    color: #313131;
+    padding: 0 0 10px 0
+}
+.genrebar ul li a:hover,.genrebar ul li a.active {
+    color: #fff;
+    text-decoration: none
+}
+.genrebar .subgenres {
+	display: none;
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+	z-index: 999;
+	top: 40px;
+	padding-bottom: 1px;
+	background: #fff;
+}
+.genrebar .subgenres ul {
+    margin-bottom: 2px
+}
+.genrebar .subgenres ul li {
+    font-size: 12px;
+    color: #313131;
+    margin: 0 2px 0 0;
+    padding: 0
+}
+.genrebar .subgenres ul li a {
+    font-size: 11px
+}
+.genrebar li.active .subgenres {
+    display: block!important
+}
+.default .genrebar .subgenres {
+    display: block!important
+}
+.genrebar ul li.active a,.genrebar ul li.default a {
+    color: #fff
+}
+.genrebar ul li.feature a {
+    border-bottom-color: #2e2e2e
+}
+.genrebar ul li.feature .subgenres a {
+    border-bottom-color: #000
+}
+.genrebar ul li.feature .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #2e2e2e
+}
+.genrebar ul li.feature .selected a {
+    color: #848484
+}
+.genrebar ul li.dance a {
+    border-bottom-color: #e2d059
+}
+.genrebar ul li.dance .subgenres a {
+    border-bottom-color: #8a7b18
+}
+.genrebar ul li.dance .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #e2d059
+}
+.genrebar ul li.dance .selected a {
+    color: #848484
+}
+.genrebar ul li.hip-hop a {
+    border-bottom-color: #e99b37
+}
+.genrebar ul li.hip-hop .subgenres a {
+    border-bottom-color: #7a4a0d
+}
+.genrebar ul li.hip-hop .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #e99b37
+}
+.genrebar ul li.hip-hop .selected a {
+    color: #848484
+}
+.genrebar ul li.hiphop a {
+    border-bottom-color: #e99b37
+}
+.genrebar ul li.hiphop .subgenres a {
+    border-bottom-color: #7a4a0d
+}
+.genrebar ul li.hiphop .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #e99b37
+}
+.genrebar ul li.hiphop .selected a {
+    color: #848484
+}
+.genrebar ul li.electronic a {
+    border-bottom-color: #48b9e3
+}
+.genrebar ul li.electronic .subgenres a {
+    border-bottom-color: #13627f
+}
+.genrebar ul li.electronic .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #48b9e3
+}
+.genrebar ul li.electronic .selected a {
+    color: #848484
+}
+.genrebar ul li.experimental a {
+    border-bottom-color: #754aab
+}
+.genrebar ul li.experimental .subgenres a {
+    border-bottom-color: #2c1c40
+}
+.genrebar ul li.experimental .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #754aab
+}
+.genrebar ul li.experimental .selected a {
+    color: #848484
+}
+.genrebar ul li.pop a {
+    border-bottom-color: #469e6c
+}
+.genrebar ul li.pop .subgenres a {
+    border-bottom-color: #173424
+}
+.genrebar ul li.pop .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #469e6c
+}
+.genrebar ul li.pop .selected a {
+    color: #848484
+}
+.genrebar ul li.mash-up a {
+    border-bottom-color: #469e6c
+}
+.genrebar ul li.mash-up .subgenres a {
+    border-bottom-color: #173424
+}
+.genrebar ul li.mash-up .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #469e6c
+}
+.genrebar ul li.mash-up .selected a {
+    color: #848484
+}
+.genrebar ul li.rap a {
+    border-bottom-color: #e99b37
+}
+.genrebar ul li.rap .subgenres a {
+    border-bottom-color: #7a4a0d
+}
+.genrebar ul li.rap .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #e99b37
+}
+.genrebar ul li.rap .selected a {
+    color: #848484
+}
+.genrebar ul li.indie a {
+    border-bottom-color: #e34848
+}
+.genrebar ul li.indie .subgenres a {
+    border-bottom-color: #7f1313
+}
+.genrebar ul li.indie .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #e34848
+}
+.genrebar ul li.indie .selected a {
+    color: #848484
+}
+.genrebar ul li.alternative a {
+    border-bottom-color: #e34848
+}
+.genrebar ul li.alternative .subgenres a {
+    border-bottom-color: #7f1313
+}
+.genrebar ul li.alternative .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #e34848
+}
+.genrebar ul li.alternative .selected a {
+    color: #848484
+}
+.genrebar ul li.blues a {
+    border-bottom-color: #754aab
+}
+.genrebar ul li.blues .subgenres a {
+    border-bottom-color: #2c1c40
+}
+.genrebar ul li.blues .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #754aab
+}
+.genrebar ul li.blues .selected a {
+    color: #848484
+}
+.genrebar ul li.rock a {
+    border-bottom-color: #754aab
+}
+.genrebar ul li.rock .subgenres a {
+    border-bottom-color: #2c1c40
+}
+.genrebar ul li.rock .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #754aab
+}
+.genrebar ul li.rock .selected a {
+    color: #848484
+}
+.genrebar ul li.downtempo a {
+    border-bottom-color: #754aab
+}
+.genrebar ul li.downtempo .subgenres a {
+    border-bottom-color: #2c1c40
+}
+.genrebar ul li.downtempo .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #754aab
+}
+.genrebar ul li.downtempo .selected a {
+    color: #848484
+}
+.genrebar ul li.dubstep a {
+    border-bottom-color: #0a6b8f
+}
+.genrebar ul li.dubstep .subgenres a {
+    border-bottom-color: #000
+}
+.genrebar ul li.dubstep .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #0a6b8f
+}
+.genrebar ul li.dubstep .selected a {
+    color: #848484
+}
+.genrebar ul li.reviews a {
+    border-bottom-color: #7d1701
+}
+.genrebar ul li.reviews .subgenres a {
+    border-bottom-color: #000
+}
+.genrebar ul li.reviews .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #7d1701
+}
+.genrebar ul li.reviews .selected a {
+    color: #848484
+}
+.genrebar ul li.news a {
+    border-bottom-color: #015ca9
+}
+.genrebar ul li.news .subgenres a {
+    border-bottom-color: #000911
+}
+.genrebar ul li.news .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #015ca9
+}
+.genrebar ul li.news .selected a {
+    color: #848484
+}
+.genrebar ul li.reviews a {
+    border-bottom-color: #7d1701
+}
+.genrebar ul li.reviews .subgenres a {
+    border-bottom-color: #000
+}
+.genrebar ul li.reviews .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #7d1701
+}
+.genrebar ul li.reviews .selected a {
+    color: #848484
+}
+.genrebar ul li.album-review a {
+    border-bottom-color: #7d1701
+}
+.genrebar ul li.album-review .subgenres a {
+    border-bottom-color: #000
+}
+.genrebar ul li.album-review .subgenres a:hover {
+    color: #848484;
+    border-bottom-color: #7d1701
+}
+.genrebar ul li.album-review .selected a {
+    color: #848484
+}
+.genre-all,.bg-all {
+    background-color: #d5d5d5!important
+}
+.dark.genre-all {
+    background-color: #7c7c7c!important
+}
+.light.genre-all {
+    background-color: #fff!important
+}
+
