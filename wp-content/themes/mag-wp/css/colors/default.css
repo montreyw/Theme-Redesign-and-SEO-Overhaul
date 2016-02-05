@@ -7,7 +7,8 @@ code, pre                  { border: none; background-color: #FFF; -moz-box-shad
 /*-----------------------------------------------------------------------------
 ----------------------------- 1 - Layout --------------------------------------
 -----------------------------------------------------------------------------*/
-a:link, a:visited          { color: #DDD; text-decoration: none; 
+a:link, a:visited          { /* color: #DDD; */ 
+	text-decoration: none; 
 	-webkit-transition: all 137ms;
 	-o-transition: all 137ms;
 	transition: all 137ms;
@@ -502,12 +503,13 @@ body > #header-filler {
 #fixed-header #inner-header #search-cont {
 	display: inline-block;
 	float: right;
+	width: 13%;
 }
 #fixed-header #inner-header #logo-header {
 	display: inline-block;
 	width: auto;
 	max-height: 85px;
-	margin: 22px 1% 0 10%;
+	margin: 22px 0% 0px 1%;
 }
 /* Header Logo */
 #fixed-header #inner-header #logo-header #earmilk-logo {
@@ -524,7 +526,7 @@ body > #header-filler {
     filter: invert(1);
     margin: 0;
 	height: auto;
-	width: 90%;
+	width: 87%;
     float: right;
 }
 /* Header Nav */
@@ -539,6 +541,7 @@ body > #header-filler {
 #fixed-header #inner-header #myjquerymenu ul li a {
     color: #000;
 	font-size: 15px;
+	height: auto;
 } 
 #fixed-header #inner-header #myjquerymenu ul li.current-menu-item a {
     color: #e34848 !important;
@@ -607,7 +610,7 @@ form#searchform {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     font-family: futura, Tahoma, Geneva, sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 100;
     pointer-events: none;
     position: absolute;
@@ -616,12 +619,12 @@ form#searchform {
 #searchform #s {
 	border: 0;
     font-family: futura, Tahoma, Geneva, sans-serif;
-	width: 79%;
+	width: 76%;
 	color: #aaa !important;
 	background-color: transparent;
 	/* margin: 0 40px 0 0; */
 	padding: 0;
-	font-size: 17px;
+	font-size: 15px;
 	font-weight: lighter;
 	line-height: 1;
 	position: relative;
@@ -663,7 +666,7 @@ form#searchform {
 #searchform .inputUnderline,
 #searchform .animatedUnderline {
     position: absolute;
-    width: 79%;
+    width: 76%;
     bottom: 0;
     left: 0;
     margin: 0;
@@ -750,11 +753,25 @@ ul.dwls_search_results {
 /*     top: 580px !important; */
 }
 ul.dwls_search_results.search_results li {
-    background-color: #fff !important;
-    border: 1px solid #eaeaea;
+	-webkit-transition: all 137ms;
+	-o-transition: all 137ms;
+	transition: all 137ms;
+	background-color: #fff !important;
+	border: 1px solid #eaeaea;
 }
-ul.search_results li:hover {
+ul.dwls_search_results.search_results li:hover {
     background-color: #f2f2f2 !important;
+    cursor: pointer;
+}
+ul.dwls_search_results.search_results li:hover a,
+body > ul.dwls_search_results li a:hover {
+	color: #000 !important;
+}
+body > ul.dwls_search_results li a {
+	color: #777 !important;
+}
+body > ul.dwls_search_results li a:hover {
+	color: #000 !important;
 }
 ul.dwls_search_results .clearfix.search_footer {
     background-color: #fff;
@@ -1308,6 +1325,10 @@ span._5mdd {
 	float: right !important;
 	width: 80px !important;
 }
+div#twitter-like-btn iframe {
+	margin: 7px auto 0;
+	display: block;
+}
 .widget.widget_ultimate_posts {
     background: #fff;
 }
@@ -1411,6 +1432,7 @@ span._5mdd {
 }
 .single-content .entry-top .entry-author-meta span.author-meta-byline span {
 	font-size: 17px;
+	margin: 0px 3px 0px 0px;
 }
 .single-content .entry-top .entry-author-meta span.time.date,
 .single-content .entry-top .entry-author-meta span.author-meta-byline,
@@ -1423,7 +1445,7 @@ span._5mdd {
 .single-content .entry-top .entry-author-meta a.author-photo {
 	line-height: initial;
 	display: inline-flex;
-	margin: 0 3px;
+	margin: 0 4px;
 }
 .single-content .entry-top .entry-author-meta a.author-photo img {
     border-radius: 50%;	
