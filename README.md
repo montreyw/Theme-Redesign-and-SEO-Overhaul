@@ -42,6 +42,7 @@ Earmilk redesign project
 - [ ] Ability to play a post's first song right from the posts grid
 - [ ] Ability to play a post's first video right from the posts grid
 - [ ] Finish Schema.org markup
+- [ ] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
 - [ ] Album Review Details custom widget
 - [ ] New Theme / PHP Infrastructure
