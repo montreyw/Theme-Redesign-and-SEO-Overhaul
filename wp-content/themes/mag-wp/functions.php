@@ -451,3 +451,11 @@ function registerCustomAdminCss() {
 	wp_enqueue_style($handle, $src, array(), false, false);
 }
 add_action('admin_head', 'registerCustomAdminCss');
+
+function mytheme_setup() {
+	// Set default values for the upload media box
+	//update_option('image_default_align', 'center' );
+	update_option('image_default_link_type', 'media' );
+	//update_option('image_default_size', 'large' );
+}
+add_action('after_setup_theme', 'mytheme_setup');
