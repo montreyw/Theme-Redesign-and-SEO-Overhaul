@@ -27,11 +27,11 @@ Earmilk redesign project
 - [x] Fix sitemap (fixed but how?)
 - [x] Add Facebook Like Buttons to Social Sidebar
 - [x] Add Google+ Buttons to Social Sidebar
-- [ ] Add Funtime Out Events Festivals to the nav menu
+- [x] Add Funtime Out Events Festivals to the nav menu
 - [ ] Place ads
 - [ ] Pull share count to posts grid
-- [ ] Show year of post if not current year
-- [ ] Make YouTube embed size more responsive to different screen sizes
+- [x] Show year of post on Author Pages if not current year
+- [x] Make YouTube embed size more responsive to different screen sizes
 - [ ] Look into and stop Google indexing post attachments / robots.txt
 - [x] Look into Facebook native comments solution
 - [x] Make all facebook comment count reflect in the posts-grid comment count
