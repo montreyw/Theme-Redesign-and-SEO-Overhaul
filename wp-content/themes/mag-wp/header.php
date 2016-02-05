@@ -166,44 +166,45 @@
 <?php } // background image ?>
 
 <!-- Begin Header -->
-<header role="banner" 
-	itemprop="hasPart" itemscope itemtype="http://schema.org/WPHeader"> 
-	<meta itemprop="name" content="EARMILK Site Header" />
-	<meta itemprop="headline" content="EARMILK.com -- All milk. No duds." />
-	<meta itemprop="description" content="This is the masthead for EARMILK.com" />
-        <div class="main-header">
-            <div class="sticky-on">
-            <?php if ($logo_align_select == 'Center') { ?>
-                <!-- Navigation Menu Left -->
-                <nav id="myjquerymenu" class="jquerycssmenu" 
-					role="navigation" itemprop="hasPart" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <?php  wp_nav_menu( array( 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'theme_location' =>   'primary-menu' ) ); ?>
-                </nav><!-- end #myjquerymenu -->
-            <?php } ?>
-                <!-- Navigation Menu Right -->
-				<nav id="myjquerymenu2" class="jquerycssmenu-right" 
-					role="navigation" itemprop="hasPart" itemscope itemtype="http://schema.org/SiteNavigationElement">
-					<?php  wp_nav_menu( array( 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'theme_location' =>   'secondary-menu' ) ); ?>
-				</nav><!-- end #myjquerymenu -->
+<div id="fixed-header">
+	<div id="inner-header">
+		<div id="logo-cont">
+			<header id="logo-header" role="banner" 
+				itemprop="hasPart" itemscope itemtype="http://schema.org/WPHeader"> 
+				<meta itemprop="name" content="EARMILK Site Header" />
+				<meta itemprop="headline" content="EARMILK.com -- All milk. No duds." />
+				<meta itemprop="description" content="This is the masthead for EARMILK.com" />
+			    <a id="earmilk-logo" href="<?php echo esc_url(home_url( '/' )); ?>">
+					<img id="earmilk-logo-img" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" />
+				</a>
+			</header>
+		</div>
 
-                <!-- logo middle -->
-                <a class="logo-cont" href="<?php echo esc_url(home_url( '/' )); ?>"><img id="earmilk-logo" class="logo" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" /></a> <!-- <?php if ($logo_align_select == 'Left') { ?>style="float: left;"<?php } ?> -->
-
-            <!-- search form get_search_form(); -->
-            <form id="searchform" method="get" action="<?php echo esc_url( home_url( '/' )); ?>">
-	            <div class="inputLabel">Search for...</div>
-                <input type="text" name="s" id="s" />
-                <button type="submit" value="Search" class="buttonicon"><i class="fa fa-search"></i></button>
-                <!-- placeholder="<?php _e('Live Search ...', 'anthemes'); ?>" -->
+		<div id="search-cont">
+			<form id="searchform" method="get" action="<?php echo esc_url( home_url( '/' )); ?>">
+			    <div class="inputLabel">Search for...</div>
+			    <input type="text" name="s" id="s" />
+			    <button type="submit" value="Search" class="buttonicon"><i class="fa fa-search"></i></button>
 				<div class="inputUnderline"></div>
 				<div class="animatedUnderline"></div>
-            </form>
+			</form>
+		</div>
 
-            </div><!-- end .sticky-on -->
-            <div class="clear"></div>
-        </div><!-- end .main-header --><div class="clear"></div>
-        <div class="header-filler"></div><div class="clear"></div>
-</header><!-- end #header -->
+		<div id="nav-cont">
+		    <nav id="myjquerymenu" class="jquerycssmenu" 
+				role="navigation" itemprop="hasPart" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		        <?php  wp_nav_menu( array( 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'theme_location' =>   'primary-menu' ) ); ?>
+		    </nav>
+		</div>
+	</div>
+</div>
+<div id="header-filler"></div>
+
+
+
+
+
+
 
 <?php if ( term_exists( 'featured', 'post_tag' ) ) { ?>
     <?php if ( is_page_template( 'template-home.php' ) || is_page_template( 'template-home-2.php' ) ) { ?>
@@ -248,6 +249,15 @@
     <?php if ( term_exists( 'current', 'post_tag' ) ) { ?>
     <!-- The next big Thing Section -->
     <div id="featured-boxes">
+	<!-- /11347700/EM_ATF_ATB_900x90 -->
+<!-- 	<div id='gfp-above-banner' style='height:90px; width:970px;'> -->
+<!--
+		<div id='div-gpt-ad-1454478333610-0' style='height:90px; width:970px;'>
+			<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454478333610-0'); });
+			</script>
+		</div>
+-->
         <div class="wrap-center">
             <?php //echo get_template_part('custom/region/left-big-thing'); ?>
 
