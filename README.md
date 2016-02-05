@@ -52,6 +52,7 @@ Earmilk redesign project
 - [ ] iOS App 
 - [ ] Implement backend templating capability for Events
 - [ ] Implement a solution for Hreflang tags for indexing in foreign languages
+- [x] Author Page pagination needs to be fixed
 - [ ] Backend/Front end widget to give photographers credit for their photos
 - [ ] A solution for photo sourcing (possible a community effort or a filtering functionality plugn)
 - [ ] Remove all `&quot;`s from posts in `src="&quot;http...`
