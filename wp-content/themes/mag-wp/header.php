@@ -196,6 +196,9 @@
 		        <?php  wp_nav_menu( array( 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'theme_location' =>   'primary-menu' ) ); ?>
 		    </nav>
 		</div>
+
+<!-- 		<?php include("custom/Genre-Bar-static-HTML.php"); ?> -->
+
 	</div>
 </div>
 <div id="header-filler"></div>
