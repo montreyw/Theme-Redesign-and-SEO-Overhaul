@@ -36,6 +36,7 @@ Earmilk redesign project
 - [x] Look into Facebook native comments solution
 - [x] Make all facebook comment count reflect in the posts-grid comment count
 - [ ] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
+- [ ] Change all image attachments image-link-type's in posts to file or none
 - [ ] Add Extra AUthor Disclosure info to author meta
 - [ ] Implement Colorful Genre Bar from old.V2
 - [ ] Remove all MP3 links from posts
