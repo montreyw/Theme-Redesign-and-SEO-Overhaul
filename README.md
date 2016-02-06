@@ -130,7 +130,7 @@ Earmilk redesign project
 7.  [Upgraded](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/428245db1b09509477f1083e7074fb6fc27b3d55) hAtom markup to h-Atom micro formats draft 2.0  
 8.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7c3ffe91e9356fb5eaf6f0a2809c13850683fc6f) hAtom to more template files  
 9.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/650f67978b9d55bf8d4ffbe4318096a73909161a) hAtom to Main Stage  
-10.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/13444148516b57421122eebdcd23801f8a397721) hAtom to main index.php file, which affects most posts  
+10.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/13444148516b57421122eebdcd23801f8a397721) hAtom to main index.php file, which affects most posts
 11.  Fixed broken hAtom entries on [Ultimate Posts Widget](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8c3de90e46576ab4cb04c91aa186def3fdd4d0ad)
 
 
@@ -139,7 +139,7 @@ Earmilk redesign project
 1.  Added [Organization](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a2bf2a07e859375ba648f950fbb9191dba17ddb9) to header.php `<head>` 
 2.  Added [WPHeader](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/3050ed60394655363ed560486c89b06cade8370e) to header.php 
 3.  Added [WPFooter](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/27d372ccd87769f519af096f281c88e1140f6b22) to footer.php
-4.  Added [SiteNavigationElement]() to re-structured Header
+4.  Added [SiteNavigationElement](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c1aa8d1a4d10f8d75ef0ae884eb337c03690587c) to re-structured Header
 5.  ...
 
 
