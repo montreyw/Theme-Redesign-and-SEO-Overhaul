@@ -35,10 +35,10 @@ Earmilk redesign project
 - [ ] Look into and stop Google indexing post attachments / robots.txt
 - [x] Look into Facebook native comments solution
 - [x] Make all facebook comment count reflect in the posts-grid comment count
-- [ ] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
+- [x] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
 - [ ] Change all image attachments image-link-type's in posts to file or none
 - [ ] Add Extra AUthor Disclosure info to author meta
-- [ ] Implement Colorful Genre Bar from old.V2
+- [x] Implement Colorful Genre Bar from old.V2
 - [ ] Remove all MP3 links from posts
 - [ ] Ability to play a post's first song right from the posts grid
 - [ ] Ability to play a post's first video right from the posts grid
@@ -46,7 +46,6 @@ Earmilk redesign project
 - [ ] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
 - [ ] Album Review Details custom widget
-- [ ] New Theme / PHP Infrastructure
 - [ ] AJAX site navigation engine
 - [ ] Site wide persistent MP3 player
 - [ ] iOS App 
@@ -57,6 +56,7 @@ Earmilk redesign project
 - [ ] A solution for photo sourcing (possible a community effort or a filtering functionality plugn)
 - [ ] Remove all `&quot;`s from posts in `src="&quot;http...`
 - [ ] LazyLoader for SoundCloud embeds
+- [ ] STARTBALL OVER :D -- New Theme / PHP Infrastructure
 - [ ] ...
 
 - [Back to top ^](#table-of-contents)  
@@ -93,7 +93,8 @@ Earmilk redesign project
 26.  Jazzed up and updated [structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a9050e0ebf33a15d482164d4ae2648c2d394552b) and [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/fec9fcc7313f605d20e5812b06e8a81622a52be3) of Author Pages
 27.  Slicked up and pdated [structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a9050e0ebf33a15d482164d4ae2648c2d394552b) and [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/fec9fcc7313f605d20e5812b06e8a81622a52be3) of Archive Pages
 28.  Restructutred, simplified and improved the main [Fixed Header](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/845d4f3b80aa6df664ae812888e3431fdfe0e2fb)
-29.  ...
+29.  Implemented colorful category navigation [Genre Bar](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5fb3cf07a1abf18eb08732d798a13d797f932362)
+30.  ...
 
 
 - [Back to top ^](#table-of-contents)  
@@ -130,6 +131,7 @@ Earmilk redesign project
 8.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7c3ffe91e9356fb5eaf6f0a2809c13850683fc6f) hAtom to more template files  
 9.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/650f67978b9d55bf8d4ffbe4318096a73909161a) hAtom to Main Stage  
 10.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/13444148516b57421122eebdcd23801f8a397721) hAtom to main index.php file, which affects most posts  
+11.  Fixed broken hAtom entries on [Ultimate Posts Widget](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8c3de90e46576ab4cb04c91aa186def3fdd4d0ad)
 
 
 <h3 id="seo-schema-sec">Schema.org Markup</h2>
