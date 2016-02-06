@@ -480,15 +480,16 @@ body > #header-filler {
 	background: #fff;
 	padding: 0;
 	margin: 0 auto;
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.1);
 }
 #fixed-header #inner-header {
 	max-width: 1280px;
 	margin: 0 auto;
 	height: 85px;
 	max-height: 85px;
+	position: relative;
 }
 #fixed-header #inner-header #logo-cont {
 	display: inline-block;
@@ -526,7 +527,7 @@ body > #header-filler {
     filter: invert(1);
     margin: 0;
 	height: auto;
-	width: 87%;
+	width: 73%;
     float: right;
 }
 /* Header Nav */
@@ -2650,10 +2651,10 @@ form#searchform {
     transition: all .5s ease;
 	display: none;
 	min-height: 17px;
-	position: relative;
+	position: absolute;
 	width: 100%;
 	background: #fff;
-	bottom: 10px;
+	bottom: 0;
 	margin: 0;
 	opacity: 0.573;
 }
