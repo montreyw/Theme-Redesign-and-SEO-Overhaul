@@ -536,7 +536,7 @@ body > #header-filler {
 #fixed-header #inner-header #myjquerymenu {
 	float: none;
 	display: inline-block;
-	margin: 22px auto 0;
+	margin: 13px auto 0;
 }
 #fixed-header #inner-header #myjquerymenu ul {
 	display: block;
@@ -599,7 +599,7 @@ form#searchform {
     background-color: #fff;
     position: relative;
 	display: inline-block;
-	margin: 28px 3% 0 0;
+	margin: 23px 3% 0 0;
 }
 #searchform .inputLabel {
 	z-index: 1;
