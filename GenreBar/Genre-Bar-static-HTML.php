@@ -4,174 +4,174 @@
 			<a class="default maingenre" href="/" data-key="">VIEW ALL</a>
 		</li>
 		<li class="dance maingenre ">
-			<a class="maingenre" href="/genre/dance" data-key="dance">DANCE</a>
+			<a class="maingenre" href="/category/dance" data-key="dance">DANCE</a>
 			<div class="dance-submenu subgenres ">
 				<ul>
 					<li class="dance">
-						<a href="/genre/house">HOUSE</a>
+						<a href="/category/house">HOUSE</a>
 					</li>
 					<li class="dance">
-						<a href="/genre/electro">ELECTRO</a>
+						<a href="/category/electro">ELECTRO</a>
 					</li>
 					<li class="dance">
-						<a href="/genre/bass-dance">BASS</a>
+						<a href="/category/bass-dance">BASS</a>
 					</li>
 					<li class="dance">
-						<a href="/genre/deep-house">DEEP HOUSE</a>
+						<a href="/category/deep-house">DEEP HOUSE</a>
 					</li>
 					<li class="dance">
-						<a href="/genre/techno">TECHNO</a>
+						<a href="/category/techno">TECHNO</a>
 					</li>
 					<li class="dance">
-						<a href="/genre/progressive-dance">PROGRESSIVE</a>
+						<a href="/category/progressive-dance">PROGRESSIVE</a>
 					</li>
 					<li class="dance">
-						<a href="/genre/electro-house">ELECTRO HOUSE</a>
+						<a href="/category/electro-house">ELECTRO HOUSE</a>
 					</li>
 				</ul>
 				<div class="clear"></div>
 			</div>
 		</li>
 		<li class="hiphop maingenre ">
-			<a class="maingenre" href="/genre/hiphop" data-key="hiphop">HIPHOP</a>
+			<a class="maingenre" href="/category/hiphop" data-key="hiphop">HIPHOP</a>
 			<div class="hiphop-submenu subgenres ">
 				<ul>
 					<li class="hiphop">
-						<a href="/genre/rap">RAP</a>
+						<a href="/category/rap">RAP</a>
 					</li>
 					<li class="hiphop">
-						<a href="/genre/rb">R&amp;B</a>
+						<a href="/category/rb">R&amp;B</a>
 					</li>
 					<li class="hiphop">
-						<a href="/genre/soul">SOUL</a>
+						<a href="/category/soul">SOUL</a>
 					</li>
 					<li class="hiphop">
-						<a href="/genre/reggae">REGGAE</a>
+						<a href="/category/reggae">REGGAE</a>
 					</li>
 					<li class="hiphop">
-						<a href="/genre/trip-hop">TRIP-HOP</a>
+						<a href="/category/trip-hop">TRIP-HOP</a>
 					</li>
 					<li class="hiphop">
-						<a href="/genre/jazz-hop">JAZZ HOP</a>
+						<a href="/category/jazz-hop">JAZZ HOP</a>
 					</li>
 					<li class="hiphop">
-						<a href="/genre/glitch-hop">GLITCH-HOP</a>
+						<a href="/category/glitch-hop">GLITCH-HOP</a>
 					</li>
 				</ul>
 				<div class="clear"></div>
 			</div>
 		</li>
         <li class="indie maingenre ">
-			<a class="maingenre" href="/genre/indie" data-key="indie">INDIE</a>
+			<a class="maingenre" href="/category/indie" data-key="indie">INDIE</a>
 			<div class="indie-submenu subgenres ">
 				<ul>
 					<li class="indie">
-						<a href="/genre/alternative">ALTERNATIVE</a>
+						<a href="/category/alternative">ALTERNATIVE</a>
 					</li>
 					<li class="indie">
-						<a href="/genre/rock">ROCK</a>
+						<a href="/category/rock">ROCK</a>
 					</li>
 					<li class="indie">
-						<a href="/genre/indie-synth">SYNTH</a>
+						<a href="/category/indie-synth">SYNTH</a>
 					</li>
 					<li class="indie">
-						<a href="/genre/chillout">CHILLOUT</a>
+						<a href="/category/chillout">CHILLOUT</a>
 					</li>
 					<li class="indie">
-						<a href="/genre/folk">FOLK</a>
+						<a href="/category/folk">FOLK</a>
 					</li>
 					<li class="indie">
-						<a href="/genre/funk">FUNK</a>
+						<a href="/category/funk">FUNK</a>
 					</li>
 					<li class="indie">
-						<a href="/genre/soft-rock">SOFT ROCK</a>
+						<a href="/category/soft-rock">SOFT ROCK</a>
 					</li>
 				</ul>
 				<div class="clear"></div>
 			</div>
 		</li>
 		<li class="electronic maingenre ">
-			<a class="maingenre" href="/genre/electronic" data-key="electronic">ELECTRONIC</a>
+			<a class="maingenre" href="/category/electronic" data-key="electronic">ELECTRONIC</a>
 			<div class="electronic-submenu subgenres ">
 				<ul>
 					<li class="electronic">
-						<a href="/genre/dubstep">DUBSTEP</a>
+						<a href="/category/dubstep">DUBSTEP</a>
 					</li>
 					<li class="electronic">
-						<a href="/genre/trap-electronic">TRAP</a>
+						<a href="/category/trap-electronic">TRAP</a>
 					</li>
 					<li class="electronic">
-						<a href="/genre/electronica">ELECTRONICA</a>
+						<a href="/category/electronica">ELECTRONICA</a>
 					</li>
 					<li class="electronic">
-						<a href="/genre/mash-up">MASH UP</a>
+						<a href="/category/mash-up">MASH UP</a>
 					</li>
 					<li class="electronic">
-						<a href="/genre/chillstep-electronic">CHILLSTEP</a>
+						<a href="/category/chillstep-electronic">CHILLSTEP</a>
 					</li>
 					<li class="electronic">
-						<a href="/genre/future-funk">FUTURE FUNK</a>
+						<a href="/category/future-funk">FUTURE FUNK</a>
 					</li>
 					<li class="electronic">
-						<a href="/genre/drum-and-bass-dance">DRUM AND BASS</a>
+						<a href="/category/drum-and-bass-dance">DRUM AND BASS</a>
 					</li>
 				</ul>
 				<div class="clear"></div>
 			</div>
 		</li>
 		<li class="experimental maingenre ">
-			<a class="maingenre" href="/genre/experimental" data-key="experimental">EXPERIMENTAL</a>
+			<a class="maingenre" href="/category/experimental" data-key="experimental">EXPERIMENTAL</a>
 			<div class="experimental-submenu subgenres ">
 				<ul>
 					<li class="experimental">
-						<a href="/genre/downtempo">DOWNTEMPO</a>
+						<a href="/category/downtempo">DOWNTEMPO</a>
 					</li>
 					<li class="experimental">
-						<a href="/genre/chillwave">CHILLWAVE</a>
+						<a href="/category/chillwave">CHILLWAVE</a>
 					</li>
 					<li class="experimental">
-						<a href="/genre/ambient">AMBIENT</a>
+						<a href="/category/ambient">AMBIENT</a>
 					</li>
 					<li class="experimental">
-						<a href="/genre/psychedelic">PSYCHEDELIC</a>
+						<a href="/category/psychedelic">PSYCHEDELIC</a>
 					</li>
 					<li class="experimental">
-						<a href="/genre/jazz">JAZZ</a>
+						<a href="/category/jazz">JAZZ</a>
 					</li>
 					<li class="experimental">
-						<a href="/genre/lo-fi">LO-FI</a>
+						<a href="/category/lo-fi">LO-FI</a>
 					</li>
 					<li class="experimental">
-						<a href="/genre/dub">DUB</a>
+						<a href="/category/dub">DUB</a>
 					</li>
 				</ul>
 				<div class="clear"></div>
 			</div>
 		</li>
 		<li class="pop maingenre ">
-			<a class="maingenre" href="/genre/pop" data-key="pop">POP</a>
+			<a class="maingenre" href="/category/pop" data-key="pop">POP</a>
 			<div class="pop-submenu subgenres ">
 				<ul>
 					<li class="pop">
-						<a href="/genre/synthpop">SYNTH POP</a>
+						<a href="/category/synthpop">SYNTH POP</a>
 					</li>
 					<li class="pop">
-						<a href="/genre/electro-pop">ELECTRO POP</a>
+						<a href="/category/electro-pop">ELECTRO POP</a>
 					</li>
 					<li class="pop">
-						<a href="/genre/dreampop">DREAMPOP</a>
+						<a href="/category/dreampop">DREAMPOP</a>
 					</li>
 					<li class="pop">
-						<a href="/genre/dark-pop">DARK POP</a>
+						<a href="/category/dark-pop">DARK POP</a>
 					</li>
 					<li class="pop">
-						<a href="/genre/surf-pop">SURF POP</a>
+						<a href="/category/surf-pop">SURF POP</a>
 					</li>
 					<li class="pop">
-						<a href="/genre/noise-pop-2">NOISE-POP</a>
+						<a href="/category/noise-pop-2">NOISE-POP</a>
 					</li>
 					<li class="pop">
-						<a href="/genre/oldies">OLDIES</a>
+						<a href="/category/oldies">OLDIES</a>
 					</li>
 				</ul>
 				<div class="clear"></div>

@@ -2643,13 +2643,22 @@ form#searchform {
 */
 /* Genre Bar */
 .genrebar {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 	display: none;
-	min-height: 23px;
+	min-height: 17px;
 	position: relative;
 	width: 100%;
 	background: #fff;
-	bottom: -2px;
+	bottom: 10px;
 	margin: 0;
+	opacity: 0.573;
+}
+.genrebar:hover {
+	opacity: 1;
 }
 .genrebar ul {
     display: table;
@@ -2658,7 +2667,7 @@ form#searchform {
 }
 .genrebar .mainmenu {
     position: relative;
-    height: 23px;
+    height: auto;
 }
 .genrebar .mainmenu li.options {
     position: absolute;
@@ -2714,11 +2723,17 @@ form#searchform {
 	padding: 0;
 	text-align: center;
 	font-weight: bolder;
+	border-bottom: 4px solid #a3a3a3;
+	height: 15px;
+	line-height: 16px;
 }
-.genrebar ul li a:hover,
+.genrebar ul li a:hover, 
 .genrebar ul li a.active {
-    color: #fff !important;
+	color: #000 !important;
     text-decoration: none;
+}
+.genrebar ul li .subgenres a:hover {
+    color: #fff !important;
 }
 .genrebar .subgenres {
 	display: none;
@@ -2726,7 +2741,7 @@ form#searchform {
 	left: 0;
 	overflow: hidden;
 	z-index: 999;
-	top: 23px;
+	top: 19px;
 	padding-bottom: 1px;
 	background: #fff;
 }
@@ -2740,7 +2755,10 @@ form#searchform {
     padding: 0;
 }
 .genrebar .subgenres ul li a {
-    font-size: 11px;
+	font-size: 11px;
+	border: 0;
+	height: 30px;
+	line-height: 30px;
 }
 .genrebar li.active .subgenres {
     display: block!important;
@@ -2748,54 +2766,54 @@ form#searchform {
 .default .genrebar .subgenres {
     display: block!important;
 }
-.genrebar ul li.active a,
-.genrebar ul li.default a {
-    color: #fff;
+.genrebar ul li.active a {
+	color: #000;	
 }
 .genrebar ul li.default a {
-	background-color: #a3a3a3;
+/*     color: #fff; */
+/* 	background-color: #a3a3a3; */
 }
 .genrebar ul li.feature a {
-    background-color: #2e2e2e;
+    border-bottom-color: #2e2e2e
 }
 .genrebar ul li.feature .subgenres a {
-    background-color: #000;
+    background-color: #000
 }
 .genrebar ul li.feature .subgenres a:hover {
     color: #848484;
-    background-color: #2e2e2e;
+    background-color: #2e2e2e
 }
 .genrebar ul li.feature .selected a {
-    color: #848484;
+    color: #848484
 }
 .genrebar ul li.dance a {
-    background-color: #e2d059;
+    border-bottom-color: #e2d059
 }
 .genrebar ul li.dance .subgenres a {
-    background-color: #8a7b18;
+    background-color: #8a7b18
 }
 .genrebar ul li.dance .subgenres a:hover {
     color: #848484;
-    background-color: #e2d059;
+    background-color: #e2d059
 }
 .genrebar ul li.dance .selected a {
-    color: #848484;
+    color: #848484
 }
 .genrebar ul li.hip-hop a {
-    background-color: #e99b37;
+    border-bottom-color: #e99b37
 }
 .genrebar ul li.hip-hop .subgenres a {
-    background-color: #7a4a0d;
+    background-color: #7a4a0d
 }
 .genrebar ul li.hip-hop .subgenres a:hover {
     color: #848484;
-    background-color: #e99b37;
+    background-color: #e99b37
 }
 .genrebar ul li.hip-hop .selected a {
-    color: #848484;
+    color: #848484
 }
 .genrebar ul li.hiphop a {
-    background-color: #e99b37
+    border-bottom-color: #e99b37
 }
 .genrebar ul li.hiphop .subgenres a {
     background-color: #7a4a0d
@@ -2808,7 +2826,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.electronic a {
-    background-color: #48b9e3
+    border-bottom-color: #48b9e3
 }
 .genrebar ul li.electronic .subgenres a {
     background-color: #13627f
@@ -2821,7 +2839,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.experimental a {
-    background-color: #754aab
+    border-bottom-color: #754aab
 }
 .genrebar ul li.experimental .subgenres a {
     background-color: #2c1c40
@@ -2834,7 +2852,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.pop a {
-    background-color: #469e6c
+    border-bottom-color: #469e6c
 }
 .genrebar ul li.pop .subgenres a {
     background-color: #173424
@@ -2847,7 +2865,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.mash-up a {
-    background-color: #469e6c
+    border-bottom-color: #469e6c
 }
 .genrebar ul li.mash-up .subgenres a {
     background-color: #173424
@@ -2860,7 +2878,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.rap a {
-    background-color: #e99b37
+    border-bottom-color: #e99b37
 }
 .genrebar ul li.rap .subgenres a {
     background-color: #7a4a0d
@@ -2873,7 +2891,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.indie a {
-    background-color: #e34848
+    border-bottom-color: #e34848
 }
 .genrebar ul li.indie .subgenres a {
     background-color: #7f1313
@@ -2886,7 +2904,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.alternative a {
-    background-color: #e34848
+    border-bottom-color: #e34848
 }
 .genrebar ul li.alternative .subgenres a {
     background-color: #7f1313
@@ -2899,7 +2917,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.blues a {
-    background-color: #754aab
+    border-bottom-color: #754aab
 }
 .genrebar ul li.blues .subgenres a {
     background-color: #2c1c40
@@ -2912,7 +2930,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.rock a {
-    background-color: #754aab
+    border-bottom-color: #754aab
 }
 .genrebar ul li.rock .subgenres a {
     background-color: #2c1c40
@@ -2925,7 +2943,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.downtempo a {
-    background-color: #754aab
+    border-bottom-color: #754aab
 }
 .genrebar ul li.downtempo .subgenres a {
     background-color: #2c1c40
@@ -2938,7 +2956,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.dubstep a {
-    background-color: #0a6b8f
+    border-bottom-color: #0a6b8f
 }
 .genrebar ul li.dubstep .subgenres a {
     background-color: #000
@@ -2950,21 +2968,8 @@ form#searchform {
 .genrebar ul li.dubstep .selected a {
     color: #848484
 }
-.genrebar ul li.reviews a {
-    background-color: #7d1701
-}
-.genrebar ul li.reviews .subgenres a {
-    background-color: #000
-}
-.genrebar ul li.reviews .subgenres a:hover {
-    color: #848484;
-    background-color: #7d1701
-}
-.genrebar ul li.reviews .selected a {
-    color: #848484
-}
 .genrebar ul li.news a {
-    background-color: #015ca9
+    border-bottom-color: #015ca9
 }
 .genrebar ul li.news .subgenres a {
     background-color: #000911
@@ -2977,7 +2982,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.reviews a {
-    background-color: #7d1701
+    border-bottom-color: #7d1701
 }
 .genrebar ul li.reviews .subgenres a {
     background-color: #000
@@ -2990,7 +2995,7 @@ form#searchform {
     color: #848484
 }
 .genrebar ul li.album-review a {
-    background-color: #7d1701
+    border-bottom-color: #7d1701
 }
 .genrebar ul li.album-review .subgenres a {
     background-color: #000
@@ -3003,12 +3008,11 @@ form#searchform {
     color: #848484
 }
 .genre-all,.bg-all {
-    background-color: #d5d5d5!important;
+    background-color: #d5d5d5!important
 }
 .dark.genre-all {
-    background-color: #7c7c7c!important;
+    background-color: #7c7c7c!important
 }
 .light.genre-all {
-    background-color: #fff!important;
+    background-color: #fff!important
 }
-
