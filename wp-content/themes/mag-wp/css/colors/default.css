@@ -504,7 +504,7 @@ body > #header-filler {
 #fixed-header #inner-header #search-cont {
 	display: inline-block;
 	float: right;
-	width: 13%;
+	width: 17%;
 }
 #fixed-header #inner-header #logo-header {
 	display: inline-block;
@@ -515,10 +515,11 @@ body > #header-filler {
 /* Header Logo */
 #fixed-header #inner-header #logo-header #earmilk-logo {
 	display: inline-block;
-	width: auto;
+	width: 70%;
 	height: auto;
 	display: block;
 	position: relative;
+	margin: 0 auto;
 }
 #fixed-header #inner-header #logo-header #earmilk-logo #earmilk-logo-img {
     transition: all 370ms;
@@ -527,8 +528,9 @@ body > #header-filler {
     filter: invert(1);
     margin: 0;
 	height: auto;
-	width: 73%;
-    float: right;
+	width: 100%;
+	float: none;
+	display: block;
 }
 /* Header Nav */
 #fixed-header #inner-header #myjquerymenu {
@@ -2649,7 +2651,7 @@ form#searchform {
     -ms-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
-	display: none;
+/* 	display: none; */
 	min-height: 17px;
 	position: absolute;
 	width: 100%;
@@ -2706,9 +2708,14 @@ form#searchform {
 .genrebar .mainmenu li.options:hover .icon-gears,.genrebar .mainmenu li.options .is_hover .icon-gears {
     opacity: .5;
 }
-@media(min-width: 735px) {
+@media(max-width: 768px) {
     .genrebar {
-        display:block
+        display: none;
+    }
+}
+@media(max-width: 1024px) and (orientation: landscape) {
+    .genrebar {
+        display: none;
     }
 }
 .genrebar ul li {
