@@ -29,6 +29,8 @@ Earmilk redesign project
 - [x] Add Google+ Buttons to Social Sidebar
 - [x] Add Funtime Out Events Festivals to the nav menu
 - [ ] Place ads
+- [ ] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
+- [ ] Add Previous Next navigation to bottom of single posts
 - [ ] Pull share count to posts grid
 - [x] Show year of post on Author Pages if not current year
 - [x] Make YouTube embed size more responsive to different screen sizes
@@ -56,7 +58,7 @@ Earmilk redesign project
 - [ ] A solution for photo sourcing (possible a community effort or a filtering functionality plugn)
 - [ ] Remove all `&quot;`s from posts in `src="&quot;http...`
 - [ ] LazyLoader for SoundCloud embeds
-- [ ] STARTBALL OVER :D -- New Theme / PHP Infrastructure
+- [ ] START ALL OVER :D -- New Theme / PHP Infrastructure
 - [ ] ...
 
 - [Back to top ^](#table-of-contents)  
