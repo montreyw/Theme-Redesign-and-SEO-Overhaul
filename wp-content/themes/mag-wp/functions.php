@@ -452,10 +452,11 @@ function registerCustomAdminCss() {
 }
 add_action('admin_head', 'registerCustomAdminCss');
 
-function mytheme_setup() {
-	// Set default values for the upload media box
-	//update_option('image_default_align', 'center' );
-	update_option('image_default_link_type', 'media' );
-	//update_option('image_default_size', 'large' );
+// ------------------------------------------------------------------------------ 
+// Remove auto injection of hEntry class into wrong place in author posts - Andre
+// ------------------------------------------------------------------------------ 
+function andre_remove_hentry($classes) {
+	$classes = array_diff($classes, array("hentry"));
+	return $classes;
 }
-add_action('after_setup_theme', 'mytheme_setup');
+add_filter('post_class','andre_remove_hentry');
