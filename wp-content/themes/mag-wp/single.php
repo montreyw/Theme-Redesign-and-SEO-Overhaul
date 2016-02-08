@@ -28,8 +28,8 @@
         </div><div class="clear"></div>
         <?php endwhile; endif; ?>
         <article class="entry-content">
-            <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
-            <div <?php post_class('post') ?> id="post-<?php the_ID(); ?>">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <div class="<?php echo andre_get_post_class_without_hentry(); ?>" id="post-<?php the_ID(); ?>">
             <div class="media-single-content">
             <?php if ( function_exists( 'rwmb_meta' ) ) {
             // If Meta Box plugin is activate ?>
@@ -98,7 +98,7 @@
 					        <?php if (get_comments_number()==0) { 
 					        } else { ?>
 					        <?php } ?>            
-				            <h3 class="title"> <?php _e( 'Comments to', 'anthemes' ); ?> <span><?php the_title(); ?></span></h3>
+				            <h3 class="title">Comments</h3>
 				            <?php comments_template('', true); // comments ?>
 				        </div>
 
