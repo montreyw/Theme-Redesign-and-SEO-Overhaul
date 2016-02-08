@@ -1,29 +1,10 @@
 jQuery( document ).ready( function( $ ) {
 "use strict";
 
-    /////////////////////////////////
-    // New Input Style - Andre
-    /////////////////////////////////
-	function newInputSty() {
-		console.log('hello!')
-		$('#s').focus(function(){
-			$(this).parents('#searchform').addClass('isFocused');
-		}).blur(function(){
-			$(this).parents('#searchform').removeClass('isFocused');
-		});
-		$('#s').on('keyup', function(e){
-			if ($(this).val() != '') {
-				$(this).parents('#searchform').addClass('hasValue');
-			} else {
-				$(this).parents('#searchform').removeClass('hasValue');
-			}
-		});
-	}
-	newInputSty();
 
-    /////////////////////////////////
-    // Genre Bar - Andre
-    /////////////////////////////////
+	///////////////////////////////////////    
+	// Genre Bar - Andre
+	///////////////////////////////////////    
 	function genreBar() {
 	    $(document).on("mouseover", ".genrebar ul li.maingenre", function() {
 	        var $this = $(this);
@@ -51,179 +32,75 @@ jQuery( document ).ready( function( $ ) {
 	        }),
 	        $("a:first", $this).removeClass("active")
 	    });
-	/*
-		var Earmilk = Earmilk || {
-			settings: {}
-		};
-		Earmilk.genrebar = {},
-		Earmilk.genrebar.reset = function() {
-			$this = $(".genrebar ul li.maingenre.default"),
-			$(".subgenres", $this).stop().animate({
-				opacity: 1
-			})
-		}
-	*/
 	};
 	genreBar();
 
-    /////////////////////////////////
-    // Slider Featured Articles
-    /////////////////////////////////
-    //jQuery("#featured-slider, .big-thing").hide().css({'left' : "0px"}).fadeIn(1000); // fade effect for images, lovely.
-/*
-    jQuery('#featured-slider').owlCarousel({
-        loop: true,
-        center: true,
-        autoWidth: true,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        items:2 
-    }) 
-*/
 
-/*
-    jQuery('.big-thing').owlCarousel({
-        loop:true,
-        autoWidth:true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        items:4
-    }) 
-*/
-    jQuery('.big-thing').owlCarousel({
+
+	///////////////////////////////////////    
+	// New Input Style - Andre
+	///////////////////////////////////////    
+	function newInputSty() {
+		console.log('hello!')
+		$('#s').focus(function(){
+			$(this).parents('#searchform').addClass('isFocused');
+		}).blur(function(){
+			$(this).parents('#searchform').removeClass('isFocused');
+		});
+		$('#s').on('keyup', function(e){
+			if ($(this).val() != '') {
+				$(this).parents('#searchform').addClass('hasValue');
+			} else {
+				$(this).parents('#searchform').removeClass('hasValue');
+			}
+		});
+	}
+	newInputSty();
+
+
+
+	///////////////////////////////////////    
+	// Slider Featured Articles
+	///////////////////////////////////////    
+	var owl = jQuery('.big-thing');
+    owl.owlCarousel({
         loop: true,
         autoPlay: true,
         autoPlayTimeout: 5000,
         stopOnHover: true,
         pagination: true,
-        //transitionStyle: "grayscale",
 		singleItem:true,
-/*
-		items : 1, //10 items above 1000px browser width
-		itemsDesktop : [1000,1], //5 items between 1000px and 901px
-		itemsDesktopSmall : [900,1], // betweem 900px and 601px
-		itemsTablet: [600,1], //2 items between 600 and 0
-		itemsMobile : [479,1], // itemsMobile disabled - inherit from itemsTablet option
-*/
         navigation: true,
         navigationText: [
         	"<i class='fa fa-chevron-left'></i>",
         	"<i class='fa fa-chevron-right'></i>"],
         autoWidth:true,
-        
-		// Most important owl features
-/*
-		items : 5,
-		itemsCustom : false,
-		itemsDesktop : [1199,4],
-		itemsDesktopSmall : [980,3],
-		itemsTablet: [768,2],
-		itemsTabletSmall: false,
-		itemsMobile : [479,1],
-		singleItem : false,
-		itemsScaleUp : false,
-*/
-		
-		//Basic Speeds
-/*
-		slideSpeed : 200,
-		paginationSpeed : 800,
-		rewindSpeed : 1000,
-*/
-		
-		//Autoplay
-/*
-		autoPlay : false,
-		stopOnHover : false,
-*/
-		
-		// Navigation
-/*
-		navigation : false,
-		navigationText : ["prev","next"],
-		rewindNav : true,
-		scrollPerPage : false,
-*/
-		
-		//Pagination
-/*
-		pagination : true,
-		paginationNumbers: false,
-*/
-		
-		// Responsive 
-/*
-		responsive: true,
-		responsiveRefreshRate : 200,
-		responsiveBaseWidth: window,
-*/
-		
-		// CSS Styles
-/*
-		baseClass : "owl-carousel",
-		theme : "owl-theme",
-*/
-		
-		//Lazy load
-/*
-		lazyLoad : false,
-		lazyFollow : true,
-		lazyEffect : "fade",
-*/
-		
-		//Auto height
-// 		autoHeight : false,
-		
-		//JSON 
-/*
-		jsonPath : false, 
-		jsonSuccess : false,
-*/
-		
-		//Mouse Events
-/*
-		dragBeforeAnimFinish : true,
-		mouseDrag : true,
-		touchDrag : true,
-*/
-		
-		//Transitions
-// 		transitionStyle : false,
-		
-		// Other
-// 		addClassActive : false,
-		
-		//Callbacks
-/*
-		beforeUpdate : false,
-		afterUpdate : false,
-		beforeInit: false, 
-		afterInit: false, 
-		beforeMove: false, 
-		afterMove: false,
-		afterAction: false,
-		startDragging : false
-		afterLazyLoad : false
-*/
-        
+        afterInit: afterOWLinit        
     }) 
+    function afterOWLinit() {
+	    owl.hide();
+	    setTimeout( function(){owl.css({'left' : "0px"}).fadeIn(1000);}, 500);
+    }
 
 
-    /////////////////////////////////
-    // Masonry style for sidebar
-    ///////////////////////////////// 
+
+	///////////////////////////////////////    
+	// Masonry style for sidebar
+	///////////////////////////////////////    
     jQuery( window ).load( function( $ ) {"use strict"; var $container = jQuery('.sidebar'); $container.imagesLoaded( function(){ $container.masonry({ itemSelector : '' }); });});
 
 
-    /////////////////////////////////
-    // Accordion 
-    /////////////////////////////////       
+
+	///////////////////////////////////////    
+	// Accordion 
+	///////////////////////////////////////    
     jQuery(".accordionButton").click(function(){jQuery(".accordionButton").removeClass("on");jQuery(".accordionContent").slideUp("normal");if(jQuery(this).next().is(":hidden")==true){jQuery(this).addClass("on");jQuery(this).next().slideDown("normal")}});jQuery(".accordionButton").mouseover(function(){jQuery(this).addClass("over")}).mouseout(function(){jQuery(this).removeClass("over")});jQuery(".accordionContent").hide(); 
 
 
-    /////////////////////////////////
-    // Go to TOP & Prev/Next Article.
-    /////////////////////////////////
+
+	///////////////////////////////////////    
+	// Go to TOP & Prev/Next Article.
+	///////////////////////////////////////    
     // hide #back-top first
     jQuery("#back-top").hide();
     
@@ -247,29 +124,12 @@ jQuery( document ).ready( function( $ ) {
     });
 
 
-    /////////////////////////////////
-    // Sticky Header
-    /////////////////////////////////
-/*
-    var stickyNavTop = jQuery('.main-header').offset().top;    
-    var stickyNav = function(){  
-    var scrollTop = jQuery(window).scrollTop();  
-           
-    if (scrollTop > stickyNavTop) {   
-        jQuery('.main-header, body').addClass('sticky');  
-    } else {  
-        jQuery('.main-header, body').removeClass('sticky');   
-    }  
-    };  
-    stickyNav();  
-    jQuery(window).scroll(function() { stickyNav(); });
-*/
 
 
 
-    /////////////////////////////////    
-    //The Harlem Shake Easter Egg - Andre
-    /////////////////////////////////
+	///////////////////////////////////////    
+	// The Harlem Shake Easter Egg - Andre
+	///////////////////////////////////////
 	function harlemShakeFunc() {
 		javascript:(function(){function c(){var e=document.createElement("link");e.setAttribute("type","text/css");e.setAttribute("rel","stylesheet");e.setAttribute("href",f);e.setAttribute("class",l);document.body.appendChild(e)}
 		function h(){var e=document.getElementsByClassName(l);for(var t=0;t<e.length;t++){document.body.removeChild(e[t])}}
