@@ -451,12 +451,3 @@ function registerCustomAdminCss() {
 	wp_enqueue_style($handle, $src, array(), false, false);
 }
 add_action('admin_head', 'registerCustomAdminCss');
-
-// ------------------------------------------------------------------------------ 
-// Remove auto injection of hEntry class into wrong place in author posts - Andre
-// ------------------------------------------------------------------------------ 
-function andre_remove_hentry($classes) {
-	$classes = array_diff($classes, array("hentry"));
-	return $classes;
-}
-add_filter('post_class','andre_remove_hentry');
