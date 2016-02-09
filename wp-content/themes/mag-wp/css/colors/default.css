@@ -843,7 +843,7 @@ div#featured-boxes {
 	margin: 0 auto;
 }
 #main-stage-split .main-stage-left .main-stage-latest ul li {
-	margin: 0 0 7px;
+	margin: 0 0 13px;
 }
 #main-stage-split .main-stage-left .main-stage-latest li .entry-thumbnail, 
 #main-stage-split .main-stage-left .main-stage-latest li .entry-title, 
@@ -852,17 +852,39 @@ div#featured-boxes {
 	vertical-align: middle;
 }
 #main-stage-split .main-stage-left .main-stage-latest li .entry-thumbnail {
-	width: 9%;
+	width: 23%;
 }
 #main-stage-split .main-stage-left .main-stage-latest li .entry-thumbnail a {
 	display: block;
 	line-height: 0;
 }
-#main-stage-split .main-stage-left .main-stage-latest li .entry-title {
-	width: 77%;
-	margin: 0 auto 0;
+#main-stage-split .main-stage-left .main-stage-latest li .entry-thumbnail a {
+	display: block;
+	line-height: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
 	position: relative;
-	width: 85%;
+	overflow: hidden;
+	max-height: 50px;
+	min-height: 50px;
+}
+#main-stage-split .main-stage-left .main-stage-latest li .entry-thumbnail a img {
+	display: block;
+	width: 120%;
+	height: auto;
+	margin: auto;
+	position: absolute;
+	left: -200%;
+	right: -200%;
+	top: -200%;
+	bottom: -200%;
+	max-width: 120%;
+}
+#main-stage-split .main-stage-left .main-stage-latest li .entry-title {
+	margin: 0 auto 0 3%;
+	position: relative;
+	width: 71%;
 }
 #main-stage-split .main-stage-left .main-stage-latest li .entry-title h3 {
 /* 	text-align: center; */
@@ -2424,45 +2446,45 @@ body #responsive-menu #responsive-menu-title {
 	}
 }
 @media only screen and (max-width: 580px) and (min-width: 480px) {
-#fixed-header,
-#fixed-header #inner-header {
-	height: 45px;
-	max-height: 45px;
-}
-#fixed-header #inner-header #logo-cont,
-#fixed-header #inner-header #search-cont {
-	max-height: 45px;
-	width: 50%;
-	height: 45px;
-}
-#fixed-header #inner-header #nav-cont {
-	display: none;
-}
-#fixed-header #inner-header #logo-header {
-	margin: 0;
-	padding: 0 0 0 43px;
-}
-/* Header Logo */
-#fixed-header #inner-header #logo-header #earmilk-logo {
-	width: 119px;
-	height: 45px;
-	margin-left: 7px;
-}
-#fixed-header #inner-header #logo-header #earmilk-logo #earmilk-logo-img {
-	width: 80%;
-	top: -100%;
-	bottom: -100%;
-	left: -100%;
-	right: -100%;
-	position: absolute;
-	margin: auto;
-}
-/* Header Search */
-#fixed-header #inner-header #searchform  {
-	margin: 10px 30px 0 0;
-	width: auto;
-	float: right;
-}
+	#fixed-header,
+	#fixed-header #inner-header {
+		height: 45px;
+		max-height: 45px;
+	}
+	#fixed-header #inner-header #logo-cont,
+	#fixed-header #inner-header #search-cont {
+		max-height: 45px;
+		width: 50%;
+		height: 45px;
+	}
+	#fixed-header #inner-header #nav-cont {
+		display: none;
+	}
+	#fixed-header #inner-header #logo-header {
+		margin: 0;
+		padding: 0 0 0 43px;
+	}
+	/* Header Logo */
+	#fixed-header #inner-header #logo-header #earmilk-logo {
+		width: 119px;
+		height: 45px;
+		margin-left: 7px;
+	}
+	#fixed-header #inner-header #logo-header #earmilk-logo #earmilk-logo-img {
+		width: 80%;
+		top: -100%;
+		bottom: -100%;
+		left: -100%;
+		right: -100%;
+		position: absolute;
+		margin: auto;
+	}
+	/* Header Search */
+	#fixed-header #inner-header #searchform  {
+		margin: 10px 30px 0 0;
+		width: auto;
+		float: right;
+	}
 	#searchform .inputLabel {
 		top: 4px;
 		font-size: 13px;
@@ -2660,9 +2682,10 @@ body #responsive-menu #responsive-menu-title {
 	#main-stage-split .main-stage-left .main-stage-latest li .entry-title, 
 	#main-stage-split .main-stage-left .main-stage-latest li .entry-author-meta {
 		vertical-align: top;
+		width: 60%;
 	}
 	#main-stage-split .main-stage-left .main-stage-latest li .entry-thumbnail {
-		width: 13%;
+		width: 33%;
 	}
 	ul.big-thing div.owl-item li .entry-thumbnail {
 		max-height: 175px;

@@ -296,7 +296,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 											if ($category) {echo $category[0]->name ;} ?>">
 										<div class="entry-thumbnail"> 
 											<a href="<?php the_permalink(); ?>"> 
-												<?php echo the_post_thumbnail('thumbnail'); ?>
+												<?php echo the_post_thumbnail('small'); ?>
 											</a>
 										</div>
 										<div class="entry-title">
@@ -338,7 +338,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 											if ($category) {echo $category[0]->name ;} ?>">
 										<div class="entry-thumbnail"> 
 											<a href="<?php the_permalink(); ?>"> 
-												<?php echo the_post_thumbnail('thumbnail'); ?>
+												<?php echo the_post_thumbnail('small'); ?>
 											</a>
 										</div>
 										<div class="entry-title">
