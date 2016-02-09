@@ -81,6 +81,13 @@ jQuery( document ).ready( function( $ ) {
 	    owl.hide();
 	    setTimeout( function(){owl.css({'left' : "0px"}).fadeIn(1000);}, 500);
     }
+	$(document.documentElement).keyup(function(event) {
+		if (event.keyCode == 37) {
+			owl.data('owlCarousel').prev();
+		} else if (event.keyCode == 39) {
+			owl.data('owlCarousel').next();
+		}
+	});
 
 
 
