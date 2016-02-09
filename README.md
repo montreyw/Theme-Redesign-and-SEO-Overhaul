@@ -31,6 +31,7 @@ Earmilk redesign project
 - [ ] Place ads
 - [ ] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
 - [ ] Add Previous Next navigation to bottom of single posts
+- [ ] Implement new Sharrre Open source, share-count aggregating, and lazyloading "plugin" by building custom plugin
 - [ ] Pull share count to posts grid
 - [x] Show year of post on Author Pages if not current year
 - [x] Make YouTube embed size more responsive to different screen sizes
