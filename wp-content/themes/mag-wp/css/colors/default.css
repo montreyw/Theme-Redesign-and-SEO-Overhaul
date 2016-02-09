@@ -480,9 +480,11 @@ body > #header-filler {
 	background: #fff;
 	padding: 0;
 	margin: 0 auto;
+/*
 	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.1);
 	box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+*/
 }
 #fixed-header #inner-header {
 	max-width: 1280px;
@@ -2666,18 +2668,21 @@ form#searchform {
 	bottom: 0;
 	margin: 0;
 	opacity: 0.573;
+	z-index: 10000
 }
 .genrebar:hover {
 	opacity: 1;
 }
 .genrebar ul {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 .genrebar .mainmenu {
-    position: relative;
-    height: auto;
+	position: relative;
+	height: auto;
 }
 .genrebar .mainmenu li.options {
     position: absolute;
