@@ -933,22 +933,32 @@ div.wrap-center .line-box .header_line {
 	text-align: center; 
 	text-transform: uppercase; 
 	color: rgb(23, 23, 23); 
-/* 	border-top: 1px solid rgb(255, 255, 255);  */
 	border-bottom: 7px solid #e34848;
 	border-color: #6c6c6c;
 	border-color: #373737;
 }
 div.wrap-center .line-box .header_line h4.top {
 	display: inline-block; 
-	padding: 4px 16px;
 	color: #fff !important;
 	font-family: futura, "Ruda", Helvetica, Arial, sans-serif;
 	width: auto;
-	height: 30px;
+	min-height: 30px;
 	font-size: 17px;
 	margin-top: -10px;
-	background-color: #e34848;
 	background-color: #6c6c6c;
+}
+div.wrap-center .line-box .header_line h4.top a {
+	-webkit-transition: all 137ms;
+	-moz-transition: all 137ms;
+	transition: all 137ms;
+	color: #fff;
+	height: 30px;
+	padding: 4px 16px;
+	display: block;
+}
+div.wrap-center .line-box .header_line h4.top a:hover {
+	background-color: #e34848;
+	color: #fff !important;
 }
 #main-stage-split .big-thing-box {
 	width: 49%;
