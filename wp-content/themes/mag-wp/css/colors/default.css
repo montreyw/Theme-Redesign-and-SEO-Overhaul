@@ -570,6 +570,7 @@ body > #header-filler {
 	-moz-box-shadow: 0 5px 3px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0 5px 3px rgba(0,0,0,0.2);
 	box-shadow: 0 5px 3px rgba(0,0,0,0.2);
+	z-index: 10001;
 }
 #fixed-header #inner-header #myjquerymenu ul li ul.sub-menu li {
 	background-color: #fff !important;
