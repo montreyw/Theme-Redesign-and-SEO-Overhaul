@@ -75,8 +75,9 @@ jQuery( document ).ready( function( $ ) {
         	"<i class='fa fa-chevron-left'></i>",
         	"<i class='fa fa-chevron-right'></i>"],
         autoWidth:true,
-        afterInit: afterOWLinit        
-    }) 
+        afterInit: customOwl,
+        afterUpdate: customOwl
+    });
 	$(document.documentElement).keyup(function(event) {
 		if (event.keyCode == 37) {
 			owl.data('owlCarousel').prev();
@@ -84,14 +85,11 @@ jQuery( document ).ready( function( $ ) {
 			owl.data('owlCarousel').next();
 		}
 	});
-    function afterOWLinit() {
-		owl.hide();
-		setTimeout( function(){owl.css({'left' : "0px"}).fadeIn(1000);}, 500);
+	function customOwl() {
+		setTimeout( function(){owl.addClass('carousel-visible');}, 1370);
 
 		$('.owl-controls .owl-page').append('<a class="item-link" href="#"/>');
-		
 		var paginatorsLink = $('.owl-controls .item-link');
-		
 		$.each(this.owl.userItems, function (i) {
 			$(paginatorsLink[i])
 			.css({
@@ -106,7 +104,6 @@ jQuery( document ).ready( function( $ ) {
 				owl.trigger('owl.goTo', i);
 			});
 		});
-
         // add Custom PREV NEXT controls
         //$('.owl-pagination').prepend('<a href="#prev" class="prev-owl"/>');
         //$('.owl-pagination').append('<a href="#next" class="next-owl"/>');
@@ -123,8 +120,8 @@ jQuery( document ).ready( function( $ ) {
 		$(".prev-owl").click(function () {
 			owl.trigger('owl.prev');
 		});
-*/
-    }
+*/		
+	}
 
 
 
