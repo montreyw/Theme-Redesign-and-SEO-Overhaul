@@ -438,10 +438,13 @@ add_filter( 'wpseo_json_ld_output', '__return_false' );
 // ------------------------------------------------------------------------------ 
 // Suppress Yoast's Spammy notices and wrnings - Andre
 // ------------------------------------------------------------------------------ 
-if ( class_exists( 'Yoast' ) ) {
-	remove_action( 'admin_notices', array( Yoast_Notification_Center::get(), 'display_notifications' ) );
-	remove_action( 'all_admin_notices', array( Yoast_Notification_Center::get(), 'display_notifications' ) );
+function disable_yoast_notifications() {
+	if ( class_exists( 'Yoast' ) ) {
+		remove_action( 'admin_notices', array( Yoast_Notification_Center::get(), 'display_notifications' ) );
+		remove_action( 'all_admin_notices', array( Yoast_Notification_Center::get(), 'display_notifications' ) );
+	}
 }
+add_action( 'plugins_loaded', 'disable_yoast_notifications' );
 
 // ------------------------------------------------------------------------------ 
 // Register and initialize Custom Admin CSS file - Andre
