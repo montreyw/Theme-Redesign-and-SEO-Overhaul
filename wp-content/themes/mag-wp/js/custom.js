@@ -77,10 +77,6 @@ jQuery( document ).ready( function( $ ) {
         autoWidth:true,
         afterInit: afterOWLinit        
     }) 
-    function afterOWLinit() {
-	    owl.hide();
-	    setTimeout( function(){owl.css({'left' : "0px"}).fadeIn(1000);}, 500);
-    }
 	$(document.documentElement).keyup(function(event) {
 		if (event.keyCode == 37) {
 			owl.data('owlCarousel').prev();
@@ -88,6 +84,47 @@ jQuery( document ).ready( function( $ ) {
 			owl.data('owlCarousel').next();
 		}
 	});
+    function afterOWLinit() {
+		owl.hide();
+		setTimeout( function(){owl.css({'left' : "0px"}).fadeIn(1000);}, 500);
+
+		$('.owl-controls .owl-page').append('<a class="item-link" href="#"/>');
+		
+		var paginatorsLink = $('.owl-controls .item-link');
+		
+		$.each(this.owl.userItems, function (i) {
+			$(paginatorsLink[i])
+			.css({
+				'background': 'url(' + $(this).find('img').attr('src') + ') center center no-repeat',
+				'-webkit-background-size': 'cover',
+				'-moz-background-size': 'cover',
+				'-o-background-size': 'cover',
+				'background-size': 'cover'
+			})
+			.click(function (e) {
+				e.preventDefault();
+				owl.trigger('owl.goTo', i);
+			});
+		});
+
+        // add Custom PREV NEXT controls
+        //$('.owl-pagination').prepend('<a href="#prev" class="prev-owl"/>');
+        //$('.owl-pagination').append('<a href="#next" class="next-owl"/>');
+
+        // set Custom event for NEXT custom control
+/*
+		$(".next-owl").click(function () {
+			owl.trigger('owl.next');
+		});
+*/
+		
+		// set Custom event for PREV custom control
+/*
+		$(".prev-owl").click(function () {
+			owl.trigger('owl.prev');
+		});
+*/
+    }
 
 
 
