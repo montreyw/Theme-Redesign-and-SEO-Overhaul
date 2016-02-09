@@ -2170,9 +2170,6 @@ body #responsive-menu #responsive-menu-title {
 	#fixed-header #inner-header #myjquerymenu ul li a {
 		font-size: 11px;
 	}
-	#main-stage-split .main-stage-left {
-		display: none;
-	}
 	div.big-thing-box {
 		height: 505px;
 	}
@@ -2643,8 +2640,9 @@ body #responsive-menu #responsive-menu-title {
 	}
 	#featured-boxes .header_line h4.top {
 		padding: 10px 23px;
-		font-size: 20px;
-		padding: 5px 20px;
+		font-size: 17px;
+		padding: 0;
+		line-height: 30px;
 	}
 	#main-stage-split {
 		display: -webkit-box;
