@@ -141,7 +141,7 @@
 	    googletag.defineSlot('/11347700/MPU', [300, 250], 'div-gpt-ad-1454727873765-3').addService(googletag.pubads());
 	    googletag.defineSlot('/11347700/Wallpaper', [1, 1], 'div-gpt-ad-1454727873765-4').addService(googletag.pubads());
 	    googletag.pubads().enableSingleRequest();
-	    googletag.pubads().collapseEmptyDivs();
+	    //googletag.pubads().collapseEmptyDivs();
 	    googletag.pubads().setTargeting('Redirect', ['false']);
 	    googletag.pubads().enableSyncRendering();
 	    googletag.enableServices();
@@ -206,18 +206,12 @@
 <div id="header-filler"></div>
 
 
-
-
-
-
-
-<div class="main-stage-left" style="display:none;">
-</div><!-- end .main-stage-left -->
-
-
-
-
-
+<!-- /11347700/Wallpaper -->
+<div id='div-gpt-ad-1454727873765-4' style='height:1px; width:1px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-4'); });
+</script>
+</div>
 
 
 
@@ -265,65 +259,156 @@
     <?php if ( term_exists( 'current', 'post_tag' ) ) { ?>
     <!-- The next big Thing Section -->
     <div id="featured-boxes">
-	<!-- /11347700/EM_ATF_ATB_900x90 -->
-<!-- 	<div id='gfp-above-banner' style='height:90px; width:970px;'> -->
-<!--
-		<div id='div-gpt-ad-1454478333610-0' style='height:90px; width:970px;'>
-			<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454478333610-0'); });
-			</script>
-		</div>
--->
-        <div class="wrap-center">
-            <?php //echo get_template_part('custom/region/left-big-thing'); ?>
 
-            <div class="big-thing-box hfeed h-feed">
-                <div class="line-box">
-                    <div class="header_line">
-                     <h4 class="top"><span class="gray"><?php _e('Main Stage', 'anthemes'); ?></span></h4>
-                    </div>
-                </div><!-- end .line-box -->
+<!-- /11347700/Leaderboard -->
+<div id='div-gpt-ad-1454727873765-0'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0'); });
+</script>
+</div>
 
-                <ul class="big-thing" style="display:none;">
-                  <?php  query_posts( array( 'post_type' => array( 'post', 'opinion_post', 'news'), 'category_name' => 'mainstage', 'posts_per_page' => $smof_data['current-posts'] ) );  ?> 
-                  <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
+		<div class="wrap-center">
+			<?php //echo get_template_part('custom/region/left-big-thing'); ?>
 
-                  <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
-						<div class="entry-thumb-cont">
-				            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
-								<span class="vertical-height-helper"></span>
-					            <?php echo the_post_thumbnail('full'); ?>
-				            </a> 
-							<div class="article-category">
-								<div class="post-date date updated">
-									<span class="month"><?php the_time('M', '', '', true); ?></span> 
-									<span class="day"><?php the_time('d', '', '', true); ?></span>
+ 				<div id="main-stage-split">
+
+	 				<div class="main-stage-left">
+
+						<div class="main-stage-latest latest-news">
+							<div class="line-box">
+								<div class="header_line">
+									<h4 class="top">SCOOPS</h4>
 								</div>
-								<span class="vcard author p-author h-card">
-									<span class="fn">
-										<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-											<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
-											<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
-										</a>
-									</span>
-								</span>
-								<?php 
-									$category = get_the_category(); 
-									if ($category) { 
-						            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
-								?>
+							</div>
+							<ul>
+								<?php  
+									$args = array(
+								    'post_type' => array( 'news' ),
+								    'numberposts' => 3,
+								    'posts_per_page' => 3,
+								    'offset' => 0,
+								    'category' => 0,
+								    'orderby' => 'post_date',
+								    'order' => 'DESC');
+									query_posts( $args );  ?> 
+								<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
+									<li class="<?php $category = get_the_category(); 
+											if ($category) {echo $category[0]->name ;} ?>">
+										<div class="entry-thumbnail"> 
+											<a href="<?php the_permalink(); ?>"> 
+												<?php echo the_post_thumbnail('thumbnail'); ?>
+											</a>
+										</div>
+										<div class="entry-title">
+											<h3>
+												<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+											</h3>
+										</div>
+							            <div class="entry-author-meta">
+								            <span class="time date updated"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
+								            <span class="author-meta-byline"><?php _e('by', 'anthemes'); ?>
+								            	<span class="vcard author p-author h-card">
+								            		<span class="fn"><?php the_author_posts_link(); ?></span>
+								            	</span>
+								            </span>
+							            </div>
+									</li>
+								<?php endwhile; endif; wp_reset_query();  ?> 
+							</ul>
+						</div>
+						<div class="main-stage-latest latest-voices">
+							<div class="line-box">
+								<div class="header_line">
+									<h4 class="top">VOICES</h4>
+								</div>
+							</div>
+							<ul>
+								<?php  
+									$args = array(
+								    'post_type' => array( 'opinion_post' ),
+								    'numberposts' => 3,
+								    'posts_per_page' => 3,
+								    'offset' => 0,
+								    'category' => 0,
+								    'orderby' => 'post_date',
+								    'order' => 'DESC');
+									query_posts( $args );  ?> 
+								<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
+									<li class="<?php $category = get_the_category(); 
+											if ($category) {echo $category[0]->name ;} ?>">
+										<div class="entry-thumbnail"> 
+											<a href="<?php the_permalink(); ?>"> 
+												<?php echo the_post_thumbnail('thumbnail'); ?>
+											</a>
+										</div>
+										<div class="entry-title">
+											<h3>
+												<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+											</h3>
+								            <div class="entry-author-meta">
+									            <span class="time date updated"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
+									            <span class="author-meta-byline"><?php _e('by', 'anthemes'); ?>
+									            	<span class="vcard author p-author h-card">
+									            		<span class="fn"><?php the_author_posts_link(); ?></span>
+									            	</span>
+									            </span>
+								            </div>
+										</div>
+									</li>
+								<?php endwhile; endif; wp_reset_query();  ?> 
+							</ul>
+						</div>
+	 				</div><!-- end .main-stage-left -->
+
+		            <div class="big-thing-box hfeed h-feed">
+						<div class="line-box">
+							<div class="header_line">
+								<h4 class="top"><?php _e('Main Stage', 'anthemes'); ?></h4>
 							</div>
 						</div>
-						<div class="an-widget-title">
-							<h3 class="article-title entry-title">
-								<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-							</h3>
-						</div>
-						<?php } ?> <div class="clear"></div>  
-					</li>
-
-                <?php endwhile; endif; wp_reset_query();  ?> 
-                </ul><!-- end .big-thing -->
+			
+		                <ul class="big-thing" style="display:none;">
+		                  <?php  query_posts( array( 'post_type' => array( 'post', 'opinion_post', 'news'), 'category_name' => 'mainstage', 'posts_per_page' => $smof_data['current-posts'] ) );  ?> 
+		                  <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
+		
+		                  <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
+								<div class="entry-thumb-cont">
+						            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
+										<span class="vertical-height-helper"></span>
+							            <?php echo the_post_thumbnail('full'); ?>
+						            </a> 
+									<div class="article-category">
+										<div class="post-date date updated">
+											<span class="month"><?php the_time('M', '', '', true); ?></span> 
+											<span class="day"><?php the_time('d', '', '', true); ?></span>
+										</div>
+										<span class="vcard author p-author h-card">
+											<span class="fn">
+												<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+													<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
+													<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
+												</a>
+											</span>
+										</span>
+										<?php 
+											$category = get_the_category(); 
+											if ($category) { 
+								            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
+										?>
+									</div>
+								</div>
+								<div class="an-widget-title">
+									<h3 class="article-title entry-title">
+										<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+									</h3>
+								</div>
+								<?php } ?> <div class="clear"></div>  
+							</li>
+		
+		                <?php endwhile; endif; wp_reset_query();  ?> 
+		                </ul><!-- end .big-thing -->
+					</div><!-- end .big-thing-box -->
+				</div><!-- end main-stage-split -->
             </div><!-- end .big-thing-box -->
         </div><!-- end .wrap-center -->
     </div><!-- end #featured-boxes -->
