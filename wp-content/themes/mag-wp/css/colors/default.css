@@ -2733,7 +2733,6 @@ form#searchform {
 	margin: 0 2px 0 0;
 	padding: 0;
 	cursor: pointer;
-	display: block;
 	color: #dcdee3;
 	padding: 0;
 	text-align: center;
@@ -2741,6 +2740,8 @@ form#searchform {
 	border-bottom: 4px solid #a3a3a3;
 	height: 15px;
 	line-height: 16px;
+	display: inline-block;
+	width: 100%;
 }
 .genrebar ul li a:hover, 
 .genrebar ul li a.active {
@@ -2756,7 +2757,6 @@ form#searchform {
 	left: 0;
 	overflow: hidden;
 	z-index: 999;
-	top: 19px;
 	padding-bottom: 1px;
 	background: #fff;
 }
