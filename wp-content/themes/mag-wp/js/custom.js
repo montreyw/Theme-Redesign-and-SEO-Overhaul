@@ -24,7 +24,7 @@ jQuery( document ).ready( function( $ ) {
 	        var $this = $(this);
 	        $(".subgenres", $this).stop().animate({
 	            opacity: 0
-	        }, 500, function() {
+	        }, 750, function() {
 	            $(this).css("display", "none")
 	        }),
 	        $('a.maingenre:not(".active")').stop().animate({
