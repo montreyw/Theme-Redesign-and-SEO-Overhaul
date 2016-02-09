@@ -515,7 +515,7 @@ body > #header-filler {
 /* Header Logo */
 #fixed-header #inner-header #logo-header #earmilk-logo {
 	display: inline-block;
-	width: 70%;
+	width: 63%;
 	height: auto;
 	display: block;
 	position: relative;
@@ -543,8 +543,10 @@ body > #header-filler {
 }
 #fixed-header #inner-header #myjquerymenu ul li a {
     color: #000;
-	font-size: 15px;
+	font-size: 14px;
 	height: auto;
+	position: relative;
+	padding: 4px 8px 0px 8px !important;
 } 
 #fixed-header #inner-header #myjquerymenu ul li.current-menu-item a {
     color: #e34848 !important;
@@ -554,12 +556,12 @@ body > #header-filler {
 	content: "";
 	width: 0;
 	height: 0;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-top: 5px solid #E34848;
-	left: 41%;
-	position: relative;
-	top: -6px;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid;
+	position: absolute;
+	right: -3px;
+	top: 50%;
 }
 #fixed-header #inner-header #myjquerymenu ul li ul.sub-menu {
     background: #fff;
@@ -591,15 +593,22 @@ body > #header-filler {
 #fixed-header #inner-header #myjquerymenu ul li ul li:hover {
     background-color: #e34848 !important;
 }
+#fixed-header #inner-header #myjquerymenu ul li ul li a {
+	padding: 8px 0 8px 18px !important;
+}
 #fixed-header #inner-header #myjquerymenu ul li ul li:hover a {
-    color: #fff !important;
+	color: #fff !important;
 }
 /* Header Search */
 form#searchform {
     background-color: #fff;
     position: relative;
 	display: inline-block;
-	margin: 23px 3% 0 0;
+	margin: 20px 3% 0 0;
+}
+#searchform .inputLabel,
+#searchform #s {
+	font-size: 13px;
 }
 #searchform .inputLabel {
 	z-index: 1;
@@ -613,11 +622,10 @@ form#searchform {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     font-family: futura, Tahoma, Geneva, sans-serif;
-    font-size: 15px;
     font-weight: 100;
     pointer-events: none;
     position: absolute;
-    top: 6px;
+    top: 8px;
 }
 #searchform #s {
 	border: 0;
@@ -627,7 +635,6 @@ form#searchform {
 	background-color: transparent;
 	/* margin: 0 40px 0 0; */
 	padding: 0;
-	font-size: 15px;
 	font-weight: lighter;
 	line-height: 1;
 	position: relative;
