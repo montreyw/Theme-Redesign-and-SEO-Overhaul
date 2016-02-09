@@ -700,14 +700,14 @@ form#searchform {
 #searchform.hasValue .inputLabel {
     -webkit-transform: scale(0.57);
     transform: scale(0.57);
-    top: -4px;
+    top: -2px;
     color: rgba(0,0,0,0.54);
 }
 #searchform.isFocused .inputLabel {
     -webkit-transform: scale(0.57);
     transform: scale(0.57);
 	color: #E34848;
-	top: -7px;
+	top: -5px;
 }
 #searchform.isFocused .animatedUnderline {
     -webkit-animation: quantumWizPaperInputAddUnderline .3s cubic-bezier(0.4,0,0.2,1);
@@ -2655,12 +2655,12 @@ form#searchform {
 */
 /* Genre Bar */
 .genrebar {
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
-/* 	display: none; */
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+	/* 	display: none; */
 	min-height: 17px;
 	position: absolute;
 	width: 100%;
@@ -2668,7 +2668,8 @@ form#searchform {
 	bottom: 0;
 	margin: 0;
 	opacity: 0.573;
-	z-index: 10000
+	z-index: 10000;
+	border-bottom: 4px solid #e5e5e5;
 }
 .genrebar:hover {
 	opacity: 1;
@@ -2683,6 +2684,7 @@ form#searchform {
 .genrebar .mainmenu {
 	position: relative;
 	height: auto;
+	bottom: -4px;
 }
 .genrebar .mainmenu li.options {
     position: absolute;
