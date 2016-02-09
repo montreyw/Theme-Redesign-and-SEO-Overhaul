@@ -8,7 +8,13 @@
 
 
 
-		<?php if (is_category()) { ?> 
+		<?php
+			$musicgenre = array('dance', 'house', 'electro', 'bass-dance', 'deep-house', 'techno', 'progressive-dance', 'electro-house', 'hiphop', 'rap', 'rb', 'soul', 'reggae', 'trip-hop', 'jazz-hop', 'glitch-hop', 'indie', 'alternative', 'rock', 'indie-synth', 'chillout', 'folk', 'funk', 'soft-rock', 'electronic', 'dubstep', 'trap-electronic', 'electronica', 'mash-up', 'chillstep-electronic', 'future-funk', 'drum-and-bass-dance', 'experimental', 'downtempo', 'chillwave', 'ambient', 'psychedelic', 'jazz', 'lo-fi', 'dub', 'pop', 'synthpop', 'electro-pop', 'dreampop', 'dark-pop', 'surf-pop', 'noise-pop-2', 'oldies'); 
+			if (is_category( $musicgenre )) { ?> 
+			<div class="archive-header">
+				<h1><strong rel="tag"><?php single_cat_title(''); ?> Stage</strong></h1><?php echo category_description(); ?>
+			</div>
+		<?php } elseif (is_category()) { ?> 
 			<div class="archive-header">
 				<h1><strong rel="tag"><?php single_cat_title(''); ?></strong></h1><?php echo category_description(); ?>
 			</div>
