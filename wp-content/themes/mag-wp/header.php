@@ -363,7 +363,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 		            <div class="big-thing-box hfeed h-feed">
 						<div class="line-box">
 							<div class="header_line">
-								<h4 class="top"><a href="/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h4>
+								<h4 class="top"><a href="/category/mainstage/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h4>
 							</div>
 						</div>
 			
