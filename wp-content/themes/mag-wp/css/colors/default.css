@@ -420,6 +420,9 @@ ul.footer-social li a:hover   { opacity: 0.7; color: #FFF !important;}
 /* Andre's edits -- black to white */
 
 /* Site wide */
+.admin-bar div#fixed-header {
+	margin-top: 32px;
+}
 html body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
