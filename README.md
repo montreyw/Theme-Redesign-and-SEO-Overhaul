@@ -29,7 +29,9 @@ Earmilk redesign project
 - [x] Add Google+ Buttons to Social Sidebar
 - [x] Add Funtime Out Events Festivals to the nav menu
 - [ ] Place ads
-- [ ] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
+- [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
+- [x] Code keyboard control of Next/Prev of Main Stage
+- [ ] ...I forget
 - [ ] Add Previous Next navigation to bottom of single posts
 - [ ] Implement new Sharrre Open source, share-count aggregating, and lazyloading "plugin" by building custom plugin
 - [ ] Pull share count to posts grid
