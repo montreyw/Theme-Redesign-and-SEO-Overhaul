@@ -6,27 +6,21 @@ add_action("admin_init", "taqyeem_post_init");
 function taqyeem_post_init(){
 	add_meta_box("taqyeem_post_options", __( 'Review Options' , 'taq' ), "taqyeem_post_options", "post", "normal", "high");
 	add_meta_box("taqyeem_post_options", __( 'Review Options' , 'taq' ), "taqyeem_post_options", "page", "normal", "high");
-	
 	//Support Custom Post Types
-	$post_types= get_post_types( array('_builtin' => false ) ,'names'); 
+	$post_types= get_post_types( array('_builtin' => false ) ,'names');
 	foreach ($post_types as $post_type ) {
 		add_meta_box("taqyeem_post_options", __( 'Review Options' , 'taq' ), "taqyeem_post_options", $post_type , "normal", "high");
 	}
 }
-
 function taqyeem_post_options(){
 	global $post ;
 	$get_meta = get_post_custom($post->ID);
-		
-	if(isset( $get_meta["taq_review_criteria"][0] ))	
+	if(isset( $get_meta["taq_review_criteria"][0] ))
 	$taq_review_criteria = unserialize($get_meta["taq_review_criteria"][0]);
-	
-	wp_enqueue_script( 'taqyeem-admin-slider' );  
+	wp_enqueue_script( 'taqyeem-admin-slider' );
 ?>
 	<div class="taqyeem-item" style="border:0 none; box-shadow: none;">
-	
 		<input type="hidden" name="taqyeem_hidden_flag" value="true" />
-		
 		<script type="text/javascript">
 			jQuery(function() {
 				jQuery( "#taqyeem-reviews-list" ).sortable({placeholder: "taqyeem-state-highlight"});
@@ -36,8 +30,7 @@ function taqyeem_post_options(){
 		/* ]]> */
 		</script>
 <?php
-
-			taqyeem_options_items(				
+			taqyeem_options_items(
 				array(	"name" => __('Review Box Position','taq'),
 						"id" => "taq_review_position",
 						"type" => "select",
@@ -51,23 +44,20 @@ function taqyeem_post_options(){
 			</p>
 			<div id="taq-reviews-options">
 			<?php
-			taqyeem_options_items(				
+			taqyeem_options_items(
 				array(	"name" => __('Review Style','taq'),
 						"id" => "taq_review_style",
 						"type" => "select",
 						"options" => array( "stars" => __('Image','taq') ,"percentage" => __('Percentage','taq'), "points" => __('Points','taq'))));
-											
-			taqyeem_options_items(				
+			taqyeem_options_items(
 				array(	"name" => __('Review Box Title','taq'),
 						"id" => "taq_review_title",
 						"type" => "text"));
-						
-			taqyeem_options_items(				
+			taqyeem_options_items(
 				array(	"name" => __('Text appears under the total score','taq'),
 						"id" => "taq_review_total",
 						"type" => "text"));
-											
-			taqyeem_options_items(				
+			taqyeem_options_items(
 				array(	"name" => __('Review Summary','taq'),
 						"id" => "taq_review_summary",
 						"type" => "textarea"));
@@ -77,7 +67,7 @@ function taqyeem_post_options(){
 		<?php $i = 0;
 		if(!empty($taq_review_criteria) && is_array($taq_review_criteria) ){
 			foreach( $taq_review_criteria as $taq_review ){  ; $i++; ?>
-			<li class="taqyeem-option-item taqyeem-review-item">				
+			<li class="taqyeem-option-item taqyeem-review-item">
 				<span class="label"><?php  _e( 'Review Criteria' , 'taq' ) ?></span>
 				<input name="taq_review_criteria[<?php echo $i ?>][name]" type="text" value="<?php if( !empty($taq_review['name'] ) ) echo $taq_review_criteria[$i]['name'] ?>" />
 				<div class="clear"></div>
@@ -98,74 +88,58 @@ function taqyeem_post_options(){
 						});
 					});
 				</script>
-			</li>	
-
+			</li>
 				<?php
 			}
 		}
 			?>
 		</ul>
 			<script>var nextReview = <?php echo $i+1 ?> ;</script>
-		</div>	
-	</div>	
-
+		</div>
+	</div>
   <?php
 }
-
-
 add_action('save_post', 'taqyeem_save_post');
 function taqyeem_save_post( $post_id ){
 	global $post;
-	
 	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE )
 		return $post_id;
-		
 	if (isset($_POST['taqyeem_hidden_flag'])) {
-	
 		$custom_meta_fields = array(
 			'taq_review_title',
 			'taq_review_position',
 			'taq_review_style',
 			'taq_review_summary',
 			'taq_review_total');
-			
 		foreach( $custom_meta_fields as $custom_meta_field ){
 			if(isset($_POST[$custom_meta_field]) )
 				update_post_meta($post_id, $custom_meta_field, htmlspecialchars(stripslashes($_POST[$custom_meta_field])) );
 			else
 				delete_post_meta($post_id, $custom_meta_field);
 		}
-		
 		if( isset($_POST['taq_review_criteria']) )
 			update_post_meta($post_id, 'taq_review_criteria', $_POST['taq_review_criteria']);
 		else
 			delete_post_meta($post_id, 'taq_review_criteria');
-		
 		$get_meta = get_post_custom($post_id);
-
 		$total_counter = $score = 0;
 		if( isset( $get_meta['taq_review_criteria'][0] ))
 		$criterias = unserialize( $get_meta['taq_review_criteria'][0] );
-		
 		if( !empty($criterias) ){
-			foreach( $criterias as $criteria){ 
+			foreach( $criterias as $criteria){
 				if( $criteria['name'] && $criteria['score'] && is_numeric( $criteria['score'] )){
 					if( $criteria['score'] > 100 ) $criteria['score'] = 100;
 					if( $criteria['score'] < 0 ) $criteria['score'] = 1;
-						
 				$score += $criteria['score'];
 				$total_counter ++;
 				}
 			}
 			if( !empty( $score ) && !empty( $total_counter ) )
 				$total_score =  $score / $total_counter ;
-			
 			update_post_meta($post_id, 'taq_review_score', $total_score);
 		}
 	}
 }
-
-
 /*********************************************************/
 function taqyeem_options_items($value){
 	global $post;
@@ -177,12 +151,10 @@ function taqyeem_options_items($value){
 		$get_meta = get_post_custom($post->ID);
 		if( isset( $get_meta[$id][0] ) )
 			$current_value = $get_meta[$id][0];
-			
 	switch ( $value['type'] ) {
-	
 		case 'text': ?>
 			<input  name="<?php echo $value['id']; ?>" id="<?php  echo $value['id']; ?>" type="text" value="<?php if( !empty( $current_value ) ) echo $current_value ?>" />
-		<?php 
+		<?php
 		break;
 		case 'select':
 		?>

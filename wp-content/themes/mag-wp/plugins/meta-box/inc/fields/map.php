@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( !class_exists( 'RWMB_Map_Field' ) )
 {
 	class RWMB_Map_Field
@@ -16,7 +15,6 @@ if ( !class_exists( 'RWMB_Map_Field' ) )
 			wp_enqueue_script( 'googlemap', 'https://maps.google.com/maps/api/js?sensor=false', array(), '', true );
 			wp_enqueue_script( 'rwmb-map', RWMB_JS_URL . 'map.js', array( 'jquery', 'jquery-ui-autocomplete', 'googlemap' ), RWMB_VER, true );
 		}
-
 		/**
 		 * Get field HTML
 		 *
@@ -29,9 +27,7 @@ if ( !class_exists( 'RWMB_Map_Field' ) )
 		static function html( $html, $meta, $field )
 		{
 			$address = isset( $field['address_field'] ) ? $field['address_field'] : false;
-
 			$html = '<div class="rwmb-map-field">';
-
 			$html .= sprintf(
 				'<div class="rwmb-map-canvas" style="%s"%s></div>
 				<input type="hidden" name="%s" class="rwmb-map-coordinate" value="%s">',
@@ -40,7 +36,6 @@ if ( !class_exists( 'RWMB_Map_Field' ) )
 				$field['field_name'],
 				$meta
 			);
-
 			if ( $address )
 			{
 				$html .= sprintf(
@@ -49,9 +44,7 @@ if ( !class_exists( 'RWMB_Map_Field' ) )
 					__( 'Find Address', 'rwmb' )
 				);
 			}
-
 			$html .= '</div>';
-
 			return $html;
 		}
 	}

@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Button_Field' ) )
 {
 	class RWMB_Button_Field
@@ -23,7 +22,6 @@ if ( ! class_exists( 'RWMB_Button_Field' ) )
 				$field['std']
 			);
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *

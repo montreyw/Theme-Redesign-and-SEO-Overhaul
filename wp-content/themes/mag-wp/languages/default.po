@@ -243,11 +243,11 @@ msgid "written by"
 msgstr ""
 
 #: ../mag-wp/single.php:94
-msgid "<div class=\"entry-btn\">Article Tags:</div>"
+msgid "<div class=\"entry-btn\">Tags:</div>"
 msgstr ""
 
 #: ../mag-wp/single.php:100
-msgid "<div class=\"entry-btn\">Article Categories:</div>"
+msgid "<div class=\"entry-btn\">Categories:</div>"
 msgstr ""
 
 #: ../mag-wp/single.php:124

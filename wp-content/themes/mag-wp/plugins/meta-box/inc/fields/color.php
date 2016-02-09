@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Color_Field' ) )
 {
 	class RWMB_Color_Field
@@ -16,7 +15,6 @@ if ( ! class_exists( 'RWMB_Color_Field' ) )
 			wp_enqueue_style( 'rwmb-color', RWMB_CSS_URL . 'color.css', array( 'farbtastic',  'wp-color-picker' ), RWMB_VER );
 			wp_enqueue_script( 'rwmb-color', RWMB_JS_URL . 'color.js', array( 'farbtastic',  'wp-color-picker' ), RWMB_VER, true );
 		}
-
 		/**
 		 * Get field HTML
 		 *
@@ -37,7 +35,6 @@ if ( ! class_exists( 'RWMB_Color_Field' ) )
 				$field['size']
 			);
 		}
-
 		/**
 		 * Don't save '#' when no color is chosen
 		 *
@@ -52,7 +49,6 @@ if ( ! class_exists( 'RWMB_Color_Field' ) )
 		{
 			return '#' === $new ? '' : $new;
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *
@@ -65,7 +61,6 @@ if ( ! class_exists( 'RWMB_Color_Field' ) )
 			$field = wp_parse_args( $field, array(
 				'size' => 7,
 			) );
-
 			return $field;
 		}
 	}

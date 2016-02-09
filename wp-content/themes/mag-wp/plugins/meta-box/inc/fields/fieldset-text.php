@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Fieldset_Text_Field' ) )
 {
   class RWMB_Fieldset_Text_Field
@@ -18,17 +17,13 @@ if ( ! class_exists( 'RWMB_Fieldset_Text_Field' ) )
     static function html( $html, $meta, $field )
     {
       $out = '';
-
       if (count($meta)==1 && trim($meta[0])=='') {
         $meta = "";
       }
-
       $html = array();
       $before = '<fieldset><legend>'.$field['desc'].'</legend>';
       $after   = '</fieldset>';
-      
       $tpl = '<label>%s <input type="text" class="rwmb-fieldset-text" name="%s[%s][%d]" placeholder="%s" value="%s" /></label>';
-      
       for($n=0;$n<$field['rows'];$n++) {
         foreach( $field['options'] as $k => $v ) {
           $fid = $field['id'];
@@ -40,11 +35,9 @@ if ( ! class_exists( 'RWMB_Fieldset_Text_Field' ) )
         }
         $html[] = "<br/>\n";
       }
-
       $out = $before . implode( ' ', $html ) . $after;
       return $out;
     }
-
     /**
      * Get meta value
      *
@@ -58,14 +51,11 @@ if ( ! class_exists( 'RWMB_Fieldset_Text_Field' ) )
     static function meta( $meta, $post_id, $saved, $field )
     {
       $meta = get_post_meta( $post_id, $field['id'] );
-
       if (is_array($meta) && !empty($meta)) {
         $meta = $meta[0];
       }
-
       return $meta;
     }
-
     /**
      * Save meta value
      *
@@ -78,6 +68,5 @@ if ( ! class_exists( 'RWMB_Fieldset_Text_Field' ) )
     {
       update_post_meta($post_id, $field['id'], $new, $old);
     }
-
   }
 }

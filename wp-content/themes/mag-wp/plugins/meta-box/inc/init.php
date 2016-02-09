@@ -1,6 +1,5 @@
 <?php
 add_action( 'admin_init', 'rwmb_register_meta_boxes' );
-
 /**
  * Register meta boxes via a filter
  * Advantages:

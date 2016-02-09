@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Checkbox_Field' ) )
 {
 	class RWMB_Checkbox_Field
@@ -24,7 +23,6 @@ if ( ! class_exists( 'RWMB_Checkbox_Field' ) )
 				checked( !empty( $meta ), 1, false )
 			);
 		}
-
 		/**
 		 * Set the value of checkbox to 1 or 0 instead of 'checked' and empty string
 		 * This prevents using default value once the checkbox has been unchecked

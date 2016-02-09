@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Common' ) )
 {
 	/**
@@ -19,7 +18,6 @@ if ( ! class_exists( 'RWMB_Common' ) )
 		{
 			self::load_textdomain();
 		}
-
 		/**
 		 * Load plugin translation
 		 *
@@ -31,11 +29,9 @@ if ( ! class_exists( 'RWMB_Common' ) )
 			$locale = get_locale();
 			$dir    = trailingslashit( RWMB_DIR . 'lang' );
 			$mofile = "{$dir}{$locale}.mo";
-
 			// In themes/plugins/mu-plugins directory
 			load_textdomain( 'rwmb', $mofile );
 		}
 	}
-
 	RWMB_Common::on_load();
 }

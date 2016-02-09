@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Radio_Field' ) )
 {
 	class RWMB_Radio_Field
@@ -19,7 +18,6 @@ if ( ! class_exists( 'RWMB_Radio_Field' ) )
 		{
 			$html = array();
 			$tpl = '<label><input type="radio" class="rwmb-radio" name="%s" value="%s"%s> %s</label>';
-
 			foreach ( $field['options'] as $value => $label )
 			{
 				$html[] = sprintf(
@@ -30,7 +28,6 @@ if ( ! class_exists( 'RWMB_Radio_Field' ) )
 					$label
 				);
 			}
-
 			return implode( ' ', $html );
 		}
 	}

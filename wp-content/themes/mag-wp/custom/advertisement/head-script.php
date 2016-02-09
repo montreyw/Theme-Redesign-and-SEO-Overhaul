@@ -12,7 +12,6 @@
     node.parentNode.insertBefore(gads, node);
   })();
 </script>
-
 <script type='text/javascript'>
   googletag.cmd.push(function() {
     googletag.defineSlot('/11347700/Leaderboard', [[970, 250], [728, 90]], 'div-gpt-ad-1433776979687-0').addService(googletag.pubads());

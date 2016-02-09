@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( !class_exists( 'RWMB_Range_Field' ) )
 {
 	class RWMB_Range_Field
@@ -15,7 +14,6 @@ if ( !class_exists( 'RWMB_Range_Field' ) )
 		{
 			wp_enqueue_style( 'rwmb-range', RWMB_CSS_URL . 'range.css', array(), RWMB_VER );
 		}
-
 		/**
 		 * Get field HTML
 		 *
@@ -37,7 +35,6 @@ if ( !class_exists( 'RWMB_Range_Field' ) )
 				$field['step']
 			);
 		}
-
 		/**
 		 * Normalize parameters for field.
 		 *
@@ -54,7 +51,6 @@ if ( !class_exists( 'RWMB_Range_Field' ) )
 			) );
 			return $field;
 		}
-
 		/**
 		 * Ensure number in range.
 		 *
@@ -70,14 +66,12 @@ if ( !class_exists( 'RWMB_Range_Field' ) )
 			$new = intval($new);
 			$min = intval($field['min']);
 			$max = intval($field['max']);
-
 			if ($new < $min) {
 				return $min;
 			}
 			else if ($new > $max) {
 				return $max;
 			}
-
 			return $new;
 		}
 	}

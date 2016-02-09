@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Text_Field' ) )
 {
 	class RWMB_Text_Field
@@ -28,7 +27,6 @@ if ( ! class_exists( 'RWMB_Text_Field' ) )
 				self::datalist_html($field)
 			);
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *
@@ -45,7 +43,6 @@ if ( ! class_exists( 'RWMB_Text_Field' ) )
 			) );
 			return $field;
 		}
-
 		/**
 		 * Create datalist, if any
 		 *
@@ -62,13 +59,10 @@ if ( ! class_exists( 'RWMB_Text_Field' ) )
 				'<datalist id="%s">',
 				$datalist['id']
 			);
-
 			foreach( $datalist['options'] as $option ) {
 				$html.= sprintf('<option value="%s"></option>', $option);
 			}
-
 			$html .= '</datalist>';
-
 			return $html;
 		}
 	}

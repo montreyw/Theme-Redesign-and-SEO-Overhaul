@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_File_Field' ) )
 {
 	class RWMB_File_Field
@@ -20,7 +19,6 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 				'maxFileUploadsPlural' => __( 'You may only upload maximum %d files', 'rwmb' ),
 			) );
 		}
-
 		/**
 		 * Add actions
 		 *
@@ -30,11 +28,9 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 		{
 			// Add data encoding type for file uploading
 			add_action( 'post_edit_form_tag', array( __CLASS__, 'post_edit_form_tag' ) );
-
 			// Delete file via Ajax
 			add_action( 'wp_ajax_rwmb_delete_file', array( __CLASS__, 'wp_ajax_delete_file' ) );
 		}
-
 		/**
 		 * Add data encoding type for file uploading
 		 *
@@ -44,7 +40,6 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 		{
 			echo ' enctype="multipart/form-data"';
 		}
-
 		/**
 		 * Ajax callback for deleting files.
 		 * Modified from a function used by "Verve Meta Boxes" plugin
@@ -58,18 +53,14 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 			$field_id      = isset( $_POST['field_id'] ) ? $_POST['field_id'] : 0;
 			$attachment_id = isset( $_POST['attachment_id'] ) ? intval( $_POST['attachment_id'] ) : 0;
 			$force_delete  = isset( $_POST['force_delete'] ) ? intval( $_POST['force_delete'] ) : 0;
-
 			check_ajax_referer( "rwmb-delete-file_{$field_id}" );
-
 			delete_post_meta( $post_id, $field_id, $attachment_id );
 			$ok = $force_delete ? wp_delete_attachment( $attachment_id ) : true;
-
 			if ( $ok )
 				wp_send_json_success();
 			else
 				wp_send_json_error( __( 'Error: Cannot delete file', 'rwmb' ) );
 		}
-
 		/**
 		 * Get field HTML
 		 *
@@ -83,13 +74,11 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 		{
 			$i18n_title = apply_filters( 'rwmb_file_upload_string', _x( 'Upload Files', 'file upload', 'rwmb' ), $field );
 			$i18n_more  = apply_filters( 'rwmb_file_add_string', _x( '+ Add new file', 'file upload', 'rwmb' ), $field );
-
 			// Uploaded files
 			$html = self::get_uploaded_files( $meta, $field );
 			$new_file_classes = array( 'new-files' );
 			if ( !empty( $field['max_file_uploads'] ) && count( $meta ) >= (int) $field['max_file_uploads'] )
 				$new_file_classes[] = 'hidden';
-
 			// Show form upload
 			$html .= sprintf(
 				'<div class="%s">
@@ -102,10 +91,8 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 				$field['id'],
 				$i18n_more
 			);
-
 			return $html;
 		}
-
 		static function get_uploaded_files( $files, $field )
 		{
 			$delete_nonce = wp_create_nonce( "rwmb-delete-file_{$field['id']}" );
@@ -122,17 +109,13 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 				$field['max_file_uploads'],
 				$field['mime_type']
 			);
-
 			foreach ( $files as $attachment_id )
 			{
 				$html .= self::file_html( $attachment_id );
 			}
-
 			$html .= '</ul>';
-
 			return $html;
 		}
-
 		static function file_html( $attachment_id )
 		{
 			$i18n_delete = apply_filters( 'rwmb_file_delete_string', _x( 'Delete', 'file upload', 'rwmb' ) );
@@ -147,7 +130,6 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 					<a title="%s" class="rwmb-delete-file" href="#" data-attachment_id="%s">%s</a>
 				</div>
 			</li>';
-
 			$mime_type = get_post_mime_type( $attachment_id );
 			return sprintf(
 				$li,
@@ -163,7 +145,6 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 				$i18n_delete
 			);
 		}
-
 		/**
 		 * Get meta values to save
 		 *
@@ -179,19 +160,14 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 			$name = $field['id'];
 			if ( empty( $_FILES[ $name ] ) )
 				return $new;
-
 			$new = array();
 			$files	= self::fix_file_array( $_FILES[ $name ] );
-
 			foreach ( $files as $file_item )
 			{
 				$file = wp_handle_upload( $file_item, array( 'test_form' => false ) );
-
 				if ( ! isset( $file['file'] ) )
 					continue;
-
 				$file_name = $file['file'];
-
 				$attachment = array(
 					'post_mime_type' => $file['type'],
 					'guid'           => $file['url'],
@@ -200,19 +176,15 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 					'post_content'   => '',
 				);
 				$id = wp_insert_attachment( $attachment, $file_name, $post_id );
-
 				if ( ! is_wp_error( $id ) )
 				{
 					wp_update_attachment_metadata( $id, wp_generate_attachment_metadata( $id, $file_name ) );
-
 					// Save file ID in meta field
 					$new[] = $id;
 				}
 			}
-
 			return array_unique( array_merge( $old, $new ) );
 		}
-
 		/**
 		 * Fixes the odd indexing of multiple file uploads from the format:
 		 *	 $_FILES['field']['key']['index']
@@ -235,7 +207,6 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 			}
 			return $output;
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *
@@ -254,7 +225,6 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 			$field['multiple'] = true;
 			return $field;
 		}
-
 		/**
 		 * Standard meta retrieval
 		 *
@@ -268,10 +238,8 @@ if ( ! class_exists( 'RWMB_File_Field' ) )
 		static function meta( $meta, $post_id, $saved, $field )
 		{
 			$meta = RW_Meta_Box::meta( $meta, $post_id, $saved, $field );
-
 			if ( empty( $meta ) )
 				return array();
-
 			return (array) $meta;
 		}
 	}

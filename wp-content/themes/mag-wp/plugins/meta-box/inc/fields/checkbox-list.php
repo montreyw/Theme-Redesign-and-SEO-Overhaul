@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Checkbox_List_Field' ) )
 {
 	class RWMB_Checkbox_List_Field
@@ -20,7 +19,6 @@ if ( ! class_exists( 'RWMB_Checkbox_List_Field' ) )
 			$meta = (array) $meta;
 			$html = array();
 			$tpl = '<label><input type="checkbox" class="rwmb-checkbox-list" name="%s" value="%s" %s /> %s</label>';
-
 			foreach ( $field['options'] as $value => $label )
 			{
 				$html[] = sprintf(
@@ -33,7 +31,6 @@ if ( ! class_exists( 'RWMB_Checkbox_List_Field' ) )
 			}
 			return implode( '<br />', $html );
 		}
-
 		/**
 		 * Get meta value
 		 * If field is cloneable, value is saved as a single entry in DB
@@ -53,14 +50,10 @@ if ( ! class_exists( 'RWMB_Checkbox_List_Field' ) )
 		static function meta( $meta, $post_id, $saved, $field )
 		{
 			$meta = get_post_meta( $post_id, $field['id'], $field['clone'] );
-
 			$meta = ( !$saved && '' === $meta || array() === $meta ) ? $field['std'] : $meta;
-
 			$meta = array_map( 'esc_attr', (array) $meta );
-
 			return $meta;
 		}
-
 		/**
 		 * Save meta value
 		 * If field is cloneable, value is saved as a single entry in DB
@@ -80,13 +73,11 @@ if ( ! class_exists( 'RWMB_Checkbox_List_Field' ) )
 				RW_Meta_Box::save( $new, $old, $post_id, $field );
 				return;
 			}
-
 			if ( empty( $new ) )
 				delete_post_meta( $post_id, $field['id'] );
 			else
 				update_post_meta( $post_id, $field['id'], $new );
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *

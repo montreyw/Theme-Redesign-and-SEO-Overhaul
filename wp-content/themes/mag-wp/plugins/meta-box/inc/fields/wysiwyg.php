@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( !class_exists( 'RWMB_Wysiwyg_Field' ) )
 {
 	class RWMB_Wysiwyg_Field
@@ -15,7 +14,6 @@ if ( !class_exists( 'RWMB_Wysiwyg_Field' ) )
 		{
 			wp_enqueue_style( 'rwmb-meta-box-wysiwyg', RWMB_CSS_URL . 'wysiwyg.css', array(), RWMB_VER );
 		}
-
 		/**
 		 * Change field value on save
 		 *
@@ -30,7 +28,6 @@ if ( !class_exists( 'RWMB_Wysiwyg_Field' ) )
 		{
 			return ( $field['raw'] ? $new : wpautop( $new ) );
 		}
-
 		/**
 		 * Get field HTML
 		 *
@@ -44,15 +41,11 @@ if ( !class_exists( 'RWMB_Wysiwyg_Field' ) )
 		{
 			// Using output buffering because wp_editor() echos directly
 			ob_start();
-
 			$field['options']['textarea_name'] = $field['field_name'];
-
 			// Use new wp_editor() since WP 3.3
 			wp_editor( $meta, $field['id'], $field['options'] );
-
 			return ob_get_clean();
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *
@@ -66,15 +59,12 @@ if ( !class_exists( 'RWMB_Wysiwyg_Field' ) )
 				'raw'     => false,
 				'options' => array(),
 			) );
-
 			$field['options'] = wp_parse_args( $field['options'], array(
 				'editor_class' => 'rwmb-wysiwyg',
 				'dfw'          => true, // Use default WordPress full screen UI
 			) );
-
 			// Keep the filter to be compatible with previous versions
 			$field['options'] = apply_filters( 'rwmb_wysiwyg_settings', $field['options'] );
-
 			return $field;
 		}
 	}

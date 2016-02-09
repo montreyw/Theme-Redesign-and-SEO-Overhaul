@@ -2,7 +2,6 @@
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
 require_once RWMB_FIELDS_DIR . 'taxonomy.php';
-
 if ( ! class_exists( 'RWMB_Taxonomy_Advanced_Field' ) )
 {
 	class RWMB_Taxonomy_Advanced_Field extends RWMB_Taxonomy_Field
@@ -23,7 +22,6 @@ if ( ! class_exists( 'RWMB_Taxonomy_Advanced_Field' ) )
 		{
 			return implode( ',', array_unique( $new ) );
 		}
-
 		/**
 		 * Save meta value
 		 *
@@ -41,7 +39,6 @@ if ( ! class_exists( 'RWMB_Taxonomy_Advanced_Field' ) )
 			else
 				delete_post_meta( $post_id, $field['id'] );
 		}
-
 		/**
 		 * Standard meta retrieval
 		 *

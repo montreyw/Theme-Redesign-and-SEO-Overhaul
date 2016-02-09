@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Divider_Field' ) )
 {
 	class RWMB_Divider_Field
@@ -15,7 +14,6 @@ if ( ! class_exists( 'RWMB_Divider_Field' ) )
 		{
 			wp_enqueue_style( 'rwmb-divider', RWMB_CSS_URL . 'divider.css', array(), RWMB_VER );
 		}
-
 		/**
 		 * Show begin HTML markup for fields
 		 *
@@ -29,7 +27,6 @@ if ( ! class_exists( 'RWMB_Divider_Field' ) )
 		{
 			return '<hr>';
 		}
-
 		/**
 		 * Show end HTML markup for fields
 		 *

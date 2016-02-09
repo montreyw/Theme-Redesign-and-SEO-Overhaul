@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( !class_exists( 'RWMB_Number_Field' ) )
 {
 	class RWMB_Number_Field
@@ -27,7 +26,6 @@ if ( !class_exists( 'RWMB_Number_Field' ) )
 				$field['placeholder']
 			);
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *

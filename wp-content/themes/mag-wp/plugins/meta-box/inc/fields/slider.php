@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( !class_exists( 'RWMB_Slider_Field' ) )
 {
 	class RWMB_Slider_Field
@@ -18,10 +17,8 @@ if ( !class_exists( 'RWMB_Slider_Field' ) )
 			wp_enqueue_style( 'jquery-ui-theme', "{$url}/jquery.ui.theme.css", array(), '1.8.17' );
 			wp_enqueue_style( 'jquery-ui-slider', "{$url}/jquery.ui.slider.css", array(), '1.8.17' );
 			wp_enqueue_style( 'rwmb-slider', RWMB_CSS_URL . 'slider.css' );
-
 			wp_enqueue_script( 'rwmb-slider', RWMB_JS_URL . 'slider.js', array( 'jquery-ui-slider', 'jquery-ui-widget', 'jquery-ui-mouse', 'jquery-ui-core' ), RWMB_VER, true );
 		}
-
 		/**
 		 * Get div HTML
 		 *
@@ -44,7 +41,6 @@ if ( !class_exists( 'RWMB_Slider_Field' ) )
 				$field['field_name'], $meta
 			);
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *
@@ -62,7 +58,6 @@ if ( !class_exists( 'RWMB_Slider_Field' ) )
 			$field['js_options'] = wp_parse_args( $field['js_options'], array(
 				'range' => 'min', // range = 'min' will add a dark background to sliding part, better UI
 			) );
-
 			return $field;
 		}
 	}

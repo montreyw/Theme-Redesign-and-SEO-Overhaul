@@ -3,7 +3,6 @@
 defined( 'ABSPATH' ) || exit;
 require_once RWMB_FIELDS_DIR . 'select-advanced.php';
 require_once RWMB_FIELDS_DIR . 'checkbox-list.php';
-
 if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 {
 	class RWMB_Taxonomy_Field
@@ -19,7 +18,6 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 			wp_enqueue_style( 'rwmb-taxonomy', RWMB_CSS_URL . 'taxonomy.css', array(), RWMB_VER );
 			wp_enqueue_script( 'rwmb-taxonomy', RWMB_JS_URL . 'taxonomy.js', array( 'jquery', 'rwmb-select-advanced', 'wp-ajax-response' ), RWMB_VER, true );
 		}
-
 		/**
 		 * Add default value for 'taxonomy' field
 		 *
@@ -32,13 +30,10 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 			$default_args = array(
 				'hide_empty' => false,
 			);
-
 			// Set default args
 			$field['options']['args'] = ! isset( $field['options']['args'] ) ? $default_args : wp_parse_args( $field['options']['args'], $default_args );
-
 			$tax = get_taxonomy( $field['options']['taxonomy'] );
 			$field['placeholder'] = empty( $field['placeholder'] ) ? sprintf( __( 'Select a %s' , 'rwmb' ), $tax->labels->singular_name ) : $field['placeholder'];
-
 			switch( $field['options']['type'] )
 			{
 				case 'select_advanced':
@@ -56,7 +51,6 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 					$field['options']['type'] = 'select';
 					$field = RWMB_Select_Field::normalize_field( $field );
 			}
-
 			if ( in_array( $field['options']['type'], array( 'checkbox_tree', 'select_tree' ) ) )
 			{
 				if ( isset( $field['options']['args']['parent'] ) )
@@ -69,12 +63,9 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 					$field['options']['parent'] = 0;
 				}
 			}
-
 			$field['field_name'] = "{$field['id']}[]";
-
 			return $field;
 		}
-
 		/**
 		 * Get field HTML
 		 *
@@ -88,11 +79,8 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 		{
 			$options = $field['options'];
 			$terms   = get_terms( $options['taxonomy'], $options['args'] );
-
 			$field['options'] = self::get_options( $terms );
-
 			$html = '';
-
 			switch( $options['type'] )
 			{
 				case 'checkbox_list':
@@ -113,10 +101,8 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 				default:
 					$html = RWMB_Select_Field::html( $html, $meta, $field );
 			}
-
 			return $html;
 		}
-
 		/**
 		 * Walker for displaying checkboxes in tree format
 		 *
@@ -135,7 +121,6 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 			$terms  = $elements[$parent];
 			$field['options'] = self::get_options( $terms );
 			$hidden = $active ? '' : 'hidden';
-
 			$html = "<ul class = 'rw-taxonomy-tree {$hidden}'>";
 			$li = '<li><label><input type="checkbox" name="%s" value="%s"%s> %s</label>';
 			foreach ( $terms as $term )
@@ -150,10 +135,8 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 				$html .= self::walk_checkbox_tree( $meta, $field, $elements, $term->term_id, $active && in_array( $term->term_id, $meta ) ) . '</li>';
 			}
 			$html .= '</ul>';
-
 			return $html;
 		}
-
 		/**
 		 * Walker for displaying select in tree format
 		 *
@@ -171,11 +154,9 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 				return;
 			$terms    = $elements[$parent];
 			$field['options'] = self::get_options( $terms );
-
 			$classes = array( 'rw-taxonomy-tree' );
 			$classes[] = $active ? 'active' : 'disabled';
 			$classes[] = "rwmb-taxonomy-{$parent}";
-
 			$html  = '<div class="' . implode( ' ', $classes ) . '">';
 			$html .= RWMB_Select_Field::html( $html, $meta, $field );
 			foreach ( $terms as $term )
@@ -183,10 +164,8 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 				$html .= self::walk_select_tree( $meta, $field, $elements, $term->term_id, $active && in_array( $term->term_id, $meta )  );
 			}
 			$html .= '</div>';
-
 			return $html;
 		}
-
 		/**
 		 * Processes terms into indexed array for walker functions
 		 *
@@ -204,7 +183,6 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 			}
 			return $elements;
 		}
-
 		/**
 		 * Get options for selects, checkbox list, etc via the terms
 		 *
@@ -221,7 +199,6 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 			}
 			return $options;
 		}
-
 		/**
 		 * Save meta value
 		 *
@@ -238,7 +215,6 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 			$new = empty( $new ) ? null : $new;
 			wp_set_object_terms( $post_id, $new, $field['options']['taxonomy'] );
 		}
-
 		/**
 		 * Standard meta retrieval
 		 *
@@ -252,11 +228,9 @@ if ( ! class_exists( 'RWMB_Taxonomy_Field' ) )
 		static function meta( $meta, $post_id, $saved, $field )
 		{
 			$options = $field['options'];
-
 			$meta = wp_get_post_terms( $post_id, $options['taxonomy'] );
 			$meta = is_array( $meta ) ? $meta : (array) $meta;
 			$meta = wp_list_pluck( $meta, 'term_id' );
-
 			return $meta;
 		}
 	}

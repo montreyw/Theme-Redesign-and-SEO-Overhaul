@@ -1,10 +1,8 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 // Make sure "text" field is loaded
 require_once RWMB_FIELDS_DIR . 'url.php';
-
 if ( ! class_exists( 'RWMB_OEmbed_Field' ) )
 {
 	class RWMB_OEmbed_Field extends RWMB_URL_Field
@@ -19,7 +17,6 @@ if ( ! class_exists( 'RWMB_OEmbed_Field' ) )
 			wp_enqueue_style( 'rwmb-oembed', RWMB_CSS_URL . 'oembed.css' );
 			wp_enqueue_script( 'rwmb-oembed', RWMB_JS_URL . 'oembed.js', array(), RWMB_VER, true );
 		}
-
 		/**
 		 * Add actions
 		 *
@@ -29,7 +26,6 @@ if ( ! class_exists( 'RWMB_OEmbed_Field' ) )
 		{
 			add_action( 'wp_ajax_rwmb_get_embed', array( __CLASS__, 'wp_ajax_get_embed' ) );
 		}
-
 		/**
 		 * Ajax callback for returning oEmbed HTML
 		 *
@@ -40,7 +36,6 @@ if ( ! class_exists( 'RWMB_OEmbed_Field' ) )
 			$url = isset( $_POST['url'] ) ? $_POST['url'] : '';
 			wp_send_json_success( self::get_embed( $url ) );
 		}
-
 		/**
 		 * Get embed html from url
 		 *
@@ -53,7 +48,6 @@ if ( ! class_exists( 'RWMB_OEmbed_Field' ) )
 			$embed = @wp_oembed_get( $url );
 			return $embed ? $embed : __( 'Embed HTML not available.', 'rwmb' );
 		}
-
 		/**
 		 * Get field HTML
 		 *

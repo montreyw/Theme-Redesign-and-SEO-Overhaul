@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Image_Field' ) )
 {
 	class RWMB_Image_Field extends RWMB_File_Field
@@ -15,11 +14,9 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 		{
 			// Enqueue same scripts and styles as for file field
 			parent::admin_enqueue_scripts();
-
 			wp_enqueue_style( 'rwmb-image', RWMB_CSS_URL . 'image.css', array(), RWMB_VER );
 			wp_enqueue_script( 'rwmb-image', RWMB_JS_URL . 'image.js', array( 'jquery-ui-sortable' ), RWMB_VER, true );
 		}
-
 		/**
 		 * Add actions
 		 *
@@ -29,11 +26,9 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 		{
 			// Do same actions as file field
 			parent::add_actions();
-
 			// Reorder images via Ajax
 			add_action( 'wp_ajax_rwmb_reorder_images', array( __CLASS__, 'wp_ajax_reorder_images' ) );
 		}
-
 		/**
 		 * Ajax callback for reordering images
 		 *
@@ -44,11 +39,8 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 			$field_id = isset( $_POST['field_id'] ) ? $_POST['field_id'] : 0;
 			$order    = isset( $_POST['order'] ) ? $_POST['order'] : 0;
 			$post_id  = isset( $_POST['post_id'] ) ? (int) $_POST['post_id'] : 0;
-
 			check_ajax_referer( "rwmb-reorder-images_{$field_id}" );
-
 			parse_str( $order, $items );
-
 			delete_post_meta( $post_id, $field_id );
 			foreach ( $items['item'] as $item )
 			{
@@ -56,7 +48,6 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 			}
 			wp_send_json_success();
 		}
-
 		/**
 		 * Get field HTML
 		 *
@@ -70,10 +61,8 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 		{
 			$i18n_title = apply_filters( 'rwmb_image_upload_string', _x( 'Upload Images', 'image upload', 'rwmb' ), $field );
 			$i18n_more  = apply_filters( 'rwmb_image_add_string', _x( '+ Add new image', 'image upload', 'rwmb' ), $field );
-
 			// Uploaded images
 			$html .= self::get_uploaded_images( $meta, $field );
-
 			// Show form upload
 			$html .= sprintf(
 				'<h4>%s</h4>
@@ -85,10 +74,8 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 				$field['id'],
 				$i18n_more
 			);
-
 			return $html;
 		}
-
 		/**
 		 * Get HTML markup for uploaded images
 		 *
@@ -114,17 +101,13 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 				$field['force_delete'] ? 1 : 0,
 				$field['max_file_uploads']
 			);
-
 			foreach ( $images as $image )
 			{
 				$html .= self::img_html( $image );
 			}
-
 			$html .= '</ul>';
-
 			return $html;
 		}
-
 		/**
 		 * Get HTML markup for ONE uploaded image
 		 *
@@ -145,11 +128,9 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 					</div>
 				</li>
 			';
-
 			$src  = wp_get_attachment_image_src( $image, 'thumbnail' );
 			$src  = $src[0];
 			$link = get_edit_post_link( $image );
-
 			return sprintf(
 				$li,
 				$image,
@@ -158,7 +139,6 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 				$i18n_delete, $image
 			);
 		}
-
 		/**
 		 * Standard meta retrieval
 		 *
@@ -172,13 +152,11 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 		static function meta( $meta, $post_id, $saved, $field )
 		{
 			global $wpdb;
-
 			$meta = $wpdb->get_col( $wpdb->prepare( "
 				SELECT meta_value FROM $wpdb->postmeta
 				WHERE post_id = %d AND meta_key = '%s'
 				ORDER BY meta_id ASC
 			", $post_id, $field['id'] ) );
-
 			return empty( $meta ) ? array() : $meta;
 		}
 	}

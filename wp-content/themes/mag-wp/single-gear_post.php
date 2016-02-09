@@ -98,7 +98,7 @@
 					        <?php if (get_comments_number()==0) { 
 					        } else { ?>
 					        <?php } ?>            
-				            <h3 class="title"> <?php _e( 'Comments to', 'anthemes' ); ?> <span><?php the_title(); ?></span></h3>
+				            <h3 class="title">Comments</h3>
 				            <?php comments_template('', true); // comments ?>
 				        </div>
 

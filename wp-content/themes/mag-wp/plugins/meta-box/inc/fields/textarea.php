@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Textarea_Field' ) )
 {
 	class RWMB_Textarea_Field
@@ -27,7 +26,6 @@ if ( ! class_exists( 'RWMB_Textarea_Field' ) )
 				$meta
 			);
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *

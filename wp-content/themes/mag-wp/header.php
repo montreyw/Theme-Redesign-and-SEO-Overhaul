@@ -125,24 +125,25 @@
 
 <!-- 	Google DFP -->
 	<script type='text/javascript'>
-	  var googletag = googletag || {};
-	  googletag.cmd = googletag.cmd || [];
 	  (function() {
-	    var gads = document.createElement('script');
-	    gads.async = true;
-	    gads.type = 'text/javascript';
 	    var useSSL = 'https:' == document.location.protocol;
-	    gads.src = (useSSL ? 'https:' : 'http:') +
-	      '//www.googletagservices.com/tag/js/gpt.js';
-	    var node = document.getElementsByTagName('script')[0];
-	    node.parentNode.insertBefore(gads, node);
+	    var src = (useSSL ? 'https:' : 'http:') +
+	        '//www.googletagservices.com/tag/js/gpt.js';
+	    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
 	  })();
 	</script>
 	
 	<script type='text/javascript'>
 	  googletag.cmd.push(function() {
-	    googletag.defineSlot('/11347700/EM_ATF_ATB_900x90', [970, 90], 'div-gpt-ad-1454478333610-0').addService(googletag.pubads());
+	    googletag.defineSlot('/11347700/Leaderboard', [[970, 250], [728, 90], [970, 90]], 'div-gpt-ad-1454727873765-0').setTargeting('Redirect', ['false']).addService(googletag.pubads());
+	    googletag.defineSlot('/11347700/Leaderboard2', [[970, 250], [728, 90], [970, 90]], 'div-gpt-ad-1454727873765-1').addService(googletag.pubads());
+	    googletag.defineSlot('/11347700/Hybrid_MPU', [[300, 250], [300, 600]], 'div-gpt-ad-1454727873765-2').addService(googletag.pubads());
+	    googletag.defineSlot('/11347700/MPU', [300, 250], 'div-gpt-ad-1454727873765-3').addService(googletag.pubads());
+	    googletag.defineSlot('/11347700/Wallpaper', [1, 1], 'div-gpt-ad-1454727873765-4').addService(googletag.pubads());
 	    googletag.pubads().enableSingleRequest();
+	    googletag.pubads().collapseEmptyDivs();
+	    googletag.pubads().setTargeting('Redirect', ['false']);
+	    googletag.pubads().enableSyncRendering();
 	    googletag.enableServices();
 	  });
 	</script>
@@ -153,9 +154,9 @@
 </head>
 <body <?php if ($boxed_version_select == 'Yes') { ?>id="boxed-style"<?php } ?> <?php body_class(); ?>
 	itemscope itemtype="http://schema.org/<?php 
-	if (is_page(array(48, 'about', 'About'))) { 
+	if (is_page(array(248463, 'about', 'About'))) { 
 		echo 'AboutPage'; 
-	} elseif (is_page(array(52, 'contact', 'Contact'))) {
+	} elseif (is_page(array(248509, 'contact-us', 'Contact Us'))) {
 		echo 'ContactPage'; 
 	} else {
 		echo 'WebPage';
@@ -167,6 +168,9 @@
 
 <!-- Begin Header -->
 <div id="fixed-header">
+
+	<?php include("custom/Genre-Bar-static-HTML.php"); ?>
+
 	<div id="inner-header">
 		<div id="logo-cont">
 			<header id="logo-header" role="banner" 
@@ -197,11 +201,20 @@
 		    </nav>
 		</div>
 
-<!-- 		<?php include("custom/Genre-Bar-static-HTML.php"); ?> -->
-
 	</div>
 </div>
 <div id="header-filler"></div>
+
+
+
+
+
+
+
+<div class="main-stage-left" style="display:none;">
+</div><!-- end .main-stage-left -->
+
+
 
 
 

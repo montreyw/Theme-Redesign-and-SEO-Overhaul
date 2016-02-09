@@ -1,10 +1,8 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 // Make sure "text" field is loaded
 require_once RWMB_FIELDS_DIR . 'text.php';
-
 if ( ! class_exists( 'RWMB_URL_Field' ) )
 {
 	class RWMB_URL_Field extends RWMB_Text_Field
@@ -29,7 +27,6 @@ if ( ! class_exists( 'RWMB_URL_Field' ) )
 				$field['placeholder']
 			);
 		}
-
 		/**
 		 * Sanitize url
 		 *

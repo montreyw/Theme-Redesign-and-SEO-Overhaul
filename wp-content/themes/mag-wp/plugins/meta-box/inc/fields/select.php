@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( !class_exists( 'RWMB_Select_Field' ) )
 {
 	class RWMB_Select_Field
@@ -15,7 +14,6 @@ if ( !class_exists( 'RWMB_Select_Field' ) )
 		{
 			wp_enqueue_style( 'rwmb-select', RWMB_CSS_URL . 'select.css', array(), RWMB_VER );
 		}
-
 		/**
 		 * Get field HTML
 		 *
@@ -34,14 +32,10 @@ if ( !class_exists( 'RWMB_Select_Field' ) )
 				$field['size'],
 				$field['multiple'] ? ' multiple="multiple"' : ''
 			);
-
 			$html .= self::options_html( $field, $meta );
-
 			$html .= '</select>';
-
 			return $html;
 		}
-
 		/**
 		 * Get meta value
 		 * If field is cloneable, value is saved as a single entry in DB
@@ -63,12 +57,9 @@ if ( !class_exists( 'RWMB_Select_Field' ) )
 			$single = $field['clone'] || !$field['multiple'];
 			$meta = get_post_meta( $post_id, $field['id'], $single );
 			$meta = ( !$saved && '' === $meta || array() === $meta ) ? $field['std'] : $meta;
-
 			$meta = array_map( 'esc_attr', (array) $meta );
-
 			return $meta;
 		}
-
 		/**
 		 * Save meta value
 		 * If field is cloneable, value is saved as a single entry in DB
@@ -88,13 +79,11 @@ if ( !class_exists( 'RWMB_Select_Field' ) )
 				RW_Meta_Box::save( $new, $old, $post_id, $field );
 				return;
 			}
-
 			if ( empty( $new ) )
 				delete_post_meta( $post_id, $field['id'] );
 			else
 				update_post_meta( $post_id, $field['id'], $new );
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *
@@ -114,7 +103,6 @@ if ( !class_exists( 'RWMB_Select_Field' ) )
 				$field['field_name'] .= '[]';
 			return $field;
 		}
-
 		/**
 		 * Creates html for options
 		 *
@@ -128,9 +116,7 @@ if ( !class_exists( 'RWMB_Select_Field' ) )
 			$html = '';
 			if ( $field['placeholder'] )
 				$html = 'select' == $field['type'] ? "<option value=''>{$field['placeholder']}</option>" : '<option></option>';
-
 			$option = '<option value="%s"%s>%s</option>';
-
 			foreach ( $field['options'] as $value => $label )
 			{
 				$html .= sprintf(
@@ -140,7 +126,6 @@ if ( !class_exists( 'RWMB_Select_Field' ) )
 					$label
 				);
 			}
-
 			return $html;
 		}
 	}

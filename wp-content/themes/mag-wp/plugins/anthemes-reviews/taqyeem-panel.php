@@ -3,34 +3,26 @@
 # Register main Scripts and Styles
 /*-----------------------------------------------------------------------------------*/
 function taq_admin_register() {
-    wp_register_script( 'taqyeem-admin-slider',  plugins_url('admin/js/jquery.ui.slider.js' , __FILE__), array('jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'jquery-ui-sortable' ) , false , false );  
-    wp_register_script( 'taqyeem-admin-checkbox', plugins_url('admin/js/checkbox.min.js' , __FILE__) , array( 'jquery' ) , false , false );  
-    wp_register_script( 'taqyeem-admin-main', plugins_url('admin/js/tie.js' , __FILE__), array( 'jquery' ) , false , false );  
-    
-	wp_register_script( 'taqyeem-admin-colorpicker',  plugins_url('admin/js/colorpicker.js' , __FILE__), array( 'jquery' ) , false , false );  
-
-	wp_register_style( 'taqyeem-admin-style', plugins_url('admin/style.css' , __FILE__), array(), '20120208', 'all' ); 
-
+    wp_register_script( 'taqyeem-admin-slider',  plugins_url('admin/js/jquery.ui.slider.js' , __FILE__), array('jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'jquery-ui-sortable' ) , false , false );
+    wp_register_script( 'taqyeem-admin-checkbox', plugins_url('admin/js/checkbox.min.js' , __FILE__) , array( 'jquery' ) , false , false );
+    wp_register_script( 'taqyeem-admin-main', plugins_url('admin/js/tie.js' , __FILE__), array( 'jquery' ) , false , false );
+	wp_register_script( 'taqyeem-admin-colorpicker',  plugins_url('admin/js/colorpicker.js' , __FILE__), array( 'jquery' ) , false , false );
+	wp_register_style( 'taqyeem-admin-style', plugins_url('admin/style.css' , __FILE__), array(), '20120208', 'all' );
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'taqyeem' ) {
-		wp_enqueue_script( 'taqyeem-admin-colorpicker');  
-		wp_enqueue_script( 'taqyeem-admin-checkbox' ); 
-		wp_enqueue_script( 'taqyeem-admin-slider' );  
-
+		wp_enqueue_script( 'taqyeem-admin-colorpicker');
+		wp_enqueue_script( 'taqyeem-admin-checkbox' );
+		wp_enqueue_script( 'taqyeem-admin-slider' );
 	}
 	wp_enqueue_script( 'taqyeem-admin-main' );
 	wp_enqueue_style( 'taqyeem-admin-style' );
 }
-add_action( 'admin_enqueue_scripts', 'taq_admin_register' ); 
-
-
+add_action( 'admin_enqueue_scripts', 'taq_admin_register' );
 /*-----------------------------------------------------------------------------------*/
 # get Google Fonts
 /*-----------------------------------------------------------------------------------*/
 require ('google-fonts.php');
 $google_font_array = json_decode ($google_api_output,true) ;
-	
 $items = $google_font_array['items'];
-	
 $options_fonts=array();
 $options_fonts[''] = "Default Font" ;
 $fontID = 0;
@@ -47,90 +39,66 @@ foreach ($items as $item) {
 	if ($variantCount <= 1) $variantText = '';
 	$options_fonts[ $item['family'] . ':' . $variants ] = $item['family']. $variantText;
 }
-
-
 /*-----------------------------------------------------------------------------------*/
 # Clean options before store it in DB
 /*-----------------------------------------------------------------------------------*/
 function taqyeem_clean_options(&$value) {
   $value = htmlspecialchars(stripslashes($value));
 }
-
-
 /*-----------------------------------------------------------------------------------*/
 # Save plugin Settings
-/*-----------------------------------------------------------------------------------*/	
+/*-----------------------------------------------------------------------------------*/
 function taqyeem_save_settings ( $data , $refresh = 0 ) {
-		
 	if( isset( $data['taqyeem_options'] )){
 		array_walk_recursive( $data['taqyeem_options'] , 'taqyeem_clean_options');
 		update_option( 'taqyeem_options' ,  $data['taqyeem_options']   );
 	}
-	
 	if( $refresh == 2 )  die('2');
 	elseif( $refresh == 1 )	die('1');
 }
-	
-	
 /*-----------------------------------------------------------------------------------*/
 # Save Options
 /*-----------------------------------------------------------------------------------*/
 add_action('wp_ajax_test_taqyeem_data_save', 'taqyeem_save_ajax');
 function taqyeem_save_ajax() {
-	
 	check_ajax_referer('test-taqyeem-data', 'taq_security');
 	$data = $_POST;
 	$refresh = 1;
-
 	if( $data['taqyeem_import'] ){
 		$data = unserialize(base64_decode( $data['taqyeem_import'] ));
 		array_walk_recursive( $data , 'taqyeem_clean_options');
 		update_option( 'taqyeem_options' ,  $data   );
 		die('2');
 	}
-	
 	taqyeem_save_settings ($data , $refresh );
 }
-
-
 /*-----------------------------------------------------------------------------------*/
 # Add Panel Page
 /*-----------------------------------------------------------------------------------*/
 function taqyeem_add_admin() {
-
 	$current_page = isset( $_REQUEST['page'] ) ? $_REQUEST['page'] : '';
-
 	$icon = plugins_url('admin/images/general.png' , __FILE__);
 	add_menu_page(TIE_Plugin.' Settings', TIE_Plugin ,'activate_plugins', 'taqyeem' , 'taqyeem_options', $icon  );
 	$theme_page = add_submenu_page('taqyeem',TIE_Plugin.' Settings', TIE_Plugin.' Settings','activate_plugins', 'taqyeem' , 'taqyeem_options');
 	add_submenu_page('taqyeem',TIE_Plugin.' Documentation', 'Documentation','activate_plugins', 'taq_docs' , 'taqyeem_redirect_docs');
-
 	function taqyeem_redirect_docs(){
 		$taq_docs_url = "http://plugins.tielabs.com/docs/taqyeem";
 		echo "<script type='text/javascript'>window.location='".$taq_docs_url."';</script>";
 	}
-	
 	add_action( 'admin_head-'. $theme_page, 'taqyeem_admin_head' );
 	function taqyeem_admin_head(){
-	
 	?>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
-
 		  jQuery('.on-of').checkbox({empty:'<?php echo plugins_url('admin/images/empty.png' , __FILE__) ?>'});
-
 		  jQuery('form#taqyeem_form').submit(function() {
-		  
 		  	//Disable Empty options
 			  jQuery('form#taqyeem_form input, form#taqyeem_form textarea, form#taqyeem_form select').each(function() {
 					if (!jQuery(this).val()) jQuery(this).attr("disabled", true );
 			  });
-			  
 			  var data = jQuery(this).serialize();
-			  
 			//Enable Empty options
 			  jQuery('form#taqyeem_form input:disabled, form#taqyeem_form textarea:disabled, form#taqyeem_form select:disabled').attr("disabled", false );
-
 			  jQuery.post(ajaxurl, data, function(response) {
 				  if(response == 1) {
 					  jQuery('#save-alert').addClass('save-done');
@@ -146,16 +114,13 @@ function taqyeem_add_admin() {
 			  });
 			  return false;
 		  });
-		  
 		});
-		
 		function fade_message() {
 			jQuery('#save-alert').fadeOut(function() {
 				jQuery('#save-alert').removeClass('save-done');
 			});
 			clearTimeout(t);
 		}
-				
 	</script>
 	<?php
 		wp_print_scripts('media-upload');
@@ -172,12 +137,10 @@ function taqyeem_add_admin() {
 		}
 	}
 }
-
-
 /*-----------------------------------------------------------------------------------*/
 # Options funtion
 /*-----------------------------------------------------------------------------------*/
-add_action('admin_menu', 'taqyeem_add_admin'); 
+add_action('admin_menu', 'taqyeem_add_admin');
 function taqyeem_option($value){
 	global $options_fonts;
 ?>
@@ -185,19 +148,16 @@ function taqyeem_option($value){
 		<span class="label"><?php echo $value['name']  ?></span>
 	<?php
 	switch ( $value['type'] ) {
-	
 		case 'text': ?>
 			<input  name="taqyeem_options[<?php echo $value['id']; ?>]" id="<?php  echo $value['id']; ?>" type="text" value="<?php echo taqyeem_get_option( $value['id'] ); ?>" />
-			<?php if( isset( $value['extra_text'] ) ) : ?><span class="extra-text"><?php echo $value['extra_text'] ?></span><?php endif; ?>		
-		<?php 
+			<?php if( isset( $value['extra_text'] ) ) : ?><span class="extra-text"><?php echo $value['extra_text'] ?></span><?php endif; ?>
+		<?php
 		break;
-		
 		case 'checkbox':
 			if(taqyeem_get_option($value['id'])){$checked = "checked=\"checked\"";  } else{$checked = "";} ?>
-				<input class="on-of" type="checkbox" name="taqyeem_options[<?php echo $value['id'] ?>]" id="<?php echo $value['id'] ?>" value="true" <?php echo $checked; ?> />			
-		<?php	
+				<input class="on-of" type="checkbox" name="taqyeem_options[<?php echo $value['id'] ?>]" id="<?php echo $value['id'] ?>" value="true" <?php echo $checked; ?> />
+		<?php
 		break;
-
 		case 'radio':
 		?>
 			<div class="radio-contnet">
@@ -207,7 +167,6 @@ function taqyeem_option($value){
 			</div>
 		<?php
 		break;
-		
 		case 'select':
 		?>
 			<select name="taqyeem_options[<?php echo $value['id']; ?>]" id="<?php echo $value['id']; ?>">
@@ -226,7 +185,6 @@ function taqyeem_option($value){
 		?>
 			<div id="<?php echo $value['id']; ?>colorSelector" class="color-pic"><div style="background-color:<?php echo taqyeem_get_option($value['id']) ; ?>"></div></div>
 			<input style="width:80px; margin-right:5px;"  name="taqyeem_options[<?php echo $value['id']; ?>]" id="<?php echo $value['id']; ?>" type="text" value="<?php echo taqyeem_get_option($value['id']) ; ?>" />
-							
 			<script>
 				jQuery('#<?php echo $value['id']; ?>colorSelector').ColorPicker({
 					color: '<?php echo taqyeem_get_option($value['id']) ; ?>',
@@ -246,7 +204,6 @@ function taqyeem_option($value){
 				</script>
 		<?php
 		break;
-		
 		case 'typography':
 			$current_value = taqyeem_get_option($value['id']);
 		?>
@@ -254,20 +211,17 @@ function taqyeem_option($value){
 				<div style="clear:both; padding:10px 14px; margin:0 -15px;">
 					<div id="<?php echo $value['id']; ?>colorSelector" class="color-pic"><div style="background-color:<?php echo $current_value['color'] ; ?>"></div></div>
 					<input style="width:80px; margin-right:5px;"  name="taqyeem_options[<?php echo $value['id']; ?>][color]" id="<?php  echo $value['id']; ?>color" type="text" value="<?php echo $current_value['color'] ; ?>" />
-					
 					<select name="taqyeem_options[<?php echo $value['id']; ?>][size]" id="<?php echo $value['id']; ?>[size]" style="width:55px;">
 						<option value="" <?php if (!$current_value['size'] ) { echo ' selected="selected"' ; } ?>></option>
 					<?php for( $i=1 ; $i<101 ; $i++){ ?>
 						<option value="<?php echo $i ?>" <?php if (( $current_value['size']  == $i ) ) { echo ' selected="selected"' ; } ?>><?php echo $i ?></option>
 					<?php } ?>
 					</select>
-
 					<select name="taqyeem_options[<?php echo $value['id']; ?>][font]" id="<?php echo $value['id']; ?>[font]" style="width:150px;">
 					<?php foreach( $options_fonts as $font => $font_name ){ ?>
 						<option value="<?php echo $font ?>" <?php if ( $current_value['font']  == $font ) { echo ' selected="selected"' ; } ?>><?php echo $font_name ?></option>
 					<?php } ?>
 					</select>
-					
 					<select name="taqyeem_options[<?php echo $value['id']; ?>][weight]" id="<?php echo $value['id']; ?>[weight]" style="width:96px;">
 						<option value="" <?php if ( !$current_value['weight'] ) { echo ' selected="selected"' ; } ?>></option>
 						<option value="normal" <?php if ( $current_value['weight']  == 'normal' ) { echo ' selected="selected"' ; } ?>>Normal</option>
@@ -284,7 +238,6 @@ function taqyeem_option($value){
 						<option value="800" <?php if ( $current_value['weight'] == '800') { echo ' selected="selected"' ; } ?>>800</option>
 						<option value="900" <?php if ( $current_value['weight'] == '900') { echo ' selected="selected"' ; } ?>>900</option>
 					</select>
-					
 					<select name="taqyeem_options[<?php echo $value['id']; ?>][style]" id="<?php echo $value['id']; ?>[style]" style="width:100px;">
 						<option value="" <?php if ( !$current_value['style'] ) { echo ' selected="selected"' ; } ?>></option>
 						<option value="normal" <?php if ( $current_value['style']  == 'normal' ) { echo ' selected="selected"' ; } ?>>Normal</option>
@@ -292,7 +245,6 @@ function taqyeem_option($value){
 						<option value="oblique" <?php if ( $current_value['style']  == 'oblique') { echo ' selected="selected"' ; } ?>>oblique</option>
 					</select>
 				</div>
-
 				<script>
 				jQuery('#<?php echo $value['id']; ?>colorSelector').ColorPicker({
 					color: '#<?php echo $current_value['color'] ; ?>',
@@ -317,22 +269,19 @@ function taqyeem_option($value){
 		<a class="taqyeem-help tooltip"  title="<?php echo $value['help'] ?>"></a>
 		<?php endif; ?>
 	</div>
-			
 <?php
 }
-
 /*-----------------------------------------------------------------------------------*/
 # Taqyeem Panel
 /*-----------------------------------------------------------------------------------*/
-function taqyeem_options() { 
+function taqyeem_options() {
 $save='
 	<div class="taqyeem-submit">
 		<input type="hidden" name="action" value="test_taqyeem_data_save" />
         <input type="hidden" name="taq_security" value="'. wp_create_nonce("test-taqyeem-data").'" />
-		<input name="save" class="taqyeem-save" type="submit" value="'. __("Save Settings","taq") .'" />    
-	</div>'; 
+		<input name="save" class="taqyeem-save" type="submit" value="'. __("Save Settings","taq") .'" />
+	</div>';
 ?>
-		
 <div id="save-alert"></div>
 <div class="taqyeem-panel">
 	<div class="taqyeem-panel-tabs">
@@ -345,14 +294,10 @@ $save='
 		</ul>
 		<div class="clear"></div>
 	</div> <!-- .taqyeem-panel-tabs -->
-	
 	<div class="taqyeem-panel-content">
 	<form action="/" name="taqyeem_form" id="taqyeem_form">
-
-	
 		<div id="tab1" class="taq-tabs-wrap">
 			<h2><?php _e('General Settings','taq'); ?></h2> <?php echo $save ?>
-
 			<div class="taqyeem-item">
 				<h3><?php _e('Show Review Boxes in the singular pages only ?','taq'); ?></h3>
 				<?php
@@ -363,7 +308,6 @@ $save='
 				?>
 				<p style="padding:10px 15px;"><?php _e("Enable it if your theme uses ' the_content() ' in homepage and archives pages and you want to show post review box in the single post page only !","taq"); ?></p>
 			</div>
-			
 			<div class="taqyeem-item">
 				<h3><?php _e('Who Is Allowed To Rate ?','taq'); ?></h3>
 				<?php
@@ -375,7 +319,7 @@ $save='
 													"both"=> __( 'Registered Users And Guests' ,'taq'),
 													"guests"=> __( 'Guests Only' ,'taq'),
 													"users"=> __( 'Registered Users Only' ,'taq') )));
-				?>									
+				?>
 			</div>
 			<div class="taqyeem-item">
 				<h3><?php _e('Ratings Image','taq'); ?></h3>
@@ -387,13 +331,11 @@ $save='
 								"options" => array( "stars"=>"<img src='".  plugins_url('admin/images/stars.png' , __FILE__) ."' alt='' />",
 													"hearts"=>"<img src='".  plugins_url('admin/images/hearts.png' , __FILE__) ."' alt='' />",
 													"thumbs"=>"<img src='".  plugins_url('admin/images/thumbs.png' , __FILE__) ."' alt='' />")));
-				?>									
+				?>
 			</div>
 		</div>
-	
 		<div id="tab3" class="tab_content taq-tabs-wrap">
-			<h2><?php _e('Styling','taq'); ?></h2><?php echo $save ?>	
-		
+			<h2><?php _e('Styling','taq'); ?></h2><?php echo $save ?>
 			<div class="taqyeem-item">
 				<h3><?php _e('Styling','taq'); ?></h3>
 				<?php
@@ -401,27 +343,22 @@ $save='
 						array(	"name" => __('Review Box Outer Border','taq'),
 								"id" => "review_bg",
 								"type" => "color"));
-			
 					taqyeem_option(
 						array(	"name" => __('Review Box Header & Footer Background','taq'),
 								"id" => "review_main_color",
 								"type" => "color"));
-								
 					taqyeem_option(
 						array(	"name" => __('Review items Background','taq'),
 								"id" => "review_items_color",
 								"type" => "color"));
-						
 					taqyeem_option(
 						array(	"name" => __('Final Score and percentage bar Background','taq'),
 								"id" => "review_secondery_color",
 								"type" => "color"));
-											
 					taqyeem_option(
 						array(	"name" => __('Links Color','taq'),
 								"id" => "review_links_color",
 								"type" => "color"));
-			
 					taqyeem_option(
 						array(	"name" => __('Links Decoration','taq'),
 								"id" => "review_links_decoration",
@@ -431,12 +368,10 @@ $save='
 													"underline"=>"underline",
 													"overline"=>"overline",
 													"line-through"=>"line-through" )));
-		
 					taqyeem_option(
 						array(	"name" => __('Links Color on mouse over','taq'),
 								"id" => "review_links_color_hover",
 								"type" => "color"));
-			
 					taqyeem_option(
 						array(	"name" => __('Links Decoration on mouse over','taq'),
 								"id" => "review_links_decoration_hover",
@@ -448,13 +383,12 @@ $save='
 													"line-through"=>"line-through" )));
 				?>
 			</div>
-		
 			<div class="taqyeem-item">
-				<h3><?php _e('Custom CSS','taq'); ?></h3>	
+				<h3><?php _e('Custom CSS','taq'); ?></h3>
 				<div class="taqyeem-option-item">
 					<p><strong><?php _e('Global CSS :','taq'); ?></strong></p>
 					<textarea id="tie_css" name="taqyeem_options[css]" style="width:100%" rows="7"><?php echo taqyeem_get_option('css');  ?></textarea>
-				</div>	
+				</div>
 				<div class="taqyeem-option-item">
 					<p><strong><?php _e('Tablets CSS :','taq'); ?></strong> <?php _e('Width from 768px to 985px','taq'); ?></p>
 					<textarea id="tie_css" name="taqyeem_options[css_tablets]" style="width:100%" rows="7"><?php echo taqyeem_get_option('css_tablets');  ?></textarea>
@@ -466,14 +400,11 @@ $save='
 				<div class="taqyeem-option-item">
 					<p><strong><?php _e('Phones CSS :','taq'); ?></strong><?php _e('Width from 320px to 479px','taq'); ?></p>
 					<textarea id="tie_css" name="taqyeem_options[css_phones]" style="width:100%" rows="7"><?php echo taqyeem_get_option('css_phones');  ?></textarea>
-				</div>	
-			</div>	
-
+				</div>
+			</div>
 		</div> <!-- Styling -->
-
 		<div id="tab4" class="tab_content taq-tabs-wrap">
-			<h2><?php _e('Typography','taq'); ?></h2>	<?php echo $save ?>	
-			
+			<h2><?php _e('Typography','taq'); ?></h2>	<?php echo $save ?>
 			<div class="taqyeem-item">
 				<h3><?php _e('Character sets','taq'); ?></h3>
 				<p style="padding:0 15px 10px;"><?php _e("<strong>Tip:</strong> If you choose only the languages that you need, you'll help prevent slowness on your webpage.","taq"); ?></p>
@@ -482,29 +413,24 @@ $save='
 						array(	"name" => __('Latin Extended','taq'),
 								"id" => "typography_latin_extended",
 								"type" => "checkbox"));
-
 					taqyeem_option(
 						array(	"name" => __('Cyrillic','taq'),
 								"id" => "typography_cyrillic",
 								"type" => "checkbox"));
-
 					taqyeem_option(
 						array(	"name" => __('Cyrillic Extended','taq'),
 								"id" => "typography_cyrillic_extended",
 								"type" => "checkbox"));
-								
 					taqyeem_option(
 						array(	"name" => __('Greek','taq'),
 								"id" => "typography_greek",
 								"type" => "checkbox"));
-								
 					taqyeem_option(
 						array(	"name" => __('Greek Extended','taq'),
 								"id" => "typography_greek_extended",
 								"type" => "checkbox"));
 				?>
 			</div>
-			
 			<div class="taqyeem-item">
 				<h3><?php _e('Typography','taq'); ?></h3>
 				<?php
@@ -512,43 +438,34 @@ $save='
 						array( 	"name" => __('Review Box Title','taq'),
 								"id" => "review_typography_title",
 								"type" => "typography"));
-	
 					taqyeem_option(
 						array( 	"name" => __('Review Items','taq'),
 								"id" => "review_typography_items",
 								"type" => "typography"));
-
 					taqyeem_option(
 						array( 	"name" => __('Review Summary','taq'),
 								"id" => "review_typography_summery",
 								"type" => "typography"));
-
 					taqyeem_option(
 						array( 	"name" => __('Total Score','taq'),
 								"id" => "review_typography_total",
 								"type" => "typography"));
-
 					taqyeem_option(
 						array( 	"name" => __('Final opinion Text','taq'),
 								"id" => "review_typography_final",
 								"type" => "typography"));
-
 					taqyeem_option(
 						array( 	"name" => __('User Rating','taq'),
 								"id" => "review_user_rate",
 								"type" => "typography"));
 				?>
 			</div>
-
 		</div> <!-- Typography -->
-		
 		<div id="tab5" class="tab_content taq-tabs-wrap">
-			<h2><?php _e('Advanced Settings','taq'); ?></h2>	<?php echo $save ?>	
-
+			<h2><?php _e('Advanced Settings','taq'); ?></h2>	<?php echo $save ?>
 			<?php
 				$current_taqyeem_options =  get_option( 'taqyeem_options' ) ;
 			?>
-			
 			<div class="taqyeem-item">
 				<h3><?php _e('Export','taq'); ?></h3>
 				<div class="taqyeem-option-item">
@@ -561,13 +478,10 @@ $save='
 					<textarea id="taqyeem_import" name="taqyeem_import" style="width:100%" rows="7"></textarea>
 				</div>
 			</div>
-	
 		</div> <!-- Advanced -->
-		
 		<div class="taqyeem-footer">
 			<?php echo $save; ?>
 		</form>
-
 			<form method="post">
 				<div class="taqyeem-reset">
 					<input type="hidden" name="resetnonce" value="<?php echo wp_create_nonce('reset-action-taqyeem'); ?>" />
@@ -576,10 +490,8 @@ $save='
 				</div>
 			</form>
 		</div>
-
 	</div><!-- .taqyeem-panel-content -->
 </div><!-- .taqyeem-panel -->
-
 <?php
 }
 ?>

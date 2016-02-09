@@ -3,8 +3,6 @@
     // Options from admin panel
     global $smof_data;
 ?>
-
-
 <!-- Begin Wrap Content -->
 <div class="wrap-fullwidth hfeed h-feed">
   <!-- Begin Main Home Content 950px -->
@@ -13,16 +11,14 @@
     <h1><?php _e('Videos on EARMILK', 'anthemes'); ?></h1>
     <br />
     <div class="clear"></div><!-- end .section-top-title -->
-
-    <ul id="masonry_list" class="classic-blog js-masonry"  data-masonry-options='{ "columnWidth": 0 }'> 
+    <ul id="masonry_list" class="classic-blog js-masonry"  data-masonry-options='{ "columnWidth": 0 }'>
         <?php
-            if ( get_query_var('paged') )  {  $paged = get_query_var('paged'); 
+            if ( get_query_var('paged') )  {  $paged = get_query_var('paged');
             } elseif ( get_query_var('page') ) { $paged = get_query_var('page');
             } else { $paged = 1;  }
             query_posts( array( 'post_type' => 'post', 'paged' => $paged, 'category_name' => 'video' ) );
             if (have_posts()) : while (have_posts()) : the_post();
             $post_meta = get_post_meta(get_the_ID());
-
             if (!empty($post_meta['anthemes_youtube'][0])) {
               $youtube_code = $post_meta['anthemes_youtube'][0];
             }
@@ -30,33 +26,27 @@
             // print_r($post_meta);
             // die();
         ?>
-        
         <li <?php post_class('') ?> id="post-<?php the_ID(); ?>">
-
-          <?php if ( has_post_thumbnail()) { ?> 
-            <a href="<?php the_permalink(); ?>"> <?php echo the_post_thumbnail('thumbnail-masonry'); ?></a> 
+          <?php if ( has_post_thumbnail()) { ?>
+            <a href="<?php the_permalink(); ?>"> <?php echo the_post_thumbnail('thumbnail-masonry'); ?></a>
           <?php } else { ?>
-            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/article-img.png" alt="article image" /></a>               
-          <?php } // Post Thumbnail ?> <div class="clear"></div> 
-
+            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/article-img.png" alt="article image" /></a>
+          <?php } // Post Thumbnail ?> <div class="clear"></div>
           <div class="an-content">
-            <div class="article-category"><i></i> <?php $category = get_the_category(); if ($category) 
+            <div class="article-category"><i></i> <?php $category = get_the_category(); if ($category)
               { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" ' . '>' . $category[0]->name.'</a> ';}  ?>
             </div>
             <h2 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <?php if(function_exists('taqyeem_get_score')) { ?>
               <?php taqyeem_get_score(); ?>
-            <?php } ?>                    
+            <?php } ?>
             <span><?php _e('by', 'anthemes'); ?> <?php the_author_posts_link(); ?></span>
             <span><?php _e('in', 'anthemes'); ?> <?php $category = get_the_category(); if ($category) { echo '<a href="' . get_category_link( $category[0]->term_id ) . '">' . $category[0]->name.'</a> ';}  ?></span>
-
           </div><!-- end .an-content -->
-
         </li>
         <?php endwhile; endif; ?>
     </ul><!-- end .classic-blog -->
-
-    <!-- Pagination -->    
+    <!-- Pagination -->
     <div class="line-bottom"></div>
     <div class="clear"></div>
       <?php if(function_exists('wp_pagenavi')) { ?>
@@ -68,7 +58,6 @@
         </div>
       <?php } ?>
       <!-- pagination -->
-
       <?php if (!empty($smof_data['home728'])) { ?>
       <div class="home-728">
           <div class="img728">
@@ -77,14 +66,9 @@
       </div>
       <?php } ?>
   </div><!-- end .home-content -->
-
-
     <!-- Begin Sidebar 1 (default right) -->
     <?php get_sidebar(); // add sidebar ?>
-    <!-- end #sidebar 1 (default right) --> 
-
-        
+    <!-- end #sidebar 1 (default right) -->
 <div class="clear"></div>
 </div><!-- end .wrap-fullwidth -->
-
 <?php get_footer(); // add footer  ?>

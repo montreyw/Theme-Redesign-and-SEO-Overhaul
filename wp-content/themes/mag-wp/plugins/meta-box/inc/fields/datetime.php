@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( !class_exists( 'RWMB_Datetime_Field' ) )
 {
 	class RWMB_Datetime_Field
@@ -19,9 +18,7 @@ if ( !class_exists( 'RWMB_Datetime_Field' ) )
 			wp_register_style( 'jquery-ui-datepicker', "{$url}/jquery.ui.datepicker.css", array( 'jquery-ui-core', 'jquery-ui-theme' ), '1.8.17' );
 			wp_register_style( 'jquery-ui-slider', "{$url}/jquery.ui.slider.css", array( 'jquery-ui-core', 'jquery-ui-theme' ), '1.8.17' );
 			wp_enqueue_style( 'jquery-ui-timepicker', "{$url}/jquery-ui-timepicker-addon.css", array( 'jquery-ui-datepicker', 'jquery-ui-slider' ), '0.9.7' );
-
 			wp_register_script( 'jquery-ui-timepicker', RWMB_JS_URL . 'jqueryui/jquery-ui-timepicker-addon.js', array( 'jquery-ui-datepicker', 'jquery-ui-slider' ), '0.9.7', true );
-
 			// Load localized scripts
 			$locale = str_replace( '_', '-', get_locale() );
 			$date_path = 'jqueryui/datepicker-i18n/jquery.ui.datepicker-' . $locale . '.js';
@@ -37,11 +34,9 @@ if ( !class_exists( 'RWMB_Datetime_Field' ) )
 				wp_register_script( 'jquery-ui-timepicker-i18n', RWMB_JS_URL . $time_path, array( 'jquery-ui-timepicker' ), '1.8.17', true );
 				$deps[] = 'jquery-ui-timepicker-i18n';
 			}
-
 			wp_enqueue_script( 'rwmb-datetime', RWMB_JS_URL . 'datetime.js', $deps, RWMB_VER, true );
 			wp_localize_script( 'rwmb-datetime', 'RWMB_Datetimepicker', array( 'lang' => $locale ) );
 		}
-
 		/**
 		 * Get field HTML
 		 *
@@ -62,7 +57,6 @@ if ( !class_exists( 'RWMB_Datetime_Field' ) )
 				esc_attr( json_encode( $field['js_options'] ) )
 			);
 		}
-
 		/**
 		 * Calculates the timestamp from the datetime string and returns it
 		 * if $field['timestamp'] is set or the datetime string if not
@@ -78,11 +72,9 @@ if ( !class_exists( 'RWMB_Datetime_Field' ) )
 		{
 			if ( !$field['timestamp'] )
 				return $new;
-
 			$d = DateTime::createFromFormat( self::translate_format( $field ), $new );
 			return $d ? $d->getTimestamp() : 0;
 		}
-
 		/**
 		 * Normalize parameters for field
 		 *
@@ -97,7 +89,6 @@ if ( !class_exists( 'RWMB_Datetime_Field' ) )
 				'js_options' => array(),
 				'timestamp'  => false,
 			) );
-
 			// Deprecate 'format', but keep it for backward compatible
 			// Use 'js_options' instead
 			$field['js_options'] = wp_parse_args( $field['js_options'], array(
@@ -106,22 +97,18 @@ if ( !class_exists( 'RWMB_Datetime_Field' ) )
 				'showButtonPanel' => true,
 				'separator'       => ' ',
 			) );
-
 			return $field;
 		}
-
 		// Missing: 't' => '', T' => '', 'm' => '', 's' => ''
 		static $time_format_translation = array(
 			'H'  => 'H', 'HH' => 'H', 'h' => 'H', 'hh' => 'H',
 			'mm' => 'i', 'ss' => 's', 'l' => 'u', 'tt' => 'a', 'TT' => 'A'
 		);
-
 		// Missing:  'o' => '', '!' => '', 'oo' => '', '@' => '', "''" => "'"
 		static $date_format_translation = array(
 			'd' => 'j', 'dd' => 'd', 'oo' => 'z', 'D' => 'D', 'DD' => 'l',
 			'm' => 'n', 'mm' => 'm', 'M' => 'M', 'MM' => 'F', 'y' => 'y', 'yy' => 'Y'
 		);
-
 		/**
 		 * Returns a date() compatible format string from the JavaScript format
 		 *

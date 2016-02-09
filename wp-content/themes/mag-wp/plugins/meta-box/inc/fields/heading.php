@@ -1,7 +1,6 @@
 <?php
 // Prevent loading this file directly
 defined( 'ABSPATH' ) || exit;
-
 if ( ! class_exists( 'RWMB_Heading_Field' ) )
 {
 	class RWMB_Heading_Field
@@ -15,7 +14,6 @@ if ( ! class_exists( 'RWMB_Heading_Field' ) )
 		{
 			wp_enqueue_style( 'rwmb-heading', RWMB_CSS_URL . 'heading.css', array(), RWMB_VER );
 		}
-
 		/**
 		 * Show begin HTML markup for fields
 		 *
@@ -32,7 +30,6 @@ if ( ! class_exists( 'RWMB_Heading_Field' ) )
 				$field['name']
 			);
 		}
-
 		/**
 		 * Show end HTML markup for fields
 		 *
