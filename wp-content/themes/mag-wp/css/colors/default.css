@@ -2804,7 +2804,7 @@ form#searchform {
 	margin: 0;
 	opacity: 0.573;
 	z-index: 10000;
-	border-bottom: 4px solid #e5e5e5;
+	border-bottom: 3px solid #e5e5e5;
 }
 .genrebar:hover {
 	opacity: 1;
@@ -2819,7 +2819,7 @@ form#searchform {
 .genrebar .mainmenu {
 	position: relative;
 	height: auto;
-	bottom: -4px;
+	bottom: -3px;
 }
 .genrebar .mainmenu li.options {
     position: absolute;
@@ -2876,10 +2876,11 @@ form#searchform {
 	padding: 0;
 	cursor: pointer;
 	color: #aaa;
+	color: #848484;
 	padding: 0;
 	text-align: center;
 	font-weight: bolder;
-	border-bottom: 4px solid #a3a3a3;
+	border-bottom: 3px solid #a3a3a3;
 	height: 15px;
 	line-height: 16px;
 	display: inline-block;
