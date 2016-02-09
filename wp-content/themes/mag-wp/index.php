@@ -21,11 +21,15 @@
 				<h1><?php printf( __( 'Search Results for: %s', 'anthemes' ), '<strong rel="tag">' . get_search_query() . '</strong>' ); ?></h1>
 			</div>
 		<?php } elseif (is_author()) { ?>
-			<?php  query_posts( 
-				array( 
-				'post_type' => array( 'post', 'opinion_post', 'gear_post', 'album_review', 'news'),
-				'author__in'=> get_the_author_meta( 'ID' )
-				) );  ?> 
+			<?php  
+				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+				$args = array(
+					'posts_per_page' => 12,
+					'paged'          => $paged,
+					'post_type'      => array( 'post', 'opinion_post', 'gear_post', 'album_review', 'news'),
+					'author__in'     => get_the_author_meta( 'ID' )
+			);
+			query_posts( $args );  ?> 
 				<?php if(get_the_author_meta('description') ): ?>
 				<div class="archive-header">
 					<h1 rel="tag"><?php the_author_posts_link(); ?></h1>
