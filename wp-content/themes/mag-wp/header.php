@@ -277,7 +277,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 						<div class="main-stage-latest latest-news">
 							<div class="line-box">
 								<div class="header_line">
-									<h4 class="top">SCOOPS</h4>
+									<h4 class="top"><a href="/news/" titles="VOICES">SCOOPS</a></h4>
 								</div>
 							</div>
 							<ul>
@@ -319,7 +319,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 						<div class="main-stage-latest latest-voices">
 							<div class="line-box">
 								<div class="header_line">
-									<h4 class="top">VOICES</h4>
+									<h4 class="top"><a href="/voices/" titles="VOICES">VOICES</a></h4>
 								</div>
 							</div>
 							<ul>
@@ -363,7 +363,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 		            <div class="big-thing-box hfeed h-feed">
 						<div class="line-box">
 							<div class="header_line">
-								<h4 class="top"><?php _e('Main Stage', 'anthemes'); ?></h4>
+								<h4 class="top"><a href="/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h4>
 							</div>
 						</div>
 			
