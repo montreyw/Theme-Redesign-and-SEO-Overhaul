@@ -1932,11 +1932,14 @@ div#flags li a.notranslate.flag:after {
     left: -9px;
 }
 .copyright {
-    background-color: #fff !important;
+	background-color: #fff !important;
 }
-img#earmilky {
-    width: 43px;
-    vertical-align: middle;
+.copyright > div {
+	display: inline-block;
+}
+.copyright img#earmilky {
+	width: 43px;
+	vertical-align: middle;
 }
 /* Footer - left Trending latest post widget */
 footer .wpp-list li {
@@ -1960,7 +1963,6 @@ footer .wpp-list li span.wpp-date {
 img#wpstats {
 	display: none;
 }
-
 
 
 

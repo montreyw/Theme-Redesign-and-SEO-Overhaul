@@ -52,7 +52,17 @@
         <?php if (!empty($smof_data['copyright_footer'])) { ?>
             <?php echo stripslashes($smof_data['copyright_footer']); ?>
         <?php } ?>  
+		<div class="earmilk-copyright">
+			<span itemprop="creator copyrightHolder" itemscope itemtype="http://schema.org/Organization">
+			<span itemprop="name">EARMILK, Inc.</span><link itemprop="sameAs" href="//earmilk.com" />
+			</span> Trusted Since <span itemprop="copyrightYear">2009</span>
 		<img id="earmilky" src="/wp-content/uploads/Milky-V1-shadow-73px.png" title="Click me! Weee!" alt="Milky form Blur's Coffee and TV" >
+		</div>
+		<div class="hosted-by">
+			<span>
+				Hosted by <a href="http://www.komputerking.com/" target="_blank">Komputer King LLC</a>
+			</span>
+		</div>
     </div>
 
 	<p id="back-top" style="display: block;"><a href="#top"><span></span></a></p>
