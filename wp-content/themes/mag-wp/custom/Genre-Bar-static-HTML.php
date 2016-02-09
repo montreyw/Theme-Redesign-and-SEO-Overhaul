@@ -26,7 +26,7 @@
 						<a href="/category/progressive-dance">PROGRESSIVE</a>
 					</li>
 					<li class="dance">
-						<a href="/category/electro-house">ELECTRO HOUSE</a>
+						<a href="/category/drum-and-bass-dance">DRUM AND BASS</a>
 					</li>
 				</ul>
 				<div class="clear"></div>
@@ -83,9 +83,6 @@
 					<li class="indie">
 						<a href="/category/funk">FUNK</a>
 					</li>
-					<li class="indie">
-						<a href="/category/soft-rock">SOFT ROCK</a>
-					</li>
 				</ul>
 				<div class="clear"></div>
 			</div>
@@ -111,9 +108,6 @@
 					</li>
 					<li class="electronic">
 						<a href="/category/future-funk">FUTURE FUNK</a>
-					</li>
-					<li class="electronic">
-						<a href="/category/drum-and-bass-dance">DRUM AND BASS</a>
 					</li>
 				</ul>
 				<div class="clear"></div>
@@ -148,6 +142,7 @@
 				<div class="clear"></div>
 			</div>
 		</li>
+<!--
 		<li class="pop maingenre ">
 			<a class="maingenre" href="/category/pop" data-key="pop">POP</a>
 			<div class="pop-submenu subgenres ">
@@ -177,6 +172,7 @@
 				<div class="clear"></div>
 			</div>
 		</li>
+-->
 	</ul>
 	<div class="clear"></div>
 </div>
