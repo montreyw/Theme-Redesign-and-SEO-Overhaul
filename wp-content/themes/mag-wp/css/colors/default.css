@@ -972,10 +972,17 @@ div.big-thing-box {
 	min-height: 400px;
 }
 ul.big-thing.owl-carousel {
+	-webkit-transition: all 735ms;
+	-moz-transition: all 735ms;
+	transition: all 735ms;
 	margin: 0 auto;
 	width: 100%;
 	font-family: futura, "Ruda", Helvetica, Arial, sans-serif;
-	display: none;
+	opacity: 0 !important
+}
+ul.big-thing.owl-carousel.carousel-visible {
+	display: block !important;
+	opacity: 1 !important;
 }
 ul.big-thing div.owl-item li {
     height: auto;
@@ -2139,12 +2146,9 @@ body #responsive-menu #responsive-menu-title {
 }
 
 @media only screen and (max-width: 1230px) and (min-width: 1001px) {
-	header .sticky.main-header .sticky-on {
-		width: 1230px;
-	}
-	header .main-header .sticky-on a.logo-cont {
-		transform: scale(0.9);
-		margin: 0 -20px;
+	#fixed-header #inner-header #logo-header {
+		width: 180px;
+		margin: 23px 0% 0px 1%;
 	}
 	header .main-header .jquerycssmenu-right {
 		font-size: 15px;
@@ -2174,11 +2178,11 @@ body #responsive-menu #responsive-menu-title {
 		height: 505px;
 	}
 	ul.big-thing div.owl-item li .entry-thumbnail {
-		max-height: 327px;
-		min-height: 327px;
+		max-height: 228px;
+		min-height: 228px;
 	}
 	.owl-theme .owl-controls .owl-buttons .owl-prev, .owl-theme .owl-controls .owl-buttons .owl-next {
-		top: 74.5%;
+		top: 61.5%;
 	}
 	.wrap-fullwidth .home-content {
 		float: none;
@@ -2906,8 +2910,6 @@ form#searchform {
 	margin: 0 2px 0 0;
 	padding: 0;
 	cursor: pointer;
-	color: #aaa;
-	color: #848484;
 	padding: 0;
 	text-align: center;
 	font-weight: bolder;
@@ -2916,6 +2918,9 @@ form#searchform {
 	line-height: 16px;
 	display: inline-block;
 	width: 100%;
+	color: #aaa;
+	color: #848484;
+	color: #fff;
 }
 .genrebar ul li a:hover, 
 .genrebar ul li a.active {
@@ -2931,11 +2936,10 @@ form#searchform {
 	left: 0;
 	overflow: hidden;
 	z-index: 999;
-	padding-bottom: 1px;
+	padding-bottom: 0;
 	background: #fff;
 }
 .genrebar .subgenres ul {
-    margin-bottom: 2px;
 }
 .genrebar .subgenres ul li {
     font-size: 12px;
