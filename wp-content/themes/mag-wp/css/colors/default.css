@@ -2920,7 +2920,6 @@ form#searchform {
 	width: 100%;
 	color: #aaa;
 	color: #848484;
-	color: #fff;
 }
 .genrebar ul li a:hover, 
 .genrebar ul li a.active {
@@ -2952,6 +2951,7 @@ form#searchform {
 	border: 0;
 	height: 30px;
 	line-height: 30px;
+	color: #fff;
 }
 .genrebar li.active .subgenres {
     display: block!important;
