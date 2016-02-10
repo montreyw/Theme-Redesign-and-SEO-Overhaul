@@ -107,7 +107,7 @@ Earmilk redesign project
 32.  Added *hot* [animated loading thematic 'music equalizer' animation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/574681198b2bed7a54d431f6a7b2b41449cee39a)  to the Main Stage as it initializes on page open
 33.  Added nifty Left Stage to the ... left of Main Stage on the front page ([Left Stage structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5240444a93de1c9fa2b2b412a9600db9b4af757c), [style(https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/574681198b2bed7a54d431f6a7b2b41449cee39a))
 34.  Coded a [basic function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/88a8a4d822428c26e183dae080a66f94386f7283) to trigger Next and Previous of Owl Carousel with keyboard keys
-35.  
+35.  ...
 
 
 - [Back to top ^](#table-of-contents)  
@@ -166,7 +166,7 @@ Earmilk redesign project
 4.  Disabled [Yoast Schema](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/d301eb3407232d5b013cca4d4cb0a49a3216740d) and some metas
 5.  Fixed W3TC and nginx settings conflict ([issue #9](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/issues/9)) which resulted in vrious bugs ([1st attempt](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/052036f4d05161d8517bd753301017d95a527a0d), [removed faulty code](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/9dab1576dd21e8abb28171c09ad41d750f73aa22), [pre-re-installed W3TC nginx.conf](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/19563ceb9adb83931704c66386d7201cad678782), [new nginx.conf after re-install](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/726bec3e5e0ca09a04b82222f384d5ac1dcd4f57), [proper include to W3TC WP-root nginx.conf](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f00971312eb2af3849e50f8bb73412ca2faa5744))
 6.  Fixed Sitemap (several plugin issues were resolved to make it work)
-7.  Added robot.txt to `mooks.` and `file2.` subdomains to prevent caching unnecessary files (Montrey)
+7.  Added robot.txt to `file2.` (Montrey) and `mooks.` subdomains to prevent caching unnecessary files 
 
 
 
