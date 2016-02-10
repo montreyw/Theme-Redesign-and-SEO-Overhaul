@@ -45,6 +45,8 @@ Earmilk redesign project
 - [ ] Add Extra AUthor Disclosure info to author meta
 - [x] Implement Colorful Genre Bar from old.V2
 - [ ] Remove all MP3 links from posts
+- [ ] Change/improve gray section headers
+- [ ] Develop some unifying site design elements
 - [ ] Ability to play a post's first song right from the posts grid
 - [ ] Ability to play a post's first video right from the posts grid
 - [ ] Finish Schema.org markup
@@ -53,7 +55,8 @@ Earmilk redesign project
 - [ ] Album Review Details custom widget
 - [ ] AJAX site navigation engine
 - [ ] Site wide persistent MP3 player
-- [ ] iOS App 
+- [ ] iOS App
+- [ ] Android App
 - [ ] Implement backend templating capability for Events
 - [ ] Implement a solution for Hreflang tags for indexing in foreign languages
 - [x] Author Page pagination needs to be fixed
@@ -68,7 +71,7 @@ Earmilk redesign project
 
 ----------
 
-<h2 id="theme-changes-sec">Theme Changes</h2>
+<h2 id="theme-changes-sec">Theme Changes - UX/UI</h2>
 
 1.  All ads have been removed -- the list of ads and their respective code can be found [in this file](https://github.com/iamandrebulatov/Earmilk/blob/master/google_ad_code_removed.html)
 2.  Black to White -- style [code has been added](https://github.com/iamandrebulatov/Earmilk/commit/76d8365db5bd6f39aee36620a45ac9f06ee1eb23) to default.css, in wp-mag > css > colors
@@ -99,7 +102,12 @@ Earmilk redesign project
 27.  Slicked up and pdated [structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a9050e0ebf33a15d482164d4ae2648c2d394552b) and [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/fec9fcc7313f605d20e5812b06e8a81622a52be3) of Archive Pages
 28.  Restructutred, simplified and improved the main [Fixed Header](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/845d4f3b80aa6df664ae812888e3431fdfe0e2fb)
 29.  Implemented colorful category navigation [Genre Bar](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5fb3cf07a1abf18eb08732d798a13d797f932362)
-30.  ...
+30.  Added custom [thumbnail pagination](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/37dc7ba8d8782268cea3d0bbf0c0889143542ee6) to Main Stage Owl Carousel
+31.  Fixed and doped out the broken [transitional fade-in](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ab81616d9761e61e8e4a146e668af656723ae609) of the Main Stage Owl Carousel
+32.  Added *hot* [animated loading thematic 'music equalizer' animation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/574681198b2bed7a54d431f6a7b2b41449cee39a)  to the Main Stage as it initializes on page open
+33.  Added nifty Left Stage to the ... left of Main Stage on the front page ([Left Stage structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5240444a93de1c9fa2b2b412a9600db9b4af757c), [style(https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/574681198b2bed7a54d431f6a7b2b41449cee39a))
+34.  Coded a [basic function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/88a8a4d822428c26e183dae080a66f94386f7283) to trigger Next and Previous of Owl Carousel with keyboard keys
+35.  
 
 
 - [Back to top ^](#table-of-contents)  
@@ -136,7 +144,8 @@ Earmilk redesign project
 8.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7c3ffe91e9356fb5eaf6f0a2809c13850683fc6f) hAtom to more template files  
 9.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/650f67978b9d55bf8d4ffbe4318096a73909161a) hAtom to Main Stage  
 10.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/13444148516b57421122eebdcd23801f8a397721) hAtom to main index.php file, which affects most posts
-11.  Fixed broken hAtom entries on [Ultimate Posts Widget](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8c3de90e46576ab4cb04c91aa186def3fdd4d0ad)
+11.  Fixed broken hAtom entries in [Ultimate Posts Widget](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8c3de90e46576ab4cb04c91aa186def3fdd4d0ad)
+12.  [Coded and added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/88a8a4d822428c26e183dae080a66f94386f7283) a functions.php function and index.php reference for a custom, new `get_post_class()` function that eliminates the `hentry` class from the array - the new function is called `andre_get_post_class_without_hentry()`
 
 
 <h3 id="seo-schema-sec">Schema.org Markup</h2>
@@ -174,7 +183,8 @@ Earmilk redesign project
 5.  Yoast Google Analytics plugin deactivated
 6.  Fixed a CSS alignment of fields bug in [ALbum Review Details](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c1aa8d1a4d10f8d75ef0ae884eb337c03690587c) backend plugin (Resolved [Issue #16](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/issues/16))
 7.  Restructured [Header](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/845d4f3b80aa6df664ae812888e3431fdfe0e2fb) for flexibility, to fix Schema Nav and to allow Genre Bar
-8.  ...
+8.  Added functions.php filter to remove annoying, spammy, and meaningless [Yoast notifications](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/1efbc3c9675c6be5c9cfb52ec9e1543f432bf66d)
+9.  ...
 
 
 - [Back to top ^](#table-of-contents)  
