@@ -31,7 +31,7 @@ Earmilk redesign project
 - [ ] Place ads
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
 - [x] Code keyboard control of Next/Prev of Main Stage
-- [ ] ...I forget
+- [ ] New Search function
 - [ ] Add Previous Next navigation to bottom of single posts
 - [ ] Implement new Sharrre Open source, share-count aggregating, and lazyloading "plugin" by building custom plugin
 - [ ] Pull share count to posts grid
