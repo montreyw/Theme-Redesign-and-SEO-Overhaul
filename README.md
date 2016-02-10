@@ -53,6 +53,7 @@ Earmilk redesign project
 - [ ] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
 - [ ] Album Review Details custom widget
+- [ ] Improve Harlem Shake CSS animation timing
 - [ ] AJAX site navigation engine
 - [ ] Site wide persistent MP3 player
 - [ ] iOS App
