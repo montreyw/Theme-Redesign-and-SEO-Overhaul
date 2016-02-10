@@ -1,6 +1,11 @@
 <?php
 /** Enable W3 Total Cache */
 define('WP_CACHE', true); // Added by W3 Total Cache
+
+
+
+
+
 define('WP_HOME', 'http://earmilk.com');
 define('WP_SITEURL', 'http://earmilk.com');
 define('WP_ALLOW_REPAIR', true);
