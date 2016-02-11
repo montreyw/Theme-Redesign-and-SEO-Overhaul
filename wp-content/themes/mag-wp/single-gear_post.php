@@ -4,7 +4,8 @@
     global $smof_data;
 ?>
 <!-- Begin Content -->
-<div class="wrap-fullwidth hfeed h-feed">
+<div class="wrap-fullwidth hfeed h-feed" role="main" 
+	itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
     <div class="single-content hentry h-entry">
         <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
         <div class="entry-top">

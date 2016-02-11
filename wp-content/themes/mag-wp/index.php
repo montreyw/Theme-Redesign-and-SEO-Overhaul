@@ -78,7 +78,8 @@
 
 
 <!-- Begin Wrap Content -->
-<div class="wrap-fullwidth hfeed h-feed">
+<div class="wrap-fullwidth hfeed h-feed" role="main" 
+	itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
 
 	<!-- Begin Main Home Content 950px -->
 	<div class="home-content">
@@ -93,8 +94,8 @@
 				<?php echo stripslashes($smof_data['top_icons']); ?>
 			<?php } ?>
 		</div>
-	<div class="arrow-down-widget"></div>
-	<div class="clear"></div><!-- end .section-top-title -->
+		<div class="arrow-down-widget"></div>
+		<div class="clear"></div><!-- end .section-top-title -->
 
 
     

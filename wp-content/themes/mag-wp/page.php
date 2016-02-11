@@ -5,7 +5,8 @@ Template Name: Template - Default with Sidebar
 ?>
 <?php get_header(); // add header ?>
 <!-- Begin Content -->
-<div class="wrap-fullwidth hfeed h-feed">
+<div class="wrap-fullwidth hfeed h-feed" role="main" 
+	itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
     <div class="single-content hentry h-entry">
         <article>
             <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
