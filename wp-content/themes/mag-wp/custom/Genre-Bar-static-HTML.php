@@ -1,7 +1,7 @@
 <div class="genrebar clearfix">
 	<ul class="mainmenu">
 	    <li class="maingenre default">
-			<a class="default maingenre" href="/" data-key="">MAIN STAGE</a>
+			<a class="default maingenre" href="/mainstage/" data-key="">MAIN STAGE</a>
 		</li>
 		<li class="dance maingenre">
 			<a class="maingenre" href="/category/dance/" data-key="dance">DANCE</a>
