@@ -1383,7 +1383,6 @@ ul.big-thing div.owl-item li h2.article-title.entry-title a {
 	margin: 2px 0 0;
 }
 .home-content ul.classic-blog li .entry-comment-count {
-	margin: 0;
 	padding: 2px 17px;
 }
 .home-content ul.classic-blog li .entry-comment-count i {
@@ -1398,10 +1397,6 @@ ul.big-thing div.owl-item li h2.article-title.entry-title a {
 }
 .home-content ul.classic-blog li .entry-comment-count .facebook-comment-count span.fb_comments_count {
 	font-size: 14px;
-}
-.home-content ul.classic-blog li .entry-comment-count {
-	margin: 0;
-	padding: 2px 17px;
 }
 .home-content ul.classic-blog li .entry-read-more a {
 	color: #94979c !important;
