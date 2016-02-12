@@ -29,6 +29,7 @@ Earmilk redesign project
 - [x] Add Google+ Buttons to Social Sidebar
 - [x] Add Funtime Out Events Festivals to the nav menu
 - [ ] Place ads
+- [ ] Set up auto-posting for Google+
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
 - [x] Code keyboard control of Next/Prev of Main Stage
 - [ ] New Search function
