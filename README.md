@@ -50,6 +50,7 @@ Earmilk redesign project
 - [ ] Develop some unifying site design elements
 - [ ] Ability to play a post's first song right from the posts grid
 - [ ] Ability to play a post's first video right from the posts grid
+- [ ] Add Schema to `/events/` page
 - [ ] Finish Schema.org markup
 - [ ] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
