@@ -54,7 +54,9 @@ Earmilk redesign project
 - [ ] Develop some unifying site design elements
 - [ ] Ability to play a post's first song right from the posts grid
 - [ ] Ability to play a post's first video right from the posts grid
-- [ ] Add Schema to `/events/` page
+- [x] Add Schema to `/events/` page
+- [ ] Add Schema to `/news/` page
+- [ ] Add Schema to all posts
 - [ ] Finish Schema.org markup
 - [ ] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
@@ -154,6 +156,9 @@ Earmilk redesign project
 10.  [Added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/13444148516b57421122eebdcd23801f8a397721) hAtom to main index.php file, which affects most posts
 11.  Fixed broken hAtom entries in [Ultimate Posts Widget](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8c3de90e46576ab4cb04c91aa186def3fdd4d0ad)
 12.  [Coded and added](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/88a8a4d822428c26e183dae080a66f94386f7283) a functions.php function and index.php reference for a custom, new `get_post_class()` function that eliminates the `hentry` class from the array - the new function is called `andre_get_post_class_without_hentry()`
+13.  Added [hEntry and h-Entry](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/02c5d8f62cec4aaac124db7942a4005e217ff478) to *Left Stage* VOICES and SCOOPS
+14.  ...
+
 
 
 <h3 id="seo-schema-sec">Schema.org Markup</h2>
@@ -164,8 +169,9 @@ Earmilk redesign project
 4.  Added [SiteNavigationElement](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c1aa8d1a4d10f8d75ef0ae884eb337c03690587c) to re-structured Header
 5.  Added [mainContentOfPage](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c2aa3a2b4516c9764dd8d9267623437204e864db) to all the single post pages -- index.php, page.php, single.php and single*.php
 6.  Added [WPSideBar](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8cf705bf2aebc25016b799bfa3a06d338e7fdf8b) Schema to all pages (I think)
-7.  Added Event Schema to [Events Archive](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ad9113728701a6ec362ab08e1dad769cfbf84380) and to [Single Event Posting Pages](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4ac2ff1f1b099902267099b77f44fd216506565e)
-8.  ...
+7.  Added [Publisher](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/3a4bc9fe36031f5085b0e954ac4f8fa4e0770c87) Schema to WPHeader
+8.  Added Event Schema to [Events Archive](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ad9113728701a6ec362ab08e1dad769cfbf84380) and to [Single Event Posting Pages](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4ac2ff1f1b099902267099b77f44fd216506565e)
+9.  ...
 
 
 
