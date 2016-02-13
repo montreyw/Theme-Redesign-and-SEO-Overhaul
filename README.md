@@ -161,7 +161,8 @@ Earmilk redesign project
 3.  Added [WPFooter](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/27d372ccd87769f519af096f281c88e1140f6b22) to footer.php
 4.  Added [SiteNavigationElement](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c1aa8d1a4d10f8d75ef0ae884eb337c03690587c) to re-structured Header
 5.  Added [mainContentOfPage](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c2aa3a2b4516c9764dd8d9267623437204e864db) to all the single post pages -- index.php, page.php, single.php and single*.php
-6.  ...
+6.  Added [Event Schema](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ad9113728701a6ec362ab08e1dad769cfbf84380) to Events Archive
+7.  ...
 
 
 
