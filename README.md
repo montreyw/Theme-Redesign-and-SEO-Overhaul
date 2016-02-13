@@ -32,6 +32,8 @@ Earmilk redesign project
 - [ ] Set up auto-posting for Google+
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
 - [x] Code keyboard control of Next/Prev of Main Stage
+- [ ] Fix Favicon icon issue for Apple
+- [ ] install full favicon suite for all devices
 - [ ] New Search function
 - [ ] Add Previous Next navigation to bottom of single posts
 - [ ] Implement new Sharrre Open source, share-count aggregating, and lazyloading "plugin" by building custom plugin
