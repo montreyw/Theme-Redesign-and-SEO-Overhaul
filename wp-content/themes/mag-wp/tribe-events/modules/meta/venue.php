@@ -13,11 +13,13 @@ if ( ! tribe_get_venue_id() ) {
 $phone   = tribe_get_phone();
 $website = tribe_get_venue_website_link();
 ?>
-<div class="tribe-events-meta-group tribe-events-meta-group-venue">
-	<h3 class="tribe-events-single-section-title"> <?php esc_html_e( tribe_get_venue_label_singular(), 'the-events-calendar' ) ?> </h3>
+<div class="tribe-events-meta-group tribe-events-meta-group-venue" 
+	itemprop="location" itemscope itemtype="http://schema.org/Place">
+	<h3 class="tribe-events-single-section-title"
+		itemprop="description"> <?php esc_html_e( tribe_get_venue_label_singular(), 'the-events-calendar' ) ?> </h3>
 	<dl>
 		<?php do_action( 'tribe_events_single_meta_venue_section_start' ) ?>
-		<dd class="tribe-venue"> <?php echo tribe_get_venue() ?> </dd>
+		<dd class="tribe-venue" itemprop="name"> <?php echo tribe_get_venue() ?> </dd>
 		<?php if ( tribe_address_exists() ) : ?>
 			<dd class="tribe-venue-location">
 				<address class="tribe-events-address">

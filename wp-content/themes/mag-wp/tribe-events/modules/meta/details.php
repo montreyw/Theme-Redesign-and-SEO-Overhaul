@@ -46,16 +46,32 @@ $website = tribe_get_event_website_link();
 	<dl>
 		<?php
 		do_action( 'tribe_events_single_meta_details_section_start' );
+		$time_format = get_option( 'time_format', Tribe__Date_Utils::TIMEFORMAT );
+		$start_date = tribe_get_start_date( null, false );
+		$start_time = tribe_get_start_date( null, false, $time_format );
+		$end_date = tribe_get_display_end_date( null, false );
+		$end_time = tribe_get_end_date( null, false, $time_format );
+		$full_start = $start_date.' @ '.$start_time;
+		$full_end = $end_date.' @ '.$end_time;
+		$iso_start = tribe_get_start_date( null, false, 'c' );
+		$iso_end = tribe_get_end_date( null, false, 'c' );
+		
 		// All day (multiday) events
 		if ( tribe_event_is_all_day() && tribe_event_is_multiday() ) :
 			?>
 			<dt> <?php esc_html_e( 'Start:', 'the-events-calendar' ) ?> </dt>
 			<dd>
-				<abbr class="tribe-events-abbr updated published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
+				<meta itemprop="startDate" content="<?php echo $iso_start ?>" />
+				<time class="updated published dt-start" datetime="<?php echo $iso_start ?>" title="<?php esc_attr_e( $start_ts ) ?>">
+					<?php echo $start_date;?>
+				</time>
 			</dd>
 			<dt> <?php esc_html_e( 'End:', 'the-events-calendar' ) ?> </dt>
 			<dd>
-				<abbr class="tribe-events-abbr dtend" title="<?php esc_attr_e( $end_ts ) ?>"> <?php esc_html_e( $end_date ) ?> </abbr>
+				<meta itemprop="endDate" content="<?php echo $iso_end ?>" />
+				<time class="dt-end" datetime="<?php echo $iso_end ?>" title="<?php esc_attr_e( $end_ts ) ?>">
+					<?php echo $end_date; ?>
+				</time>
 			</dd>
 		<?php
 		// All day (single day) events
@@ -63,7 +79,10 @@ $website = tribe_get_event_website_link();
 			?>
 			<dt> <?php esc_html_e( 'Date:', 'the-events-calendar' ) ?> </dt>
 			<dd>
-				<abbr class="tribe-events-abbr updated published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
+				<meta itemprop="startDate" content="<?php echo $iso_start ?>" />
+				<time class="updated published dt-start" datetime="<?php echo $iso_start ?>" title="<?php esc_attr_e( $start_ts ) ?>">
+					<?php echo $start_date;?>
+				</time>
 			</dd>
 		<?php
 		// Multiday events
@@ -71,11 +90,17 @@ $website = tribe_get_event_website_link();
 			?>
 			<dt> <?php esc_html_e( 'Start:', 'the-events-calendar' ) ?> </dt>
 			<dd>
-				<abbr class="tribe-events-abbr updated published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_datetime ) ?> </abbr>
+				<meta itemprop="startDate" content="<?php echo $iso_start ?>" />
+				<time class="updated published dt-start" datetime="<?php echo $iso_start ?>" title="<?php esc_attr_e( $start_ts ) ?>">
+					<?php echo $full_start;?>
+				</time>
 			</dd>
 			<dt> <?php esc_html_e( 'End:', 'the-events-calendar' ) ?> </dt>
 			<dd>
-				<abbr class="tribe-events-abbr dtend" title="<?php esc_attr_e( $end_ts ) ?>"> <?php esc_html_e( $end_datetime ) ?> </abbr>
+				<meta itemprop="endDate" content="<?php echo $iso_end ?>" />
+				<time class="dt-end" datetime="<?php echo $iso_end ?>" title="<?php esc_attr_e( $end_ts ) ?>">
+						<?php echo $full_end; ?>
+				</time>
 			</dd>
 		<?php
 		// Single day events
@@ -83,18 +108,35 @@ $website = tribe_get_event_website_link();
 			?>
 			<dt> <?php esc_html_e( 'Date:', 'the-events-calendar' ) ?> </dt>
 			<dd>
-				<abbr class="tribe-events-abbr updated published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
+				<meta itemprop="startDate" content="<?php echo $iso_start ?>" />
+				<time class="updated published dt-start" datetime="<?php echo $iso_start ?>" title="<?php esc_attr_e( $start_ts ) ?>">
+					<?php echo $start_date;?>
+				</time>
 			</dd>
 			<dt> <?php echo esc_html( $time_title ); ?> </dt>
-			<dd><div class="tribe-events-abbr updated published dtstart" title="<?php esc_attr_e( $end_ts ) ?>">
-					<?php echo $time_formatted; ?>
-				</div></dd>
+			<dd>
+				<meta itemprop="startDate" content="<?php echo $iso_start ?>" />
+				<time class="updated published dt-start" datetime="<?php echo $iso_start ?>" title="<?php esc_attr_e( $start_ts ) ?>">
+					<?php echo $start_time;?> - <?php echo $end_time;?>
+				</time>
+			</dd>
 		<?php endif ?>
 		<?php
 		// Event Cost
 		if ( ! empty( $cost ) ) : ?>
 			<dt> <?php esc_html_e( 'Cost:', 'the-events-calendar' ) ?> </dt>
-			<dd class="tribe-events-event-cost"> <?php esc_html_e( $cost ); ?> </dd>
+			<dd class="tribe-events-event-cost" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+				<meta itemprop="priceCurrency" content="USD" />
+				<meta itemprop="url" class="u-url" content="<?php echo tribe_get_event_website_url( $event ); ?>" />
+				<meta itemprop="price" content="<?php echo tribe_get_cost( null, false ); ?>" />
+		<!--
+				<meta itemprop="availability" content="" />
+				<meta itemprop="category" content="" />
+				<meta itemprop="validFrom" content="" />
+				<meta itemprop="validThrough" content="" />
+		-->
+				<span><?php echo tribe_get_cost( null, true ); ?></span>
+			</dd>
 		<?php endif ?>
 		<?php
 		echo tribe_get_event_categories(

@@ -22,7 +22,7 @@ $organizer = tribe_get_organizer();
 <?php if ( tribe_get_cost() ) : ?>
 	<div class="tribe-events-event-cost" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 		<meta itemprop="priceCurrency" content="USD" />
-		<meta itemprop="url" content="<?php echo tribe_get_event_website_url( $event ); ?>" />
+		<meta itemprop="url" class="u-url" content="<?php echo tribe_get_event_website_url( $event ); ?>" />
 		<meta itemprop="price" content="<?php echo tribe_get_cost( null, false ); ?>" />
 <!--
 		<meta itemprop="availability" content="" />
@@ -35,9 +35,9 @@ $organizer = tribe_get_organizer();
 <?php endif; ?>
 <!-- Event Title -->
 <?php do_action( 'tribe_events_before_the_event_title' ) ?>
-<h2 class="tribe-events-list-event-title" itemprop="name">
+<h2 class="tribe-events-list-event-title entry-title" itemprop="name">
 	<a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark">
-		<?php the_title() ?>
+		<span class="p-name"><?php the_title() ?></span>
 	</a>
 </h2>
 <?php do_action( 'tribe_events_after_the_event_title' ) ?>
@@ -49,7 +49,7 @@ $organizer = tribe_get_organizer();
 		<div class="tribe-event-schedule-details">
 			<span class="tribe-event-date-start">
 				<meta itemprop="startDate" content="<?php echo tribe_get_start_date( null, false, 'c' ) ?>" />
-				<time datetime="<?php echo tribe_get_start_date( null, false, 'c' ) ?>">
+				<time class="dt-start" datetime="<?php echo tribe_get_start_date( null, false, 'c' ) ?>">
 					<?php 
 						$time_format = get_option( 'time_format', Tribe__Date_Utils::TIMEFORMAT );
 						$start_date = tribe_get_start_date( null, false );
@@ -60,7 +60,7 @@ $organizer = tribe_get_organizer();
 			</span> - 
 			<span class="tribe-event-date-end">
 				<meta itemprop="endDate" content="<?php echo tribe_get_end_date( null, false, 'c' ) ?>" />
-				<time datetime="<?php echo tribe_get_end_date( null, false, 'c' ) ?>">
+				<time class="dt-end" datetime="<?php echo tribe_get_end_date( null, false, 'c' ) ?>">
 					<?php 
 						$end_date = tribe_get_display_end_date( null, false );
 						$end_time = tribe_get_end_date( null, false, $time_format );
@@ -85,7 +85,7 @@ $organizer = tribe_get_organizer();
 <?php echo tribe_event_featured_image( null, 'medium' ) ?>
 <!-- Event Content -->
 <?php do_action( 'tribe_events_before_the_content' ) ?>
-<div class="tribe-events-list-event-description tribe-events-content">
+<div class="tribe-events-list-event-description tribe-events-content" itemprop="description">
 	<?php echo tribe_events_get_the_excerpt(); ?>
 	<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="tribe-events-read-more" rel="bookmark" itemprop="mainEntityOfPage">
 		<?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;

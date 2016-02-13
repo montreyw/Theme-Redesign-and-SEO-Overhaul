@@ -16,13 +16,16 @@ $events_label_singular = tribe_get_event_label_singular();
 $events_label_plural = tribe_get_event_label_plural();
 $event_id = get_the_ID();
 ?>
-<div id="tribe-events-content" class="tribe-events-single">
+<div id="tribe-events-content" class="tribe-events-single hevent h-event" role="main" 
+	itemprop="mainEntity" itemscope itemtype="http://schema.org/Event">
 	<p class="tribe-events-back">
-		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>"> <?php printf( '&laquo; ' . esc_html__( 'All %s', 'the-events-calendar' ), $events_label_plural ); ?></a>
+		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>"> 
+			<?php printf( '&laquo; ' . esc_html__( 'All %s', 'the-events-calendar' ), $events_label_plural ); ?>
+		</a>
 	</p>
 	<!-- Notices -->
 	<?php tribe_the_notices() ?>
-	<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
+	<?php the_title( '<h1 class="tribe-events-single-event-title p-name" itemprop="name">', '</h1>' ); ?>
 	<div class="tribe-events-schedule tribe-clearfix">
 		<?php echo tribe_events_event_schedule_details( $event_id, '<h2>', '</h2>' ); ?>
 		<?php if ( tribe_get_cost() ) : ?>
@@ -42,12 +45,27 @@ $event_id = get_the_ID();
 	</div>
 	<!-- #tribe-events-header -->
 	<?php while ( have_posts() ) :  the_post(); ?>
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div id="post-<?php the_ID(); ?>" class="<?php echo andre_get_post_class_without_hentry(); ?>">
 			<!-- Event featured image, but exclude link -->
-			<?php echo tribe_event_featured_image( $event_id, 'full', false ); ?>
+			<?php 
+				function tribe_event_andre_image( $post_id = null, $size = 'full', $link = true ) {
+					if ( is_null( $post_id ) ) {
+						$post_id = get_the_ID();
+					}
+					$image_html     = get_the_post_thumbnail( $post_id, $size, array('itemprop' => 'image'));
+					$featured_image = '';
+					//if link is not specifically excluded, then include <a>
+					if ( ! empty( $image_html ) && $link ) {
+						$featured_image .= '<div class="tribe-events-event-image"><a href="' . esc_url( tribe_get_event_link() ) . '">' . $image_html . '</a></div>';
+					} elseif ( ! empty( $image_html ) ) {
+						$featured_image .= '<div class="tribe-events-event-image">' . $image_html . '</div>';
+					}
+					return apply_filters( 'tribe_event_featured_image', $featured_image, $post_id, $size );
+				}
+				echo tribe_event_andre_image( $event_id, 'full'); ?>
 			<!-- Event content -->
 			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
-			<div class="tribe-events-single-event-description tribe-events-content">
+			<div class="tribe-events-single-event-description tribe-events-content" itemprop="description">
 				<?php the_content(); ?>
 			</div>
 			<!-- .tribe-events-single-event-description -->
