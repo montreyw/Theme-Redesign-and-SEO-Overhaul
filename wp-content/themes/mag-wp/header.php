@@ -274,7 +274,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 
 	 				<div class="main-stage-left">
 
-						<div class="main-stage-latest latest-news">
+						<div class="main-stage-latest latest-news hfeed h-feed">
 							<div class="line-box">
 								<div class="header_line">
 									<h4 class="top"><a href="/news/" titles="VOICES">SCOOPS</a></h4>
@@ -292,7 +292,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 								    'order' => 'DESC');
 									query_posts( $args );  ?> 
 								<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-									<li class="<?php $category = get_the_category(); 
+									<li class="hentry h-entry <?php $category = get_the_category(); 
 											if ($category) {echo $category[0]->name ;} ?>">
 										<div class="entry-thumbnail"> 
 											<a href="<?php the_permalink(); ?>"> 
@@ -316,7 +316,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 								<?php endwhile; endif; wp_reset_query();  ?> 
 							</ul>
 						</div>
-						<div class="main-stage-latest latest-voices">
+						<div class="main-stage-latest latest-voices hfeed h-feed">
 							<div class="line-box">
 								<div class="header_line">
 									<h4 class="top"><a href="/voices/" titles="VOICES">VOICES</a></h4>
@@ -334,7 +334,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 								    'order' => 'DESC');
 									query_posts( $args );  ?> 
 								<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-									<li class="<?php $category = get_the_category(); 
+									<li class="hentry h-entry <?php $category = get_the_category(); 
 											if ($category) {echo $category[0]->name ;} ?>">
 										<div class="entry-thumbnail"> 
 											<a href="<?php the_permalink(); ?>"> 
