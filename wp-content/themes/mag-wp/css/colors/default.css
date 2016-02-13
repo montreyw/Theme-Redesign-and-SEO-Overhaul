@@ -637,7 +637,7 @@ form#searchform {
 	border: 0;
     font-family: futura, Tahoma, Geneva, sans-serif;
 	width: 76%;
-	color: #aaa !important;
+	color: #000 !important;
 	background-color: transparent;
 	/* margin: 0 40px 0 0; */
 	padding: 0;
@@ -1739,7 +1739,6 @@ div.ts-fab-tab .ts-fab-text .ts-fab-latest li span {
 }
 .single-content .comments {
 	min-height: 270px;
-	display: none;
 }
 .single-content .comments h3.title {
 	color: #000 !important;
