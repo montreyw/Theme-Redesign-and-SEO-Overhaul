@@ -69,15 +69,15 @@
         "@context": "http://schema.org",
         "@type": "Organization",
         "url": "http://earmilk.com",
+        "name" : "EARMILK",
+        "alternateName" : "EARMILK.com",
+        "description": "EARMILK is an online music publication that straddles the line between underground and mainstream. Covering Hip-Hop, Electronic, Indie and the in between. All Milk. No Duds.",
+        "brand" : "EARMILK",
+        "logo": "http://earmilk.com/wp-content/uploads/2016/02/EARMILK_logo_3.png",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http://earmilk.com/about/"
         },
-        "name" : "DankStop",
-        "alternateName" : "EARMILK",
-        "description": "EARMILK is an online music publication that straddles the line between underground and mainstream. Covering Hip-Hop, Electronic, Indie and the in between. All Milk. No Duds.",
-        "brand" : "EARMILK",
-        "logo": "http://earmilk.com/wp-content/uploads/2015/05/2.0-Logo-Transparent-Cropped.png",
         "sameAs": [
             "https://facebook.com/earmilk",
             "https://twitter.com/earmilk",
@@ -178,8 +178,16 @@
 				<meta itemprop="name" content="EARMILK Site Header" />
 				<meta itemprop="headline" content="EARMILK.com -- All milk. No duds." />
 				<meta itemprop="description" content="This is the masthead for EARMILK.com" />
-			    <a id="earmilk-logo" href="<?php echo esc_url(home_url( '/' )); ?>">
-					<img id="earmilk-logo-img" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" />
+				<a id="earmilk-logo" href="<?php echo esc_url(home_url( '/' )); ?>">
+					<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+						<meta itemprop="name" content="EARMILK">
+						<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+							<img id="earmilk-logo-img" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" />
+							<meta itemprop="url" content="http://earmilk.com/wp-content/uploads/2016/02/EARMILK_logo_3.png">
+							<meta itemprop="width" content="229">
+							<meta itemprop="height" content="50">
+						</div>
+					</div>
 				</a>
 			</header>
 		</div>
