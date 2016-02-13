@@ -115,8 +115,16 @@
 
 			<?php if ( has_post_thumbnail()) { ?> 
 			<div class="entry-thumb-cont">
-				<a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
-					<?php echo the_post_thumbnail('thumbnail-blog'); ?>
+				<a href="<?php the_permalink(); ?>" class="entry-thumbnail">
+					<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+						<?php echo the_post_thumbnail('thumbnail-blog'); ?>
+						<meta itemprop="url" content="<?php 
+							$post_thumbnail_id = get_post_thumbnail_id();
+							$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+							echo $post_thumbnail_url; ?>">
+						<meta itemprop="width" content="283">
+						<meta itemprop="height" content="133">
+					</div>
 				</a> 
 				<div class="article-category">
 					<div class="post-date date updated">
