@@ -102,27 +102,40 @@
 <?php if ($home_select == 'Grid Style') { ?>
 	<ul class="classic-blog">  
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>">
+		<li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>" itemscope itemprop="hasPart" itemtype="http://schema.org/NewsArticle">
+			<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="<?php the_permalink(); ?>"/>
+			<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+				<meta itemprop="name" content="EARMILK">
+				<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+					<meta itemprop="url" content="http://earmilk.com/wp-content/uploads/2016/02/EARMILK_logo_3.png">
+					<meta itemprop="width" content="229">
+					<meta itemprop="height" content="50">
+				</div>
+			</div>
 
-          <?php if ( has_post_thumbnail()) { ?> 
+			<?php if ( has_post_thumbnail()) { ?> 
 			<div class="entry-thumb-cont">
-	            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
-		            <?php echo the_post_thumbnail('thumbnail-blog'); ?>
-	            </a> 
+				<a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
+					<?php echo the_post_thumbnail('thumbnail-blog'); ?>
+				</a> 
 				<div class="article-category">
 					<div class="post-date date updated">
 						<?php if ( get_the_time('Y') == date('Y')) { ?> 
+							<meta itemprop="datePublished" content="<?php the_time('c'); ?>"/>
+							<meta itemprop="dateModified" content="<?php the_time('c'); ?>"/>
 							<span class="month"><?php the_time('M', '', '', true); ?></span> 
 							<span class="day"><?php the_time('d', '', '', true); ?></span>
 						<?php } else { ?> 
+							<meta itemprop="datePublished" content="<?php the_time('c'); ?>"/>
+							<meta itemprop="dateModified" content="<?php the_time('c'); ?>"/>
 							<span class="month"><?php the_time('M', '', '', true); ?></span> 
 							<span class="day"><?php the_time('d', '', '', true); ?></span>
 							<span class="year">'<?php the_time('y', '', '', true); ?></span>
 						<?php } ?>
 					</div>
-					<span class="vcard author p-author h-card">
-						<span class="fn">
-							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+					<span class="vcard author p-author h-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span class="fn" itemprop="name">
+							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" itemprop="url">
 								<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
 								<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
 							</a>
@@ -147,23 +160,28 @@
               { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  ?>
             </div><div class="arrow-down-cat"></div>
 -->
-          <?php } // Post Thumbnail ?> 
-          <div class="clear"></div> 
+		<?php } // Post Thumbnail ?> 
+		<div class="clear"></div> 
 
-          <div class="an-content">
-            <h2 class="article-title entry-title">
-	            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-	        </h2>
-            <p class="article-summary entry-summary"><?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 137); ?></p>
-			<div class="entry-footer">
-				<div class="entry-comment-count">
-					<i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;<div class="facebook-comment-count"><fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count></div>
+			<div class="an-content">
+				<h2 class="article-title entry-title" itemprop="headline">
+					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+				</h2>
+				<p class="article-summary entry-summary" itemprop="description">
+					<?php echo anthemes_excerpt(strip_tags(strip_shortcodes(get_the_excerpt())), 137); ?>
+				</p>
+				<div class="entry-footer">
+					<div class="entry-comment-count">
+						<i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;
+						<div class="facebook-comment-count">
+							<fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count>
+						</div>
+					</div>
+					<div class="entry-read-more">
+						<a href="<?php the_permalink(); ?>" title="Read the whole article.">Read More...</a>
+					</div>
+					<div class="entry-empty-box">&nbsp;</div>
 				</div>
-				<div class="entry-read-more">
-					<a href="<?php the_permalink(); ?>" title="Read the whole article.">Read More...</a>
-				</div>
-				<div class="entry-empty-box">&nbsp;</div>
-			</div>
 
 
 			<?php if(function_exists('taqyeem_get_score')) { ?>
