@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $venue_id = get_the_ID();
 $full_region = tribe_get_full_region( $venue_id );
 ?>
-<span class="tribe-address">
+<span class="tribe-address" itemprop="address">
 <?php
 // This location's street address.
 if ( tribe_get_address( $venue_id ) ) : ?>

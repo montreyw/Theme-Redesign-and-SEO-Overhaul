@@ -28,7 +28,8 @@ $more = false;
 			$post_parent = ' data-parent-post-id="' . absint( $post->post_parent ) . '"';
 		}
 		?>
-		<div id="post-<?php the_ID() ?>" class="hentry h-entry <?php tribe_events_event_classes() ?>" <?php echo $post_parent; ?>>
+		<div id="post-<?php the_ID() ?>" class="hentry h-entry <?php tribe_events_event_classes() ?>" <?php echo $post_parent; ?>
+			itemprop="itemListElement" itemscope itemtype="http://schema.org/Event">
 			<?php tribe_get_template_part( 'list/single', 'event' ) ?>
 		</div>
 		<?php do_action( 'tribe_events_inside_after_loop' ); ?>
