@@ -98,7 +98,30 @@
             "query-input": "required name=search_query"
         }
     }
-    </script>  
+    </script>
+	<!-- Custom Favicons -- Andre -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png?v=699q2Rg3Mq">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png?v=699q2Rg3Mq">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png?v=699q2Rg3Mq">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png?v=699q2Rg3Mq">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png?v=699q2Rg3Mq">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png?v=699q2Rg3Mq">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png?v=699q2Rg3Mq">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png?v=699q2Rg3Mq">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png?v=699q2Rg3Mq">
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png?v=699q2Rg3Mq" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png?v=699q2Rg3Mq" sizes="192x192">
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png?v=699q2Rg3Mq" sizes="96x96">
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png?v=699q2Rg3Mq" sizes="16x16">
+	<link rel="manifest" href="/favicons/manifest.json?v=699q2Rg3Mq">
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg?v=699q2Rg3Mq" color="#000000">
+	<link rel="shortcut icon" href="/favicons/favicon.ico?v=699q2Rg3Mq">
+	<meta name="apple-mobile-web-app-title" content="EARMILK">
+	<meta name="application-name" content="EARMILK">
+	<meta name="msapplication-TileColor" content="#222222">
+	<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png?v=699q2Rg3Mq">
+	<meta name="msapplication-config" content="/favicons/browserconfig.xml?v=699q2Rg3Mq">
+	<meta name="theme-color" content="#e34848">
     
     <!-- The HTML5 Shim for older browsers (mostly older versions of IE). -->
 	<!--[if IE]> <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script> <![endif]--><!--[if IE 9]><style type="text/css">.logo, header .sticky .logo  { margin-top: 0 !important; } </style><![endif]--> <!--[if IE 8]><style type="text/css">.logo, header .sticky .logo  { margin-top: 0 !important; } #searchform2  { margin-top: -5px !important;} #searchform2 .buttonicon { margin-top: 5px !important;} </style><![endif]--> 
@@ -106,7 +129,7 @@
 	<!-- Favicons and rss / pingback -->
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php esc_url(bloginfo('rss2_url')); ?>" />
     <link rel="pingback" href="<?php esc_url(bloginfo('pingback_url')); ?>" />
-    <link rel="shortcut icon" type="image/png" href="<?php echo esc_url($favicon); ?>"/>  
+<!--     <link rel="shortcut icon" type="image/png" href="<?php echo esc_url($favicon); ?>"/>   -->
 
     <!-- Custom style -->
     <?php echo get_template_part('custom-style'); ?>
