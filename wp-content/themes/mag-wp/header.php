@@ -156,6 +156,8 @@
 	itemscope itemtype="http://schema.org/<?php 
 	if (is_page(array(248463, 'about', 'About'))) { 
 		echo 'AboutPage'; 
+	} elseif (is_author()) {
+		echo 'CollectionPage';
 	} elseif (is_page(array(248509, 'contact-us', 'Contact Us'))) {
 		echo 'ContactPage'; 
 	} else {
