@@ -173,7 +173,7 @@ Earmilk redesign project
 8.  Added Event Schema to [Events Archive](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ad9113728701a6ec362ab08e1dad769cfbf84380) and to [Single Event Posting Pages](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4ac2ff1f1b099902267099b77f44fd216506565e)
 9.  Added [NewsArticle](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/67db412c0a4acbb0b56cdad6142129ab8d845782) Schema to index.php, which will apply to a variety of single posts, as well as several post grid types (eg, Author Archive Pages)
 10.  Added [Image Object](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4519b255f09d2ce100d07d6ea17c7655d5e9662a) Schema added to NewsArticle index.php
-11.  ...
+11.  For Author Pages, added [CollectionPage VS WebPage differentiation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/d1f5146f08bdb231abd71535c2a82bc741b7fd19) to Main Site Header
 
 
 
