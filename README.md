@@ -32,9 +32,9 @@ Earmilk redesign project
 - [x] Set up auto-posting for Google+
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
 - [x] Code keyboard control of Next/Prev of Main Stage
-- [ ] Fix Favicon icon issue for Apple
-- [ ] Install full favicon suite for all devices
-- [ ] Install mobile app view manifest.json
+- [x] Fix Favicon icon issue for Apple
+- [x] Install mobile app view manifest.json
+- [x] Install full favicon suite for all devices
 - [ ] Look into [AppCache](http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
 - [ ] New Search function
 - [ ] Add Previous Next navigation to bottom of single posts
@@ -173,7 +173,8 @@ Earmilk redesign project
 8.  Added Event Schema to [Events Archive](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ad9113728701a6ec362ab08e1dad769cfbf84380) and to [Single Event Posting Pages](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4ac2ff1f1b099902267099b77f44fd216506565e)
 9.  Added [NewsArticle](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/67db412c0a4acbb0b56cdad6142129ab8d845782) Schema to index.php, which will apply to a variety of single posts, as well as several post grid types (eg, Author Archive Pages)
 10.  Added [Image Object](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4519b255f09d2ce100d07d6ea17c7655d5e9662a) Schema added to NewsArticle index.php
-11.  For Author Pages, added [CollectionPage VS WebPage differentiation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/d1f5146f08bdb231abd71535c2a82bc741b7fd19) to Main Site Header
+11.  For Author Pages, added `CollectionPage` via [CollectionPage VS WebPage differentiation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/d1f5146f08bdb231abd71535c2a82bc741b7fd19) to Main Site Header
+12.  ...
 
 
 
@@ -188,6 +189,7 @@ Earmilk redesign project
 6.  Fixed Sitemap (several plugin issues were resolved to make it work)
 7.  Added robot.txt to `file2.` (Montrey) and `mooks.` subdomains to prevent caching unnecessary files 
 8.  WOOHOO! Auto-posting to [Google+](https://plus.google.com/+earmilk/posts) via [RSSFeed](http://earmilk/feed/) and [Hootsuite](https://hootsuite.com) finally setup!
+9.  ...
 
 
 
@@ -205,7 +207,9 @@ Earmilk redesign project
 6.  Fixed a CSS alignment of fields bug in [ALbum Review Details](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c1aa8d1a4d10f8d75ef0ae884eb337c03690587c) backend plugin (Resolved [Issue #16](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/issues/16))
 7.  Restructured [Header](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/845d4f3b80aa6df664ae812888e3431fdfe0e2fb) for flexibility, to fix Schema Nav and to allow Genre Bar
 8.  Added functions.php filter to remove annoying, spammy, and meaningless [Yoast notifications](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/1efbc3c9675c6be5c9cfb52ec9e1543f432bf66d)
-9.  ...
+9.  Installed new suite of favicons for all devices and platforms ([files](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/2a4dd566cafeb9f6efc1ed01ae1392247714b902), [header.php references](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a668f4c262a64d01680da88b7197863e1d394498))
+10.  Set up EARMILK Bookmark on Android as Standalone App via `manifest.json` ([reference](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a668f4c262a64d01680da88b7197863e1d394498), [file](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/2a4dd566cafeb9f6efc1ed01ae1392247714b902))
+11.  ...
 
 
 - [Back to top ^](#table-of-contents)  
