@@ -53,12 +53,13 @@ Earmilk redesign project
 - [ ] Change/improve gray section headers
 - [ ] Develop some unifying site design elements
 - [ ] Ability to play a post's first song right from the posts grid
+- [ ] Re-style re-design [MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/)
 - [ ] Ability to play a post's first video right from the posts grid
 - [x] Add Schema to `/events/` page
 - [ ] Add Schema to `/news/` page
 - [ ] Add Schema to all posts
 - [ ] Finish Schema.org markup
-- [ ] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
+- [x] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
 - [ ] Album Review Details custom widget
 - [ ] Improve Harlem Shake CSS animation timing
