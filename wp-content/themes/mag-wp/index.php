@@ -113,11 +113,14 @@
 				</div>
 			</div>
 
-			<?php if ( has_post_thumbnail()) { ?> 
 			<div class="entry-thumb-cont">
 				<a href="<?php the_permalink(); ?>" class="entry-thumbnail">
 					<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+					<?php if ( has_post_thumbnail()) { ?> 
 						<?php echo the_post_thumbnail('thumbnail-blog'); ?>
+					<?php } else { ?>
+						<img src="<?php echo get_template_directory_uri(); ?>/images/article-img.png" alt="article image" />
+					<?php } // Post Thumbnail ?> 
 						<meta itemprop="url" content="<?php 
 							$post_thumbnail_id = get_post_thumbnail_id();
 							$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
@@ -126,6 +129,7 @@
 						<meta itemprop="height" content="133">
 					</div>
 				</a> 
+
 				<div class="article-category">
 					<div class="post-date date updated">
 						<?php if ( get_the_time('Y') == date('Y')) { ?> 
@@ -157,19 +161,7 @@
 				</div>
 			</div>
 		
-          <?php } else { ?>
-<!--
-            <div class="post-date date updated">
-              <span class="month"><?php the_time('M', '', '', true); ?></span> 
-              <span class="day"><?php the_time('d', '', '', true); ?></span>
-            </div>
-            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/article-img.png" alt="article image" /></a> 
-            <div class="article-category"><i></i> <?php $category = get_the_category(); if ($category) 
-              { echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  ?>
-            </div><div class="arrow-down-cat"></div>
--->
-		<?php } // Post Thumbnail ?> 
-		<div class="clear"></div> 
+			<div class="clear"></div> 
 
 			<div class="an-content">
 				<h2 class="article-title entry-title" itemprop="headline">
@@ -190,18 +182,17 @@
 					</div>
 					<div class="entry-empty-box">&nbsp;</div>
 				</div>
-
-
-			<?php if(function_exists('taqyeem_get_score')) { ?>
-				<?php taqyeem_get_score(); ?>
-			<?php } ?>                   
-          </div><!-- end .an-content -->
-
-        </li>
-        <?php endwhile; endif; ?>
-    </ul><!-- end .classic-blog -->
+	
+				<?php if(function_exists('taqyeem_get_score')) { ?>
+					<?php taqyeem_get_score(); ?>
+				<?php } ?>                   
+			</div><!-- end .an-content -->
+		</li>
+		<?php endwhile; endif; ?>
+	</ul><!-- end .classic-blog -->
 
 <?php } else { ?>
+
     <ul id="masonry_list" class="classic-blog js-masonry"  data-masonry-options='{ "columnWidth": 1 }'>  
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>">
