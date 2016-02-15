@@ -467,3 +467,15 @@ function andre_get_post_class_without_hentry() {
 	}; 
 	return implode(" ", $classes);
 }
+
+// ------------------------------------------------------------------------------ 
+// Add all custom post types to RSS feed - Andre
+// ------------------------------------------------------------------------------ 
+function myfeed_request($qv) {
+	if (isset($qv['feed']))
+		//$qv['post_type'] = get_post_types();
+		$qv['post_type'] = array('news', 'opinion_post', 'gear_post', 'album_review', 'post');
+	return $qv;
+}
+add_filter('request', 'myfeed_request');
+
