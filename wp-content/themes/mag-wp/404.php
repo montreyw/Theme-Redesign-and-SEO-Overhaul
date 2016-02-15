@@ -58,6 +58,10 @@ get_header(); ?>
 /* 				border: 0; */
 				border-top: 1px solid #eee;
 			}
+			.post_content {
+				background: url("http://www.pixeljoint.com/files/icons/full/mangawar.png") no-repeat left bottom;
+				background-position: 19px 113px;
+			}
 			.post_content li {
 				list-style: circle;
 				margin-bottom: 5px;
@@ -173,7 +177,7 @@ get_header(); ?>
 				color: #000;
 				font-size: 13px;
 				line-height: 17px;
-				background: url(http://www.pixeljoint.com/files/icons/full/mangawar.png) no-repeat left top;
+/* 				background: url(http://www.pixeljoint.com/files/icons/full/mangawar.png) no-repeat left top; */
 				min-height: 600px;
 				background-position: 19px -183px
 			}
