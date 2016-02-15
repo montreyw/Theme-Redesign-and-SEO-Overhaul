@@ -117,7 +117,7 @@ Earmilk redesign project
 32.  Added *hot* [animated loading thematic 'music equalizer' animation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/574681198b2bed7a54d431f6a7b2b41449cee39a)  to the Main Stage as it initializes on page open
 33.  Added nifty Left Stage to the ... left of Main Stage on the front page ([Left Stage structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5240444a93de1c9fa2b2b412a9600db9b4af757c), [style(https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/574681198b2bed7a54d431f6a7b2b41449cee39a))
 34.  Coded a [basic function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/88a8a4d822428c26e183dae080a66f94386f7283) to trigger Next and Previous of Owl Carousel with keyboard keys
-35.  New Interview Post question and answer [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7acd32bc47f979a3fff4573bb407cafade2cfb2f)\
+35.  New Interview Post question and answer [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7acd32bc47f979a3fff4573bb407cafade2cfb2f)
 36.  ...
 
 
