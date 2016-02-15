@@ -48,7 +48,23 @@
 									<?php echo number_format_i18n( get_the_author_posts() ); ?>
 								</a>
 								<a href="<?php echo get_author_posts_url( $user_id ); ?>" class="author-photo-anchor">
-									<?php echo get_avatar( get_the_author_meta( 'user_email' ), 300 ); ?>
+									<?php 
+										$wp_avatar_profile    = get_user_meta( $user_id, 'wp_avatar_profile', true );
+										$wp_fb_profile        = get_user_meta( $user_id, 'wp_fb_profile', true );
+										$wp_avatar_capability = get_option( 'wp_avatar_capability', 'read' );
+										$size = '300';
+										$atts = array( 'extra_attr' => 'itemprop="image"' );
+										if ( user_can( $user_id, $wp_avatar_capability ) ) {
+											if ( 'wp-facebook' == $wp_avatar_profile && ! empty( $wp_fb_profile ) ) {
+												$fb = 'https://graph.facebook.com/' . $wp_fb_profile . '/picture?width='. $size . '&height=' . $size;
+												echo "<img alt='facebook-profile-picture' src='{$fb}' height='{$size}' width='{$size}' itemprop='image' />";
+											} else {
+												echo get_avatar( get_the_author_meta( 'user_email' ), 300, '', '', $atts );
+											}
+										} else {
+											echo get_avatar( get_the_author_meta( 'user_email' ), 300, '', '', $atts );
+										}
+									?>
 								</a>
 							</div>
 							<div class="author-info">
