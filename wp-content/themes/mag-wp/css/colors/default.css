@@ -483,11 +483,6 @@ body > #header-filler {
 	background: #fff;
 	padding: 0;
 	margin: 0 auto;
-/*
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.1);
-	box-shadow: 0 3px 3px rgba(0,0,0,0.1);
-*/
 }
 #fixed-header #inner-header {
 	max-width: 1280px;
@@ -2498,6 +2493,11 @@ body #responsive-menu #responsive-menu-title {
 	body #header-filler {
 		height: 45px;
 	}
+	#fixed-header {
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
 	#fixed-header,
 	#fixed-header #inner-header {
 		height: 45px;
@@ -2631,7 +2631,7 @@ body #responsive-menu #responsive-menu-title {
 	}
 	.owl-theme .owl-controls .owl-buttons .owl-prev, 
 	.owl-theme .owl-controls .owl-buttons .owl-next {
-		top: 62%;
+		top: 57%;
 		font-size: 40px;
 	}
 	.owl-theme .owl-controls .owl-buttons .owl-prev {
