@@ -981,7 +981,7 @@ div.wrap-center .line-box .header_line h4.top a:hover {
 div.big-thing-box {
 	margin: 0 auto;
 	float: none;
-	min-height: 400px;
+	min-height: 480px;
 }
 ul.big-thing.owl-carousel {
 	-webkit-transition: all 735ms;
@@ -1124,43 +1124,40 @@ ul.big-thing div.owl-item li h2.article-title.entry-title a {
 	text-align: center;
 }
 /* Styling Next and Prev buttons */
-.owl-theme .owl-controls .owl-buttons div{
-	color: #FFF;
-	display: inline-block;
-	zoom: 1;
-	*display: inline;/*IE7 life-saver */
-	margin: 5px;
-	padding: 3px 10px;
-	font-size: 12px;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
-	background: #869791;
-	filter: Alpha(Opacity=50);/*IE7 fix*/
-	opacity: 0.5;
-}
-.owl-theme .owl-controls .owl-buttons div {
-	position: absolute;
-}
 .owl-theme .owl-controls .owl-buttons .owl-prev,
 .owl-theme .owl-controls .owl-buttons .owl-next {
-	top: 71%;
-	background: transparent;
-	color: #E34848;
-	font-size: 50px;
-	-webkit-transition: all 137ms;
-	-o-transition: all 137ms;
-	transition: all 137ms;
+	display: inline-block;
+	position: absolute;
+	top: 68%;
+	zoom: 1;
+	margin: 0;
+	padding: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	background: #FBFBFB;
 }
 .owl-theme .owl-controls .owl-buttons .owl-prev{
-	left: -4px;
+	background: linear-gradient(to right,#FBFBFB 60%,rgba(255,255,255,0));
+	padding: 8px 20px 8px 7px;
+	left: 0;
 }
 .owl-theme .owl-controls .owl-buttons .owl-next{
-	right: -4px;
+	background: linear-gradient(to left,#FBFBFB 60%,rgba(255,255,255,0));
+	padding: 8px 7px 8px 20px;
+	right: 0;
 }
-.owl-theme .owl-controls.clickable .owl-buttons div:hover {
-/*     background: #e34848; */
-	opacity: 1;
+.owl-theme .owl-controls .owl-buttons i {
+	-webkit-transition: all 137ms;
+	-moz-transition: all 137ms;
+	-o-transition: all 137ms;
+	transition: all 137ms;
+	line-height: 68px;
+	font-size: 50px;
+    color: #ddd;
+}
+.owl-theme .owl-controls.clickable .owl-buttons div:hover i{
+    color: #e34848;
 }
 /* Clickable class fix problem with hover on touch devices */
 /* Use it for non-touch hover action */
