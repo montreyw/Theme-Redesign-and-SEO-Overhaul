@@ -1729,6 +1729,7 @@ div.ts-fab-tab .ts-fab-text .ts-fab-latest li span {
 }
 .single-content .comments {
 	min-height: 270px;
+	width: 100%;
 }
 .single-content .comments h3.title {
 	color: #000 !important;
