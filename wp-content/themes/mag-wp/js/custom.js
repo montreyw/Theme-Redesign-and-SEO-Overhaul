@@ -86,7 +86,12 @@ jQuery( document ).ready( function( $ ) {
 		}
 	});
 	function customOwl() {
-		setTimeout( function(){owl.addClass('carousel-visible');}, 1370);
+		setTimeout( function(){ 
+			setTimeout( function(){ 
+				owl.addClass('carousel-visible'); 
+			}, 137);
+			$('#main-stage-loader').addClass('main-stage-loaded'); 
+		}, 1370);
 
 		$('.owl-controls .owl-page').append('<a class="item-link" href="#"/>');
 		var paginatorsLink = $('.owl-controls .item-link');

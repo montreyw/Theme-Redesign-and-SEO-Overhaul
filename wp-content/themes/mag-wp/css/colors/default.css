@@ -816,8 +816,23 @@ div#featured-boxes {
 /*     margin: 85px 0 0; */
 }
 .big-thing-box {
-    margin: 0 auto;
-    float: none;
+	margin: 0 auto;
+	float: none;
+	position: relative;
+}
+#main-stage-loader {
+	position: absolute;
+	left: -100%;
+	right: -100%;
+	top: -100%;
+	bottom: -100%;
+	margin: auto;
+	-webkit-transition: all 370ms;
+	transition: all 370ms;
+	opacity: 1;
+}
+#main-stage-loader.main-stage-loaded {
+	opacity: 0;
 }
 .wrap-fullwidth {
     background: #fff;
@@ -966,9 +981,6 @@ div.wrap-center .line-box .header_line h4.top a:hover {
 div.big-thing-box {
 	margin: 0 auto;
 	float: none;
-	background: url("http://earmilk.com/wp-content/uploads/equalizer_bw.gif");
-	background-position: center center;
-	background-repeat: no-repeat;
 	min-height: 400px;
 }
 ul.big-thing.owl-carousel {

@@ -394,6 +394,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0');
 	 				</div><!-- end .main-stage-left -->
 
 		            <div class="big-thing-box hfeed h-feed">
+						<img id="main-stage-loader" src="http://earmilk.com/wp-content/uploads/equalizer_bw.gif" alt="EARMILK Main Stage loading music equalizer">
 						<div class="line-box">
 							<div class="header_line">
 								<h4 class="top"><a href="/category/mainstage/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h4>
