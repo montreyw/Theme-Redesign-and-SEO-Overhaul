@@ -35,6 +35,7 @@ Earmilk redesign project
 - [x] Fix Favicon icon issue for Apple
 - [x] Install mobile app view manifest.json
 - [x] Install full favicon suite for all devices
+- [ ] Implement new bottle favicon
 - [ ] Look into [AppCache](http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
 - [ ] New Search function
 - [ ] Add Previous Next navigation to bottom of single posts
@@ -49,6 +50,7 @@ Earmilk redesign project
 - [ ] Change all image attachments image-link-type's in posts to file or none
 - [ ] Add Extra AUthor Disclosure info to author meta
 - [x] Implement Colorful Genre Bar from old.V2
+- [ ] Implement new Facebook Like box slideout
 - [ ] Remove all MP3 links from posts
 - [ ] Change/improve gray section headers
 - [ ] Develop some unifying site design elements
