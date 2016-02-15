@@ -175,7 +175,8 @@ Earmilk redesign project
 9.  Added [NewsArticle](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/67db412c0a4acbb0b56cdad6142129ab8d845782) Schema to index.php, which will apply to a variety of single posts, as well as several post grid types (eg, Author Archive Pages)
 10.  Added [Image Object](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4519b255f09d2ce100d07d6ea17c7655d5e9662a) Schema added to NewsArticle index.php
 11.  For Author Pages, added `CollectionPage` via [CollectionPage VS WebPage differentiation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/d1f5146f08bdb231abd71535c2a82bc741b7fd19) to Main Site Header
-12.  ...
+12.  Added [Person](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4d89df66e88c819e695c84292ebc55cbd8c3a6b6) to Author Pages and made authors the mainEntity of the page.  Note: had to write [a custom PHP function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/eb5c52886dcf07325e0e0465863b0d84ed856357) to inject `itemprop="image"` into the `<img>` tag of author photos, regardless of whether WP Social Avatar or default Gravatar is being used.
+13.  ...
 
 
 
@@ -190,7 +191,8 @@ Earmilk redesign project
 6.  Fixed Sitemap (several plugin issues were resolved to make it work)
 7.  Added robot.txt to `file2.` (Montrey) and `mooks.` subdomains to prevent caching unnecessary files 
 8.  WOOHOO! Auto-posting to [Google+](https://plus.google.com/+earmilk/posts) via [RSSFeed](http://earmilk/feed/) and [Hootsuite](https://hootsuite.com) finally setup!
-9.  ...
+9.  Fixed RSS Feed so that now it [loads ALL post types](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/2b32148db9ff1b50da83af54533ccf17944e0a2d), including the custom types
+10.  ...
 
 
 
