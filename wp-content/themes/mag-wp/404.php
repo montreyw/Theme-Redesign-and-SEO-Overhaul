@@ -183,7 +183,7 @@ get_header(); ?>
 			}
 			.page-error #err-human-poem h3 {
 				color: #e34848;
-				margin: 0;
+				margin: 0 0 16px;
 				padding: 0;
 			}
 			.page-error #err-human-poem em {
@@ -196,6 +196,9 @@ get_header(); ?>
 			}
 			.page-error #err-human-poem em a:hover {
 				text-decoration: underline
+			}
+			#err-human-poem .col-md-3 {
+				margin: 26px 0 0 0;
 			}
 			.row:before, .row:after {
 				content: " ";
