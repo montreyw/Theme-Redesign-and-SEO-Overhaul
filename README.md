@@ -35,6 +35,7 @@ Earmilk redesign project
 - [x] Fix Favicon icon issue for Apple
 - [x] Install mobile app view manifest.json
 - [x] Install full favicon suite for all devices
+- [x] New 404 page
 - [ ] Implement new bottle favicon
 - [ ] Look into [AppCache](http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
 - [ ] New Search function
@@ -120,7 +121,8 @@ Earmilk redesign project
 33.  Added nifty Left Stage to the ... left of Main Stage on the front page ([Left Stage structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5240444a93de1c9fa2b2b412a9600db9b4af757c), [style(https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/574681198b2bed7a54d431f6a7b2b41449cee39a))
 34.  Coded a [basic function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/88a8a4d822428c26e183dae080a66f94386f7283) to trigger Next and Previous of Owl Carousel with keyboard keys
 35.  New Interview Post question and answer [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7acd32bc47f979a3fff4573bb407cafade2cfb2f)
-36.  ...
+36.  New [404 page](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/11d1e0f0b0d8a86e0bca3d1f3f5698d858862e78) according to design from [EARMILK 2.0](http://old.earmilk.com:81/favicon.ico2)
+37.  ...
 
 
 - [Back to top ^](#table-of-contents)  
