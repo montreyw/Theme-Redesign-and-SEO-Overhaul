@@ -2597,7 +2597,8 @@ body #responsive-menu #responsive-menu-title {
 	}
 	#main-stage-split .big-thing-box {
 		width: 100%;
-		height: 368px;
+		height: 400px;
+		min-height: 400px;
 		margin: 0 0 50px;
 		-webkit-box-ordinal-group: 1;
 		-moz-box-ordinal-group: 1;
