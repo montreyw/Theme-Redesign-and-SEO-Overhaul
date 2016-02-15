@@ -28,24 +28,26 @@
 			</div>
 		<?php } elseif (is_author()) { ?>
 			<?php  
+				$user_id = get_the_author_meta( 'ID' );
 				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 				$args = array(
 					'posts_per_page' => 12,
 					'paged'          => $paged,
 					'post_type'      => array( 'post', 'opinion_post', 'gear_post', 'album_review', 'news'),
-					'author__in'     => get_the_author_meta( 'ID' )
+					'author__in'     => $user_id
 			);
 			query_posts( $args );  ?> 
 				<?php if(get_the_author_meta('description') ): ?>
-				<div class="archive-header">
-					<h1 rel="tag"><?php the_author_posts_link(); ?></h1>
+				<div class="archive-header" 
+					itemprop="mainEntity" itemscope itemtype="https://schema.org/Person">
+					<h1 rel="tag" itemprop="name"><?php the_author_posts_link(); ?></h1>
 					<div class="author-meta">
 						<div class="entry">
 							<div class="author-photo-cont">
-								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" class="author-nrposts">
+								<a href="<?php echo get_author_posts_url( $user_id ); ?>" class="author-nrposts">
 									<?php echo number_format_i18n( get_the_author_posts() ); ?>
 								</a>
-								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" class="author-photo-anchor">
+								<a href="<?php echo get_author_posts_url( $user_id ); ?>" class="author-photo-anchor">
 									<?php echo get_avatar( get_the_author_meta( 'user_email' ), 300 ); ?>
 								</a>
 							</div>
@@ -147,7 +149,7 @@
 					</div>
 					<span class="vcard author p-author h-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
 						<span class="fn" itemprop="name">
-							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" itemprop="url">
+							<a href="<?php echo get_author_posts_url( $user_id ); ?>" itemprop="url">
 								<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
 								<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
 							</a>
