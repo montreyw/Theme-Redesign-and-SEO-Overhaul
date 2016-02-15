@@ -1121,12 +1121,12 @@ ul.big-thing div.owl-item li h2.article-title.entry-title a {
 	background: #FBFBFB;
 }
 .owl-theme .owl-controls .owl-buttons .owl-prev{
-	background: linear-gradient(to right,#FBFBFB 60%,rgba(255,255,255,0));
+	background: linear-gradient(to right,#FBFBFB 73%,rgba(255,255,255,0));
 	padding: 8px 20px 8px 7px;
 	left: 0;
 }
 .owl-theme .owl-controls .owl-buttons .owl-next{
-	background: linear-gradient(to left,#FBFBFB 60%,rgba(255,255,255,0));
+	background: linear-gradient(to left,#FBFBFB 73%,rgba(255,255,255,0));
 	padding: 8px 7px 8px 20px;
 	right: 0;
 }
