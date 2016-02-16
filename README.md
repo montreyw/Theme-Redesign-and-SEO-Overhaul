@@ -49,6 +49,7 @@ Earmilk redesign project
 - [x] Look into Facebook native comments solution
 - [x] Make all facebook comment count reflect in the posts-grid comment count
 - [x] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
+- [x] Remove duplicate, error-prone Events ld+json schema block
 - [ ] Change all image attachments image-link-type's in posts to file or none
 - [ ] Add Extra AUthor Disclosure info to author meta
 - [x] Implement Colorful Genre Bar from old.V2
@@ -182,7 +183,8 @@ Earmilk redesign project
 10.  Added [Image Object](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4519b255f09d2ce100d07d6ea17c7655d5e9662a) Schema added to NewsArticle index.php
 11.  For Author Pages, added `CollectionPage` via [CollectionPage VS WebPage differentiation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/d1f5146f08bdb231abd71535c2a82bc741b7fd19) to Main Site Header
 12.  Added [Person](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4d89df66e88c819e695c84292ebc55cbd8c3a6b6) to Author Pages and made authors the mainEntity of the page.  Note: had to write [a custom PHP function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/eb5c52886dcf07325e0e0465863b0d84ed856357) to inject `itemprop="image"` into the `<img>` tag of author photos, regardless of whether WP Social Avatar or default Gravatar is being used.
-13.  ...
+13.  Removed duplicate, error-prone The Events Calendar `ld+json` Schema.org markup block via [function.php function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c75745b607dc4a2318fcc817616c3c838c01edff)
+14.  ...
 
 
 
