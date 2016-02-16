@@ -2033,6 +2033,11 @@ img#wpstats {
 
 /* Mobile */
 div#click-menu {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	-o-box-sizing: content-box;
+	box-sizing: content-box;
 	background: #E34848;
 	height: 35px;
 	left: 0;
