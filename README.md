@@ -28,6 +28,7 @@ Earmilk redesign project
 - [x] Add Facebook Like Buttons to Social Sidebar
 - [x] Add Google+ Buttons to Social Sidebar
 - [x] Add Funtime Out Events Festivals to the nav menu
+- [ ] Write a script that will make the first word interview/er/ee name bold on Interview Posts
 - [ ] Place ads
 - [x] Set up auto-posting for Google+
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
