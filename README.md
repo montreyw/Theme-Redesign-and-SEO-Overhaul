@@ -28,7 +28,7 @@ Earmilk redesign project
 - [x] Add Facebook Like Buttons to Social Sidebar
 - [x] Add Google+ Buttons to Social Sidebar
 - [x] Add Funtime Out Events Festivals to the nav menu
-- [ ] Write a script that will make the first word interview/er/ee name bold on Interview Posts
+- [x] Write a script that will make the first word interview/er/ee name bold on Interview Posts
 - [ ] Place ads
 - [x] Set up auto-posting for Google+
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
@@ -125,7 +125,8 @@ Earmilk redesign project
 34.  Coded a [basic function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/88a8a4d822428c26e183dae080a66f94386f7283) to trigger Next and Previous of Owl Carousel with keyboard keys
 35.  New Interview Post question and answer [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7acd32bc47f979a3fff4573bb407cafade2cfb2f)
 36.  New [404 page](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/11d1e0f0b0d8a86e0bca3d1f3f5698d858862e78) according to design from [EARMILK 2.0](http://old.earmilk.com:81/favicon.ico2)
-37.  ...
+37.  Interviewer and Interviewee names in Interview posts [will now have their names boldened](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ae468d5bf8d03c7a8f43074204158cf0655a8b5f) even if the markup protocol is not followed properly by the writer
+38.  ...
 
 
 - [Back to top ^](#table-of-contents)  
