@@ -55,12 +55,14 @@ get_header(); ?>
 				margin: 15px 0 15px 0;
 				margin-top: 20px;
 				margin-bottom: 20px;
-/* 				border: 0; */
 				border-top: 1px solid #eee;
+				z-index: -1;
+				position: relative;
 			}
 			.post_content {
 				background: url("http://www.pixeljoint.com/files/icons/full/mangawar.png") no-repeat left bottom;
 				background-position: 19px 113px;
+				position: relative;
 			}
 			.post_content li {
 				list-style: circle;
@@ -70,7 +72,6 @@ get_header(); ?>
 			}
 			#box {
 				margin: 0 auto;
-	/* 			background: url(/images/bg_body.gif) repeat; */
 				clear: both;
 			}
 			#layout-content-wrapper {
