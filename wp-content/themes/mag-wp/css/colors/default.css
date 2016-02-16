@@ -1782,6 +1782,8 @@ h6.post-question {
 h6.post-answer {
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	margin-top: 16px;
+	margin-bottom: 17px;
 }
 h6.post-question strong,  
 h6.post-answer strong {
