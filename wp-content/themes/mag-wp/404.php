@@ -243,6 +243,7 @@ get_header(); ?>
 									<?php
 										$path=$_SERVER['REQUEST_URI'];
 										$URI='http://earmilk.com'.$path;
+										$path=ltrim($path, '/');
 									?>
 									<li><a href="/?s=<?php echo $path ?>">Search for missing page related to "<!--
 										--><span id="search-string"><?php echo $path ?></span>"</a> <em>(recommended!)</em></li>
