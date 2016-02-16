@@ -482,21 +482,4 @@ add_filter('request', 'myfeed_request');
 // ---------------------------------------------------------------------------------------------------- 
 // Remove unnecessary JSON+LD schema block being added by The Events Calendar to Events pages - Andre
 // ---------------------------------------------------------------------------------------------------- 
-/*
-global $Tribe__Events__Template__Single_Event;
-remove_action( 'wp_head', array( $Tribe__Events__Template__Single_Event, 'google_data_markup' ) );
-remove_action( 'wp_head', array( &$Tribe__Events__Template__Single_Event, 'google_data_markup' ) );
-global $Tribe__Events__Template_Factory;
-remove_action( 'wp_head', array( $Tribe__Events__Template_Factory, 'google_data_markup' ) );
-remove_action( 'wp_head', array( &$Tribe__Events__Template_Factory, 'google_data_markup' ) );
-*/
-//remove_action( 'Tribe__Events__Template__Single_Event', array( 'Tribe__Events__Template__Single_Event', 'google_data_markup' ) );
-
-/*
-function remove_the_events_calendar_jsonld() {
-	remove_action( 'wp_head', array( $Tribe__Events__Template__Single_Event, 'google_data_markup' ) );
-}
-add_action( 'plugins_loaded', 'remove_the_events_calendar_jsonld', 1 );
-*/
-//global $wp_filter; print_r($wp_filter);
 add_filter( 'tribe_google_data_markup_json', '__return_empty_string', 20 );
