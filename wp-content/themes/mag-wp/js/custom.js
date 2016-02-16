@@ -60,7 +60,7 @@ jQuery( document ).ready( function( $ ) {
 
 
 	///////////////////////////////////////    
-	// Slider Featured Articles
+	// Slider Featured Articles - Andre
 	///////////////////////////////////////    
 	var owl = jQuery('.big-thing');
     owl.owlCarousel({
@@ -128,6 +128,15 @@ jQuery( document ).ready( function( $ ) {
 */		
 	}
 
+
+	//////////////////////////////////////////////////////////////////
+	// Style the first word of Interview Quetions and Answers - Andre
+	//////////////////////////////////////////////////////////////////
+	$('.post-question, .post-answer').each(function(){
+		var postQA = $(this);
+		var intervText = postQA.text().split(' ');
+		postQA.html( '<span class="interviewee">'+intervText.shift()+'</span> '+intervText.join(' ') );
+	});
 
 
 	///////////////////////////////////////    
