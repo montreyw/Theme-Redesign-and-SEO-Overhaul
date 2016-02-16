@@ -1,4 +1,4 @@
-EARMILK Stylin'
+[EARMILK Stylin'](http://mooks.earmilk.com/style)
 
 At EARMILK we try to give our contributors as much freedom as possible, so they can express themselves accordingly. We’re not going to restrict what artists you want to write about so we’ll just be outlining the bare minimum we want to see out of a writeup. The following is a style guide & tutorial on the basics of how we post on EARMILK. Everyone using similar styles will allow our readers to easily find what they are looking for in each post, as well as give our website a cleaner more polished look.
 Table of contents
