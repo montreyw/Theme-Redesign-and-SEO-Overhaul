@@ -134,9 +134,10 @@ jQuery( document ).ready( function( $ ) {
 	//////////////////////////////////////////////////////////////////
 	$('.post-question, .post-answer').each(function(){
 		var postQA = $(this);
-		var intervText = postQA.text().split(' ');
-		postQA.html( '<span class="interviewee">'+intervText.shift()+'</span> '+intervText.join(' ') );
+		var intervText = postQA.text().split(':');
+		postQA.html( '<span class="interviewee">'+intervText.shift()+':</span> '+intervText.join('') );
 	});
+
 
 
 	///////////////////////////////////////    
