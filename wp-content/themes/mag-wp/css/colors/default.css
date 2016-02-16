@@ -1787,8 +1787,10 @@ h6.post-question strong,
 h6.post-answer strong {
 	color: #000;
 }
-
-
+h6.post-question .interviewee,  
+h6.post-answer .interviewee {
+	font-weight: bold;
+}
 /* Author Writer Page */
 .author-meta,
 .author-meta img.avatar,
