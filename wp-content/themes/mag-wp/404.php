@@ -71,8 +71,9 @@ get_header(); ?>
 				list-style-position: inside;
 			}
 			#box {
-				margin: 0 auto;
+				margin: 0 auto 30px;
 				clear: both;
+				padding: 0 27.5px;
 			}
 			#layout-content-wrapper {
 				clear: both
