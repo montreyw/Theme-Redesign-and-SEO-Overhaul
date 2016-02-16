@@ -77,6 +77,7 @@ Earmilk redesign project
 - [ ] A solution for photo sourcing (possible a community effort or a filtering functionality plugn)
 - [ ] Remove all `&quot;`s from posts in `src="&quot;http...`
 - [ ] LazyLoader for SoundCloud embeds
+- [ ] Look into how Writer tools for posts like Interviews and Events can be improved for posting ease and style consistency
 - [ ] START ALL OVER :D -- New Theme / PHP Infrastructure
 - [ ] ...
 
