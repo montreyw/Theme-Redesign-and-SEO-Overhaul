@@ -483,3 +483,15 @@ add_filter('request', 'myfeed_request');
 // Remove unnecessary JSON+LD schema block being added by The Events Calendar to Events pages - Andre
 // ---------------------------------------------------------------------------------------------------- 
 add_filter( 'tribe_google_data_markup_json', '__return_empty_string', 20 );
+
+// ---------------------------------------------------------------------------------------------------- 
+// Register Genre Bar Navigation Manu to enable dynamic functionality - Andre
+// ---------------------------------------------------------------------------------------------------- 
+function register_genre_bar_menu() {
+	register_nav_menus(
+		array(
+			'genre-bar-menu' => __( 'Genre Bar Menu' )
+		)
+	);
+}
+add_action( 'init', 'register_genre_bar_menu' );
