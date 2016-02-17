@@ -1067,7 +1067,7 @@ ul.big-thing div.owl-item li .article-category .tiptipBlog {
 ul.big-thing div.owl-item li .an-widget-title {
 	min-height: 86px;
 	height: 86px;
-	width: 90%;
+	width: 87%;
 	display: table;
 	bottom: 0;
 	position: relative;
@@ -1116,13 +1116,13 @@ ul.big-thing div.owl-item li h2.article-title.entry-title a {
 	background: #FBFBFB;
 }
 .owl-theme .owl-controls .owl-buttons .owl-prev{
-	background: linear-gradient(to right,#FBFBFB 73%,rgba(255,255,255,0));
-	padding: 8px 20px 8px 7px;
+	background: linear-gradient(to right,#FBFBFB 53%,rgba(255,255,255,0));
+	padding: 8px 10px 8px 7px;
 	left: 0;
 }
 .owl-theme .owl-controls .owl-buttons .owl-next{
-	background: linear-gradient(to left,#FBFBFB 73%,rgba(255,255,255,0));
-	padding: 8px 7px 8px 20px;
+	background: linear-gradient(to left,#FBFBFB 53%,rgba(255,255,255,0));
+	padding: 8px 7px 8px 10px;
 	right: 0;
 }
 .owl-theme .owl-controls .owl-buttons i {

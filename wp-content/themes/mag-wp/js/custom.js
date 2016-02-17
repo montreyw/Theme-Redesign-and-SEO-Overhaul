@@ -86,6 +86,8 @@ jQuery( document ).ready( function( $ ) {
 		}
 	});
 	function customOwl() {
+
+		// proper fade-in fade-out effect for muscial loading equalizer animation and Main Stage
 		setTimeout( function(){ 
 			setTimeout( function(){ 
 				owl.addClass('carousel-visible'); 
@@ -93,6 +95,24 @@ jQuery( document ).ready( function( $ ) {
 			$('#main-stage-loader').addClass('main-stage-loaded'); 
 		}, 1370);
 
+		// Get Max height of variable length title boxes and set all boxes to this height 
+		// this ensures the titles will fade away under the nav arrows on small devices
+		var maxHeight = Math.max.apply(null, $("div.an-widget-title").map(function ()	{
+			return $(this).height();
+		}).get());
+		$("div.an-widget-title").height(maxHeight);
+		// Set the proper cooresponding height and top-position of nav arrows
+		var mainStageImg = $('.entry-thumb-cont');
+		var mainStageImgBtm = mainStageImg.position().top + mainStageImg.outerHeight(true);
+		$('.owl-buttons div').css({
+			'padding-top': '0',
+			'padding-bottom': '0',
+			'height': maxHeight,
+			'line-height': maxHeight+'px',
+			'top': mainStageImgBtm
+		});
+
+		// Create and append thumbnail image pagination
 		$('.owl-controls .owl-page').append('<a class="item-link" href="#"/>');
 		var paginatorsLink = $('.owl-controls .item-link');
 		$.each(this.owl.userItems, function (i) {
