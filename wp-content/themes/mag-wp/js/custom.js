@@ -107,9 +107,11 @@ jQuery( document ).ready( function( $ ) {
 		$('.owl-buttons div').css({
 			'padding-top': '0',
 			'padding-bottom': '0',
-			'height': maxHeight,
-			'line-height': maxHeight+'px',
+			'height': maxHeight - 1,
 			'top': mainStageImgBtm
+		});
+		$('.owl-buttons div i').css({
+			'line-height': maxHeight+'px'
 		});
 
 		// Create and append thumbnail image pagination
