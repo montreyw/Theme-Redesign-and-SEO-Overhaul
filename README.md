@@ -37,7 +37,7 @@ Earmilk redesign project
 - [x] Install mobile app view manifest.json
 - [x] Install full favicon suite for all devices
 - [x] New 404 page
-- [ ] Implement new bottle favicon
+- [x] Implement new bottle favicon
 - [ ] Look into [AppCache](http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
 - [ ] New Search function
 - [ ] Add Previous Next navigation to bottom of single posts
