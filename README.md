@@ -221,7 +221,10 @@ Earmilk redesign project
 8.  Added functions.php filter to remove annoying, spammy, and meaningless [Yoast notifications](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/1efbc3c9675c6be5c9cfb52ec9e1543f432bf66d)
 9.  Installed new suite of favicons for all devices and platforms ([files](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/2a4dd566cafeb9f6efc1ed01ae1392247714b902), [header.php references](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a668f4c262a64d01680da88b7197863e1d394498), [validation test](http://realfavicongenerator.net/favicon_checker?site=earmilk.com&ignore_root_issues=on#.VsA34JMrKHp))
 10.  Set up EARMILK Bookmark on Android as Standalone App via `manifest.json` ([reference](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a668f4c262a64d01680da88b7197863e1d394498), [file](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/2a4dd566cafeb9f6efc1ed01ae1392247714b902))
-11.  ...
+11.  Made Genre Bar Dynamic and editable from the backend ([functions.php registetration](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/68c41356fdaada4fce43cf4b2f83fb3b31b00c54), [structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/cfd52ca7df161b137e84d2bc6dd625e46e740754), [javascript](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f43af698d3e7ff7255292db4540c52d59c898cc2), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8c8b6d11f6cb43ebd9d360e3caf19420a77f8e64))
+12.  Placed ads ([header/header.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/00464a3f4bdd9f2e40e0d94ad1d3194c38f2f316))
+13.  ...
+
 
 
 - [Back to top ^](#table-of-contents)  
