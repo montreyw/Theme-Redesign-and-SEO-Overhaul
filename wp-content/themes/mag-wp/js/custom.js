@@ -89,7 +89,7 @@ jQuery( document ).ready( function( $ ) {
 		setTimeout( function(){ 
 			setTimeout( function(){ 
 				owl.addClass('carousel-visible'); 
-			}, 137);
+			}, 37);
 			$('#main-stage-loader').addClass('main-stage-loaded'); 
 		}, 1370);
 
