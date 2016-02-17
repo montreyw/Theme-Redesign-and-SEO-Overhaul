@@ -6,13 +6,13 @@ jQuery( document ).ready( function( $ ) {
 	// Genre Bar - Andre
 	///////////////////////////////////////    
 	function genreBar() {
-	    $(document).on("mouseover", ".genrebar ul li.maingenre", function() {
+	    $(document).on("mouseover", ".genrebar ul.mainmenu > li.menu-item", function() {
 	        var $this = $(this);
-			if ( ( $(".subgenres", $this).css({
-				display: "block",
+			if ( ( $(".sub-menu", $this).css({
+				display: "table",
 				opacity: 1
 			}) ) ) {
-	        $(".subgenres", $this).stop().animate({
+	        $(".sub-menu", $this).stop().animate({
 	            opacity: 1
 	        }),
 	        $("a:first", $this).addClass("active"),
@@ -20,9 +20,9 @@ jQuery( document ).ready( function( $ ) {
 	            opacity: 1
 	        })
 			}
-	    }).on("mouseout", ".genrebar ul li.maingenre", function() {
+	    }).on("mouseout", ".genrebar ul.mainmenu > li.menu-item", function() {
 	        var $this = $(this);
-	        $(".subgenres", $this).stop().animate({
+	        $(".sub-menu", $this).stop().animate({
 	            opacity: 0
 	        }, 750, function() {
 	            $(this).css("display", "none")
