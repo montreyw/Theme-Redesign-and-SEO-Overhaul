@@ -205,11 +205,10 @@
 		$genre_bar_args = array(
 			'menu'=>'genre-bar',
 			'container'=>'nav',
-			'container_class'=>'genrebar', //menu-{menu slug}-container
+			'container_class'=>'genrebar',
 			'items_wrap' => '<ul class="mainmenu">%3$s</ul>'
 		);
-		wp_nav_menu( $genre_bar_args ); 
-		//include("custom/Genre-Bar-static-HTML.php"); ?>
+		wp_nav_menu( $genre_bar_args ); ?>
 
 	<div id="inner-header">
 		<div id="logo-cont">
