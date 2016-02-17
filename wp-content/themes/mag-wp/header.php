@@ -157,6 +157,26 @@
 	  })();
 	</script>
 	
+	<script type='text/javascript'>
+	  googletag.cmd.push(function() {
+		googletag.defineSlot('/11347700/EM_ATF_ATB_900x90', [[728, 90], [970, 90]], 'div-gpt-ad-1455694346925-0').addService(googletag.pubads());
+		googletag.defineSlot('/11347700/Leaderboard', [[970, 90], [970, 250], [728, 90]], 'div-gpt-ad-1455698643418-1').addService(googletag.pubads());
+		googletag.defineSlot('/11347700/Hybrid_MPU', [[300, 250], [300, 600]], 'div-gpt-ad-1455698643418-2').addService(googletag.pubads());
+		googletag.defineSlot('/11347700/Wallpaper', [1, 1], 'div-gpt-ad-1455698643418-3').addService(googletag.pubads());
+/*
+	    googletag.defineSlot('/11347700/Leaderboard', [[970, 250], [728, 90], [970, 90]], 'div-gpt-ad-1454727873765-0').setTargeting('Redirect', ['false']).addService(googletag.pubads());
+	    googletag.defineSlot('/11347700/Leaderboard2', [[970, 250], [728, 90], [970, 90]], 'div-gpt-ad-1454727873765-1').addService(googletag.pubads());
+	    googletag.defineSlot('/11347700/Hybrid_MPU', [[300, 250], [300, 600]], 'div-gpt-ad-1454727873765-2').addService(googletag.pubads());
+	    googletag.defineSlot('/11347700/MPU', [300, 250], 'div-gpt-ad-1454727873765-3').addService(googletag.pubads());
+	    googletag.defineSlot('/11347700/Wallpaper', [1, 1], 'div-gpt-ad-1454727873765-4').addService(googletag.pubads());
+*/
+	    googletag.pubads().enableSingleRequest();
+	    googletag.pubads().collapseEmptyDivs();
+	    googletag.pubads().setTargeting('Redirect', ['false']);
+	    googletag.pubads().enableSyncRendering();
+	    googletag.enableServices();
+	  });
+	</script>
 
     <!-- Theme output -->
     <?php wp_head(); ?> 
@@ -235,6 +255,14 @@
 
 
 
+<!-- /11347700/Wallpaper -->
+<!--
+<div id='div-gpt-ad-1454727873765-4' style='height:1px; width:1px;'>
+	<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-4'); });
+	</script>
+</div>
+-->
 
 
 
@@ -282,6 +310,22 @@
     <!-- The next big Thing Section -->
     <div id="featured-boxes">
 
+		<!-- /11347700/Leaderboard -->
+<!--
+		<div id='div-gpt-ad-1454727873765-0'>
+			<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0'); });
+			</script>
+		</div>
+-->
+		<div id="atf-970x90-ad-slot" class="ad-slot">
+			<!-- /11347700/EM_ATF_ATB_900x90 -->
+			<div id="div-gpt-ad-1455694346925-0">
+				<script type="text/javascript">
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1455694346925-0'); });
+				</script>
+			</div>
+		</div>
 
 		<div class="wrap-center">
 			<?php //echo get_template_part('custom/region/left-big-thing'); ?>
