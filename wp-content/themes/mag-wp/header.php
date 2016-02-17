@@ -157,20 +157,6 @@
 	  })();
 	</script>
 	
-	<script type='text/javascript'>
-	  googletag.cmd.push(function() {
-	    googletag.defineSlot('/11347700/Leaderboard', [[970, 250], [728, 90], [970, 90]], 'div-gpt-ad-1454727873765-0').setTargeting('Redirect', ['false']).addService(googletag.pubads());
-	    googletag.defineSlot('/11347700/Leaderboard2', [[970, 250], [728, 90], [970, 90]], 'div-gpt-ad-1454727873765-1').addService(googletag.pubads());
-	    googletag.defineSlot('/11347700/Hybrid_MPU', [[300, 250], [300, 600]], 'div-gpt-ad-1454727873765-2').addService(googletag.pubads());
-	    googletag.defineSlot('/11347700/MPU', [300, 250], 'div-gpt-ad-1454727873765-3').addService(googletag.pubads());
-	    googletag.defineSlot('/11347700/Wallpaper', [1, 1], 'div-gpt-ad-1454727873765-4').addService(googletag.pubads());
-	    googletag.pubads().enableSingleRequest();
-	    //googletag.pubads().collapseEmptyDivs();
-	    googletag.pubads().setTargeting('Redirect', ['false']);
-	    googletag.pubads().enableSyncRendering();
-	    googletag.enableServices();
-	  });
-	</script>
 
     <!-- Theme output -->
     <?php wp_head(); ?> 
@@ -195,7 +181,15 @@
 <!-- Begin Header -->
 <div id="fixed-header">
 
-	<?php include("custom/Genre-Bar-static-HTML.php"); ?>
+	<?php 
+		$genre_bar_args = array(
+			'menu'=>'genre-bar',
+			'container'=>'nav',
+			'container_class'=>'genrebar', //menu-{menu slug}-container
+			'items_wrap' => '<ul class="mainmenu">%3$s</ul>'
+		);
+		wp_nav_menu( $genre_bar_args ); 
+		//include("custom/Genre-Bar-static-HTML.php"); ?>
 
 	<div id="inner-header">
 		<div id="logo-cont">
@@ -240,12 +234,6 @@
 <div id="header-filler"></div>
 
 
-<!-- /11347700/Wallpaper -->
-<div id='div-gpt-ad-1454727873765-4' style='height:1px; width:1px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-4'); });
-</script>
-</div>
 
 
 
@@ -294,12 +282,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-4');
     <!-- The next big Thing Section -->
     <div id="featured-boxes">
 
-<!-- /11347700/Leaderboard -->
-<div id='div-gpt-ad-1454727873765-0'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1454727873765-0'); });
-</script>
-</div>
 
 		<div class="wrap-center">
 			<?php //echo get_template_part('custom/region/left-big-thing'); ?>
