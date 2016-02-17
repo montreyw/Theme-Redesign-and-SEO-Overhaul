@@ -2026,19 +2026,20 @@ img#wpstats {
 
 
 /* Google ad -- also disabled in index.html line 139 */
-.home-728 {
+.ad-slot {
+	margin: 0 auto;
 	display: none;
 }
-.top-leaderboard {
-    display: none;
-}
-.img-300 {
-	display: none;
-}
-#gfp-above-banner {
+.ad-slot > div {
 	margin: 0 auto;
 }
-
+#atf-970x90-ad-slot {
+	margin: 20px auto;
+}
+#atf-970x90-ad-slot > div {
+	min-width: 728px;
+	max-width: 732px;
+}
 
 
 
@@ -2765,24 +2766,20 @@ form#searchform {
 */
 /* Genre Bar */
 .genrebar {
+	border-bottom: 3px solid #e5e5e5;
 	-webkit-transition: all .5s ease;
 	-moz-transition: all .5s ease;
 	-ms-transition: all .5s ease;
 	-o-transition: all .5s ease;
 	transition: all .5s ease;
-	/* 	display: none; */
-	min-height: 17px;
 	position: absolute;
-	width: 100%;
+	min-height: 17px;
 	background: #fff;
+	width: 100%;
 	bottom: 0;
 	margin: 0;
-	opacity: 0.573;
 	z-index: 10000;
-	border-bottom: 3px solid #e5e5e5;
-}
-.genrebar:hover {
-	opacity: 1;
+	text-transform: uppercase;
 }
 .genrebar ul {
 	display: table;
@@ -2843,7 +2840,23 @@ form#searchform {
     }
 }
 .genrebar ul li {
-    display: table-cell
+    display: table-cell;
+	opacity: 0.573;
+}
+.genrebar:hover ul li {
+	opacity: 1;
+}
+.genrebar ul li:hover {
+	opacity: 1;
+}
+.genrebar .mainmenu .current-category-ancestor, 
+.genrebar .mainmenu .current-menu-ancestor, 
+.genrebar .mainmenu .current-menu-parent, 
+.genrebar .mainmenu .current-category-parent {
+	opacity: 1;
+}
+.genrebar .mainmenu .current-menu-item {
+	opacity: 1;
 }
 .genrebar ul li a {
 	font-size: 12px;
@@ -2866,10 +2879,10 @@ form#searchform {
 	color: #000 !important;
     text-decoration: none;
 }
-.genrebar ul li .subgenres a:hover {
+.genrebar ul li .sub-menu a:hover {
     color: #fff !important;
 }
-.genrebar .subgenres {
+.genrebar .sub-menu {
 	display: none;
 	position: absolute;
 	left: 0;
@@ -2878,25 +2891,25 @@ form#searchform {
 	padding-bottom: 0;
 	background: #fff;
 }
-.genrebar .subgenres ul {
+.genrebar ul.sub-menu {
 }
-.genrebar .subgenres ul li {
+.genrebar ul.sub-menu li {
     font-size: 12px;
     color: #313131;
     margin: 0 2px 0 0;
     padding: 0;
 }
-.genrebar .subgenres ul li a {
+.genrebar ul.sub-menu li a {
 	font-size: 11px;
 	border: 0;
 	height: 30px;
 	line-height: 30px;
 	color: #fff;
 }
-.genrebar li.active .subgenres {
+.genrebar li.active .sub-menu {
     display: block!important;
 }
-.default .genrebar .subgenres {
+.default .genrebar .sub-menu {
     display: block!important;
 }
 .genrebar ul li.active a {
@@ -2909,10 +2922,10 @@ form#searchform {
 .genrebar ul li.feature a {
     border-bottom-color: #2e2e2e
 }
-.genrebar ul li.feature .subgenres a {
+.genrebar ul li.feature .sub-menu a {
     background-color: #000
 }
-.genrebar ul li.feature .subgenres a:hover {
+.genrebar ul li.feature .sub-menu a:hover {
     color: #848484;
     background-color: #2e2e2e
 }
@@ -2922,10 +2935,10 @@ form#searchform {
 .genrebar ul li.dance a {
     border-bottom-color: #e2d059
 }
-.genrebar ul li.dance .subgenres a {
+.genrebar ul li.dance .sub-menu a {
     background-color: #8a7b18
 }
-.genrebar ul li.dance .subgenres a:hover {
+.genrebar ul li.dance .sub-menu a:hover {
     color: #848484;
     background-color: #e2d059
 }
@@ -2935,10 +2948,10 @@ form#searchform {
 .genrebar ul li.hip-hop a {
     border-bottom-color: #e99b37
 }
-.genrebar ul li.hip-hop .subgenres a {
+.genrebar ul li.hip-hop .sub-menu a {
     background-color: #7a4a0d
 }
-.genrebar ul li.hip-hop .subgenres a:hover {
+.genrebar ul li.hip-hop .sub-menu a:hover {
     color: #848484;
     background-color: #e99b37
 }
@@ -2948,10 +2961,10 @@ form#searchform {
 .genrebar ul li.hiphop a {
     border-bottom-color: #e99b37
 }
-.genrebar ul li.hiphop .subgenres a {
+.genrebar ul li.hiphop .sub-menu a {
     background-color: #7a4a0d
 }
-.genrebar ul li.hiphop .subgenres a:hover {
+.genrebar ul li.hiphop .sub-menu a:hover {
     color: #848484;
     background-color: #e99b37
 }
@@ -2961,10 +2974,10 @@ form#searchform {
 .genrebar ul li.electronic a {
     border-bottom-color: #48b9e3
 }
-.genrebar ul li.electronic .subgenres a {
+.genrebar ul li.electronic .sub-menu a {
     background-color: #13627f
 }
-.genrebar ul li.electronic .subgenres a:hover {
+.genrebar ul li.electronic .sub-menu a:hover {
     color: #848484;
     background-color: #48b9e3
 }
@@ -2974,10 +2987,10 @@ form#searchform {
 .genrebar ul li.experimental a {
     border-bottom-color: #754aab
 }
-.genrebar ul li.experimental .subgenres a {
+.genrebar ul li.experimental .sub-menu a {
     background-color: #2c1c40
 }
-.genrebar ul li.experimental .subgenres a:hover {
+.genrebar ul li.experimental .sub-menu a:hover {
     color: #848484;
     background-color: #754aab
 }
@@ -2987,10 +3000,10 @@ form#searchform {
 .genrebar ul li.pop a {
     border-bottom-color: #469e6c
 }
-.genrebar ul li.pop .subgenres a {
+.genrebar ul li.pop .sub-menu a {
     background-color: #173424
 }
-.genrebar ul li.pop .subgenres a:hover {
+.genrebar ul li.pop .sub-menu a:hover {
     color: #848484;
     background-color: #469e6c
 }
@@ -3000,10 +3013,10 @@ form#searchform {
 .genrebar ul li.mash-up a {
     border-bottom-color: #469e6c
 }
-.genrebar ul li.mash-up .subgenres a {
+.genrebar ul li.mash-up .sub-menu a {
     background-color: #173424
 }
-.genrebar ul li.mash-up .subgenres a:hover {
+.genrebar ul li.mash-up .sub-menu a:hover {
     color: #848484;
     background-color: #469e6c
 }
@@ -3013,10 +3026,10 @@ form#searchform {
 .genrebar ul li.rap a {
     border-bottom-color: #e99b37
 }
-.genrebar ul li.rap .subgenres a {
+.genrebar ul li.rap .sub-menu a {
     background-color: #7a4a0d
 }
-.genrebar ul li.rap .subgenres a:hover {
+.genrebar ul li.rap .sub-menu a:hover {
     color: #848484;
     background-color: #e99b37
 }
@@ -3026,10 +3039,10 @@ form#searchform {
 .genrebar ul li.indie a {
     border-bottom-color: #e34848
 }
-.genrebar ul li.indie .subgenres a {
+.genrebar ul li.indie .sub-menu a {
     background-color: #7f1313
 }
-.genrebar ul li.indie .subgenres a:hover {
+.genrebar ul li.indie .sub-menu a:hover {
     color: #848484;
     background-color: #e34848
 }
@@ -3039,10 +3052,10 @@ form#searchform {
 .genrebar ul li.alternative a {
     border-bottom-color: #e34848
 }
-.genrebar ul li.alternative .subgenres a {
+.genrebar ul li.alternative .sub-menu a {
     background-color: #7f1313
 }
-.genrebar ul li.alternative .subgenres a:hover {
+.genrebar ul li.alternative .sub-menu a:hover {
     color: #848484;
     background-color: #e34848
 }
@@ -3052,10 +3065,10 @@ form#searchform {
 .genrebar ul li.blues a {
     border-bottom-color: #754aab
 }
-.genrebar ul li.blues .subgenres a {
+.genrebar ul li.blues .sub-menu a {
     background-color: #2c1c40
 }
-.genrebar ul li.blues .subgenres a:hover {
+.genrebar ul li.blues .sub-menu a:hover {
     color: #848484;
     background-color: #754aab
 }
@@ -3065,10 +3078,10 @@ form#searchform {
 .genrebar ul li.rock a {
     border-bottom-color: #754aab
 }
-.genrebar ul li.rock .subgenres a {
+.genrebar ul li.rock .sub-menu a {
     background-color: #2c1c40
 }
-.genrebar ul li.rock .subgenres a:hover {
+.genrebar ul li.rock .sub-menu a:hover {
     color: #848484;
     background-color: #754aab
 }
@@ -3078,10 +3091,10 @@ form#searchform {
 .genrebar ul li.downtempo a {
     border-bottom-color: #754aab
 }
-.genrebar ul li.downtempo .subgenres a {
+.genrebar ul li.downtempo .sub-menu a {
     background-color: #2c1c40
 }
-.genrebar ul li.downtempo .subgenres a:hover {
+.genrebar ul li.downtempo .sub-menu a:hover {
     color: #848484;
     background-color: #754aab
 }
@@ -3091,10 +3104,10 @@ form#searchform {
 .genrebar ul li.dubstep a {
     border-bottom-color: #0a6b8f
 }
-.genrebar ul li.dubstep .subgenres a {
+.genrebar ul li.dubstep .sub-menu a {
     background-color: #000
 }
-.genrebar ul li.dubstep .subgenres a:hover {
+.genrebar ul li.dubstep .sub-menu a:hover {
     color: #848484;
     background-color: #0a6b8f
 }
@@ -3104,10 +3117,10 @@ form#searchform {
 .genrebar ul li.news a {
     border-bottom-color: #015ca9
 }
-.genrebar ul li.news .subgenres a {
+.genrebar ul li.news .sub-menu a {
     background-color: #000911
 }
-.genrebar ul li.news .subgenres a:hover {
+.genrebar ul li.news .sub-menu a:hover {
     color: #848484;
     background-color: #015ca9
 }
@@ -3117,10 +3130,10 @@ form#searchform {
 .genrebar ul li.reviews a {
     border-bottom-color: #7d1701
 }
-.genrebar ul li.reviews .subgenres a {
+.genrebar ul li.reviews .sub-menu a {
     background-color: #000
 }
-.genrebar ul li.reviews .subgenres a:hover {
+.genrebar ul li.reviews .sub-menu a:hover {
     color: #848484;
     background-color: #7d1701
 }
@@ -3130,10 +3143,10 @@ form#searchform {
 .genrebar ul li.album-review a {
     border-bottom-color: #7d1701
 }
-.genrebar ul li.album-review .subgenres a {
+.genrebar ul li.album-review .sub-menu a {
     background-color: #000
 }
-.genrebar ul li.album-review .subgenres a:hover {
+.genrebar ul li.album-review .sub-menu a:hover {
     color: #848484;
     background-color: #7d1701
 }
