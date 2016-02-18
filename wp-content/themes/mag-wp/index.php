@@ -13,6 +13,21 @@
 			if (is_category( $musicgenre )) { ?> 
 			<div class="archive-header">
 				<h1><strong rel="tag"><?php single_cat_title(''); ?> Stage</strong></h1><?php echo category_description(); ?>
+				<div class="genre-playlists">
+				<?php 
+					$earmilk_json = file_get_contents( "custom/EARMILK_data.json", true );
+					$earmilk_array = json_decode($earmilk_json);
+					$cat_slug = get_category(get_query_var('cat'))->slug;
+					$genre_playlists = $earmilk_array->EARMILK->genre->$cat_slug->header->playlists;
+					echo '<div class="genre-spotify-playlist"><h3>Dope Albums</h3>' . $genre_playlists[0] . '</div>';					
+					echo '<div class="genre-spotify-playlist"><h3>Hot Singles</h3>' . $genre_playlists[1] . '</div>';					
+					/*
+					foreach ($genre_playlists as $playlist) {
+						echo '<div class="genre-spotify-playlist">' . $playlist . '</div>';					
+					}; 
+					*/
+				?>
+				</div>
 			</div>
 		<?php } elseif (is_category()) { ?> 
 			<div class="archive-header">
@@ -190,9 +205,10 @@
 				</p>
 				<div class="entry-footer">
 					<div class="entry-comment-count">
-<span style="display:none;"><?php print_r (comments_evolved_get_facebook_count());
-print_r ($facebook_count); ?></span>
-						<a href="<?php the_permalink(); ?>/#comments">
+<span style="display:none;"><?php 
+	//print_r (woowoo_woowop_dabam());
+	//print_r (comments_evolved_get_facebook_count()); ?></span>
+						<a href="<?php the_permalink(); ?>#comments">
 							<i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;
 							<?php comments_number( 'add 2 cents', '1 comment', '% comments' ) ?>
 	<!-- 						<?php echo comments_evolved_get_total_count( 'comment here', '1 comment', '% comments' ) ?> -->
