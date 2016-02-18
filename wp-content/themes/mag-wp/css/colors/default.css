@@ -1419,6 +1419,8 @@ ul#masonry_list li .entry-empty-box {
 ul#masonry_list li .entry-comment-count {
 	padding: 2px 17px;
 }
+.home-content ul.classic-blog li .entry-comment-count a,
+ul#masonry_list li .entry-comment-count a,
 .home-content ul.classic-blog li .entry-read-more a,
 ul#masonry_list li .entry-read-more a {
 	color: #94979c !important;
@@ -1774,6 +1776,8 @@ body.logged-in .single-content .comments {
 h6.post-question,  h6.post-answer {
 	background: #f5f5f5;
 	font-weight: lighter;
+	background: #555;
+	color: #fff;
 }
 h6.post-question {
 	border-top-left-radius: 5px;
