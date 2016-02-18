@@ -796,6 +796,15 @@ div#placeholder {
 
 
 
+/* Genre Headers */
+.archive-header .genre-spotify-playlist {
+	display: inline-block;
+	margin: 0 auto;
+}
+.archive-header .genre-spotify-playlist .genre-spotify-playlist {
+	display: inline-block;
+	margin: 0 10px;
+}
 
 
 
