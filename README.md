@@ -127,7 +127,8 @@ Earmilk redesign project
 35.  New Interview Post question and answer [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7acd32bc47f979a3fff4573bb407cafade2cfb2f)
 36.  New [404 page](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/11d1e0f0b0d8a86e0bca3d1f3f5698d858862e78) according to design from [EARMILK 2.0](http://old.earmilk.com:81/favicon.ico2)
 37.  Interviewer and Interviewee names in Interview posts [will now have their names boldened](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ae468d5bf8d03c7a8f43074204158cf0655a8b5f) even if the markup protocol is not followed properly by the writer
-38.  ...
+38.  Implemented unique Spotify Playlists for respective Genre Category Headers (ie, hiphp, dance, etc) ([JSON iFrame URL data](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/0ee69bbbecd6547a14ba650642133ca7e673eed6), [structure and function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a4437c58146d3263320efd3316701af33711ac1f), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/36b17364fd7f595aa4a3c3bef6abab462ee6ac56))
+39.  ...
 
 
 - [Back to top ^](#table-of-contents)  
