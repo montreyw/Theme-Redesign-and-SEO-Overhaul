@@ -797,11 +797,11 @@ div#placeholder {
 
 
 /* Genre Headers */
-.archive-header .genre-spotify-playlist {
+.archive-header .genre-playlists {
 	display: inline-block;
 	margin: 0 auto;
 }
-.archive-header .genre-spotify-playlist .genre-spotify-playlist {
+.archive-header .genre-playlists .genre-spotify-playlist {
 	display: inline-block;
 	margin: 0 10px;
 }
@@ -1484,7 +1484,7 @@ ul#masonry_list li.news a.entry-thumbnail {
 
 
 
-
+/* Comments Evolved comments plugin */
 /* Facebook comments */
 .entry p.comments-count {
 	display: none;
@@ -1498,7 +1498,12 @@ span._5mdd {
 .pluginSkinDark ._2vq9 a {
     color: #777;
 }
-
+/* WordPress comments */
+#wordpress-tab ul.comment li {
+    background-color: #fff;
+    border: 1px solid #c5c5c5;
+    padding: 20px;
+}
 
 
 
