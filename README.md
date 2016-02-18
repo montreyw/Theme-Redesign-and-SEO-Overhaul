@@ -23,6 +23,7 @@ Earmilk redesign project
 - [x] Normalize posts on Videos, Album Reviews and others
 - [x] Widen Latest Posts on mobile view
 - [x] Improve layout of Author Pages
+- [x] Added spotify playlists to hiphop category genre header
 - [ ] Add unique headers to individual category pages
 - [x] Fix sitemap (fixed but how?)
 - [x] Add Facebook Like Buttons to Social Sidebar
@@ -30,6 +31,7 @@ Earmilk redesign project
 - [x] Add Funtime Out Events Festivals to the nav menu
 - [x] Write a script that will make the first word interview/er/ee name bold on Interview Posts
 - [ ] Add sliding Out like buttons on desktop
+- [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
 - [ ] Place ads
 - [x] Set up auto-posting for Google+
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
