@@ -132,33 +132,6 @@
 
 
 
-<!--
-    <span style="display:none;">
-		<?php
-			$url_batch = '';
-			if (have_posts()) {
-				while (have_posts()) {
-					the_post();
-					$one_url = get_permalink();
-					if (!$url_batch) {
-						$url_batch = urlencode($one_url);
-					} else {
-						$url_batch .= ',' . urlencode($one_url); 
-					}
-				}
-			}
-			$batch_link = 'https://graph.facebook.com/?ids=' . $url_batch . '&amp;access_token=91124514089|L294TU-xvDErs3GH80achCFYNQM';
-			echo $batch_link;
-			$batch_body = wp_remote_retrieve_body(wp_remote_get($batch_link));
-			$batch_json_body = json_decode($batch_body);
-			print_r ($batch_json_body);
-			//return $json->$url->comments;
-		?>
-    </span>
--->
-
-
-
 <?php if ($home_select == 'Grid Style') { ?>
 	<ul class="classic-blog">  
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
