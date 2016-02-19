@@ -32,6 +32,7 @@ Earmilk redesign project
 - [x] Write a script that will make the first word interview/er/ee name bold on Interview Posts
 - [ ] Add sliding Out like buttons on desktop
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
+- [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
 - [ ] Place ads
 - [x] Set up auto-posting for Google+
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
