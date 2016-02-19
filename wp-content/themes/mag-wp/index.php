@@ -131,6 +131,7 @@
 		<div class="clear"></div><!-- end .section-top-title -->
 
 
+
 <!--
     <span style="display:none;">
 		<?php
@@ -155,6 +156,7 @@
 		?>
     </span>
 -->
+
 
 
 <?php if ($home_select == 'Grid Style') { ?>
@@ -230,18 +232,9 @@
 				</p>
 				<div class="entry-footer">
 					<div class="entry-comment-count">
-<span style="display:none;"><?php 
-	//print_r (woowoo_woowop_dabam());
-	//print_r (comments_evolved_get_facebook_count()); ?></span>
 						<a href="<?php the_permalink(); ?>#comments">
 							<i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;
 							<?php comments_number( 'add 2 cents', '1 comment', '% comments' ) ?>
-	<!-- 						<?php echo comments_evolved_get_total_count( 'comment here', '1 comment', '% comments' ) ?> -->
-	<!--
-							<div class="facebook-comment-count">
-								<fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count>
-							</div>
-	-->
 						</a>
 					</div>
 					<div class="entry-read-more">
