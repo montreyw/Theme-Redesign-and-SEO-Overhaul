@@ -4,15 +4,6 @@
     global $smof_data;
 
     $home_select = (isset($smof_data['home_select'])) ? $smof_data['home_select'] : 'Grid Style';
-
-	function woowoo_woowop_dabam($url = "") {
-		if(empty($url)){ $url = get_permalink(); }
-		$link = 'https://graph.facebook.com/?ids=' . urlencode($url);
-		//$link_body = wp_remote_retrieve_body(wp_remote_get($link));
-		//$json = json_decode($link_body);
-		//return $json->$url->comments;
-		return $link;
-	}
 ?>
 
 
@@ -24,7 +15,7 @@
 				<h1><strong rel="tag"><?php single_cat_title(''); ?> Stage</strong></h1><?php echo category_description(); ?>
 				<div class="genre-playlists">
 				<?php 
-					$earmilk_json = file_get_contents( "/home/iamandre/public_html/allmilknoduds.com/wp-content/themes/mag-wp/custom/EARMILK_data.json" );
+					$earmilk_json = file_get_contents( "custom/EARMILK_data.json", true );
 					$earmilk_array = json_decode($earmilk_json);
 					$cat_slug = get_category(get_query_var('cat'))->slug;
 					$genre_playlists = $earmilk_array->EARMILK->genre->$cat_slug->header->playlists;
@@ -38,7 +29,6 @@
 				?>
 				</div>
 			</div>
-			
 		<?php } elseif (is_category()) { ?> 
 			<div class="archive-header">
 				<h1><strong rel="tag"><?php single_cat_title(''); ?></strong></h1><?php echo category_description(); ?>
@@ -141,6 +131,8 @@
 		<div class="clear"></div><!-- end .section-top-title -->
 
 
+<!--
+    <span style="display:none;">
 		<?php
 			$url_batch = '';
 			if (have_posts()) {
@@ -161,7 +153,10 @@
 			print_r ($batch_json_body);
 			//return $json->$url->comments;
 		?>
-    
+    </span>
+-->
+
+
 <?php if ($home_select == 'Grid Style') { ?>
 	<ul class="classic-blog">  
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -238,14 +233,9 @@
 <span style="display:none;"><?php 
 	//print_r (woowoo_woowop_dabam());
 	//print_r (comments_evolved_get_facebook_count()); ?></span>
-						<a href="<?php the_permalink(); ?>/#comments">
+						<a href="<?php the_permalink(); ?>#comments">
 							<i class="fa fa-comments-o"></i>&nbsp;&nbsp;&nbsp;
-							<?php 
-/*
-								$post_url = get_permalink();
-								echo $batch_json_body->$post_url->comments;
-*/
-								//comments_number( 'Say somethin\'!', '1 comment', '% comments' ) ?>
+							<?php comments_number( 'add 2 cents', '1 comment', '% comments' ) ?>
 	<!-- 						<?php echo comments_evolved_get_total_count( 'comment here', '1 comment', '% comments' ) ?> -->
 	<!--
 							<div class="facebook-comment-count">
