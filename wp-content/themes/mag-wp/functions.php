@@ -501,35 +501,11 @@ add_action( 'init', 'register_genre_bar_menu' );
 // ---------------------------------------------------------------------------------------------------- 
 // Block Comments Evolved sneaky comment activity tracking
 remove_action('wp_insert_comment', 'track_comment_posted_event');
-// Replace native comment count with Comments Evolved comment in native comments_number function
-function comments_evolved_number() {
-	$number = comments_evolved_get_total_count();
+function andre_comments_evolved_number( $count ) {
+	// Override the comment count
+	if( function_exists( 'comments_evolved_get_total_count' ) )
+		$count = comments_evolved_get_total_count();
+	// We must then return the value:
+	return $count;
 }
-//apply_filters('comments_number', 'comments_evolved_number');
-function comment_count_agg() {
-  $total_count = 0;
-
-  //$wordpress_count = comments_evolved_get_wordpress_count();
-  $wordpress_count = get_comments_number();
-
-  $gplus_count = comments_evolved_get_gplus_count();
-  $trackback_count = comments_evolved_get_trackback_count();
-  $facebook_count = comments_evolved_get_facebook_count();
-  $disqus_count = comments_evolved_get_disqus_count();
-
-  $total_count = $total_count + $wordpress_count + $gplus_count + $trackback_count + $facebook_count + $disqus_count;
-  return $total_count;
-}
-//add_filter('comments_evolved_get_total_count', 'comment_count_agg', 4270);
-//add_filter('get_comments_number', 'comments_evolved_get_total_count', 4271);
-function wpse_comments_evolved_number( $count ) 
-{
-    // Override the comment count
-    if( function_exists( 'comments_evolved_get_total_count' ) )
-        $count = comments_evolved_get_total_count();
-
-    // We must then return the value:
-    return $count;
-}
-add_filter( 'get_comments_number', 'wpse_comments_evolved_number');
-
+//add_filter( 'get_comments_number', 'andre_comments_evolved_number');
