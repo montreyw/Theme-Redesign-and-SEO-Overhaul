@@ -793,12 +793,10 @@ div#placeholder {
 ::-webkit-input-placeholder {
     color: #eaeaea;
 }
-@import url('http://fonts.googleapis.com/css?family=Raleway:200');
 #ta-search-container {
 	position: fixed;
 	z-index: 9999;
 	top: 0;
-	font-family: "Raleway", sans-serif;
 }
 #ta-search {
 	display: none;
