@@ -4,9 +4,9 @@
     global $smof_data;
 ?>
 <!-- Begin Content -->
-<div class="wrap-fullwidth hfeed h-feed" role="main" 
-	itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
-    <div class="single-content hentry h-entry">
+<div class="wrap-fullwidth hfeed h-feed" role="main">
+    <div class="single-content hentry h-entry" 
+		itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
         <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
         <div class="entry-top">
             <h1 class="article-title entry-title p-name"><?php the_title(); ?></h1>
@@ -28,9 +28,16 @@
             </div>
         </div><div class="clear"></div>
         <?php endwhile; endif; ?>
-        <article class="entry-content">
+        <article class="entry-content" itemprop="hasPart" itemscope itemtype="http://schema.org/MusicAlbum">
+			<meta itemprop="name" content="<?php get_field('album_name'); ?>" />
+			<meta itemprop="url" content="<?php the_permalink(); ?>" />
+			<meta itemprop="image" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>" />
+			<span itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup">
+				<meta itemprop="name" content="<?php echo get_field('artist_name'); ?>" />
+			</span>
             <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
-            <div class="<?php echo andre_get_post_class_without_hentry(); ?>" id="post-<?php the_ID(); ?>">
+			<div class="<?php echo andre_get_post_class_without_hentry(); ?>" id="post-<?php the_ID(); ?>"
+				itemprop="review" itemscope itemtype="http://schema.org/Review">
             <div class="media-single-content">
             <?php if ( function_exists( 'rwmb_meta' ) ) {
             // If Meta Box plugin is activate ?>
@@ -73,13 +80,67 @@
 				<!-- end #single-share -->
             </div><!-- end .media-single-content -->
                     <div class="entry">
+						<div style="display:none;">
+							<?php 
+								$date = get_field('my-date');
+								$date2 = date("F j, Y", strtotime($date)); 
+								$date_iso = date("c", strtotime($date)); 
+								$record_label_name = get_field('labels')[0]['label_name']; 
+								$record_label_location = get_field('labels')[0]['label_location']; 
+								$record_label_url = get_field('labels')[0]['label_url']; 
+							?>							
+							<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
+							<div class="earmilk-review-release">
+								<?php echo get_field('release_type'); ?>
+							</div>
+							<div class="earmilk-review-artist">
+								<?php echo get_field('artist_name'); ?>
+							</div>
+							<div class="earmilk-review-album">
+								<?php echo get_field('album_name'); ?>
+							</div>
+							<div class="earmilk-review-time">
+								<time datetime="<?php echo $date_iso ?>">
+									<?php echo $date; ?>
+									<?php echo $date2; ?>
+								</time>
+							</div>
+							<div class="earmilk-review-rating" 
+								itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+								<meta itemprop="name" content="EARMILK Rating">
+								<meta itemprop="bestRating" content="10">
+								<meta itemprop="worstRating" content="1">
+	                        	<div itemprop="ratingValue">
+									<?php echo get_field('review_rating'); ?>
+	                        	</div>
+							</div>
+							<div class="earmilk-review-label">
+								<div class="earmilk-review-label-name">
+									<?php echo $record_label_name; ?>
+								</div>
+								<div class="earmilk-review-label-location">
+									<?php echo $record_label_location; ?>
+								</div>
+								<div class="earmilk-review-label-url">
+									<?php echo $record_label_url; ?>
+								</div>
+							</div>
+							<div class="earmilk-review-links">
+								<?php echo implode( get_field('links') ); ?>
+							</div>
+							<div class="earmilk-review-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+								<span itemprop="name"><?php echo get_the_author_meta( 'display_name' ); ?></span>
+								<span itemprop="url"><?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?></span>
+								<span itemprop="image"><?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?></span>
+							</div>
+                        </div>
                         <!-- entry content -->
-                        <div class="p-first-letter">
+                        <div class="p-first-letter" itemprop="reviewBody">
                             <?php if (!empty($smof_data['ads_entry_top'])) { ?>
                             <?php } ?>
                             <?php if ( !empty( $post->post_excerpt ) ) : the_excerpt(); else : false; endif;  ?>
                             <?php the_content(''); // content ?>
-                        </div><!-- end .p-first-letter -->
+						</div><!-- end .p-first-letter -->
                         <?php wp_link_pages(); // content pagination ?>
                         <div class="clear"></div>
                         <!-- tags -->
