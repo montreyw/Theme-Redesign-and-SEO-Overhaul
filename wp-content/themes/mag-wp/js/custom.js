@@ -93,6 +93,9 @@ jQuery( document ).ready( function( $ ) {
 				owl.addClass('carousel-visible'); 
 			}, 37);
 			$('#main-stage-loader').addClass('main-stage-loaded'); 
+			setTimeout( function(){ 
+				$('#main-stage-loader').remove();
+			}, 370);
 		}, 1370);
 
 		// Get Max height of variable length title boxes and set all boxes to this height 
