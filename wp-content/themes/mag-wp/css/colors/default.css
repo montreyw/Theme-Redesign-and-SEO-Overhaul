@@ -1263,6 +1263,22 @@ ul.big-thing div.owl-item li h2.article-title.entry-title a {
 	display: inline-block;
 	margin: 0 30px;
 }
+.archive-header .genre-playlists .playlist-tabs .ui-tabs-nav li {
+	margin: 0 auto;
+	display: inline-block;
+	width: 48%;
+}
+.archive-header .genre-playlists .playlist-tabs .ui-tabs-nav li a h3 {
+	font-size: 20px;
+}
+.archive-header .genre-playlists .playlist-tabs .ui-tabs-nav li.ui-state-hover a h3 {
+    /* font-weight: bold; */
+    color: #000;
+}
+.archive-header .genre-playlists .playlist-tabs .ui-tabs-nav li.ui-state-active a h3 {
+	color: #e34848;
+	font-weight: bold;
+}
 
 
 

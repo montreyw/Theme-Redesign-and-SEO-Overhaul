@@ -25,13 +25,32 @@
 					$earmilk_array = json_decode($earmilk_json);
 					$cat_slug = get_category(get_query_var('cat'))->slug;
 					$genre_playlists = $earmilk_array->EARMILK->genre->$cat_slug->header->playlists;
-					if ( $genre_playlists != NULL ) {
-						echo '<div class="genre-playlists">';
-						echo '<div class="genre-spotify-playlist"><h3>Hotter Singles</h3>' . $genre_playlists[0] . '</div>';					
-						echo '<div class="genre-spotify-playlist"><h3>Hot Singles</h3>' . $genre_playlists[1] . '</div>';
-						echo '</div>';
-					}
-				?>
+					if ( $genre_playlists != NULL ) : ?>
+						<div class="genre-playlists">
+							<div class="genre-spotify-playlist">
+								<h3>Hotter Singles</h3>
+								<?php echo $genre_playlists[0] ?>
+							</div>				
+							<div class="genre-spotify-playlist">
+								<div class="playlist-tabs">
+									<ul>
+										<li><a href="#dope-albums"><h3>Dope Albums</h3></a></li>
+										<li><a href="#hot-singles"><h3>Hot Singles</h3></a></li>
+									</ul>
+									<div id="dope-albums">
+										<?php echo $genre_playlists[1] ?>
+									</div>
+									<div id="hot-singles">
+										<?php echo $genre_playlists[2] ?>
+									</div>
+								</div>
+								<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+								<script>
+								jQuery( ".playlist-tabs" ).tabs();
+								</script>
+							</div>
+						</div>
+				<?php endif; ?>
 			</div>
 		<?php } elseif (is_category()) { ?> 
 			<div class="archive-header">

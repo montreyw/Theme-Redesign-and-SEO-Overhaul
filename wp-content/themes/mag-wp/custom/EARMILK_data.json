@@ -5,7 +5,8 @@
         "header": {
           "playlists": [
             "<iframe src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/197323419&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;color=000000&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;show_artwork=false' width='300' height='380' frameborder='0' allowtransparency='true'></iframe>",
-            "<iframe src='https://embed.spotify.com/?uri=spotify%3Auser%3Aearmilkdotcom%3Aplaylist%3A18mK3zD7xkmiW5XDbrEeWJ' width='300' height='380' frameborder='0' allowtransparency='true'></iframe>"
+            "<iframe src='https://embed.spotify.com/?uri=spotify%3Auser%3Aearmilkdotcom%3Aplaylist%3A18mK3zD7xkmiW5XDbrEeWJ' width='300' height='380' frameborder='0' allowtransparency='true'></iframe>",
+            "<iframe src='https://embed.spotify.com/?uri=spotify%3Auser%3Aearmilkdotcom%3Aplaylist%3A2aFlRbXms2EC7aoyq9Wqdr” width='300' height='380' frameborder='0' allowtransparency='true'></iframe>"
           ]
         }
       },
