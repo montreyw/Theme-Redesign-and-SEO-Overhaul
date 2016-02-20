@@ -1811,13 +1811,13 @@ body.logged-in .single-content .comments {
 .entry .vvqyoutube span img {
 	height: auto;
 }
-/* Centering other, naked iFrame embeds such as Instagram */
+/* Centering other, naked iFrame embeds such as Instagram and Vimeo */
 .entry blockquote.instagram-media, 
 .entry blockquote.instagram-media-registered, 
 .entry iframe.instagram-media, 
 .entry iframe {
-    margin: 1px auto !important;
-    width: 100%;
+	width: 100%;
+	margin: 1px auto !important;
 }
 
 
