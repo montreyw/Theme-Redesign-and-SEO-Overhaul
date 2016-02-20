@@ -12,7 +12,15 @@
 			$musicgenre = array('dance', 'house', 'electro', 'bass-dance', 'deep-house', 'techno', 'progressive-dance', 'electro-house', 'hiphop', 'rap', 'rb', 'soul', 'reggae', 'trip-hop', 'jazz-hop', 'glitch-hop', 'indie', 'alternative', 'rock', 'indie-synth', 'chillout', 'folk', 'funk', 'soft-rock', 'electronic', 'dubstep', 'trap-electronic', 'electronica', 'mash-up', 'chillstep-electronic', 'future-funk', 'drum-and-bass-dance', 'experimental', 'downtempo', 'chillwave', 'ambient', 'psychedelic', 'jazz', 'lo-fi', 'dub', 'pop', 'synthpop', 'electro-pop', 'dreampop', 'dark-pop', 'surf-pop', 'noise-pop-2', 'oldies'); 
 			if (is_category( $musicgenre )) { ?> 
 			<div class="archive-header">
-				<h1><strong rel="tag"><?php single_cat_title(''); ?> Stage</strong></h1><?php echo category_description(); ?>
+				<div class="line-box">
+					<div class="header_line">
+						<h1 class="top">
+							<a href="/category/mainstage/" titles="<?php single_cat_title(''); ?> Stage"><?php single_cat_title(''); ?> Stage</a>
+						</h1>
+					</div>
+				</div>
+				<!-- <h1><strong rel="tag"></strong></h1> -->
+				<?php echo category_description(); ?>
 				<div class="genre-playlists">
 				<?php 
 					$earmilk_json = file_get_contents( "custom/EARMILK_data.json", true );

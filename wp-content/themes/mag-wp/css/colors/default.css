@@ -810,12 +810,12 @@ div#placeholder {
 
 /* Main Stage */
 /* Main Stage header line */
-div.wrap-center .line-box { 
+.line-box { 
 	margin: 7px auto 37px;
 	z-index: 10;
 	position: relative;
 }
-div.wrap-center .line-box .header_line { 
+.line-box .header_line { 
 	height: 7px; 
 	text-align: center; 
 	text-transform: uppercase; 
@@ -824,7 +824,7 @@ div.wrap-center .line-box .header_line {
 	border-color: #6c6c6c;
 	border-color: #373737;
 }
-div.wrap-center .line-box .header_line h4.top {
+.line-box .header_line .top {
 	display: inline-block; 
 	color: #fff !important;
 	font-family: futura, "Ruda", Helvetica, Arial, sans-serif;
@@ -834,7 +834,7 @@ div.wrap-center .line-box .header_line h4.top {
 	margin-top: -10px;
 	background-color: #6c6c6c;
 }
-div.wrap-center .line-box .header_line h4.top a {
+.line-box .header_line .top a {
 	-webkit-transition: all 137ms;
 	-moz-transition: all 137ms;
 	transition: all 137ms;
@@ -843,7 +843,7 @@ div.wrap-center .line-box .header_line h4.top a {
 	padding: 4px 16px;
 	display: block;
 }
-div.wrap-center .line-box .header_line h4.top a:hover {
+.line-box .header_line .top a:hover {
 	background-color: #e34848;
 	color: #fff !important;
 }
