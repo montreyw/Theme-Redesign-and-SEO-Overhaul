@@ -793,6 +793,42 @@ div#placeholder {
 ::-webkit-input-placeholder {
     color: #eaeaea;
 }
+@import url('http://fonts.googleapis.com/css?family=Raleway:200');
+#ta-search-container {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	font-family: "Raleway", sans-serif;
+}
+#ta-search {
+	display: none;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+}
+#ta-searchform {
+	width: 50%;
+	margin: 10% auto 0;
+	font-size: 3em;
+}
+#ta-label {
+	color: white;
+	display: block;
+}
+#ta-searchtext {
+	margin: 0 auto;
+	width: 100%;
+	background: transparent;
+	border: none;
+	color: #FFF;
+	font-family: inherit;
+	font-size: 2em;
+}
+#ta-searchtext:focus {
+	outline: none;
+}
+
 
 
 
