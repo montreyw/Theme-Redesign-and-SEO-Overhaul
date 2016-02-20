@@ -832,7 +832,7 @@ div#placeholder {
 	height: 30px;
 	padding: 4px 16px;
 	display: block;
-	line-height: 30px;
+	line-height: 29px;
 }
 .line-box .header_line .top a:hover {
 	background-color: #e34848;
