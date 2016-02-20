@@ -19,23 +19,19 @@
 						</h1>
 					</div>
 				</div>
-				<!-- <h1><strong rel="tag"></strong></h1> -->
-				<?php echo category_description(); ?>
-				<div class="genre-playlists">
+				<?php echo category_description(); ?>				
 				<?php 
 					$earmilk_json = file_get_contents( "custom/EARMILK_data.json", true );
 					$earmilk_array = json_decode($earmilk_json);
 					$cat_slug = get_category(get_query_var('cat'))->slug;
 					$genre_playlists = $earmilk_array->EARMILK->genre->$cat_slug->header->playlists;
-					echo '<div class="genre-spotify-playlist"><h3>Dope Albums</h3>' . $genre_playlists[0] . '</div>';					
-					echo '<div class="genre-spotify-playlist"><h3>Hot Singles</h3>' . $genre_playlists[1] . '</div>';					
-					/*
-					foreach ($genre_playlists as $playlist) {
-						echo '<div class="genre-spotify-playlist">' . $playlist . '</div>';					
-					}; 
-					*/
+					if ( $genre_playlists != NULL ) {
+						echo '<div class="genre-playlists">';
+						echo '<div class="genre-spotify-playlist"><h3>Hotter Singles</h3>' . $genre_playlists[0] . '</div>';					
+						echo '<div class="genre-spotify-playlist"><h3>Hot Singles</h3>' . $genre_playlists[1] . '</div>';
+						echo '</div>';
+					}
 				?>
-				</div>
 			</div>
 		<?php } elseif (is_category()) { ?> 
 			<div class="archive-header">
