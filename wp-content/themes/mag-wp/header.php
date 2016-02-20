@@ -254,6 +254,17 @@
 
 
 
+<div id="ta-search-container">
+	<div id="ta-search">
+		<form id="ta-searchform" method="get" action="http://earmilk.com/">
+			<label id="ta-label" for="ta-searchtext">search: </label>
+			<input id="ta-searchtext" name="s" type="text" />
+		</form>
+	</div>
+</div>
+
+
+
 <!-- /11347700/Wallpaper -->
 <!--
 <div id='div-gpt-ad-1454727873765-4' style='height:1px; width:1px;'>
