@@ -336,7 +336,7 @@
 						<div class="main-stage-latest latest-news hfeed h-feed">
 							<div class="line-box">
 								<div class="header_line">
-									<h4 class="top"><a href="/news/" titles="VOICES">SCOOPS</a></h4>
+									<h2 class="top"><a href="/news/" titles="VOICES">SCOOPS</a></h4>
 								</div>
 							</div>
 							<ul>
@@ -378,7 +378,7 @@
 						<div class="main-stage-latest latest-voices hfeed h-feed">
 							<div class="line-box">
 								<div class="header_line">
-									<h4 class="top"><a href="/voices/" titles="VOICES">VOICES</a></h4>
+									<h2 class="top"><a href="/voices/" titles="VOICES">VOICES</a></h4>
 								</div>
 							</div>
 							<ul>
@@ -423,7 +423,7 @@
 						<img id="main-stage-loader" src="http://earmilk.com/wp-content/uploads/equalizer_bw.gif" alt="EARMILK Main Stage loading music equalizer">
 						<div class="line-box">
 							<div class="header_line">
-								<h4 class="top"><a href="/category/mainstage/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h4>
+								<h1 class="top"><a href="/category/mainstage/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h4>
 							</div>
 						</div>
 			
