@@ -33,8 +33,8 @@ Earmilk redesign project
 - [x] Add sliding slide out facebook like box (desktop)
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
 - [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
-- [ ] Re-style re-design [MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/)
-- [ ] Place ads
+- [ ] Re-style re-design [MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) ([1](https://starslingeruk.bandcamp.com/album/sketchy-ep))
+- [x] Place ads
 - [x] Set up auto-posting for Google+
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
 - [x] Code keyboard control of Next/Prev of Main Stage
