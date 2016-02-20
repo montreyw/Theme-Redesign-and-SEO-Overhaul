@@ -813,6 +813,7 @@ div#placeholder {
 #ta-label {
 	color: white;
 	display: block;
+	line-height: 1em;
 }
 #ta-searchtext {
 	margin: 0 auto;
