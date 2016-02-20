@@ -30,9 +30,10 @@ Earmilk redesign project
 - [x] Add Google+ Buttons to Social Sidebar
 - [x] Add Funtime Out Events Festivals to the nav menu
 - [x] Write a script that will make the first word interview/er/ee name bold on Interview Posts
-- [ ] Add sliding Out like buttons on desktop
+- [x] Add sliding slide out facebook like box (desktop)
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
 - [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
+- [ ] Re-style re-design [MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/)
 - [ ] Place ads
 - [x] Set up auto-posting for Google+
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
@@ -57,12 +58,10 @@ Earmilk redesign project
 - [ ] Change all image attachments image-link-type's in posts to file or none
 - [ ] Add Extra AUthor Disclosure info to author meta
 - [x] Implement Colorful Genre Bar from old.V2
-- [ ] Implement new Facebook Like box slideout
 - [ ] Remove all MP3 links from posts
 - [ ] Change/improve gray section headers
 - [ ] Develop some unifying site design elements
 - [ ] Ability to play a post's first song right from the posts grid
-- [ ] Re-style re-design [MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/)
 - [ ] Ability to play a post's first video right from the posts grid
 - [x] Add Schema to `/events/` page
 - [ ] Add Schema to `/news/` page
@@ -84,7 +83,7 @@ Earmilk redesign project
 - [ ] Remove all `&quot;`s from posts in `src="&quot;http...`
 - [ ] LazyLoader for SoundCloud embeds
 - [ ] Look into how Writer tools for posts like Interviews and Events can be improved for posting ease and style consistency
-- [ ] START ALL OVER :D -- New Theme / PHP Infrastructure
+- [ ] START ALL OVER :D -- New Well-planned Theme and Infrastructure
 - [ ] ...
 
 - [Back to top ^](#table-of-contents)  
