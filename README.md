@@ -133,7 +133,9 @@ Earmilk redesign project
 39.  Facebook Like Box [slideout](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/cdf7ce2388b1fa57acda08a2a0a1bc61450920a6)
 40.  Genre Category Archive Page header Soundcloud and Spotify tabbed playlists ([structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a4437c58146d3263320efd3316701af33711ac1f), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/36b17364fd7f595aa4a3c3bef6abab462ee6ac56), [data in JSON](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/0ee69bbbecd6547a14ba650642133ca7e673eed6))
 41.  Type Anywhere Search ([structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/1e6e11c12f37930d05af74c97542941fea59b994), [functionality](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/67235e8694c68d170e0bb6d925b55ae80ce214af), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e3f88ebc6c6aa2988abbbe197d4a92b8712ef81c))
-42.  ...
+42.  Album Review Single Post Details Box Redone ([HTML structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e3873b4ab17a27f04a10912c820dc38f488ca2d8), [CSS style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5c9f9aee696497d421ae3ee9eee749e7cf346654))
+43.  ...
+
 
 
 - [Back to top ^](#table-of-contents)  
@@ -192,7 +194,7 @@ Earmilk redesign project
 11.  For Author Pages, added `CollectionPage` via [CollectionPage VS WebPage differentiation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/d1f5146f08bdb231abd71535c2a82bc741b7fd19) to Main Site Header
 12.  Added [Person](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4d89df66e88c819e695c84292ebc55cbd8c3a6b6) to Author Pages and made authors the mainEntity of the page.  Note: had to write [a custom PHP function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/eb5c52886dcf07325e0e0465863b0d84ed856357) to inject `itemprop="image"` into the `<img>` tag of author photos, regardless of whether WP Social Avatar or default Gravatar is being used.
 13.  Removed duplicate, error-prone The Events Calendar `ld+json` Schema.org markup block via [function.php function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c75745b607dc4a2318fcc817616c3c838c01edff)
-14.  Album Review Single Post Schema perfected ([Schema](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/774ec382bf4e628671895db7513e09eef88aa484), [HTML structure](), [CSS style]())
+14.  Album Review Single Post [Schema perfected](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/774ec382bf4e628671895db7513e09eef88aa484)
 15.  ...
 
 
