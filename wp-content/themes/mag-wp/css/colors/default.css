@@ -1990,6 +1990,7 @@ h6.post-answer .interviewee {
 	width: 720px;
 	max-width: 80%;
 	margin: 0 auto;
+	font-size: 17px;
 }
 .earmilk-album-review table.table {
 	border-spacing: 0;
@@ -2007,10 +2008,6 @@ h6.post-answer .interviewee {
 .earmilk-album-review .table thead th {
 	text-align: center;
 }
-.earmilk-album-review .table > tfoot > tr > th, 
-.earmilk-album-review .table > tfoot > tr > td {
-	border-top: 3px solid #ddd;
-}
 .earmilk-album-review .table th {
 	text-align: right;
 }
@@ -2025,10 +2022,6 @@ h6.post-answer .interviewee {
 	vertical-align: top;
 	border-top: 1px solid #ddd;
 }
-.earmilk-album-review .table td img {
-	vertical-align: middle;
-	margin: 0 0 0 7px;
-}
 .earmilk-album-review .table > caption + thead > tr:first-child > th,
 .earmilk-album-review .table > colgroup + thead > tr:first-child > th,
 .earmilk-album-review .table > thead:first-child > tr:first-child > th,
@@ -2037,8 +2030,19 @@ h6.post-answer .interviewee {
 .earmilk-album-review .table > thead:first-child > tr:first-child > td {
 	border-top: 0;
 }
+.earmilk-album-review .table > thead > tr > th {
+	border-bottom: 3px solid #ddd;
+}
+.earmilk-album-review .table > tfoot > tr > th, 
+.earmilk-album-review .table > tfoot > tr > td {
+	border-top: 3px solid #ddd;
+}
 .earmilk-album-review .table > tbody + tbody {
 	border-top: 2px solid #ddd;
+}
+.earmilk-album-review .table td img {
+	vertical-align: middle;
+	margin: 0 0 0 7px;
 }
 .earmilk-album-review .table .table {
 	background-color: #fff;
@@ -2051,9 +2055,96 @@ h6.post-answer .interviewee {
 .table-condensed > tfoot > tr > td {
 	padding: 5px;
 }
-.table-hover > tbody > tr:hover {
+.table-hover > thead > tr:hover,
+.table-hover > tbody > tr:hover,
+.table-hover > tfoot > tr:hover {
 	background-color: #f5f5f5;
 }
+.earmilk-album-review thead, 
+.earmilk-album-review .earmilk-review-rating-row {
+	font-size: 17px;
+}
+.album-review-number {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	background: rgba(57, 181, 74, 0.75);
+	border: 2px solid #39B54A;
+	border-radius: 4px;
+	color: #fff;
+	padding: 0px 4px;
+	margin: 0 7px 0 0;
+}
+.fa-star {
+	color: #DFE0E0; 
+	vertical-align: middle; 
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.earmilk-review-rating-row:hover .fa-star {
+	margin-left: 2px; 
+}
+.fa-star.filled-star {
+	color: #ffd200; 
+}
+.fa-star.quarter-star,
+.fa-star.half-star,
+.fa-star.three-quarters-star {
+	position:relative;
+	display:inline-block;
+	color: transparent; 
+	overflow:hidden;
+	white-space: pre;
+}
+.fa-star.quarter-star:before,
+.fa-star.half-star:before,
+.fa-star.three-quarters-star:before {
+	display: block;
+	z-index: 1;
+	top: 0;
+	overflow: hidden;
+	pointer-events: none;
+	color: #ffd200;
+}
+.fa-star.quarter-star:after,
+.fa-star.half-star:after,
+.fa-star.three-quarters-star:after { 
+	display: block;
+	direction: rtl;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 4px;
+	width: 70%;
+	content: "\f005";
+	overflow: hidden;
+	pointer-events: none;
+	color: #DFE0E0;
+}
+.fa-star.quarter-star:before {
+	width: 30%;
+}
+.fa-star.quarter-star:after { 
+	left: 4px;
+	width: 70%;
+}
+.fa-star.half-star:before {
+	width: 50%;
+}
+.fa-star.half-star:after { 
+	left:50%;
+	width: 50%;
+}
+.fa-star.three-quarters-star:before {
+	width: 75%;
+}
+.fa-star.three-quarters-star:after { 
+	left: 10px;
+	width: 30%;
+}
+
 
 
 
