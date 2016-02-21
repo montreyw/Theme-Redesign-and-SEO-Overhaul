@@ -133,8 +133,9 @@ Earmilk redesign project
 39.  Facebook Like Box [slideout](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/cdf7ce2388b1fa57acda08a2a0a1bc61450920a6)
 40.  Genre Category Archive Page header Soundcloud and Spotify tabbed playlists ([structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a4437c58146d3263320efd3316701af33711ac1f), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/36b17364fd7f595aa4a3c3bef6abab462ee6ac56), [data in JSON](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/0ee69bbbecd6547a14ba650642133ca7e673eed6))
 41.  Type Anywhere Search ([structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/1e6e11c12f37930d05af74c97542941fea59b994), [functionality](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/67235e8694c68d170e0bb6d925b55ae80ce214af), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e3f88ebc6c6aa2988abbbe197d4a92b8712ef81c))
-42.  Album Review Single Post Details Box Redone ([HTML structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e3873b4ab17a27f04a10912c820dc38f488ca2d8), [CSS style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5c9f9aee696497d421ae3ee9eee749e7cf346654))
+42.  Album Review Single Post Details Box Redone ([HTML structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e3873b4ab17a27f04a10912c820dc38f488ca2d8), [CSS style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5c9f9aee696497d421ae3ee9eee749e7cf346654); [dynamic rating stars structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/519e3af0a3c7364c818b7e323e02b2a3e9fa4b58) and [dynamic rating stars style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/49d193117d5b21e55bff1f78d4e489c1a044b750))
 43.  ...
+44.  
 
 
 
