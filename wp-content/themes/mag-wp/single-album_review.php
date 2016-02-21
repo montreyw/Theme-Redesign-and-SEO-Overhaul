@@ -29,12 +29,36 @@
         </div><div class="clear"></div>
         <?php endwhile; endif; ?>
         <article class="entry-content" itemprop="hasPart" itemscope itemtype="http://schema.org/MusicAlbum">
-			<meta itemprop="name" content="<?php get_field('album_name'); ?>" />
-			<meta itemprop="url" content="<?php the_permalink(); ?>" />
-			<meta itemprop="image" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>" />
-			<span itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup">
-				<meta itemprop="name" content="<?php echo get_field('artist_name'); ?>" />
-			</span>
+	        <div class="earmilk-album-review-meta" style="display:none;">
+				<?php 
+					$date = get_field('release_date');
+					$date_human = date("F j, Y", strtotime($date)); 
+					$date_iso = date("c", strtotime($date)); 
+					$record_label_name = get_field('labels')[0]['label_name']; 
+					$record_label_location = get_field('labels')[0]['label_location']; 
+					$record_label_url = get_field('labels')[0]['label_url']; 
+				?>							
+				<meta itemprop="name" content="<?php echo get_field('album_name'); ?>" />
+				<meta itemprop="albumReleaseType" content="<?php echo get_field('release_type'); ?>" />
+				<span itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup">
+					<meta itemprop="name" content="<?php echo get_field('artist_name'); ?>" />
+				</span>
+				<div itemprop="dateCreated">
+					<time datetime="<?php echo $date_iso ?>">
+						<?php echo $date_human; ?>
+					</time>
+				</div>
+				<meta itemprop="url" content="<?php the_permalink(); ?>" />
+				<meta itemprop="image" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>" />
+				<span itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization">
+					<meta itemprop="name" content="<?php echo $record_label_name; ?>">
+					<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						<meta itemprop="addressLocality addressRegion" content="<?php echo $record_label_location; ?>" />
+					</span>
+					<meta itemprop="url" content="<?php echo $record_label_url; ?>" />
+				</span>
+	        </div>
+				
             <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
 			<div class="<?php echo andre_get_post_class_without_hentry(); ?>" id="post-<?php the_ID(); ?>"
 				itemprop="review" itemscope itemtype="http://schema.org/Review">
@@ -80,15 +104,57 @@
 				<!-- end #single-share -->
             </div><!-- end .media-single-content -->
                     <div class="entry">
-						<div style="display:none;">
-							<?php 
-								$date = get_field('my-date');
-								$date2 = date("F j, Y", strtotime($date)); 
-								$date_iso = date("c", strtotime($date)); 
-								$record_label_name = get_field('labels')[0]['label_name']; 
-								$record_label_location = get_field('labels')[0]['label_location']; 
-								$record_label_url = get_field('labels')[0]['label_url']; 
-							?>							
+						<div class="earmilk-album-review" style="display:none;">
+							<table class="table table-condensed table-hover">
+							<caption>
+							Optional table caption.
+							</caption>
+							
+							<thead>
+							<tr>
+							<th>#</th>
+							
+							<th>First Name</th>
+							
+							<th>Last Name</th>
+							
+							<th>Username</th>
+							</tr>
+							</thead>
+							
+							<tbody>
+							<tr>
+							<th scope="row">1</th>
+							
+							<td>Mark</td>
+							
+							<td>Otto</td>
+							
+							<td>@mdo</td>
+							</tr>
+							
+							<tr>
+							<th scope="row">2</th>
+							
+							<td>Jacob</td>
+							
+							<td>Thornton</td>
+							
+							<td>@fat</td>
+							</tr>
+							
+							<tr>
+							<th scope="row">3</th>
+							
+							<td>Larry</td>
+							
+							<td>the Bird</td>
+							
+							<td>@twitter</td>
+							</tr>
+							</tbody>
+							</table>
+
 							<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
 							<div class="earmilk-review-release">
 								<?php echo get_field('release_type'); ?>
@@ -99,10 +165,14 @@
 							<div class="earmilk-review-album">
 								<?php echo get_field('album_name'); ?>
 							</div>
-							<div class="earmilk-review-time">
+							<div class="earmilk-review-album-release-date">
 								<time datetime="<?php echo $date_iso ?>">
-									<?php echo $date; ?>
-									<?php echo $date2; ?>
+									<?php echo $date_human; ?>
+								</time>
+							</div>
+							<div class="earmilk-review-created-time" itemprop="dateCreated">
+								<time datetime="<?php echo get_the_date('c'); ?>">
+									<?php echo get_the_date('F j, Y'); ?>
 								</time>
 							</div>
 							<div class="earmilk-review-rating" 
@@ -114,14 +184,16 @@
 									<?php echo get_field('review_rating'); ?>
 	                        	</div>
 							</div>
-							<div class="earmilk-review-label">
-								<div class="earmilk-review-label-name">
+							<div class="earmilk-review-label" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization">
+								<div class="earmilk-review-label-name" itemprop="name">
 									<?php echo $record_label_name; ?>
 								</div>
-								<div class="earmilk-review-label-location">
-									<?php echo $record_label_location; ?>
+								<div class="earmilk-review-label-location" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+									<span itemprop="addressLocality addressRegion">
+										<?php echo $record_label_location; ?>
+									</span>
 								</div>
-								<div class="earmilk-review-label-url">
+								<div class="earmilk-review-label-url" itemprop="url">
 									<?php echo $record_label_url; ?>
 								</div>
 							</div>
