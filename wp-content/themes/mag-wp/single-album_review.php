@@ -108,7 +108,7 @@
 				<!-- end #single-share -->
             </div><!-- end .media-single-content -->
                     <div class="entry">
-						<div class="earmilk-album-review" style="display:none;">
+						<div class="earmilk-album-review">
 							<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
 							<table class="table table-condensed table-hover">
 <!--
@@ -208,9 +208,9 @@
 									<?php 
 											};
 										}; ?>
-									<tr>
+									<tr class="earmilk-review-rating-row">
 										<td></td>
-										<th>Review Rating:</th>
+										<th>EARMILK Review Rating:</th>
 										<td>
 											<div class="earmilk-review-rating" 
 												itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
@@ -218,7 +218,30 @@
 												<meta itemprop="bestRating" content="10">
 												<meta itemprop="worstRating" content="1">
 					                        	<div itemprop="ratingValue">
-													<?php echo $review_rating; ?>
+													<div class="album-review-number"><?php echo $review_rating; ?></div>
+						                        	<?php
+							                        	$rating_int = ( (float)$review_rating ) / 2;
+							                        	$subtractor = 0;
+														for($x=1; $x<=$rating_int; $x++) {
+															echo '<i class="fa fa-star filled-star"></i>';
+															$subtractor++;
+														}
+														$raminder = $rating_int - $subtractor;
+														if ( $raminder == 0.25 ) {
+															echo '<i class="fa fa-star quarter-star"></i>';
+															$x++;
+														} elseif ( $raminder == 0.50 ) {
+															echo '<i class="fa fa-star half-star"></i>';
+															$x++;
+														} elseif ( $raminder == 0.75 ) {
+															echo '<i class="fa fa-star three-quarters-star"></i>';
+															$x++;
+														}
+														while ($x<=5) {
+															echo '<i class="fa fa-star"></i>';
+															$x++;
+														}
+													?>
 					                        	</div>
 											</div>
 										</td>
