@@ -31,17 +31,21 @@
         <article class="entry-content" itemprop="hasPart" itemscope itemtype="http://schema.org/MusicAlbum">
 	        <div class="earmilk-album-review-meta" style="display:none;">
 				<?php 
+					$artist_name = get_field('artist_name');
+					$album_name = get_field('album_name');					
 					$date = get_field('release_date');
 					$date_human = date("F j, Y", strtotime($date)); 
 					$date_iso = date("c", strtotime($date)); 
 					$record_label_name = get_field('labels')[0]['label_name']; 
 					$record_label_location = get_field('labels')[0]['label_location']; 
 					$record_label_url = get_field('labels')[0]['label_url']; 
+					$review_rating = get_field('review_rating');
+					$review_links = get_field('links');
 				?>							
-				<meta itemprop="name" content="<?php echo get_field('album_name'); ?>" />
+				<meta itemprop="name" content="<?php echo $album_name; ?>" />
 				<meta itemprop="albumReleaseType" content="<?php echo get_field('release_type'); ?>" />
 				<span itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup">
-					<meta itemprop="name" content="<?php echo get_field('artist_name'); ?>" />
+					<meta itemprop="name" content="<?php echo $artist_name; ?>" />
 				</span>
 				<div itemprop="dateCreated">
 					<time datetime="<?php echo $date_iso ?>">
@@ -105,107 +109,127 @@
             </div><!-- end .media-single-content -->
                     <div class="entry">
 						<div class="earmilk-album-review" style="display:none;">
+							<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
 							<table class="table table-condensed table-hover">
-							<caption>
-							Optional table caption.
-							</caption>
-							
-							<thead>
-							<tr>
-							<th>#</th>
-							
-							<th>First Name</th>
-							
-							<th>Last Name</th>
-							
-							<th>Username</th>
-							</tr>
-							</thead>
-							
-							<tbody>
-							<tr>
-							<th scope="row">1</th>
-							
-							<td>Mark</td>
-							
-							<td>Otto</td>
-							
-							<td>@mdo</td>
-							</tr>
-							
-							<tr>
-							<th scope="row">2</th>
-							
-							<td>Jacob</td>
-							
-							<td>Thornton</td>
-							
-							<td>@fat</td>
-							</tr>
-							
-							<tr>
-							<th scope="row">3</th>
-							
-							<td>Larry</td>
-							
-							<td>the Bird</td>
-							
-							<td>@twitter</td>
-							</tr>
-							</tbody>
+<!--
+								<caption>
+									Detail's of EARMILK Review of <?php the_title(); ?>
+								</caption>
+-->
+								<thead>
+									<tr>
+										<th colspan="4">Detail's of EARMILK Review of <?php the_title(); ?></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Artist Name:</th>
+										<td>
+											<div class="earmilk-review-artist">
+												<?php echo $artist_name; ?>
+											</div>
+										</td>
+										<th>Album Name:</th>
+										<td>
+											<div class="earmilk-review-album">
+												<?php echo $album_name; ?> <?php the_post_thumbnail( array( 18, 18 ) ); ?>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Release Type:</th>
+										<td>
+											<div class="earmilk-review-release">
+												<?php echo get_field('release_type'); ?>
+											</div>
+										</td>
+										<th>Release Date:</th>
+										<td>
+											<div class="earmilk-review-album-release-date">
+												<time datetime="<?php echo $date_iso ?>">
+													<?php echo $date_human; ?>
+												</time>
+											</div>
+										</td>
+									</tr>
+									<tr class="earmilk-review-label" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization">
+										<th scope="row">Record Label:</th>
+										<td>
+											<div class="earmilk-review-label-name" itemprop="name">
+												<a class="earmilk-review-label-url" href="<?php echo $record_label_url; ?>" itemprop="url">
+													<?php echo $record_label_name; ?>
+												</a>
+											</div>
+										</td>
+										<th>Record Label Location:</th>
+										<td>
+											<div class="earmilk-review-label-location" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+												<span itemprop="addressLocality addressRegion">
+													<?php echo $record_label_location; ?>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Review Author:</th>
+										<td>
+											<div class="earmilk-review-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+												<meta itemprop="url" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" />
+												<meta itemprop="image" content="<?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?>" />
+								                <a class="author-photo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+													<span itemprop="name"><?php echo get_the_author_meta( 'display_name' ); ?></span>
+									                <?php echo get_avatar( get_the_author_meta( 'user_email' ), 18 ); ?>
+									            </a>
+											</div>
+										</td>
+										<th>Review Date:</th>
+										<td>
+											<div class="earmilk-review-created-time" itemprop="dateCreated">
+												<time datetime="<?php echo get_the_date('c'); ?>">
+													<?php echo get_the_date('F j, Y'); ?>
+												</time>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<?php 
+										if ( $review_links !== NULL ) { 
+											foreach ( $review_links as $review_link ) { ?>
+												<tr class="earmilk-review-links" style="display:none;">
+													<th colspan=""><?php echo $review_link['link_display_text']; ?></th>
+													<td colspan="3">
+														<a href="<?php echo $review_link['link_url']; ?>" 
+															title="<?php echo $artist_name . ' on ' . $review_link['link_display_text']; ?>">
+															<?php echo $review_link['link_url']; ?>
+														</a>
+													</td>
+												</tr>
+									<?php 
+											};
+										}; ?>
+									<tr>
+										<td></td>
+										<th>Review Rating:</th>
+										<td>
+											<div class="earmilk-review-rating" 
+												itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+												<meta itemprop="name" content="EARMILK Rating">
+												<meta itemprop="bestRating" content="10">
+												<meta itemprop="worstRating" content="1">
+					                        	<div itemprop="ratingValue">
+													<?php echo $review_rating; ?>
+					                        	</div>
+											</div>
+										</td>
+										<td></td>
+									</tr>
+								</tfoot>
 							</table>
 
-							<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
-							<div class="earmilk-review-release">
-								<?php echo get_field('release_type'); ?>
-							</div>
-							<div class="earmilk-review-artist">
-								<?php echo get_field('artist_name'); ?>
-							</div>
-							<div class="earmilk-review-album">
-								<?php echo get_field('album_name'); ?>
-							</div>
-							<div class="earmilk-review-album-release-date">
-								<time datetime="<?php echo $date_iso ?>">
-									<?php echo $date_human; ?>
-								</time>
-							</div>
-							<div class="earmilk-review-created-time" itemprop="dateCreated">
-								<time datetime="<?php echo get_the_date('c'); ?>">
-									<?php echo get_the_date('F j, Y'); ?>
-								</time>
-							</div>
-							<div class="earmilk-review-rating" 
-								itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-								<meta itemprop="name" content="EARMILK Rating">
-								<meta itemprop="bestRating" content="10">
-								<meta itemprop="worstRating" content="1">
-	                        	<div itemprop="ratingValue">
-									<?php echo get_field('review_rating'); ?>
-	                        	</div>
-							</div>
-							<div class="earmilk-review-label" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization">
-								<div class="earmilk-review-label-name" itemprop="name">
-									<?php echo $record_label_name; ?>
-								</div>
-								<div class="earmilk-review-label-location" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-									<span itemprop="addressLocality addressRegion">
-										<?php echo $record_label_location; ?>
-									</span>
-								</div>
-								<div class="earmilk-review-label-url" itemprop="url">
-									<?php echo $record_label_url; ?>
-								</div>
-							</div>
-							<div class="earmilk-review-links">
-								<?php echo implode( get_field('links') ); ?>
-							</div>
-							<div class="earmilk-review-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-								<span itemprop="name"><?php echo get_the_author_meta( 'display_name' ); ?></span>
-								<span itemprop="url"><?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?></span>
-								<span itemprop="image"><?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?></span>
-							</div>
                         </div>
+
+
                         <!-- entry content -->
                         <div class="p-first-letter" itemprop="reviewBody">
                             <?php if (!empty($smof_data['ads_entry_top'])) { ?>
