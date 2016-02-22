@@ -44,7 +44,7 @@ Earmilk redesign project
 - [x] New 404 page
 - [x] Implement new bottle favicon
 - [ ] Look into [AppCache](http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
-- [ ] New Search function
+- [ ] New Live Search function
 - [ ] Add Previous Next navigation to bottom of single posts
 - [ ] Implement new Sharrre Open source, share-count aggregating, and lazyloading "plugin" by building custom plugin
 - [ ] Pull share count to posts grid
@@ -64,12 +64,12 @@ Earmilk redesign project
 - [ ] Ability to play a post's first song right from the posts grid
 - [ ] Ability to play a post's first video right from the posts grid
 - [x] Add Schema to `/events/` page
-- [ ] Add Schema to `/news/` page
+- [x] Add Schema to `/news/` page
+- [x] Album Review Details custom Schema + HTML details table widget
 - [ ] Add Schema to all posts
 - [ ] Finish Schema.org markup
 - [x] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
-- [ ] Album Review Details custom widget
 - [ ] Improve Harlem Shake CSS animation timing
 - [ ] AJAX site navigation engine
 - [ ] Site wide persistent MP3 player
@@ -195,7 +195,8 @@ Earmilk redesign project
 12.  Added [Person](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4d89df66e88c819e695c84292ebc55cbd8c3a6b6) to Author Pages and made authors the mainEntity of the page.  Note: had to write [a custom PHP function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/eb5c52886dcf07325e0e0465863b0d84ed856357) to inject `itemprop="image"` into the `<img>` tag of author photos, regardless of whether WP Social Avatar or default Gravatar is being used.
 13.  Removed duplicate, error-prone The Events Calendar `ld+json` Schema.org markup block via [function.php function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c75745b607dc4a2318fcc817616c3c838c01edff)
 14.  Album Review Single Post [Schema perfected](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/774ec382bf4e628671895db7513e09eef88aa484)
-15.  ...
+15.  BlogPosting Schema added to [single.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/043aabd8eb0759a8190bc29d8648bbcec7a4abfd)
+16.  ...
 
 
 
