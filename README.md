@@ -196,7 +196,8 @@ Earmilk redesign project
 13.  Removed duplicate, error-prone The Events Calendar `ld+json` Schema.org markup block via [function.php function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/c75745b607dc4a2318fcc817616c3c838c01edff)
 14.  Album Review Single Post [Schema perfected](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/774ec382bf4e628671895db7513e09eef88aa484)
 15.  BlogPosting Schema added to [single.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/043aabd8eb0759a8190bc29d8648bbcec7a4abfd)
-16.  ...
+16.  BlogPosting Schema added to [single-opinion_post.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/36d975c1343d024463d9fbc66f4464b5e0fd9775)
+17.  ...
 
 
 
