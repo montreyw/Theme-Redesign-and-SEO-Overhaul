@@ -26,6 +26,12 @@
 				};
 			?>
             <meta itemprop="name headline" content="<?php the_title(); ?>" />
+			<?php 
+				if ( class_exists('WPSEO_Frontend') ) { 
+	 				$wp_seo_object = WPSEO_Frontend::get_instance();
+	 				$post_description = htmlentities( $wp_seo_object->metadesc( false ) ); 
+					echo '<meta itemprop="description" content="' . $post_description . '" />'; }
+			?>
 			<time itemprop="datePublished" datetime="<?php echo $post_date_iso ?>">
 				<?php echo $post_date_human; ?>
 			</time>
