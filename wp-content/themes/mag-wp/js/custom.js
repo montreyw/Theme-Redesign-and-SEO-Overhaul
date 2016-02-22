@@ -160,7 +160,7 @@ jQuery( document ).ready( function( $ ) {
 	//////////////////////////////////////////////////////////////////
 	// global keycode constant
 	var KEYCODE_ESC = 27;
-	var exitKeys = [37, 38, 39, 40, 17, 18, 91, 32, 192, 8]; 
+	var exitKeys = [37, 38, 39, 40, 17, 18, 91, 32, 16, 20, 27, 192, 8]; 
 
 	// extending the jQuery prototype with setCursorPosition
 	$.fn.setCursorPosition = function(pos) {
@@ -186,7 +186,7 @@ jQuery( document ).ready( function( $ ) {
 		// on any keydown, start parsing keyboard input
 		$(document).keydown(function(e) {
 			//if the keycode is not found in the array, the result will be -1
-			if ($.inArray(e.keyCode, exitKeys) !== -1) return;
+			if(!$search.is(':visible')) if ($.inArray(e.keyCode, exitKeys) !== -1) return;
 			if ( !$("*:not(#ta-searchtext)").is(":focus") ) {
 				if($search.is(':visible')) {
 					switch (e.which) {
