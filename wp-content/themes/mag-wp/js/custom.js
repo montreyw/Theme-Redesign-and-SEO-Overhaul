@@ -182,6 +182,7 @@ jQuery( document ).ready( function( $ ) {
 		// cache variables
 		var $search = $('#ta-search');
 		var $searchtext = $('#ta-searchtext');
+		var $escapeKey = $('#escape-key');
 		// on any keydown, start parsing keyboard input
 		$(document).keydown(function(e) {
 			//if the keycode is not found in the array, the result will be -1
@@ -190,13 +191,19 @@ jQuery( document ).ready( function( $ ) {
 				if($search.is(':visible')) {
 					switch (e.which) {
 						case KEYCODE_ESC:
-							$search.fadeOut(200);
-							$searchtext.blur().hide();
+							$escapeKey.addClass('active');
+							setTimeout( function() {
+								$search.fadeOut(200);
+								$searchtext.blur().hide();
+							}, 137 );
 							break;
 						default:
 							$searchtext.focus();
 							break;
 					}
+					setTimeout( function() {
+						$escapeKey.removeClass('active');
+					}, 137 );
 				} else {
 					$searchtext.show().focus();
 					// Grab the key pressed ( String.fromCharCode(e.which) ) 
