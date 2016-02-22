@@ -160,7 +160,7 @@ jQuery( document ).ready( function( $ ) {
 	//////////////////////////////////////////////////////////////////
 	// global keycode constant
 	var KEYCODE_ESC = 27;
-	var exitKeys = [37, 38, 39, 40, 17, 18, 91, 32]; 
+	var exitKeys = [37, 38, 39, 40, 17, 18, 91, 32, 192, 8]; 
 
 	// extending the jQuery prototype with setCursorPosition
 	$.fn.setCursorPosition = function(pos) {
