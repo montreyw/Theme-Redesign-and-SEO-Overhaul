@@ -111,40 +111,35 @@
 						<div class="earmilk-album-review">
 							<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
 							<table class="table table-condensed table-hover">
-<!--
-								<caption>
-									Detail's of EARMILK Review of <?php the_title(); ?>
-								</caption>
--->
 								<thead>
 									<tr>
-										<th colspan="4">Detail's of EARMILK Review of <?php the_title(); ?></th>
+										<th colspan="10">Detail's of EARMILK Review of <?php the_title(); ?></th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<th scope="row">Artist Name:</th>
-										<td>
+										<th scope="row" colspan="2">Artist Name:</th>
+										<td colspan="3">
 											<div class="earmilk-review-artist">
 												<?php echo $artist_name; ?>
 											</div>
 										</td>
-										<th>Album Name:</th>
-										<td>
+										<th colspan="2">Album Name:</th>
+										<td colspan="3">
 											<div class="earmilk-review-album">
 												<?php echo $album_name; ?> <?php the_post_thumbnail( array( 18, 18 ) ); ?>
 											</div>
 										</td>
 									</tr>
 									<tr>
-										<th scope="row">Release Type:</th>
-										<td>
+										<th scope="row" colspan="2">Release Type:</th>
+										<td colspan="3">
 											<div class="earmilk-review-release">
 												<?php echo get_field('release_type'); ?>
 											</div>
 										</td>
-										<th>Release Date:</th>
-										<td>
+										<th colspan="2">Release Date:</th>
+										<td colspan="3">
 											<div class="earmilk-review-album-release-date">
 												<time datetime="<?php echo $date_iso ?>">
 													<?php echo $date_human; ?>
@@ -153,16 +148,16 @@
 										</td>
 									</tr>
 									<tr class="earmilk-review-label" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization">
-										<th scope="row">Record Label:</th>
-										<td>
+										<th scope="row" colspan="2">Record Label:</th>
+										<td colspan="3">
 											<div class="earmilk-review-label-name" itemprop="name">
 												<a class="earmilk-review-label-url" href="<?php echo $record_label_url; ?>" itemprop="url">
 													<?php echo $record_label_name; ?>
 												</a>
 											</div>
 										</td>
-										<th>Record Label Location:</th>
-										<td>
+										<th colspan="2">Label Location:</th>
+										<td colspan="3">
 											<div class="earmilk-review-label-location" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 												<span itemprop="addressLocality addressRegion">
 													<?php echo $record_label_location; ?>
@@ -171,8 +166,8 @@
 										</td>
 									</tr>
 									<tr>
-										<th scope="row">Review Author:</th>
-										<td>
+										<th scope="row" colspan="2">Review Author:</th>
+										<td colspan="3">
 											<div class="earmilk-review-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
 												<meta itemprop="url" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" />
 												<meta itemprop="image" content="<?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?>" />
@@ -182,8 +177,8 @@
 									            </a>
 											</div>
 										</td>
-										<th>Review Date:</th>
-										<td>
+										<th colspan="2">Review Date:</th>
+										<td colspan="3">
 											<div class="earmilk-review-created-time" itemprop="dateCreated">
 												<time datetime="<?php echo get_the_date('c'); ?>">
 													<?php echo get_the_date('F j, Y'); ?>
@@ -209,9 +204,8 @@
 											};
 										}; ?>
 									<tr class="earmilk-review-rating-row">
-										<td></td>
-										<th>EARMILK Review Rating:</th>
-										<td>
+										<th colspan="5">EM Review Rating:</th>
+										<td colspan="5">
 											<div class="earmilk-review-rating" 
 												itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
 												<meta itemprop="name" content="EARMILK Rating">
@@ -245,7 +239,6 @@
 					                        	</div>
 											</div>
 										</td>
-										<td></td>
 									</tr>
 								</tfoot>
 							</table>
