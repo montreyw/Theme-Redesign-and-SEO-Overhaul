@@ -9,12 +9,21 @@
 	itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="earmilk-album-review-meta schema-meta" style="display:none;">
 			<?php 
-				$post_date = get_the_date();
 				$post_date_human = get_the_date("F j, Y"); 
 				$post_date_iso = get_the_date("c");
-				$post_modified_date = get_the_modified_date();
-				$post_modified_date_human = date("F j, Y", strtotime($post_date)); 
-				$post_modified_date_iso = date("c", strtotime($post_date));
+				$post_modified_date_human = get_the_modified_date("F j, Y");
+				$post_modified_date_iso = get_the_modified_date("c");
+				$post_tags_array = wp_get_post_tags($post->ID);
+				$post_kyewords = '';
+				foreach( $post_tags_array as $tag ) {
+					if ( $post_kyewords == '' ) { $post_kyewords .= $tag->name; } else { $post_kyewords .= ', ' . $tag->name; };
+				};
+				$post_categories_array = wp_get_post_categories($post->ID);
+				$post_sections = ''; 
+				foreach( $post_categories_array as $cats ) {
+					$cat = get_category( $cats );
+					if ( $post_sections == '' ) { $post_sections .= $cat->name; } else { $post_sections .= ', ' . $cat->name; };
+				};
 			?>
             <meta itemprop="name headline" content="<?php the_title(); ?>" />
 			<time itemprop="datePublished" datetime="<?php echo $post_date_iso ?>">
@@ -44,6 +53,8 @@
 				<meta itemprop="image" content="<?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?>" />
 				<meta itemprop="name" content="<?php echo get_the_author_meta( 'display_name' ); ?>" />
 			</div>
+			<meta itemprop="articleSection" content="<?php echo $post_sections; ?>" />
+			<meta itemprop="keywords" content="<?php echo $post_kyewords; ?>" />
         </div>
         <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
         <div class="entry-top">
