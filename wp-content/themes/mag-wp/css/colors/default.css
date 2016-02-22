@@ -455,13 +455,18 @@ blockquote p {
 }
 
 /* Gray bars */
-#searchform #s, 
 .section-top-title h3, 
 .sidebar .widget h3.title, 
 footer .widget h3.title {
-/*     color: #fff; */
-    background-color: #555;
-    background: #555;
+	background-color: transparent;
+	display: block;
+	font-size: 17px;
+	text-transform: uppercase;
+	padding: 0 0 5px 12px;
+	margin-bottom: 28px;
+	border-bottom: 4px solid #E34848;
+	color: #E34848 !important;
+	color: #000 !important;
 }
 
 
@@ -1343,6 +1348,17 @@ ul.big-thing div.owl-item li h2.article-title.entry-title a {
 .home-content {
     background: #fff;
 }
+.entry-btn {
+	background-color: #cd2026;
+	color: #FFF;
+}
+.single-content h3.title {
+	color: #FFF !important;
+	background-color: #171717;
+}
+.arrow-down-related {
+	border-top: 10px solid #171717;
+}
 
 
 
@@ -1601,6 +1617,7 @@ span._5mdd {
 /* Sidebar ? */
 .sidebar .widget {
 	background: #fff;
+	border: 0;
 }
 .sidebar .widget h3.title {
 }
@@ -1668,7 +1685,8 @@ div#twitter-like-btn iframe {
 .upw-posts .album_review .entry-meta {
     font-size: 10px;
 }
-
+.sidebar .widget .wpp-date {
+}
 
 
 
@@ -1986,6 +2004,24 @@ h6.post-answer .interviewee {
 
 
 /* Album Review post style */
+.album_review .album-review-box {
+	width: 80%;
+	margin: 0 auto;
+}
+.album_review .album-review-box .media-single-content,
+.album_review .album-review-box .earmilk-album-review {
+	width: 50%;
+	display: inline-block;
+}
+.album_review .album-review-box .media-single-content {
+	padding: 20px;
+	box-sizing: border-box;
+	background: #fff;
+}
+.album_review .album-review-box .earmilk-album-review {
+	vertical-align: top;
+	margin: 10px 0 0;
+}
 .album_review .media-single-content {
 	width: 720px;
 	max-width: 80%;
@@ -2165,9 +2201,6 @@ h6.post-answer .interviewee {
 .post-249009 .entry h1.page-title {
     color: #e34848;
 }
-h3 {
-    color: #e34848;
-}
 
 
 
@@ -2203,7 +2236,6 @@ footer .widget {
     background-color: #fff;
 }
 footer .widget h3.title {
-    color: #fff;
 }
 ul.footer-social li a {
     color: #fff !important;
@@ -2349,6 +2381,11 @@ body #responsive-menu #responsive-menu-title {
 }
 
 @media only screen and (max-width: 1230px) and (min-width: 1001px) {
+	#fixed-header {
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
 	#fixed-header #inner-header #logo-header {
 		width: 180px;
 		margin: 23px 0% 0px 1%;
@@ -2400,6 +2437,11 @@ body #responsive-menu #responsive-menu-title {
 	}
 }
 @media only screen and (max-width: 1000px) and (min-width: 760px) {
+	#fixed-header {
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
 	#fixed-header,
 	#fixed-header #inner-header {
 		height: 45px;
@@ -2545,8 +2587,18 @@ body #responsive-menu #responsive-menu-title {
 	footer {
 		padding-bottom: 64px;
 	}
+	.album_review .album-review-box .media-single-content,
+	.album_review .album-review-box .earmilk-album-review {
+		width: 100%;
+		display: block;
+	}
 }
 @media only screen and (max-width: 760px) and (min-width: 580px) {
+	#fixed-header {
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
 	#fixed-header,
 	#fixed-header #inner-header {
 		height: 45px;
@@ -2658,8 +2710,18 @@ body #responsive-menu #responsive-menu-title {
 	footer {
 		padding-bottom: 64px;
 	}
+	.album_review .album-review-box .media-single-content,
+	.album_review .album-review-box .earmilk-album-review {
+		width: 100%;
+		display: block;
+	}
 }
 @media only screen and (max-width: 580px) and (min-width: 480px) {
+	#fixed-header {
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
 	#fixed-header,
 	#fixed-header #inner-header {
 		height: 45px;
@@ -2773,6 +2835,11 @@ body #responsive-menu #responsive-menu-title {
 	}
 	footer {
 		padding-bottom: 64px;
+	}
+	.album_review .album-review-box .media-single-content,
+	.album_review .album-review-box .earmilk-album-review {
+		width: 100%;
+		display: block;
 	}
 }
 @media only screen and (max-width: 479px) {
@@ -3016,6 +3083,11 @@ body #responsive-menu #responsive-menu-title {
 	}
 	footer {
 		padding-bottom: 64px;
+	}
+	.album_review .album-review-box .media-single-content,
+	.album_review .album-review-box .earmilk-album-review {
+		width: 100%;
+		display: block;
 	}
 }
 
