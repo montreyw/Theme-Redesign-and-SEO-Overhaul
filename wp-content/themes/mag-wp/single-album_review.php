@@ -29,10 +29,11 @@
         </div><div class="clear"></div>
         <?php endwhile; endif; ?>
         <article class="entry-content" itemprop="hasPart" itemscope itemtype="http://schema.org/MusicAlbum">
-	        <div class="earmilk-album-review-meta" style="display:none;">
+	        <div class="earmilk-album-review-meta schema-meta" style="display:none;">
 				<?php 
 					$artist_name = get_field('artist_name');
-					$album_name = get_field('album_name');					
+					$album_name = get_field('album_name');
+					$release_type = get_field('release_type');
 					$date = get_field('release_date');
 					$date_human = date("F j, Y", strtotime($date)); 
 					$date_iso = date("c", strtotime($date)); 
@@ -41,9 +42,23 @@
 					$record_label_url = get_field('labels')[0]['label_url']; 
 					$review_rating = get_field('review_rating');
 					$review_links = get_field('links');
+					$post_modified_date_human = get_the_modified_date("F j, Y");
+					$post_modified_date_iso = get_the_modified_date("c");
+					$post_tags_array = wp_get_post_tags($post->ID);
+					$post_kyewords = '';
+					foreach( $post_tags_array as $tag ) {
+						if ( $post_kyewords == '' ) { $post_kyewords .= $tag->name; } else { $post_kyewords .= ', ' . $tag->name; };
+					};
+					$post_categories_array = wp_get_post_categories($post->ID);
+					$post_sections = ''; 
+					foreach( $post_categories_array as $cats ) {
+						$cat = get_category( $cats );
+						if ( $post_sections == '' ) { $post_sections .= $cat->name; } else { $post_sections .= ', ' . $cat->name; };
+					};
 				?>							
 				<meta itemprop="name" content="<?php echo $album_name; ?>" />
-				<meta itemprop="albumReleaseType" content="<?php echo get_field('release_type'); ?>" />
+				<meta itemprop="mainEntityOfPage" content="<?php the_permalink(); ?>" />
+				<meta itemprop="albumReleaseType" content="<?php echo $release_type; ?>" />
 				<span itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup">
 					<meta itemprop="name" content="<?php echo $artist_name; ?>" />
 				</span>
@@ -61,6 +76,7 @@
 					</span>
 					<meta itemprop="url" content="<?php echo $record_label_url; ?>" />
 				</span>
+				<meta itemprop="keywords" content="<?php echo $post_kyewords; ?>" />
 	        </div>
 				
             <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
@@ -110,6 +126,14 @@
                     <div class="entry">
 						<div class="earmilk-album-review">
 							<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
+							<meta itemprop="about" content="<?php the_title(); ?>" />
+							<?php 
+								if ( class_exists('WPSEO_Frontend') ) { 
+					 				$wp_seo_object = WPSEO_Frontend::get_instance();
+					 				$post_description = htmlentities( $wp_seo_object->metadesc( false ) ); 
+									echo '<meta itemprop="description" content="' . $post_description . '" />'; }
+							?>
+							<meta itemprop="keywords" content="<?php echo $post_sections . ', ' . $post_kyewords; ?>" />
 							<table class="table table-condensed table-hover">
 								<thead>
 									<tr>
@@ -135,7 +159,7 @@
 										<th scope="row" colspan="2">Release Type:</th>
 										<td colspan="3">
 											<div class="earmilk-review-release">
-												<?php echo get_field('release_type'); ?>
+												<?php echo $release_type; ?>
 											</div>
 										</td>
 										<th colspan="2">Release Date:</th>
@@ -179,10 +203,11 @@
 										</td>
 										<th colspan="2">Review Date:</th>
 										<td colspan="3">
-											<div class="earmilk-review-created-time" itemprop="dateCreated">
-												<time datetime="<?php echo get_the_date('c'); ?>">
+											<div class="earmilk-review-created-time">
+												<time itemprop="dateCreated" datetime="<?php echo get_the_date('c'); ?>">
 													<?php echo get_the_date('F j, Y'); ?>
 												</time>
+												<meta itemprop="dateModified" content="<?php echo $post_modified_date_iso ?>" />
 											</div>
 										</td>
 									</tr>
