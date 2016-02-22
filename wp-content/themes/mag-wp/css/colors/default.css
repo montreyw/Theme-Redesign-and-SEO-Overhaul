@@ -2041,8 +2041,10 @@ h6.post-answer .interviewee {
 	border-top: 2px solid #ddd;
 }
 .earmilk-album-review .table td img {
-	vertical-align: middle;
-	margin: 0 0 0 7px;
+	-webkit-box-shadow: 0 0px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 0px 3px rgba(0,0,0,0.1);
+	border: 1px solid #eee;
 }
 .earmilk-album-review .table .table {
 	background-color: #fff;
@@ -2064,9 +2066,15 @@ h6.post-answer .interviewee {
 .earmilk-album-review .earmilk-review-rating-row {
 	font-size: 17px;
 }
+.earmilk-review-rating > div * {
+	vertical-align: middle;
+}
 .album-review-number {
 	display: inline-block;
 	font-size: 13px;
+	line-height: 19px;
+	height: 17px;
+	white-space: nowrap;
 	font-weight: bold;
 	background: rgba(57, 181, 74, 0.75);
 	border: 2px solid #39B54A;
