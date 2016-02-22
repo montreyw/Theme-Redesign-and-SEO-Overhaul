@@ -4,9 +4,64 @@
     global $smof_data;
 ?>
 <!-- Begin Content -->
-<div class="wrap-fullwidth hfeed h-feed" role="main" 
-	itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
-    <div class="single-content hentry h-entry">
+<div class="wrap-fullwidth hfeed h-feed" role="main">
+    <div class="single-content hentry h-entry" 
+	itemprop="mainEntity" itemscope itemtype="http://schema.org/NewsArticle">
+        <div class="earmilk-album-review-meta schema-meta" style="display:none;">
+			<?php 
+				$post_date_human = get_the_date("F j, Y"); 
+				$post_date_iso = get_the_date("c");
+				$post_modified_date_human = get_the_modified_date("F j, Y");
+				$post_modified_date_iso = get_the_modified_date("c");
+				$post_tags_array = wp_get_post_tags($post->ID);
+				$post_kyewords = '';
+				foreach( $post_tags_array as $tag ) {
+					if ( $post_kyewords == '' ) { $post_kyewords .= $tag->name; } else { $post_kyewords .= ', ' . $tag->name; };
+				};
+				$post_categories_array = wp_get_post_categories($post->ID);
+				$post_sections = ''; 
+				foreach( $post_categories_array as $cats ) {
+					$cat = get_category( $cats );
+					if ( $post_sections == '' ) { $post_sections .= $cat->name; } else { $post_sections .= ', ' . $cat->name; };
+				};
+			?>
+            <meta itemprop="name headline" content="<?php the_title(); ?>" />
+			<?php 
+				if ( class_exists('WPSEO_Frontend') ) { 
+	 				$wp_seo_object = WPSEO_Frontend::get_instance();
+	 				$post_description = htmlentities( $wp_seo_object->metadesc( false ) ); 
+					echo '<meta itemprop="description" content="' . $post_description . '" />'; }
+			?>
+			<time itemprop="datePublished" datetime="<?php echo $post_date_iso ?>">
+				<?php echo $post_date_human; ?>
+			</time>
+			<time itemprop="dateModified" datetime="<?php echo $post_modified_date_iso ?>">
+				<?php echo $post_modified_date_human; ?>
+			</time>
+			<meta itemprop="url" content="<?php the_permalink(); ?>" />
+			<meta itemprop="mainEntityOfPage" content="<?php the_permalink(); ?>" />
+			<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>">
+				<meta itemprop="width" content="950">
+				<meta itemprop="height" content="451">
+			</div>
+			<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+				<meta itemprop="name" content="EARMILK">
+				<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+					<img id="earmilk-logo-img" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" />
+					<meta itemprop="url" content="http://earmilk.com/wp-content/uploads/2016/02/EARMILK_logo_3.png">
+					<meta itemprop="width" content="229">
+					<meta itemprop="height" content="50">
+				</div>
+			</div>
+			<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+				<meta itemprop="url" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" />
+				<meta itemprop="image" content="<?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?>" />
+				<meta itemprop="name" content="<?php echo get_the_author_meta( 'display_name' ); ?>" />
+			</div>
+			<meta itemprop="articleSection" content="<?php echo $post_sections; ?>" />
+			<meta itemprop="keywords" content="<?php echo $post_kyewords; ?>" />
+        </div>
         <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
         <div class="entry-top">
             <h1 class="article-title entry-title p-name"><?php the_title(); ?></h1>
