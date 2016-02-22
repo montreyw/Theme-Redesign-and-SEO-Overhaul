@@ -160,6 +160,8 @@ jQuery( document ).ready( function( $ ) {
 	//////////////////////////////////////////////////////////////////
 	// global keycode constant
 	var KEYCODE_ESC = 27;
+	var exitKeys = [37, 38, 39, 40, 17, 18, 91, 32]; 
+
 	// extending the jQuery prototype with setCursorPosition
 	$.fn.setCursorPosition = function(pos) {
 		this.each(function(index, elem) {
@@ -177,11 +179,13 @@ jQuery( document ).ready( function( $ ) {
 	};
 	// intialize
 	$(document).ready( function() {
-	// cache variables
+		// cache variables
 		var $search = $('#ta-search');
 		var $searchtext = $('#ta-searchtext');
 		// on any keydown, start parsing keyboard input
 		$(document).keydown(function(e) {
+			//if the keycode is not found in the array, the result will be -1
+			if ($.inArray(e.keyCode, exitKeys) !== -1) return;
 			if ( !$("*:not(#ta-searchtext)").is(":focus") ) {
 				if($search.is(':visible')) {
 					switch (e.which) {
@@ -195,9 +199,9 @@ jQuery( document ).ready( function( $ ) {
 					}
 				} else {
 					$searchtext.show().focus();
-					// grab the key pressed ( String.fromCharCode(e.which) ) 
+					// Grab the key pressed ( String.fromCharCode(e.which) ) 
 					// and insert it into $searchtext.
-					// then,set the cursor to the end of $searchtext.
+					// then, set the cursor to the end of $searchtext.
 					$searchtext.val(String.fromCharCode(e).toLowerCase())
 						.setCursorPosition($searchtext.val().length);
 					$search.fadeIn(200); 
