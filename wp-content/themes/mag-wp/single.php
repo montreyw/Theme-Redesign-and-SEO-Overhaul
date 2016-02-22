@@ -4,9 +4,47 @@
     global $smof_data;
 ?>
 <!-- Begin Content -->
-<div class="wrap-fullwidth hfeed h-feed" role="main" 
-	itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
-    <div class="single-content hentry h-entry">
+<div class="wrap-fullwidth hfeed h-feed" role="main">
+    <div class="single-content hentry h-entry" 
+	itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="earmilk-album-review-meta schema-meta" style="display:none;">
+			<?php 
+				$post_date = get_the_date();
+				$post_date_human = get_the_date("F j, Y"); 
+				$post_date_iso = get_the_date("c");
+				$post_modified_date = get_the_modified_date();
+				$post_modified_date_human = date("F j, Y", strtotime($post_date)); 
+				$post_modified_date_iso = date("c", strtotime($post_date));
+			?>
+            <meta itemprop="name headline" content="<?php the_title(); ?>" />
+			<time itemprop="datePublished" datetime="<?php echo $post_date_iso ?>">
+				<?php echo $post_date_human; ?>
+			</time>
+			<time itemprop="dateModified" datetime="<?php echo $post_modified_date_iso ?>">
+				<?php echo $post_modified_date_human; ?>
+			</time>
+			<meta itemprop="url" content="<?php the_permalink(); ?>" />
+			<meta itemprop="mainEntityOfPage" content="<?php the_permalink(); ?>" />
+			<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>">
+				<meta itemprop="width" content="950">
+				<meta itemprop="height" content="451">
+			</div>
+			<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+				<meta itemprop="name" content="EARMILK">
+				<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+					<img id="earmilk-logo-img" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" />
+					<meta itemprop="url" content="http://earmilk.com/wp-content/uploads/2016/02/EARMILK_logo_3.png">
+					<meta itemprop="width" content="229">
+					<meta itemprop="height" content="50">
+				</div>
+			</div>
+			<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+				<meta itemprop="url" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" />
+				<meta itemprop="image" content="<?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?>" />
+				<meta itemprop="name" content="<?php echo get_the_author_meta( 'display_name' ); ?>" />
+			</div>
+        </div>
         <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
         <div class="entry-top">
             <h1 class="article-title entry-title p-name"><?php the_title(); ?></h1>
@@ -74,7 +112,7 @@
             </div><!-- end .media-single-content -->
                     <div class="entry">
                         <!-- entry content -->
-                        <div class="p-first-letter">
+                        <div class="p-first-letter" itemprop="articleBody">
                             <?php if (!empty($smof_data['ads_entry_top'])) { ?>
                             <?php } ?>
                             <?php if ( !empty( $post->post_excerpt ) ) : the_excerpt(); else : false; endif;  ?>
