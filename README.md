@@ -197,7 +197,8 @@ Earmilk redesign project
 14.  Album Review Single Post [Schema perfected](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/774ec382bf4e628671895db7513e09eef88aa484)
 15.  BlogPosting Schema added to [single.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/043aabd8eb0759a8190bc29d8648bbcec7a4abfd)
 16.  BlogPosting Schema added to [single-opinion_post.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/36d975c1343d024463d9fbc66f4464b5e0fd9775)
-17.  ...
+17.  NewsArticle Schema added to [single-news.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/69d7d7d049d0d8ad1c4e971893dc12583ca3743d)
+18.  ...
 
 
 
