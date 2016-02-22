@@ -31,6 +31,8 @@ Earmilk redesign project
 - [x] Add Funtime Out Events Festivals to the nav menu
 - [x] Write a script that will make the first word interview/er/ee name bold on Interview Posts
 - [x] Add sliding slide out facebook like box (desktop)
+- [ ] Unique style for About Page
+- [ ] Create and style basic List of Authors Page
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
 - [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
 - [ ] Re-style re-design [MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) ([1](https://starslingeruk.bandcamp.com/album/sketchy-ep))
