@@ -1998,6 +1998,10 @@ h6.post-answer .interviewee {
 	width: 100%;
 	max-width: 100%;
 	margin-bottom: 20px;
+	table-layout: fixed;
+}
+.earmilk-album-review table.table * {
+	vertical-align: middle;
 }
 .earmilk-album-review caption {
 	padding-top: 8px;
@@ -2066,13 +2070,10 @@ h6.post-answer .interviewee {
 .earmilk-album-review .earmilk-review-rating-row {
 	font-size: 17px;
 }
-.earmilk-review-rating > div * {
-	vertical-align: middle;
-}
 .album-review-number {
 	display: inline-block;
 	font-size: 13px;
-	line-height: 19px;
+	line-height: 17px;
 	height: 17px;
 	white-space: nowrap;
 	font-weight: bold;
