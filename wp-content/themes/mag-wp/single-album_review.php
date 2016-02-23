@@ -137,7 +137,7 @@
 						<table class="table table-condensed table-hover">
 							<thead>
 								<tr>
-									<th colspan="10">Detail's of EARMILK Review of <?php the_title(); ?></th>
+									<th colspan="10">Detail's of EARMILK <?php the_title(); ?></th>
 								</tr>
 							</thead>
 							<tbody>
