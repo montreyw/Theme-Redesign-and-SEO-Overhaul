@@ -1828,7 +1828,10 @@ div#single-share {
 	display: none;
 }
 .single-content {
-    background-color: #fff;
+	background-color: #fff;
+}
+.single-content .media-single-content {
+	background-color: #fff;
 }
 .entry h1, 
 .entry h2, 
