@@ -517,7 +517,7 @@ function append_album_review_to_title( $title ) {
 	global $post;
 	$text = 'Album Review: ';
 
-	if ( get_post_type( $post->ID ) == 'album_review' ){
+	if ( get_post_type( $post->ID ) == 'album_review' && in_the_loop() ){
 		return $text . $title;
 	}
 	else {
