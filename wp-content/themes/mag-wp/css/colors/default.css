@@ -2052,8 +2052,18 @@ h6.post-answer .interviewee {
 .author-meta .entry .author-info p {
     color: #777;
 }
-
-
+/* All authors page -- administrator, author, eidtor, contirbutor, VOICE contributor */
+.authbox_left, .authbox_right {
+	display: inline-block;
+	vertical-align: top;
+}
+.authbox_left {
+	width: 10%;
+}
+.authbox_right {
+	width: 80%;
+	margin: 0 0 0 30px;
+}
 
 
 /* Album Review post style */
