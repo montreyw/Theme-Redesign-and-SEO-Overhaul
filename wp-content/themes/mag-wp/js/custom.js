@@ -183,10 +183,24 @@ jQuery( document ).ready( function( $ ) {
 		var $search = $('#ta-search');
 		var $searchtext = $('#ta-searchtext');
 		var $escapeKey = $('#escape-key');
+
+		// record keys that are being pressed and held down, eg. "Control" or "Command"
+		var pressedKeys = [];
+		onkeydown = onkeyup = function(e){
+			e = e || event;
+			pressedKeys[e.keyCode] = e.type == 'keydown';
+		}
+
 		// on any keydown, start parsing keyboard input
 		$(document).keydown(function(e) {
-			//if the keycode is not found in the array, the result will be -1
-			if(!$search.is(':visible')) if ($.inArray(e.keyCode, exitKeys) !== -1) return;
+  			// if the keycode is not found in the array, the result will be -1, 
+			// so if not visible, and exitKeys code is not -1, then exit function
+			if (!$search.is(':visible')) {
+				if ( ($.inArray(e.keyCode, exitKeys) !== -1) || pressedKeys[17] || pressedKeys[91]) {
+ 					//pressedKeys = [];
+					return;
+				}
+			}
 			if ( !$("*:not(#ta-searchtext)").is(":focus") ) {
 				if($search.is(':visible')) {
 					switch (e.which) {
