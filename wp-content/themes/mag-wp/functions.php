@@ -531,7 +531,7 @@ if(function_exists('add_filter')) {
 // ---------------------------------------------------------------------------------------------------- 
 // Fallback thumbnail image tag and src function  - Andre
 // ---------------------------------------------------------------------------------------------------- 
-function fallback_thumbnail_image( $tag_or_src ) {
+function fallback_thumbnail_image( $tag_or_src = 'tag' ) {
 	$thumbnail_fallback_tag = '<img src="http://images.earmilk.com/delivery.png" alt="Really hot thumbnail for this article post!" />';
 	$thumbnail_fallback_src = 'http://images.earmilk.com/delivery.png';
 	$response = '';
@@ -544,3 +544,12 @@ function fallback_thumbnail_image( $tag_or_src ) {
 	}
 	return $response;
 }
+
+// ---------------------------------------------------------------------------------------------------- 
+// Modify to get_users author with published post count of >= 1 - via SQL query modification - Andre
+// ---------------------------------------------------------------------------------------------------- 
+function filter_users_have_posted( $user_query ) {
+	$user_query->query_from = str_replace( 'LEFT OUTER', 'INNER', $user_query->query_from );
+	remove_action( current_filter(), __FUNCTION__ );
+}
+//add_action( 'pre_user_query', 'filter_users_have_posted' );
