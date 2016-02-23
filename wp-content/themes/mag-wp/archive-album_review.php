@@ -17,7 +17,8 @@ Template Name: Album Reviews - Archive
 <div class="wrap-fullwidth hfeed h-feed">
 
   <!-- Begin Main Home Content 950px -->
-  <div class="home-content">
+  <div class="home-content" 
+		itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
 
     <div class="section-top-title">
       <h3><?php _e('Latest Album Reviews', 'anthemes'); ?></h3>
