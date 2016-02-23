@@ -527,3 +527,20 @@ function append_album_review_to_title( $title ) {
 if(function_exists('add_filter')) {
 	add_filter('the_title', 'append_album_review_to_title');
 }
+
+// ---------------------------------------------------------------------------------------------------- 
+// Album Review titles -- append "Album Review:" to titles - Andre
+// ---------------------------------------------------------------------------------------------------- 
+function fallback_thumbnail_image( $tag_or_src ) {
+	$thumbnail_fallback_tag = '<img src="http://images.earmilk.com/delivery.png" alt="Really hot thumbnail for this article post!" />';
+	$thumbnail_fallback_src = 'http://images.earmilk.com/delivery.png';
+	$response = '';
+	if ( $tag_or_src == 'src' ) {
+		$response = $thumbnail_fallback_src;
+	} elseif ( $tag_or_src == 'tag' ) {
+		$response = $thumbnail_fallback_tag;
+	} else {
+		$response = $thumbnail_fallback_tag;
+	}
+	return $response;
+}
