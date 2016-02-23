@@ -129,7 +129,7 @@
             </div><!-- end .media-single-content -->
                     <div class="entry">
                         <!-- entry content -->
-                        <div class="p-first-letter">
+                        <div class="p-first-letter" itemprop="articleBody">
                             <?php if (!empty($smof_data['ads_entry_top'])) { ?>
                             <?php } ?>
                             <?php if ( !empty( $post->post_excerpt ) ) : the_excerpt(); else : false; endif;  ?>
