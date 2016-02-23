@@ -529,7 +529,7 @@ if(function_exists('add_filter')) {
 }
 
 // ---------------------------------------------------------------------------------------------------- 
-// Album Review titles -- append "Album Review:" to titles - Andre
+// Fallback thumbnail image tag and src function  - Andre
 // ---------------------------------------------------------------------------------------------------- 
 function fallback_thumbnail_image( $tag_or_src ) {
 	$thumbnail_fallback_tag = '<img src="http://images.earmilk.com/delivery.png" alt="Really hot thumbnail for this article post!" />';
