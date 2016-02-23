@@ -509,3 +509,21 @@ function andre_comments_evolved_number( $count ) {
 	return $count;
 }
 //add_filter( 'get_comments_number', 'andre_comments_evolved_number');
+
+// ---------------------------------------------------------------------------------------------------- 
+// Album Review titles -- append "Album Review:" to titles - Andre
+// ---------------------------------------------------------------------------------------------------- 
+function append_album_review_to_title( $title ) {
+	global $post;
+	$text = 'Album Review: ';
+
+	if ( get_post_type( $post->ID ) == 'album_review' && in_the_loop() ){
+		return $text . $title;
+	}
+	else {
+		return $title;
+	}
+}
+if(function_exists('add_filter')) {
+	add_filter('the_title', 'append_album_review_to_title');
+}
