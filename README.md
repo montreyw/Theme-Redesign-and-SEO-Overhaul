@@ -240,7 +240,8 @@ Earmilk redesign project
 11.  Made Genre Bar Dynamic and editable from the backend ([functions.php registetration](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/68c41356fdaada4fce43cf4b2f83fb3b31b00c54), [structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/cfd52ca7df161b137e84d2bc6dd625e46e740754), [javascript](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f43af698d3e7ff7255292db4540c52d59c898cc2), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8c8b6d11f6cb43ebd9d360e3caf19420a77f8e64))
 12.  Placed ads ([header/header.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/00464a3f4bdd9f2e40e0d94ad1d3194c38f2f316))
 13.  Added function to use a default fallback image when something goes wrong with the default `the_post_thumbnail()` WP function ([func in functions.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/079a18968558c7dd8be08dce3806bef243a11996), [index.php fixed](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5dcfca072f3dc25c8d044490f6a2bf36ddbecff6))
-14.  ...
+14.  Created a dynamically generated pages of all EARMILK authors that have published 1 or more posts ([page start](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f8af8fb27462a09c5f3d49e49e59c038bb83991f), [functions.php function to only output authors with 1 or more posts](), [page finished]())
+15.  ...
 
 
 
