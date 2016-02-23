@@ -218,6 +218,10 @@ jQuery( document ).ready( function( $ ) {
 					setTimeout( function() {
 						$escapeKey.removeClass('active');
 					}, 137 );
+					var loaderHtml = $('<div id="ta-loader"><i class="fa fa-spinner fa-pulse"></i><span>Searching...</span></div>').hide().fadeIn(375);
+					document.getElementById('ta-searchform').onsubmit=function() {
+						$search.append( loaderHtml );
+					}
 				} else {
 					$searchtext.show().focus();
 					// Grab the key pressed ( String.fromCharCode(e.which) ) 

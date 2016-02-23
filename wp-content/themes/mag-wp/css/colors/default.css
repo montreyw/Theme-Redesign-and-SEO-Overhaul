@@ -877,7 +877,19 @@ kbd.active {
 		0 0 3px #333;
 	border-top: 1px solid #eee;
 }
-
+#ta-search-container #ta-loader {
+	position: absolute;
+	top: 50%;
+	left: 37%;
+	color: #fff;
+	font-size: 30px;
+	font-style: italic;
+}
+#ta-search-container #ta-loader i {
+	font-size: 40px;
+	vertical-align: middle;
+	margin: 0 7px 0;
+}
 
 
 
