@@ -172,17 +172,25 @@
 			<div class="entry-thumb-cont">
 				<a href="<?php the_permalink(); ?>" class="entry-thumbnail">
 					<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-					<?php if ( has_post_thumbnail()) { ?> 
-						<?php echo the_post_thumbnail('thumbnail-blog'); ?>
-					<?php } else { ?>
-						<img src="<?php echo get_template_directory_uri(); ?>/images/article-img.png" alt="article image" />
-					<?php } // Post Thumbnail ?> 
-						<meta itemprop="url" content="<?php 
+						<?php
 							$post_thumbnail_id = get_post_thumbnail_id();
 							$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
-							echo $post_thumbnail_url; ?>">
-						<meta itemprop="width" content="283">
-						<meta itemprop="height" content="133">
+						?>
+						<?php if ( has_post_thumbnail() ) { ?> 
+							<?php if ( get_the_post_thumbnail() ) { ?> 
+								<?php echo the_post_thumbnail('thumbnail-blog'); ?>
+								<meta itemprop="url" content="<?php echo $post_thumbnail_url; ?>" />
+							<?php } else { ?>
+								<?php echo fallback_thumbnail_image(); ?>
+								<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
+							<?php } // Post with messed up Thumbnail ?>
+						<?php } else { ?>
+							<!-- post has no thumbnail -->
+							<?php echo fallback_thumbnail_image(); ?>
+							<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
+						<?php } // Post Thumbnail ?> 
+						<meta itemprop="width" content="283" />
+						<meta itemprop="height" content="133" />
 					</div>
 				</a> 
 
