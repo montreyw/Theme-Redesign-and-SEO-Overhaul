@@ -82,193 +82,194 @@
             <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
 			<div class="<?php echo andre_get_post_class_without_hentry(); ?>" id="post-<?php the_ID(); ?>"
 				itemprop="review" itemscope itemtype="http://schema.org/Review">
-            <div class="media-single-content">
-            <?php if ( function_exists( 'rwmb_meta' ) ) {
-            // If Meta Box plugin is activate ?>
-                <?php
-                $youtubecode = rwmb_meta('anthemes_youtube', true );
-                $vimeocode = rwmb_meta('anthemes_vimeo', true );
-                $image = rwmb_meta('anthemes_slider', true );
-                $hideimg = rwmb_meta('anthemes_hideimg', true );
-                ?>
-                <?php if(!empty($image)) { ?>
-                    <!-- #### Single Gallery #### -->
-                    <div class="single-gallery">
-                        <?php
-                        $images = rwmb_meta( 'anthemes_slider', 'type=image&size=thumbnail-small-gallery' );
-                        foreach($images as $key =>$image)
-                         { echo "<a href='{$image['full_url']}' rel='mygallery'><img src='{$image['url']}'  alt='{$image['alt']}' width='{$image['width']}' height='{$image['height']}' /></a>";
-                        } ?>
-                    </div><!-- end .single-gallery -->
-                <?php } ?>
-                <?php if(!empty($youtubecode)) { ?>
-                    <!-- #### Youtube video #### -->
-                    <iframe class="single_iframe" width="720" height="420" src="//www.youtube.com/embed/<?php echo $youtubecode; ?>?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-                <?php } ?>
-                <?php if(!empty($vimeocode)) { ?>
-                    <!-- #### Vimeo video #### -->
-                    <iframe class="single_iframe" src="//player.vimeo.com/video/<?php echo $vimeocode; ?>?portrait=0" width="720" height="420" frameborder="0" allowFullScreen></iframe>
-                <?php } ?>
-                <?php if(!empty($image) || !empty($youtubecode) || !empty($vimeocode)) { ?>
-                <?php } elseif ( has_post_thumbnail()) { ?>
-                    <?php if(!empty($hideimg)) { } else { ?>
-                     <?php the_post_thumbnail('thumbnail-single-image'); ?>
-                    <?php } // disable featured image ?>
-                <?php } ?>
-            <?php } else {
-            // Meta Box Plugin ?>
-                <?php the_post_thumbnail('thumbnail-single-image'); ?>
-            <?php } ?>
-                <div class="clear"></div>
-                <div id="single-share"></div>
-				<!-- end #single-share -->
-            </div><!-- end .media-single-content -->
+				<div class="album-review-box">
+		            <div class="media-single-content">
+		            <?php if ( function_exists( 'rwmb_meta' ) ) {
+		            // If Meta Box plugin is activate ?>
+		                <?php
+		                $youtubecode = rwmb_meta('anthemes_youtube', true );
+		                $vimeocode = rwmb_meta('anthemes_vimeo', true );
+		                $image = rwmb_meta('anthemes_slider', true );
+		                $hideimg = rwmb_meta('anthemes_hideimg', true );
+		                ?>
+		                <?php if(!empty($image)) { ?>
+		                    <!-- #### Single Gallery #### -->
+		                    <div class="single-gallery">
+		                        <?php
+		                        $images = rwmb_meta( 'anthemes_slider', 'type=image&size=thumbnail-small-gallery' );
+		                        foreach($images as $key =>$image)
+		                         { echo "<a href='{$image['full_url']}' rel='mygallery'><img src='{$image['url']}'  alt='{$image['alt']}' width='{$image['width']}' height='{$image['height']}' /></a>";
+		                        } ?>
+		                    </div><!-- end .single-gallery -->
+		                <?php } ?>
+		                <?php if(!empty($youtubecode)) { ?>
+		                    <!-- #### Youtube video #### -->
+		                    <iframe class="single_iframe" width="720" height="420" src="//www.youtube.com/embed/<?php echo $youtubecode; ?>?wmode=transparent" frameborder="0" allowfullscreen></iframe>
+		                <?php } ?>
+		                <?php if(!empty($vimeocode)) { ?>
+		                    <!-- #### Vimeo video #### -->
+		                    <iframe class="single_iframe" src="//player.vimeo.com/video/<?php echo $vimeocode; ?>?portrait=0" width="720" height="420" frameborder="0" allowFullScreen></iframe>
+		                <?php } ?>
+		                <?php if(!empty($image) || !empty($youtubecode) || !empty($vimeocode)) { ?>
+		                <?php } elseif ( has_post_thumbnail()) { ?>
+		                    <?php if(!empty($hideimg)) { } else { ?>
+		                     <?php the_post_thumbnail('thumbnail-single-image'); ?>
+		                    <?php } // disable featured image ?>
+		                <?php } ?>
+		            <?php } else {
+		            // Meta Box Plugin ?>
+		                <?php the_post_thumbnail('thumbnail-single-image'); ?>
+		            <?php } ?>
+		                <div class="clear"></div>
+		                <div id="single-share"></div>
+						<!-- end #single-share -->
+		            </div><!-- end .media-single-content
+					--><div class="earmilk-album-review">
+						<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
+						<meta itemprop="about" content="<?php the_title(); ?>" />
+						<?php 
+							if ( class_exists('WPSEO_Frontend') ) { 
+				 				$wp_seo_object = WPSEO_Frontend::get_instance();
+				 				$post_description = htmlentities( $wp_seo_object->metadesc( false ) ); 
+								echo '<meta itemprop="description" content="' . $post_description . '" />'; }
+						?>
+						<meta itemprop="keywords" content="<?php echo $post_sections . ', ' . $post_kyewords; ?>" />
+						<table class="table table-condensed table-hover">
+							<thead>
+								<tr>
+									<th colspan="10">Detail's of EARMILK Review of <?php the_title(); ?></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row" colspan="2">Artist Name:</th>
+									<td colspan="3">
+										<div class="earmilk-review-artist">
+											<?php echo $artist_name; ?>
+										</div>
+									</td>
+									<th colspan="2">Album Name:</th>
+									<td colspan="3">
+										<div class="earmilk-review-album">
+											<?php echo $album_name; ?> <?php the_post_thumbnail( array( 18, 18 ) ); ?>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">Release Type:</th>
+									<td colspan="3">
+										<div class="earmilk-review-release">
+											<?php echo $release_type; ?>
+										</div>
+									</td>
+									<th colspan="2">Release Date:</th>
+									<td colspan="3">
+										<div class="earmilk-review-album-release-date">
+											<time datetime="<?php echo $date_iso ?>">
+												<?php echo $date_human; ?>
+											</time>
+										</div>
+									</td>
+								</tr>
+								<tr class="earmilk-review-label" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization">
+									<th scope="row" colspan="2">Record Label:</th>
+									<td colspan="3">
+										<div class="earmilk-review-label-name" itemprop="name">
+											<a class="earmilk-review-label-url" href="<?php echo $record_label_url; ?>" itemprop="url">
+												<?php echo $record_label_name; ?>
+											</a>
+										</div>
+									</td>
+									<th colspan="2">Label Location:</th>
+									<td colspan="3">
+										<div class="earmilk-review-label-location" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+											<span itemprop="addressLocality addressRegion">
+												<?php echo $record_label_location; ?>
+											</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">Review Author:</th>
+									<td colspan="3">
+										<div class="earmilk-review-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+											<meta itemprop="url" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" />
+											<meta itemprop="image" content="<?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?>" />
+							                <a class="author-photo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+												<span itemprop="name"><?php echo get_the_author_meta( 'display_name' ); ?></span>
+								                <?php echo get_avatar( get_the_author_meta( 'user_email' ), 18 ); ?>
+								            </a>
+										</div>
+									</td>
+									<th colspan="2">Review Date:</th>
+									<td colspan="3">
+										<div class="earmilk-review-created-time">
+											<time itemprop="dateCreated" datetime="<?php echo get_the_date('c'); ?>">
+												<?php echo get_the_date('F j, Y'); ?>
+											</time>
+											<meta itemprop="dateModified" content="<?php echo $post_modified_date_iso ?>" />
+										</div>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<?php 
+									if ( $review_links !== NULL ) { 
+										foreach ( $review_links as $review_link ) { ?>
+											<tr class="earmilk-review-links" style="display:none;">
+												<th colspan=""><?php echo $review_link['link_display_text']; ?></th>
+												<td colspan="3">
+													<a href="<?php echo $review_link['link_url']; ?>" 
+														title="<?php echo $artist_name . ' on ' . $review_link['link_display_text']; ?>">
+														<?php echo $review_link['link_url']; ?>
+													</a>
+												</td>
+											</tr>
+								<?php 
+										};
+									}; ?>
+								<tr class="earmilk-review-rating-row">
+									<th colspan="5">EM Review Rating:</th>
+									<td colspan="5">
+										<div class="earmilk-review-rating" 
+											itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+											<meta itemprop="name" content="EARMILK Rating">
+											<meta itemprop="bestRating" content="10">
+											<meta itemprop="worstRating" content="1">
+				                        	<div itemprop="ratingValue">
+												<div class="album-review-number"><?php echo $review_rating; ?></div>
+					                        	<?php
+						                        	$rating_int = ( (float)$review_rating ) / 2;
+						                        	$subtractor = 0;
+													for($x=1; $x<=$rating_int; $x++) {
+														echo '<i class="fa fa-star filled-star"></i>';
+														$subtractor++;
+													}
+													$raminder = $rating_int - $subtractor;
+													if ( $raminder == 0.25 ) {
+														echo '<i class="fa fa-star quarter-star"></i>';
+														$x++;
+													} elseif ( $raminder == 0.50 ) {
+														echo '<i class="fa fa-star half-star"></i>';
+														$x++;
+													} elseif ( $raminder == 0.75 ) {
+														echo '<i class="fa fa-star three-quarters-star"></i>';
+														$x++;
+													}
+													while ($x<=5) {
+														echo '<i class="fa fa-star"></i>';
+														$x++;
+													}
+												?>
+				                        	</div>
+										</div>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+                    </div>
+				</div><!-- end .album-review-box -->
                     <div class="entry">
-						<div class="earmilk-album-review">
-							<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
-							<meta itemprop="about" content="<?php the_title(); ?>" />
-							<?php 
-								if ( class_exists('WPSEO_Frontend') ) { 
-					 				$wp_seo_object = WPSEO_Frontend::get_instance();
-					 				$post_description = htmlentities( $wp_seo_object->metadesc( false ) ); 
-									echo '<meta itemprop="description" content="' . $post_description . '" />'; }
-							?>
-							<meta itemprop="keywords" content="<?php echo $post_sections . ', ' . $post_kyewords; ?>" />
-							<table class="table table-condensed table-hover">
-								<thead>
-									<tr>
-										<th colspan="10">Detail's of EARMILK Review of <?php the_title(); ?></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th scope="row" colspan="2">Artist Name:</th>
-										<td colspan="3">
-											<div class="earmilk-review-artist">
-												<?php echo $artist_name; ?>
-											</div>
-										</td>
-										<th colspan="2">Album Name:</th>
-										<td colspan="3">
-											<div class="earmilk-review-album">
-												<?php echo $album_name; ?> <?php the_post_thumbnail( array( 18, 18 ) ); ?>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<th scope="row" colspan="2">Release Type:</th>
-										<td colspan="3">
-											<div class="earmilk-review-release">
-												<?php echo $release_type; ?>
-											</div>
-										</td>
-										<th colspan="2">Release Date:</th>
-										<td colspan="3">
-											<div class="earmilk-review-album-release-date">
-												<time datetime="<?php echo $date_iso ?>">
-													<?php echo $date_human; ?>
-												</time>
-											</div>
-										</td>
-									</tr>
-									<tr class="earmilk-review-label" itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization">
-										<th scope="row" colspan="2">Record Label:</th>
-										<td colspan="3">
-											<div class="earmilk-review-label-name" itemprop="name">
-												<a class="earmilk-review-label-url" href="<?php echo $record_label_url; ?>" itemprop="url">
-													<?php echo $record_label_name; ?>
-												</a>
-											</div>
-										</td>
-										<th colspan="2">Label Location:</th>
-										<td colspan="3">
-											<div class="earmilk-review-label-location" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-												<span itemprop="addressLocality addressRegion">
-													<?php echo $record_label_location; ?>
-												</span>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<th scope="row" colspan="2">Review Author:</th>
-										<td colspan="3">
-											<div class="earmilk-review-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-												<meta itemprop="url" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" />
-												<meta itemprop="image" content="<?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?>" />
-								                <a class="author-photo" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-													<span itemprop="name"><?php echo get_the_author_meta( 'display_name' ); ?></span>
-									                <?php echo get_avatar( get_the_author_meta( 'user_email' ), 18 ); ?>
-									            </a>
-											</div>
-										</td>
-										<th colspan="2">Review Date:</th>
-										<td colspan="3">
-											<div class="earmilk-review-created-time">
-												<time itemprop="dateCreated" datetime="<?php echo get_the_date('c'); ?>">
-													<?php echo get_the_date('F j, Y'); ?>
-												</time>
-												<meta itemprop="dateModified" content="<?php echo $post_modified_date_iso ?>" />
-											</div>
-										</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<?php 
-										if ( $review_links !== NULL ) { 
-											foreach ( $review_links as $review_link ) { ?>
-												<tr class="earmilk-review-links" style="display:none;">
-													<th colspan=""><?php echo $review_link['link_display_text']; ?></th>
-													<td colspan="3">
-														<a href="<?php echo $review_link['link_url']; ?>" 
-															title="<?php echo $artist_name . ' on ' . $review_link['link_display_text']; ?>">
-															<?php echo $review_link['link_url']; ?>
-														</a>
-													</td>
-												</tr>
-									<?php 
-											};
-										}; ?>
-									<tr class="earmilk-review-rating-row">
-										<th colspan="5">EM Review Rating:</th>
-										<td colspan="5">
-											<div class="earmilk-review-rating" 
-												itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-												<meta itemprop="name" content="EARMILK Rating">
-												<meta itemprop="bestRating" content="10">
-												<meta itemprop="worstRating" content="1">
-					                        	<div itemprop="ratingValue">
-													<div class="album-review-number"><?php echo $review_rating; ?></div>
-						                        	<?php
-							                        	$rating_int = ( (float)$review_rating ) / 2;
-							                        	$subtractor = 0;
-														for($x=1; $x<=$rating_int; $x++) {
-															echo '<i class="fa fa-star filled-star"></i>';
-															$subtractor++;
-														}
-														$raminder = $rating_int - $subtractor;
-														if ( $raminder == 0.25 ) {
-															echo '<i class="fa fa-star quarter-star"></i>';
-															$x++;
-														} elseif ( $raminder == 0.50 ) {
-															echo '<i class="fa fa-star half-star"></i>';
-															$x++;
-														} elseif ( $raminder == 0.75 ) {
-															echo '<i class="fa fa-star three-quarters-star"></i>';
-															$x++;
-														}
-														while ($x<=5) {
-															echo '<i class="fa fa-star"></i>';
-															$x++;
-														}
-													?>
-					                        	</div>
-											</div>
-										</td>
-									</tr>
-								</tfoot>
-							</table>
-
-                        </div>
 
 
                         <!-- entry content -->
