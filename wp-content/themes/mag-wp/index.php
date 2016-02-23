@@ -181,12 +181,12 @@
 								<?php echo the_post_thumbnail('thumbnail-blog'); ?>
 								<meta itemprop="url" content="<?php echo $post_thumbnail_url; ?>" />
 							<?php } else { ?>
-								<?php echo fallback_thumbnail_image(); ?>
+								<?php echo fallback_thumbnail_image('tag'); ?>
 								<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
 							<?php } // Post with messed up Thumbnail ?>
 						<?php } else { ?>
 							<!-- post has no thumbnail -->
-							<?php echo fallback_thumbnail_image(); ?>
+							<?php echo fallback_thumbnail_image('tag'); ?>
 							<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
 						<?php } // Post Thumbnail ?> 
 						<meta itemprop="width" content="283" />
