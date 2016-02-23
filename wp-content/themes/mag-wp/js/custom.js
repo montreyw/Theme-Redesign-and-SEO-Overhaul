@@ -196,7 +196,7 @@ jQuery( document ).ready( function( $ ) {
   			// if the keycode is not found in the array, the result will be -1, 
 			// so if not visible, and exitKeys code is not -1, then exit function
 			if (!$search.is(':visible')) {
-				if ( ($.inArray(e.keyCode, exitKeys) !== -1) || pressedKeys[17] || pressedKeys[91]) {
+				if ( ($.inArray(e.keyCode, exitKeys) !== -1) || pressedKeys[17] || pressedKeys[18] || pressedKeys[91]) {
  					//pressedKeys = [];
 					return;
 				}
