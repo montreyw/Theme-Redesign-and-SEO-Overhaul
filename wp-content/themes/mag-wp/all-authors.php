@@ -41,6 +41,12 @@ Template Name: All Authors Page
 
 	// If user level is above 0 or login name is "admin", display profile
 		if($curauth->user_level > 0 || $curauth->user_login == 'admin') :
+		
+		$post_count = count_user_posts( $curauth->ID );
+		// Move on if user has not published a post (yet).
+		if ( ! $post_count ) {
+			continue;
+		}
 
 		// Get link to author page
 			$user_link = get_author_posts_url($curauth->ID);
@@ -61,7 +67,8 @@ Template Name: All Authors Page
 <p style="margin-bottom:0;"><strong>Website:</strong> <a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></p>
 <p style="margin-bottom:4px;"><strong>Twitter: </strong><a href="<?php echo $curauth->jabber; ?>"><?php echo $curauth->jabber; ?></a></p>
 <p style="margin-bottom:0;"><?php echo $curauth->description; ?></p>
-</div>
+<p style="margin-bottom:0;">$post_count == <?php echo $post_count; ?></p>
+</div>		
 <div style="clear:both;"></div>
 </div> <!-- end post -->
 <div style="clear:both;"></div>
