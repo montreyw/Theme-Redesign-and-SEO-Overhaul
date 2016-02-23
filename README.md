@@ -216,7 +216,8 @@ Earmilk redesign project
 7.  Added robot.txt to `file2.` (Montrey) and `mooks.` subdomains to prevent caching unnecessary files 
 8.  WOOHOO! Auto-posting to [Google+](https://plus.google.com/+earmilk/posts) via [RSSFeed](http://earmilk/feed/) and [Hootsuite](https://hootsuite.com) finally setup!
 9.  Fixed RSS Feed so that now it [loads ALL post types](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/2b32148db9ff1b50da83af54533ccf17944e0a2d), including the custom types
-10.  ...
+10.  Added func to functions.php to [append `"Album Review: "`](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7de8559dd9da33d16521e361c11a29caee611ecd) to Album Review custom post_type titles
+11.  ...
 
 
 
