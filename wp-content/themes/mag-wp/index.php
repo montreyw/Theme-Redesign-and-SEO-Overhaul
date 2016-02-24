@@ -232,7 +232,7 @@
 			<div class="clear"></div> 
 
 			<div class="an-content">
-				<h2 class="article-title entry-title" itemprop="headline">
+				<h2 class="article-title entry-title" itemprop="name headline">
 					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 				</h2>
 				<p class="article-summary entry-summary" itemprop="description">
