@@ -2005,6 +2005,8 @@ h6.post-answer .interviewee {
 	font-size: 37px;
 	margin: 0 0 30px;
 	line-height: 37px;
+	font-style: italic;
+	font-weight: 300;
 }
 .author-meta {
     background-color: #fff;
