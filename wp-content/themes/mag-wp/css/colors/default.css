@@ -2060,16 +2060,61 @@ h6.post-answer .interviewee {
     color: #777;
 }
 /* All authors page -- administrator, author, eidtor, contirbutor, VOICE contributor */
-.authbox_left, .authbox_right {
+.authorbox.main {
+	margin: 0 0 30px;
+}
+.authorbox.main .authbox_left, .authbox_right {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 }
-.authbox_left {
+.authorbox.main .authbox_left {
 	width: 10%;
+	width: 200px;
+	height: 200px;
 }
-.authbox_right {
-	width: 80%;
+.authorbox.main .authbox_left a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.authorbox.main .authbox_left a img {
+	-webkit-transition: all 357ms;
+	-moz-transition: all 357ms;
+	-o-transition: all 357ms;
+	transition: all 357ms;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 17px solid #eee;
+	box-sizing: border-box;
+}
+.authorbox.main:hover .authbox_left a img {
+    border: 7px solid #eee;
+}
+.authorbox.main .authbox_right {
+	width: 50%;
 	margin: 0 0 0 30px;
+	width: calc( 100% - 237px );
+}
+.authorbox.main .authbox_right .author-info {
+	width: auto;
+	height: auto;
+	margin: 0;
+}
+.authorbox.main .authbox_right .author-info a.author-link {
+	text-decoration: none;
+	padding: 0;
+	font-size: 13px;
+}
+.authorbox.main .authbox_right .author-info ul.author-social-top li {
+	text-align: center;
+}
+.authorbox.main .authbox_right .author-info ul.author-social-top li a {
+	border-radius: 50%;
+}
+.authorbox.main .authbox_right .author-info ul.author-social-top li a i {
+	padding: 0;
 }
 
 
