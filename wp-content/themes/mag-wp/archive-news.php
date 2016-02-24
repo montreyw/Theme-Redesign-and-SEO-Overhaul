@@ -17,7 +17,8 @@ Template Name: News - Archive
 <div class="wrap-fullwidth hfeed h-feed">
 
 	<!-- Begin Main Home Content 950px -->
-	<div class="home-content">
+	<div class="home-content" 
+		itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
 
 		<div class="section-top-title">
 			<h3><?php _e('Latest EARMILK News Articles', 'anthemes'); ?></h3>
