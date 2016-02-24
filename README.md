@@ -50,6 +50,7 @@ Earmilk redesign project
 - [x] Author Page pagination needs to be fixed
 - [x] Album Review Details custom Schema + HTML details table widget
 - [x] Change/improve gray section headers
+- [ ] Improve mobile font styles and sizes (atleast on i6-size)
 - [ ] Create and style basic List of Authors Page
 - [ ] Unique style for About Page
 - [ ] Restructure post grids into post lists with much larger images
