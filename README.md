@@ -24,18 +24,12 @@ Earmilk redesign project
 - [x] Widen Latest Posts on mobile view
 - [x] Improve layout of Author Pages
 - [x] Added spotify playlists to hiphop category genre header
-- [ ] Add unique headers to individual category pages
 - [x] Fix sitemap (fixed but how?)
 - [x] Add Facebook Like Buttons to Social Sidebar
 - [x] Add Google+ Buttons to Social Sidebar
 - [x] Add Funtime Out Events Festivals to the nav menu
 - [x] Write a script that will make the first word interview/er/ee name bold on Interview Posts
 - [x] Add sliding slide out facebook like box (desktop)
-- [ ] Unique style for About Page
-- [ ] Create and style basic List of Authors Page
-- [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
-- [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
-- [ ] Re-style re-design [MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) ([1](https://starslingeruk.bandcamp.com/album/sketchy-ep))
 - [x] Place ads
 - [x] Set up auto-posting for Google+
 - [x] Split Main Stage area, make Main Stage smaller, and add VOICES and SCOOPS sections
@@ -45,41 +39,52 @@ Earmilk redesign project
 - [x] Install full favicon suite for all devices
 - [x] New 404 page
 - [x] Implement new bottle favicon
+- [x] Show year of post on Author Pages if not current year
+- [x] Make YouTube embed size more responsive to different screen sizes
+- [x] Look into Facebook native comments solution
+- [x] Make all facebook comment count reflect in the posts-grid comment count
+- [x] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
+- [x] Remove duplicate, error-prone Events ld+json schema block
+- [x] Implement Colorful Genre Bar from old.V2
+- [x] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
+- [x] Author Page pagination needs to be fixed
+- [x] Add Schema to `/events/` page
+- [x] Add Schema to `/news/` page
+- [x] Album Review Details custom Schema + HTML details table widget
+- [ ] Create and style basic List of Authors Page
+- [ ] Unique style for About Page
+- [ ] Restructure post grids into post lists with much larger images
+- [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
+- [ ] Add Schema'd up breadcrumbs
+- [ ] Add Schema to all single posts
+- [ ] Add Schema to all archive pages
+- [ ] Add Schema to all unique type posts (ie, events, reviews, news articles, music recordings, premieres, etc)
+- [ ] Finish Schema.org markup
+- [ ] Implement system to automatically color site elements (ie, image meta info color line) to match genre class
+- [ ] Improve Harlem Shake CSS animation timing
+- [ ] Develop some unifying site design elements
+- [ ] Add unique headers to individual category pages
+- [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
+- [ ] Re-style re-design [MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) ([1](https://starslingeruk.bandcamp.com/album/sketchy-ep))
 - [ ] Look into [AppCache](http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
 - [ ] New Live Search function
 - [ ] Add Previous Next navigation to bottom of single posts
 - [ ] Implement new Sharrre Open source, share-count aggregating, and lazyloading "plugin" by building custom plugin
 - [ ] Pull share count to posts grid
-- [x] Show year of post on Author Pages if not current year
-- [x] Make YouTube embed size more responsive to different screen sizes
 - [ ] Look into and stop Google indexing post attachments / robots.txt
-- [x] Look into Facebook native comments solution
-- [x] Make all facebook comment count reflect in the posts-grid comment count
-- [x] Make all comment-counts (facebook, disqus, native) reflect in the posts-grid comment count
-- [x] Remove duplicate, error-prone Events ld+json schema block
 - [ ] Change all image attachments image-link-type's in posts to file or none
 - [ ] Add Extra AUthor Disclosure info to author meta
-- [x] Implement Colorful Genre Bar from old.V2
 - [ ] Remove all MP3 links from posts
 - [ ] Change/improve gray section headers
-- [ ] Develop some unifying site design elements
 - [ ] Ability to play a post's first song right from the posts grid
 - [ ] Ability to play a post's first video right from the posts grid
-- [x] Add Schema to `/events/` page
-- [x] Add Schema to `/news/` page
-- [x] Album Review Details custom Schema + HTML details table widget
-- [ ] Add Schema to all posts
-- [ ] Finish Schema.org markup
-- [x] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
-- [ ] Improve Harlem Shake CSS animation timing
 - [ ] AJAX site navigation engine
 - [ ] Site wide persistent MP3 player
 - [ ] iOS App
 - [ ] Android App
 - [ ] Implement backend templating capability for Events
 - [ ] Implement a solution for Hreflang tags for indexing in foreign languages
-- [x] Author Page pagination needs to be fixed
 - [ ] Backend/Front end widget to give photographers credit for their photos
 - [ ] A solution for photo sourcing (possible a community effort or a filtering functionality plugn)
 - [ ] Remove all `&quot;`s from posts in `src="&quot;http...`
