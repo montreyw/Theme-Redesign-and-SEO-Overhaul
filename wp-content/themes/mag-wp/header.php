@@ -193,7 +193,7 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 	itemscope itemtype="http://schema.org/<?php 
 	if (is_page(array(248463, 'about', 'About'))) { 
 		echo 'AboutPage'; 
-	} elseif ( ( is_author() ) || ( is_page_template( 'archive-album_review.php' ) ) ) {
+	} elseif ( (is_archive()) || (is_author()) || ( is_page_template('archive-album_review.php') ) ) {
 		echo 'CollectionPage';
 	} elseif (is_page(array(248509, 'contact-us', 'Contact Us'))) {
 		echo 'ContactPage'; 
