@@ -16,7 +16,7 @@
 					<div class="header_line">
 						<h1 class="top">
 							<a href="/category/mainstage/" titles="<?php single_cat_title(''); ?> Stage">
-								<?php single_cat_title(''); ?><?php _e( 'Stage', 'anthemes' ); ?>
+								<?php single_cat_title(''); ?><?php _e( ' Stage', 'anthemes' ); ?>
 							</a>
 						</h1>
 					</div>
