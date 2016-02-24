@@ -10,7 +10,7 @@ Template Name: News - Archive
 ?>
 
 <div class="archive-header">
-	<h1>EARMILK News</h1>
+	<h1><?php _e( 'EARMILK News', 'anthemes' ); ?></h1>
 </div>
 
 <!-- Begin Wrap Content -->
