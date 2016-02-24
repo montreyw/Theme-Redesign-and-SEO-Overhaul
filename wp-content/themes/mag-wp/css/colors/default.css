@@ -2077,6 +2077,7 @@ h6.post-answer .interviewee {
 .album_review .album-review-box {
 	width: 80%;
 	margin: 0 auto;
+	font-size: 0;
 }
 .album_review .album-review-box .media-single-content,
 .album_review .album-review-box .earmilk-album-review {
@@ -2106,14 +2107,20 @@ h6.post-answer .interviewee {
 	margin-bottom: 20px;
 	table-layout: fixed;
 }
-.earmilk-album-review table.table * {
+.album_review .album-review-box .earmilk-album-review table.table * {
 	vertical-align: middle;
+	font-size: 14px;
 }
 .earmilk-album-review caption {
 	padding-top: 8px;
 	padding-bottom: 8px;
 	color: #777;
 	text-align: left;
+}
+.album_review .album-review-box .earmilk-album-review table.table thead tr th, 
+.album_review .album-review-box .earmilk-album-review table.table .earmilk-review-rating-row th,
+.album_review .album-review-box .earmilk-album-review table.table .earmilk-review-rating-row td i {
+	font-size: 17px;
 }
 .earmilk-album-review .table thead th {
 	text-align: center;
@@ -2173,10 +2180,6 @@ h6.post-answer .interviewee {
 .table-hover > tfoot > tr:hover {
 	background-color: #f5f5f5;
 }
-.earmilk-album-review thead, 
-.earmilk-album-review .earmilk-review-rating-row {
-	font-size: 17px;
-}
 .album-review-number {
 	display: inline-block;
 	font-size: 13px;
@@ -2198,6 +2201,7 @@ h6.post-answer .interviewee {
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+	margin: 0 1px 0 0;
 }
 .earmilk-review-rating-row:hover .fa-star {
 	margin-left: 2px; 

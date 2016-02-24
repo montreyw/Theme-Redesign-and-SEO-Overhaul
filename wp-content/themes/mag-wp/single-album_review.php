@@ -88,63 +88,63 @@
 				itemprop="review" itemscope itemtype="http://schema.org/Review">
 				<div class="album-review-box">
 		            <div class="media-single-content">
-		            <?php if ( function_exists( 'rwmb_meta' ) ) {
-		            // If Meta Box plugin is activate ?>
-		                <?php
-		                $youtubecode = rwmb_meta('anthemes_youtube', true );
-		                $vimeocode = rwmb_meta('anthemes_vimeo', true );
-		                $image = rwmb_meta('anthemes_slider', true );
-		                $hideimg = rwmb_meta('anthemes_hideimg', true );
-		                ?>
-		                <?php if(!empty($image)) { ?>
-		                    <!-- #### Single Gallery #### -->
-		                    <div class="single-gallery">
-		                        <?php
-		                        $images = rwmb_meta( 'anthemes_slider', 'type=image&size=thumbnail-small-gallery' );
-		                        foreach($images as $key =>$image)
-		                         { echo "<a href='{$image['full_url']}' rel='mygallery'><img src='{$image['url']}'  alt='{$image['alt']}' width='{$image['width']}' height='{$image['height']}' /></a>";
-		                        } ?>
-		                    </div><!-- end .single-gallery -->
-		                <?php } ?>
-		                <?php if(!empty($youtubecode)) { ?>
-		                    <!-- #### Youtube video #### -->
-		                    <iframe class="single_iframe" width="720" height="420" src="//www.youtube.com/embed/<?php echo $youtubecode; ?>?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-		                <?php } ?>
-		                <?php if(!empty($vimeocode)) { ?>
-		                    <!-- #### Vimeo video #### -->
-		                    <iframe class="single_iframe" src="//player.vimeo.com/video/<?php echo $vimeocode; ?>?portrait=0" width="720" height="420" frameborder="0" allowFullScreen></iframe>
-		                <?php } ?>
-		                <?php if(!empty($image) || !empty($youtubecode) || !empty($vimeocode)) { ?>
-                <?php } elseif ( has_post_thumbnail() ) { ?> 
-					<?php
-						$post_thumbnail_id = get_post_thumbnail_id();
-						$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
-					?>
-					<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-						<?php if ( get_the_post_thumbnail() ) { ?> 
-							<?php echo the_post_thumbnail('thumbnail-single-image'); ?>
-							<meta itemprop="url" content="<?php echo $post_thumbnail_url; ?>" />
-						<?php } else { ?>
-							<?php echo fallback_thumbnail_image(); ?>
-							<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
-						<?php } // Post with messed up Thumbnail ?>
-						<meta itemprop="width" content="950" />
-						<meta itemprop="height" content="950" />
-					</div>
-				<?php } else { ?>
-					<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-						<?php echo fallback_thumbnail_image(); ?>
-						<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
-						<meta itemprop="width" content="950" />
-						<meta itemprop="height" content="950" />
-					</div>
-				<?php } // Post Thumbnail ?> 
-            <?php } ?>
-				<div class="clear"></div>
-				<div id="single-share"></div>
-				<!-- end #single-share -->
-			</div><!-- end .media-single-content -->
-					--><div class="earmilk-album-review">
+			            <?php if ( function_exists( 'rwmb_meta' ) ) {
+				            // If Meta Box plugin is activate ?>
+			                <?php
+			                $youtubecode = rwmb_meta('anthemes_youtube', true );
+			                $vimeocode = rwmb_meta('anthemes_vimeo', true );
+			                $image = rwmb_meta('anthemes_slider', true );
+			                $hideimg = rwmb_meta('anthemes_hideimg', true );
+			                ?>
+			                <?php if(!empty($image)) { ?>
+			                    <!-- #### Single Gallery #### -->
+			                    <div class="single-gallery">
+			                        <?php
+			                        $images = rwmb_meta( 'anthemes_slider', 'type=image&size=thumbnail-small-gallery' );
+			                        foreach($images as $key =>$image)
+			                         { echo "<a href='{$image['full_url']}' rel='mygallery'><img src='{$image['url']}'  alt='{$image['alt']}' width='{$image['width']}' height='{$image['height']}' /></a>";
+			                        } ?>
+			                    </div><!-- end .single-gallery -->
+			                <?php } ?>
+			                <?php if(!empty($youtubecode)) { ?>
+			                    <!-- #### Youtube video #### -->
+			                    <iframe class="single_iframe" width="720" height="420" src="//www.youtube.com/embed/<?php echo $youtubecode; ?>?wmode=transparent" frameborder="0" allowfullscreen></iframe>
+			                <?php } ?>
+			                <?php if(!empty($vimeocode)) { ?>
+			                    <!-- #### Vimeo video #### -->
+			                    <iframe class="single_iframe" src="//player.vimeo.com/video/<?php echo $vimeocode; ?>?portrait=0" width="720" height="420" frameborder="0" allowFullScreen></iframe>
+			                <?php } ?>
+			                <?php if(!empty($image) || !empty($youtubecode) || !empty($vimeocode)) { ?>
+			                <?php } elseif ( has_post_thumbnail() ) { ?> 
+								<?php
+									$post_thumbnail_id = get_post_thumbnail_id();
+									$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+								?>
+								<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+									<?php if ( get_the_post_thumbnail() ) { ?> 
+										<?php echo the_post_thumbnail('thumbnail-single-image'); ?>
+										<meta itemprop="url" content="<?php echo $post_thumbnail_url; ?>" />
+									<?php } else { ?>
+										<?php echo fallback_thumbnail_image(); ?>
+										<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
+									<?php } // Post with messed up Thumbnail ?>
+									<meta itemprop="width" content="950" />
+									<meta itemprop="height" content="950" />
+								</div>
+							<?php } else { ?>
+								<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+									<?php echo fallback_thumbnail_image(); ?>
+									<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
+									<meta itemprop="width" content="950" />
+									<meta itemprop="height" content="950" />
+								</div>
+							<?php } // Post Thumbnail ?> 
+			            <?php } ?>
+						<div class="clear"></div>
+						<div id="single-share"></div>
+						<!-- end #single-share -->
+					</div><!-- end .media-single-content -->
+					<div class="earmilk-album-review">
 						<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
 						<meta itemprop="about" content="<?php the_title(); ?>" />
 						<?php 
@@ -287,43 +287,42 @@
 								</tr>
 							</tfoot>
 						</table>
-                    </div>
+		            </div>
 				</div><!-- end .album-review-box -->
-                    <div class="entry">
+                <div class="entry">
 
-
-                        <!-- entry content -->
-                        <div class="p-first-letter" itemprop="reviewBody">
-                            <?php if (!empty($smof_data['ads_entry_top'])) { ?>
-                            <?php } ?>
-                            <?php if ( !empty( $post->post_excerpt ) ) : the_excerpt(); else : false; endif;  ?>
-                            <?php the_content(''); // content ?>
-						</div><!-- end .p-first-letter -->
-                        <?php wp_link_pages(); // content pagination ?>
-                        <div class="clear"></div>
-                        <!-- tags -->
-                        <?php $tags = get_the_tags();
-                        if ($tags): ?>
-                            <div class="ct-size"><?php the_tags(__('<div class="entry-btn">Tags:</div>', 'anthemes'),' &middot; '); // tags ?></div><div class="clear"></div>
-                        <?php endif; ?>
-                        <!-- categories -->
-                        <?php $categories = get_the_category();
-                        if ($categories): ?>
-                            <div class="ct-size"><?php _e( '<div class="entry-btn">Categories:</div>', 'anthemes' ); ?> <?php the_category(' &middot; '); // categories ?></div><div class="clear"></div>
-                        <?php endif; ?>
-                        <div class="clear"></div>
-
-				        <!-- Comments -->
-				        <div class="comments">
-					        <?php if (get_comments_number()==0) { 
-					        } else { ?>
-					        <?php } ?>            
-				            <h3 class="title">Comments</h3>
-				            <?php comments_template('', true); // comments ?>
-				        </div>
-
-                    </div><!-- end .entry -->
+                    <!-- entry content -->
+                    <div class="p-first-letter" itemprop="reviewBody">
+                        <?php if (!empty($smof_data['ads_entry_top'])) { ?>
+                        <?php } ?>
+                        <?php if ( !empty( $post->post_excerpt ) ) : the_excerpt(); else : false; endif;  ?>
+                        <?php the_content(''); // content ?>
+					</div><!-- end .p-first-letter -->
+                    <?php wp_link_pages(); // content pagination ?>
                     <div class="clear"></div>
+                    <!-- tags -->
+                    <?php $tags = get_the_tags();
+                    if ($tags): ?>
+                        <div class="ct-size"><?php the_tags(__('<div class="entry-btn">Tags:</div>', 'anthemes'),' &middot; '); // tags ?></div><div class="clear"></div>
+                    <?php endif; ?>
+                    <!-- categories -->
+                    <?php $categories = get_the_category();
+                    if ($categories): ?>
+                        <div class="ct-size"><?php _e( '<div class="entry-btn">Categories:</div>', 'anthemes' ); ?> <?php the_category(' &middot; '); // categories ?></div><div class="clear"></div>
+                    <?php endif; ?>
+                    <div class="clear"></div>
+
+			        <!-- Comments -->
+			        <div class="comments">
+				        <?php if (get_comments_number()==0) { 
+				        } else { ?>
+				        <?php } ?>            
+			            <h3 class="title">Comments</h3>
+			            <?php comments_template('', true); // comments ?>
+			        </div>
+
+                </div><!-- end .entry -->
+                <div class="clear"></div>
             </div><!-- end #post -->
             <?php endwhile; endif; ?>
         </article><!-- end article -->
