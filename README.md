@@ -75,7 +75,7 @@ Earmilk redesign project
 - [ ] Change all image attachments image-link-type's in posts to file or none
 - [ ] Add Extra AUthor Disclosure info to author meta
 - [ ] Remove all MP3 links from posts
-- [ ] Change/improve gray section headers
+- [x] Change/improve gray section headers
 - [ ] Ability to play a post's first song right from the posts grid
 - [ ] Ability to play a post's first video right from the posts grid
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
@@ -141,7 +141,8 @@ Earmilk redesign project
 40.  Genre Category Archive Page header Soundcloud and Spotify tabbed playlists ([structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/a4437c58146d3263320efd3316701af33711ac1f), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/36b17364fd7f595aa4a3c3bef6abab462ee6ac56), [data in JSON](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/0ee69bbbecd6547a14ba650642133ca7e673eed6))
 41.  Type Anywhere Search ([structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/1e6e11c12f37930d05af74c97542941fea59b994), [functionality](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/67235e8694c68d170e0bb6d925b55ae80ce214af), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e3f88ebc6c6aa2988abbbe197d4a92b8712ef81c))
 42.  Album Review Single Post Details Box Redone ([HTML structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e3873b4ab17a27f04a10912c820dc38f488ca2d8), [CSS style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5c9f9aee696497d421ae3ee9eee749e7cf346654); [dynamic rating stars structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/519e3af0a3c7364c818b7e323e02b2a3e9fa4b58) and [dynamic rating stars style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/49d193117d5b21e55bff1f78d4e489c1a044b750))
-43.  ...
+43.  Re-styled drab, gray [section headers](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/33d85cd362db70fe61bb88c529af447ee3b07a4a)
+44.  ...
 
 
 
@@ -196,7 +197,7 @@ Earmilk redesign project
 6.  Added [WPSideBar](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8cf705bf2aebc25016b799bfa3a06d338e7fdf8b) Schema to all pages (I think)
 7.  Added [Publisher](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/3a4bc9fe36031f5085b0e954ac4f8fa4e0770c87) Schema to WPHeader
 8.  Added Event Schema to [Events Archive](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ad9113728701a6ec362ab08e1dad769cfbf84380) and to [Single Event Posting Pages](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4ac2ff1f1b099902267099b77f44fd216506565e)
-9.  Added [NewsArticle](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/67db412c0a4acbb0b56cdad6142129ab8d845782) Schema to index.php, which will apply to a variety of single posts, as well as several post grid types (eg, Author Archive Pages)
+9.  Added [NewsArticle](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/67db412c0a4acbb0b56cdad6142129ab8d845782) Schema to index.php, which will apply to a variety of archive pages and post grid types (eg, Author Archive Pages)
 10.  Added [Image Object](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4519b255f09d2ce100d07d6ea17c7655d5e9662a) Schema added to NewsArticle index.php
 11.  For Author Pages, added `CollectionPage` via [CollectionPage VS WebPage differentiation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/d1f5146f08bdb231abd71535c2a82bc741b7fd19) to Main Site Header
 12.  Added [Person](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4d89df66e88c819e695c84292ebc55cbd8c3a6b6) to Author Pages and made authors the mainEntity of the page.  Note: had to write [a custom PHP function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/eb5c52886dcf07325e0e0465863b0d84ed856357) to inject `itemprop="image"` into the `<img>` tag of author photos, regardless of whether WP Social Avatar or default Gravatar is being used.
@@ -205,7 +206,9 @@ Earmilk redesign project
 15.  BlogPosting Schema added to [single.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/043aabd8eb0759a8190bc29d8648bbcec7a4abfd)
 16.  BlogPosting Schema added to [single-opinion_post.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/36d975c1343d024463d9fbc66f4464b5e0fd9775)
 17.  NewsArticle Schema added to [single-news.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/69d7d7d049d0d8ad1c4e971893dc12583ca3743d)
-18.  ...
+18.  Added full BlogPosting list to [archive-album_review.php / Album Review](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/bf9908ec8b3e7707492def5aaeab0a641132e0fb) Archive pages
+19.  Added full BlogPosting list to [archive-opinion_post.php / VOICES / Opinion Post](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/cc6519405368f832ac83b052fbd761d41c0957ee) Archive pages
+20.  ...
 
 
 
