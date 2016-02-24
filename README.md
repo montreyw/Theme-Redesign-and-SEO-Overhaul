@@ -48,21 +48,26 @@ Earmilk redesign project
 - [x] Implement Colorful Genre Bar from old.V2
 - [x] Get into [Google News](https://support.google.com/news/publisher/answer/40787?hl=en#general)
 - [x] Author Page pagination needs to be fixed
-- [x] Add Schema to `/events/` page
-- [x] Add Schema to `/news/` page
 - [x] Album Review Details custom Schema + HTML details table widget
+- [x] Change/improve gray section headers
 - [ ] Create and style basic List of Authors Page
 - [ ] Unique style for About Page
 - [ ] Restructure post grids into post lists with much larger images
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
 - [ ] Add Schema'd up breadcrumbs
+- [ ] Implement system to automatically color site elements (ie, image meta info color line) to match genre class
+- [ ] Improve Harlem Shake CSS animation timing
+- [ ] Develop some unifying site design elements
+- [x] Add Schema to all standard `index.php` and `single.php` posts and pages (single and archive)
+- [x] Add Schema to `/events/` page (single and archive)
+- [x] Add Schema to `/news/` page (single and archive)
+- [x] Add Schema to `/voices/` page (single and archive)
+- [x] Add Schema to `/album-reviews/` page (single and archive)
+- [ ] Add Schema to `/gear/` page (single and archive)
 - [ ] Add Schema to all single posts
 - [ ] Add Schema to all archive pages
 - [ ] Add Schema to all unique type posts (ie, events, reviews, news articles, music recordings, premieres, etc)
 - [ ] Finish Schema.org markup
-- [ ] Implement system to automatically color site elements (ie, image meta info color line) to match genre class
-- [ ] Improve Harlem Shake CSS animation timing
-- [ ] Develop some unifying site design elements
 - [ ] Add unique headers to individual category pages
 - [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
 - [ ] Re-style re-design [MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) ([1](https://starslingeruk.bandcamp.com/album/sketchy-ep))
@@ -70,17 +75,12 @@ Earmilk redesign project
 - [ ] New Live Search function
 - [ ] Add Previous Next navigation to bottom of single posts
 - [ ] Implement new Sharrre Open source, share-count aggregating, and lazyloading "plugin" by building custom plugin
-- [ ] Pull share count to posts grid
+- [ ] Pull share count to posts grid (this could be untenable due to response time contraints for multiple social networks)
 - [ ] Look into and stop Google indexing post attachments / robots.txt
 - [ ] Change all image attachments image-link-type's in posts to file or none
 - [ ] Add Extra AUthor Disclosure info to author meta
 - [ ] Remove all MP3 links from posts
-- [x] Change/improve gray section headers
-- [ ] Ability to play a post's first song right from the posts grid
-- [ ] Ability to play a post's first video right from the posts grid
 - [ ] Changes "archives" to "crates" for archive links of tags/categories
-- [ ] AJAX site navigation engine
-- [ ] Site wide persistent MP3 player
 - [ ] iOS App
 - [ ] Android App
 - [ ] Implement backend templating capability for Events
@@ -90,7 +90,11 @@ Earmilk redesign project
 - [ ] Remove all `&quot;`s from posts in `src="&quot;http...`
 - [ ] LazyLoader for SoundCloud embeds
 - [ ] Look into how Writer tools for posts like Interviews and Events can be improved for posting ease and style consistency
+- [ ] Ability to play a post's first song right from the posts grid
+- [ ] Ability to play a post's first video right from the posts grid
 - [ ] START ALL OVER :D -- New Well-planned Theme and Infrastructure
+- [ ] AJAX site navigation engine
+- [ ] Site wide persistent MP3 player
 - [ ] ...
 
 - [Back to top ^](#table-of-contents)  
@@ -197,7 +201,7 @@ Earmilk redesign project
 6.  Added [WPSideBar](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/8cf705bf2aebc25016b799bfa3a06d338e7fdf8b) Schema to all pages (I think)
 7.  Added [Publisher](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/3a4bc9fe36031f5085b0e954ac4f8fa4e0770c87) Schema to WPHeader
 8.  Added Event Schema to [Events Archive](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ad9113728701a6ec362ab08e1dad769cfbf84380) and to [Single Event Posting Pages](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4ac2ff1f1b099902267099b77f44fd216506565e)
-9.  Added [NewsArticle](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/67db412c0a4acbb0b56cdad6142129ab8d845782) Schema to index.php, which will apply to a variety of archive pages and post grid types (eg, Author Archive Pages)
+9.  Added BlogPosting Schema to [index.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/67db412c0a4acbb0b56cdad6142129ab8d845782), which will apply to a variety of archive pages and post grid types (eg, Hip-hop Category Page, Author Archive Pages, etc)
 10.  Added [Image Object](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4519b255f09d2ce100d07d6ea17c7655d5e9662a) Schema added to NewsArticle index.php
 11.  For Author Pages, added `CollectionPage` via [CollectionPage VS WebPage differentiation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/d1f5146f08bdb231abd71535c2a82bc741b7fd19) to Main Site Header
 12.  Added [Person](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/4d89df66e88c819e695c84292ebc55cbd8c3a6b6) to Author Pages and made authors the mainEntity of the page.  Note: had to write [a custom PHP function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/eb5c52886dcf07325e0e0465863b0d84ed856357) to inject `itemprop="image"` into the `<img>` tag of author photos, regardless of whether WP Social Avatar or default Gravatar is being used.
@@ -206,9 +210,9 @@ Earmilk redesign project
 15.  BlogPosting Schema added to [single.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/043aabd8eb0759a8190bc29d8648bbcec7a4abfd)
 16.  BlogPosting Schema added to [single-opinion_post.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/36d975c1343d024463d9fbc66f4464b5e0fd9775)
 17.  NewsArticle Schema added to [single-news.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/69d7d7d049d0d8ad1c4e971893dc12583ca3743d)
-18.  Added full BlogPosting list to [archive-album_review.php / Album Review](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/bf9908ec8b3e7707492def5aaeab0a641132e0fb) Archive pages
-19.  Added full BlogPosting list to [archive-opinion_post.php / VOICES / Opinion Post](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/cc6519405368f832ac83b052fbd761d41c0957ee) Archive pages
-20.  ...
+18.  Added full BlogPosting list Schema to [archive-album_review.php / Album Review](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/bf9908ec8b3e7707492def5aaeab0a641132e0fb) Archive pages
+19.  Added full BlogPosting list Schema to [archive-opinion_post.php / VOICES / Opinion Post](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/cc6519405368f832ac83b052fbd761d41c0957ee) Archive pages
+20. ...
 
 
 
