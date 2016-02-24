@@ -143,7 +143,9 @@
 	<div class="home-content">
 		<div class="section-top-title">
 			<?php if (is_author()): ?> 
-				<h3>Freshest Pieces by <?php the_author(); ?></h3>
+				<h3><?php _e('Freshest Pieces by', 'anthemes'); ?> <?php the_author(); ?></h3>
+			<?php elseif (is_search()): ?>
+				<h3><?php _e('Freshest Search Results', 'anthemes'); ?></h3>
 			<?php else: ?>
 				<h3><?php _e('Freshest Content', 'anthemes'); ?></h3>
 			<?php endif ?>
