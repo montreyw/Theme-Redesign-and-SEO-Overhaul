@@ -68,7 +68,11 @@
 					</time>
 				</div>
 				<meta itemprop="url" content="<?php the_permalink(); ?>" />
-				<meta itemprop="image" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>" />
+				<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+					<meta itemprop="url" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>">
+					<meta itemprop="width" content="950">
+					<meta itemprop="height" content="950">
+				</div>
 				<span itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization">
 					<meta itemprop="name" content="<?php echo $record_label_name; ?>">
 					<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -111,19 +115,35 @@
 		                    <iframe class="single_iframe" src="//player.vimeo.com/video/<?php echo $vimeocode; ?>?portrait=0" width="720" height="420" frameborder="0" allowFullScreen></iframe>
 		                <?php } ?>
 		                <?php if(!empty($image) || !empty($youtubecode) || !empty($vimeocode)) { ?>
-		                <?php } elseif ( has_post_thumbnail()) { ?>
-		                    <?php if(!empty($hideimg)) { } else { ?>
-		                     <?php the_post_thumbnail('thumbnail-single-image'); ?>
-		                    <?php } // disable featured image ?>
-		                <?php } ?>
-		            <?php } else {
-		            // Meta Box Plugin ?>
-		                <?php the_post_thumbnail('thumbnail-single-image'); ?>
-		            <?php } ?>
-		                <div class="clear"></div>
-		                <div id="single-share"></div>
-						<!-- end #single-share -->
-		            </div><!-- end .media-single-content
+                <?php } elseif ( has_post_thumbnail() ) { ?> 
+					<?php
+						$post_thumbnail_id = get_post_thumbnail_id();
+						$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+					?>
+					<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+						<?php if ( get_the_post_thumbnail() ) { ?> 
+							<?php echo the_post_thumbnail('thumbnail-single-image'); ?>
+							<meta itemprop="url" content="<?php echo $post_thumbnail_url; ?>" />
+						<?php } else { ?>
+							<?php echo fallback_thumbnail_image(); ?>
+							<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
+						<?php } // Post with messed up Thumbnail ?>
+						<meta itemprop="width" content="950" />
+						<meta itemprop="height" content="950" />
+					</div>
+				<?php } else { ?>
+					<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+						<?php echo fallback_thumbnail_image(); ?>
+						<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
+						<meta itemprop="width" content="950" />
+						<meta itemprop="height" content="950" />
+					</div>
+				<?php } // Post Thumbnail ?> 
+            <?php } ?>
+				<div class="clear"></div>
+				<div id="single-share"></div>
+				<!-- end #single-share -->
+			</div><!-- end .media-single-content -->
 					--><div class="earmilk-album-review">
 						<meta itemprop="name" content="EARMILK Review of <?php the_title(); ?>" />
 						<meta itemprop="about" content="<?php the_title(); ?>" />
