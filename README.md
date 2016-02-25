@@ -51,8 +51,9 @@ Earmilk redesign project
 - [x] Album Review Details custom Schema + HTML details table widget
 - [x] Change/improve gray section headers
 - [ ] Improve mobile font styles and sizes (atleast on i6-size)
+- [ ] Fix mobile width on Firefox
 - [ ] Create and style basic List of Authors Page
-- [ ] Unique style for About Page
+- [x] Unique style for About Page
 - [ ] Restructure post grids into post lists with much larger images
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
 - [ ] Add Schema'd up breadcrumbs
