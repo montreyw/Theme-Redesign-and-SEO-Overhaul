@@ -551,3 +551,39 @@ function filter_users_have_posted( $user_query ) {
 	remove_action( current_filter(), __FUNCTION__ );
 }
 //add_action( 'pre_user_query', 'filter_users_have_posted' );
+
+// ---------------------------------------------------------------------------------------------------- 
+// Function to add shortcode for dislaying WordPress user meta data in pages and posts - Andre
+// ---------------------------------------------------------------------------------------------------- 
+function user_meta_shortcode_handler($atts,$content=null){
+/**
+ * User Meta Shortcode handler
+ * usage: [USER_META user_id=1 meta="first_name"]
+ * @param  array $atts   
+ * @param  string $content
+ * @return stirng
+ */
+    return esc_html(get_user_meta($atts['user_id'], $atts['meta'], true));
+}
+add_shortcode('USER_META', 'user_meta_shortcode_handler');
+// ---------------------------------------------------------------------------------------------------- 
+// Function to add shortcode for dislaying WordPress user avatar - Andre
+// ---------------------------------------------------------------------------------------------------- 
+if ( function_exists( 'get_avatar' ) ) {
+	function candid_user_gravatar_shortcode ( $attributes ) {
+		global $current_user;
+		get_currentuserinfo();
+		extract(shortcode_atts(array(
+			"id" => $current_user->ID,
+			"size" => 32,
+			"default" => 'mystery',
+			"alt" => '',
+			"class" => '',
+			"style" => '',
+		), $attributes, 'get_avatar' ));
+		$get_avatar= get_avatar( $id, $size, $default, $alt );
+		return $get_avatar;
+	}
+	add_shortcode ('get_avatar', 'candid_user_gravatar_shortcode');
+}
+
