@@ -1592,6 +1592,7 @@ ul#masonry_list li .entry-comment-count a,
 .home-content ul.classic-blog li .entry-read-more a,
 ul#masonry_list li .entry-read-more a {
 	color: #94979c !important;
+	font-size: 14px;
 }
 .home-content ul.classic-blog li .entry-empty-box,
 ul#masonry_list li .entry-empty-box {
