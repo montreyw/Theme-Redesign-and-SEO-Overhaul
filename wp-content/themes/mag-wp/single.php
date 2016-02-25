@@ -7,7 +7,7 @@
 <div class="wrap-fullwidth hfeed h-feed" role="main">
     <div class="single-content hentry h-entry" 
 	itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="earmilk-album-review-meta schema-meta" style="display:none;">
+        <span class="schema-meta">
 			<?php 
 				$post_date_human = get_the_date("F j, Y"); 
 				$post_date_iso = get_the_date("c");
@@ -32,31 +32,26 @@
 	 				$post_description = htmlentities( $wp_seo_object->metadesc( false ) ); 
 					echo '<meta itemprop="description" content="' . $post_description . '" />'; }
 			?>
-			<time itemprop="datePublished" datetime="<?php echo $post_date_iso ?>">
-				<?php echo $post_date_human; ?>
-			</time>
-			<time itemprop="dateModified" datetime="<?php echo $post_modified_date_iso ?>">
-				<?php echo $post_modified_date_human; ?>
-			</time>
+			<meta itemprop="datePublished" content="<?php echo $post_date_iso ?>" />
+			<meta itemprop="dateModified" content="<?php echo $post_modified_date_iso ?>" />
 			<meta itemprop="url" content="<?php the_permalink(); ?>" />
 			<meta itemprop="mainEntityOfPage" content="<?php the_permalink(); ?>" />
-			<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+			<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 				<meta itemprop="name" content="EARMILK">
-				<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-					<img id="earmilk-logo-img" src="<?php echo ($site_logo); ?>" alt="<?php bloginfo('sitename'); ?>" />
-					<meta itemprop="url" content="http://earmilk.com/wp-content/uploads/2016/02/EARMILK_logo_3.png">
+				<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+					<meta itemprop="url" content="<?php echo ($site_logo); ?>">
 					<meta itemprop="width" content="229">
 					<meta itemprop="height" content="50">
-				</div>
-			</div>
-			<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+				</span>
+			</span>
+			<span itemprop="author" itemscope itemtype="http://schema.org/Person">
 				<meta itemprop="url" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" />
 				<meta itemprop="image" content="<?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?>" />
 				<meta itemprop="name" content="<?php echo get_the_author_meta( 'display_name' ); ?>" />
-			</div>
+			</span>
 			<meta itemprop="articleSection" content="<?php echo $post_sections; ?>" />
 			<meta itemprop="keywords" content="<?php echo $post_kyewords; ?>" />
-        </div>
+        </span>
         <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
         <div class="entry-top">
             <h1 class="article-title entry-title p-name"><?php the_title(); ?></h1>

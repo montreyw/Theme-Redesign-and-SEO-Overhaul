@@ -37,18 +37,18 @@ Template Name: VOICES - Archive
 
 			<li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>" itemscope itemprop="hasPart" itemtype="http://schema.org/BlogPosting">
 				<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="<?php the_permalink(); ?>"/>
-				<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+				<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 					<meta itemprop="name" content="EARMILK">
-					<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+					<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
 						<meta itemprop="url" content="http://earmilk.com/wp-content/uploads/2016/02/EARMILK_logo_3.png">
 						<meta itemprop="width" content="229">
 						<meta itemprop="height" content="50">
-					</div>
-				</div>
+					</span>
+				</span>
 	
 				<div class="entry-thumb-cont">
 					<a href="<?php the_permalink(); ?>" class="entry-thumbnail">
-						<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+						<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 							<?php
 								$post_thumbnail_id = get_post_thumbnail_id();
 								$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
@@ -68,7 +68,7 @@ Template Name: VOICES - Archive
 							<?php } // Post Thumbnail ?> 
 							<meta itemprop="width" content="283" />
 							<meta itemprop="height" content="133" />
-						</div>
+						</span>
 					</a> 
 	
 					<div class="article-category">

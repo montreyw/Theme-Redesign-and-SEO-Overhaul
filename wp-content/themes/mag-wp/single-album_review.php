@@ -29,7 +29,7 @@
         </div><div class="clear"></div>
         <?php endwhile; endif; ?>
         <article class="entry-content" itemprop="hasPart" itemscope itemtype="http://schema.org/MusicAlbum">
-	        <div class="earmilk-album-review-meta schema-meta" style="display:none;">
+	        <span class="schema-meta">
 				<?php 
 					$artist_name = get_field('artist_name');
 					$album_name = get_field('album_name');
@@ -62,17 +62,13 @@
 				<span itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup">
 					<meta itemprop="name" content="<?php echo $artist_name; ?>" />
 				</span>
-				<div itemprop="dateCreated">
-					<time datetime="<?php echo $date_iso ?>">
-						<?php echo $date_human; ?>
-					</time>
-				</div>
+				<meta itemprop="dateCreated" content="<?php echo $date_iso ?>" />
 				<meta itemprop="url" content="<?php the_permalink(); ?>" />
-				<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+				<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 					<meta itemprop="url" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>">
 					<meta itemprop="width" content="950">
 					<meta itemprop="height" content="950">
-				</div>
+				</span>
 				<span itemprop="sourceOrganization" itemscope itemtype="http://schema.org/Organization">
 					<meta itemprop="name" content="<?php echo $record_label_name; ?>">
 					<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -81,7 +77,7 @@
 					<meta itemprop="url" content="<?php echo $record_label_url; ?>" />
 				</span>
 				<meta itemprop="keywords" content="<?php echo $post_kyewords; ?>" />
-	        </div>
+	        </span>
 				
             <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
 			<div class="<?php echo andre_get_post_class_without_hentry(); ?>" id="post-<?php the_ID(); ?>"
