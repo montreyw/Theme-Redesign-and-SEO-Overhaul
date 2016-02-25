@@ -54,6 +54,7 @@ Earmilk redesign project
 - [ ] Fix mobile width on Firefox
 - [ ] Create and style basic List of Authors Page
 - [x] Unique style for About Page
+- [ ] Make Interview Question?Answer as buttons instead of dropdown menu items
 - [ ] Restructure post grids into post lists with much larger images
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
 - [ ] Add Schema'd up breadcrumbs
