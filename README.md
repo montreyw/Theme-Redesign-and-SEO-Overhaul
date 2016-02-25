@@ -54,6 +54,7 @@ Earmilk redesign project
 - [ ] Fix mobile width on Firefox
 - [ ] Create and style basic List of Authors Page
 - [x] Unique style for About Page
+- [ ] Move all custom style CSS to style.css and disable call to theme-folder/css/colors/default.css
 - [ ] Make Interview Question?Answer as buttons instead of dropdown menu items
 - [ ] Extend Related Posts function to include Category-related posts if there aren't enough in Tag-related posts
 - [ ] Restructure post grids into post lists with much larger images
