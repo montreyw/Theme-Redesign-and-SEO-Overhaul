@@ -426,7 +426,8 @@ ul.footer-social li a:hover   { opacity: 0.7; color: #FFF !important;}
 html body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font: 14px/22px Helvetica, Arial, sans-serif;
+	font: 300 14px/22px Helvetica, Arial, sans-serif;
+	color: #333;
 }
 body#boxed-style {
     background: #fff;
@@ -907,7 +908,7 @@ kbd.active {
 	text-align: center; 
 	text-transform: uppercase; 
 	color: rgb(23, 23, 23); 
-	border-bottom: 7px solid #e34848;
+	border-bottom: 4px solid #e34848;
 	border-color: #6c6c6c;
 	border-color: #373737;
 }
@@ -1782,7 +1783,6 @@ div#twitter-like-btn iframe {
 
 
 
-
 /* Single Post */
 .single-content .entry-top {
 	padding: 0 0 30px;
@@ -1845,8 +1845,11 @@ div#single-share {
 	text-decoration: none;
 	color: initial;
 }
+.entry .p-first-letter,
+.entry .entry-content,
+.single-content .p-first-letter,
 .single-content .p-first-letter p {
-	color: #555;
+	text-align: initial;
 }
 .single-content .p-first-letter p a {
 	background-color: transparent;
@@ -2313,20 +2316,128 @@ h6.post-answer .interviewee {
 
 
 
-
-/* Jobs Page */
-.post-248999 h3 {
-    color: #e34848;
+/* Single Page */
+.single-content .page .entry h1.page-title {
+	position: relative;
+	font-size: 47px;
+	line-height: 47px;
+	font-weight: 100;
+	margin: 30px auto 73px;
+	padding: 10px 0;
 }
-.post-249009 .entry h1.page-title {
-    color: #e34848;
+.single-content .page .entry h1.page-title:after {
+	content: "";
+	height: 4px;
+	width: 50px;
+	background: #e34848;
+	display: block;
+	margin: 27px 0 0 -25px;
+	position: absolute;
+	left: 50%;
 }
-
 
 
 /* About Us page */
 span.light {
     color: #555 !important;
+}
+.p-first-letter .about-page-content p {
+    font-size: 19px;
+    line-height: 33px;
+}
+.about-page-content .earmilk-team {
+	font-size: 0;
+	margin: 30px auto 0;
+}
+.about-page-content .earmilk-team h2,
+.about-page-content .earmilk-team h3 {
+	text-align: center;
+	text-transform: inherit;
+	font-weight: 300;
+	margin: 0;
+}
+.about-page-content .earmilk-team h2 {
+	font-size: 50px;
+	line-height: 50px;
+	padding: 37px 0;
+}
+.about-page-content .earmilk-team h3 {
+	font-size: 33px;
+	line-height: 33px;
+	padding: 20px 0 30px;
+}
+.about-page-content .earmilk-team > div.section {
+	margin: 0 auto 37px;
+}
+.about-page-content .earmilk-team > div {
+	-webkit-columns: 3 200px;
+	-moz-columns: 3 200px;
+	columns: 3 200px;
+	-moz-column-fill: auto;
+	column-fill: auto;
+	-webkit-column-gap: 0;
+	-moz-column-gap: 0;
+	column-gap: 0;
+}
+.about-page-content .earmilk-team > div.one-column {
+	-webkit-columns: 1 200px;
+	-moz-columns: 1 200px;
+	columns: 1 200px;
+	-moz-column-fill: auto;
+	column-fill: auto;
+}
+.about-page-content .earmilk-team > div.two-columns {
+	-webkit-columns: 2 200px;
+	-moz-columns: 2 200px;
+	columns: 2 200px;
+	-moz-column-fill: auto;
+	column-fill: auto;
+}
+.about-page-content .earmilk-team > div > div {
+	margin: 0 0 30px;
+	min-height: 213px;
+}
+.about-page-content .earmilk-team > div > div > a {
+	text-align: center;
+	display: block;
+	width: auto;
+	margin: 0 auto;
+}
+.about-page-content .earmilk-team > div > div p,
+.about-page-content .earmilk-team > div > div > a br {
+	display: none;
+}
+.about-page-content .earmilk-team > div > div span {
+	display: table;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0 auto;
+}
+.about-page-content .earmilk-team > div > div img {
+	border-radius: 50%;
+	width: auto;
+	height: 150px;
+}
+.about-page-content .earmilk-team > div > div span:first-of-type {
+	color: #e34848;
+	font-weight: 900;
+	font-size: 14px;
+	padding-bottom: 3px;
+}
+.about-page-content .earmilk-team > div > div span:nth-of-type(2) {
+	font-family: sans-serif;
+	font-size: 10px;
+	line-height: 10px;
+}
+@media screen and (max-width: 768px) {
+	.about-page-content .earmilk-team > div {
+		font-size: 12px;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns: 1;
+		-moz-column-fill: auto;
+		column-fill: auto;
+	}
 }
 
 
@@ -2338,6 +2449,18 @@ div#customer_widget_main {
 .input .form_label {
     color: #777;
 }
+
+
+
+
+/* Jobs Page */
+.post-248999 h3 {
+    color: #e34848;
+}
+.post-249009 .entry h1.page-title {
+    color: #e34848;
+}
+
 
 
 
