@@ -55,6 +55,7 @@ Earmilk redesign project
 - [ ] Create and style basic List of Authors Page
 - [x] Unique style for About Page
 - [ ] Make Interview Question?Answer as buttons instead of dropdown menu items
+- [ ] Extend Related Posts function to include Category-related posts if there aren't enough in Tag-related posts
 - [ ] Restructure post grids into post lists with much larger images
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
 - [ ] Add Schema'd up breadcrumbs
