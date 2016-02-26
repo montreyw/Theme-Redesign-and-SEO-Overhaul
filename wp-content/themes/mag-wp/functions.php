@@ -587,3 +587,27 @@ if ( function_exists( 'get_avatar' ) ) {
 	add_shortcode ('get_avatar', 'candid_user_gravatar_shortcode');
 }
 
+// ---------------------------------------------------------------------------------------------------- 
+// TinyMCE functions to change around some buttons and menu options on post editor - Andre
+// ---------------------------------------------------------------------------------------------------- 
+add_action('admin_head', 'andres_edits_to_tinymce');
+function andres_edits_to_tinymce() {
+	global $typenow;
+	// check user permissions
+	if ( !current_user_can('edit_posts') && !current_user_can('edit_pages') ) return;
+	// verify the post type
+	if( ! in_array( $typenow, array( 'post', 'page' ) ) ) return;
+	// check if WYSIWYG is enabled
+	if ( get_user_option('rich_editing') == 'true') {
+		add_filter("mce_external_plugins", "andres_add_tinymce_plugin");
+		add_filter('mce_buttons', 'andres_tinymce_button_register');
+	}
+}
+function andres_add_tinymce_plugin($plugin_array) {
+	$plugin_array['andres_interview_buttons'] = get_bloginfo('template_directory') . '/custom/andres-tinymce-buttons.js'; 
+	return $plugin_array;
+}
+function andres_tinymce_button_register($buttons) {
+	array_push($buttons, 'andres_interview_question', 'andres_interview_answer' );
+	return $buttons;
+}
