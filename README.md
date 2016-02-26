@@ -72,6 +72,7 @@ Earmilk redesign project
 - [ ] Add Schema to all single posts
 - [ ] Add Schema to all archive pages
 - [ ] Add Schema to all unique type posts (ie, events, reviews, news articles, music recordings, premieres, etc)
+- [ ] Fix ImageObject on all schemas
 - [ ] Finish Schema.org markup
 - [ ] Add unique headers to individual category pages
 - [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
