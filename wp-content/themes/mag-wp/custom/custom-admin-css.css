@@ -4,3 +4,25 @@
 .acf_postbox .field.required {
 	margin-left: 0;
 }
+.fa {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.fa:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.fa-question:before {
+    content: "\f128";
+}
+.fa-comment-o:before {
+	content: "\f0e5";
+}
