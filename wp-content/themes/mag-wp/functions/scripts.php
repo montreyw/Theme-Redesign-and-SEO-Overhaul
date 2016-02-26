@@ -6,7 +6,7 @@ if( !function_exists( 'anthemes_enqueue_scripts' ) ) {
     function anthemes_enqueue_scripts() {
 		// Register css files
         wp_register_style( 'style', get_stylesheet_uri(), false);
-		wp_register_style( 'default', get_template_directory_uri() . '/css/colors/default.css', TRUE);
+// 		wp_register_style( 'default', get_template_directory_uri() . '/css/colors/default.css', TRUE);
 		wp_register_style( 'responsive', get_template_directory_uri() . '/css/responsive.css', TRUE);
         wp_register_style( 'fancyboxcss', get_template_directory_uri() . '/fancybox/jquery.fancybox-1.3.4.css', TRUE);
         wp_register_style( 'google-font', '//fonts.googleapis.com/css?family=Ruda:400,700|Lato:100,300,700', TRUE);
@@ -20,7 +20,7 @@ if( !function_exists( 'anthemes_enqueue_scripts' ) ) {
         wp_register_script( 'owl-carouseljs', get_template_directory_uri() . '/owl-carousel/owl.carousel.min.js', 'jquery', '', TRUE);
         // Display js files in Header via wp_head();
         wp_enqueue_style('style');
-        wp_enqueue_style('default');
+//         wp_enqueue_style('default');
         wp_enqueue_style('owl-carousel-css');
         wp_enqueue_style('responsive');
         wp_enqueue_style('google-font');
