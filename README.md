@@ -53,9 +53,9 @@ Earmilk redesign project
 - [ ] Improve mobile font styles and sizes (atleast on i6-size)
 - [ ] Fix mobile width on Firefox
 - [ ] Create and style basic List of Authors Page
-- [x] Unique style for About Page
-- [ ] Move all custom style CSS to style.css and disable call to theme-folder/css/colors/default.css
-- [ ] Make Interview Question?Answer as buttons instead of dropdown menu items
+- [x] New styling for About Page
+- [x] Move all custom style CSS to style.css and disable call to theme-folder/css/colors/default.css
+- [x] Make Interview Question?Answer as buttons instead of dropdown menu items
 - [ ] Extend Related Posts function to include Category-related posts if there aren't enough in Tag-related posts
 - [ ] Restructure post grids into post lists with much larger images
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
@@ -260,7 +260,9 @@ Earmilk redesign project
 13.  Added function to use a default fallback image when something goes wrong with the default `the_post_thumbnail()` WP function ([func in functions.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/079a18968558c7dd8be08dce3806bef243a11996), [index.php fixed](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5dcfca072f3dc25c8d044490f6a2bf36ddbecff6))
 14.  Created a dynamically generated pages of all EARMILK authors that have published 1 or more posts ([page start](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f8af8fb27462a09c5f3d49e49e59c038bb83991f), [functions.php function to only output authors with 1 or more posts](), [page finished]())
 15.  Appended to functions.php to create [shortcodes](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f33505375951bc66573147e915b4c89da78b0463) which enable outpitting WordPress user meta info (eg, like name and photo) from within WordPress pposts or pages
-16.  ...
+16.  [Transfered](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/7c66e1f690346f5333d296e0d20d2cbcd86f0093) all important CSS from default.css to style.css and [disabled](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/79acea579f9d02c4096d8f6cc45253cf09d86a5b) scripts.php registration and call to default.css
+17.  Developed custom TinyMCE Interview Question and Interview Answer buttons for content writers post editting view ([functions.PHP](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/ae60bd271c443b9febb279ffb6fd2d0521aabb31), [JS](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/74af7390af2b22c18a7284fb6abe3e21d6e15c18), [CSS](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/30a4bdc01a2f1bd0a08c007c6ca9841369966dd2))
+18.  ...
 
 
 
