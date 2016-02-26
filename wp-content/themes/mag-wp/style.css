@@ -1750,7 +1750,18 @@ ul.big-thing div.owl-item li h2.article-title.entry-title a {
 .wrap-fullwidth {
     background: #fff;
 }
+.section-top-title {
+	position: relative;
+}
 .section-top-title h3 {
+}
+.section-top-title ul.top-social {
+	margin: 0;
+	float: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 38px;
 }
 .home-content {
     background: #fff;
@@ -1867,6 +1878,9 @@ ul#masonry_list li .article-category .post-date span.day {
 .home-content ul.classic-blog li .article-category .author,
 ul#masonry_list li .article-category .author {
 	background-color: #4b4b4b;
+}
+.home-content ul .article-category a {
+	color: #fff;
 }
 .home-content ul.classic-blog li .article-category .author a {
 	padding: 1px 11px;
