@@ -159,7 +159,7 @@ jQuery( document ).ready( function( $ ) {
 	//////////////////////////////////////////////////////////////////
 	// global keycode constant
 	var KEYCODE_ESC = 27;
-	var noTriggerKeys = [37, 38, 39, 40, 17, 18, 91, 93, 32, 16, 20, 27, 192, 8]; 
+	var noTriggerKeys = [37, 38, 39, 40, 17, 18, 91, 93, 32, 16, 20, 27, 192, 8, 9, 224]; 
 
 	// extending the jQuery prototype with setCursorPosition
 	$.fn.setCursorPosition = function(pos) {
