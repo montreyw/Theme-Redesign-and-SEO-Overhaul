@@ -450,7 +450,7 @@ add_action( 'plugins_loaded', 'disable_yoast_notifications' );
 // Register and initialize Custom Admin CSS file - Andre
 // ------------------------------------------------------------------------------ 
 function registerCustomAdminCss() {
-	$src = "/wp-content/themes/mag-wp/css/custom-admin-css.css";
+	$src = "/wp-content/themes/mag-wp/custom/custom-admin-css.css";
 	$handle = "customAdminCss";
 	wp_register_script($handle, $src);
 	wp_enqueue_style($handle, $src, array(), false, false);
