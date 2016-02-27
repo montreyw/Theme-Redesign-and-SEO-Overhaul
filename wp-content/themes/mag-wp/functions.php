@@ -473,7 +473,6 @@ function andre_get_post_class_without_hentry() {
 // ------------------------------------------------------------------------------ 
 function myfeed_request($qv) {
 	if (isset($qv['feed']))
-		//$qv['post_type'] = get_post_types();
 		$qv['post_type'] = array('news', 'opinion_post', 'gear_post', 'album_review', 'post');
 	return $qv;
 }
@@ -555,17 +554,43 @@ function filter_users_have_posted( $user_query ) {
 // ---------------------------------------------------------------------------------------------------- 
 // Function to add shortcode for dislaying WordPress user meta data in pages and posts - Andre
 // ---------------------------------------------------------------------------------------------------- 
-function user_meta_shortcode_handler($atts,$content=null){
-/**
- * User Meta Shortcode handler
- * usage: [USER_META user_id=1 meta="first_name"]
- * @param  array $atts   
- * @param  string $content
- * @return stirng
- */
-    return esc_html(get_user_meta($atts['user_id'], $atts['meta'], true));
+function earmilk_staff_shortcode_handler( $atts ) {
+	/**
+	 * User Meta Shortcode handler
+	 * usage: [USER_META user_id=1 meta="first_name"]
+	 * @param  array $atts   
+	 * @param  string $content
+	 * @return stirng
+	 */
+    //return esc_html(print_r(get_users($atts['user_id'], $atts['meta'], true)));
+
+	$atts = shortcode_atts(
+		array(
+			'id' => 1,
+			'role' => 'Awesome Person',
+		), $atts, 'EARMILK_Staff' );
+
+	$user_id = $atts['id'];
+	$user_role = $atts['role'];
+
+	$args = array(
+		'include' => $user_id
+	);
+
+	$this_user = get_users( $args );
+	$u_out = '';
+	foreach ($this_user as $user) {
+		$u_out .= '<div>';
+			$u_out .= '<a href="' . $user->user_url . '" title="' . $user->display_name . '">';
+				$u_out .= ''. get_avatar( $user_id, 213, $default, "Photo of " . $user->display_name . "" ) .'';
+				$u_out .= '<span>' . $user->display_name . '</span>';
+				$u_out .= '<span>' . $user_role . '</span>';
+			$u_out .= '</a>';
+		$u_out .= '</div>';
+	};
+	return $u_out;
 }
-add_shortcode('USER_META', 'user_meta_shortcode_handler');
+add_shortcode('EARMILK_Staff', 'earmilk_staff_shortcode_handler');
 // ---------------------------------------------------------------------------------------------------- 
 // Function to add shortcode for dislaying WordPress user avatar - Andre
 // ---------------------------------------------------------------------------------------------------- 
@@ -575,7 +600,7 @@ if ( function_exists( 'get_avatar' ) ) {
 		get_currentuserinfo();
 		extract(shortcode_atts(array(
 			"id" => $current_user->ID,
-			"size" => 32,
+			//"size" => 32,
 			"default" => 'mystery',
 			"alt" => '',
 			"class" => '',
