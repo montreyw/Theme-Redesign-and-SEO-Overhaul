@@ -581,7 +581,7 @@ function earmilk_staff_shortcode_handler( $atts ) {
 	$u_out = '';
 	foreach ($this_user as $user) {
 		$u_out .= '<div>';
-			$u_out .= '<a href="' . $user->user_url . '" title="' . $user->display_name . '">';
+			$u_out .= '<a href="' . $user->user_url . '" title="' . $user->display_name . ', ' . ucwords($user_role) . '">';
 				$u_out .= ''. get_avatar( $user_id, 213, $default, "Photo of " . $user->display_name . "" ) .'';
 				$u_out .= '<span>' . $user->display_name . '</span>';
 				$u_out .= '<span>' . $user_role . '</span>';
