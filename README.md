@@ -56,6 +56,7 @@ Earmilk redesign project
 - [x] New styling for About Page
 - [x] Move all custom style CSS to style.css and disable call to theme-folder/css/colors/default.css
 - [x] Make Interview Question?Answer as buttons instead of dropdown menu items
+- [ ] Make article-category dates into an anchor on all archive pages
 - [ ] Extend Related Posts function to include Category-related posts if there aren't enough in Tag-related posts
 - [ ] Restructure post grids into post lists with much larger images
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
