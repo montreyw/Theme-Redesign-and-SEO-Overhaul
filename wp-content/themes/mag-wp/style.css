@@ -901,7 +901,7 @@ body > #header-filler {
 }
 #fixed-header #inner-header #myjquerymenu ul li a {
     color: #000;
-	font-size: 14px;
+	font-size: 13px;
 	height: auto;
 	position: relative;
 	padding: 4px 8px 0px 8px !important;
@@ -1972,8 +1972,11 @@ ul#masonry_list li .entry-empty-box {
 	font-size: 14px;
 }
 .wp-pagenavi a, .wp-pagenavi span {
-	color: #777 !important;
+	color: #777;
 	background-color: #eee;
+}
+.wp-pagenavi .current {
+	color: #fff;
 }
 /* Post grid types */
 .single-content .review .review_info h2 {
@@ -2484,6 +2487,17 @@ h6.post-answer .interviewee {
 .authorbox.main .authbox_right .author-info ul.author-social-top li a i {
 	padding: 0;
 }
+.authorbox.main .authbox_right .author-post-count,
+.authorbox.main .authbox_right .author-monthly-post-count {
+	margin: 0 auto 0 30px;
+	display: none;
+}
+.logged-in .authorbox.main .authbox_right .author-post-count,
+.logged-in .authorbox.main .authbox_right .author-monthly-post-count {
+	display: initial;
+}
+
+
 
 
 /* Album Review post style */
