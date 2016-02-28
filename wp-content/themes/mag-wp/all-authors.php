@@ -24,6 +24,8 @@ Template Name: All Authors Page
 
 	<?php
 		// Get the authors from the database ordered by user nicename
+		$current_month = date('m');
+		$current_year = date('Y');
 		$args = array(
 			//'role'         => 'author',
 			'role__in'     => [ 'administrator', 'editor', 'author', 'contributor', 'aamrole_53856fd146ba3' ],
@@ -46,6 +48,9 @@ Template Name: All Authors Page
 				$user_link = get_author_posts_url( $userID );
 				// Set default avatar (values = default, wavatar, identicon, monsterid)
 				$avatar = 'default';
+
+				$posts_this_month = count( get_posts('year=' . $current_year . '&monthnum=' . $current_month . '&author=' . $userID . '&posts_per_page=-1') );
+
 	?>
 
 				<div class="main authorbox">
@@ -78,7 +83,8 @@ Template Name: All Authors Page
 						<p><strong>Twitter: </strong><a href="<?php echo $curauth->jabber; ?>"><?php echo $curauth->jabber; ?></a></p>
 -->
 						<p><?php echo $curauth->description; ?></p>
-						<p>Published Posts: <?php echo $post_count; ?></p>
+						<span class="author-post-count">Published Posts: <span><?php echo $post_count; ?></span></span>
+						<span class="author-monthly-post-count">Posts this month: <span><?php echo $posts_this_month; ?></span></span>
 					</div>		
 					<div style="clear:both;"></div>
 				</div> <!-- end post -->
