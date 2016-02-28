@@ -1416,7 +1416,8 @@ ul.big-thing.owl-carousel {
 	margin: 0 auto;
 	width: 100%;
 	font-family: futura, "Ruda", Helvetica, Arial, sans-serif;
-	opacity: 0 !important
+	opacity: 0 !important;
+	overflow: hidden;
 }
 ul.big-thing.owl-carousel.carousel-visible {
 	display: block !important;
@@ -1880,6 +1881,9 @@ ul#masonry_list li .article-category .author {
 }
 .home-content ul .article-category a {
 	color: #fff;
+}
+.home-content ul .article-category a:hover {
+	color: #fff !important;
 }
 .home-content ul.classic-blog li .article-category .author a {
 	padding: 1px 11px;
@@ -2404,6 +2408,10 @@ h6.post-answer .interviewee {
 	width: auto;
 	padding: 0 3px;
 	min-width: 17px;
+	color: #fff;
+}
+.author-meta .entry .author-photo-cont a.author-nrposts:hover {
+	color: #fff !important;
 }
 .author-meta .entry .author-photo-cont a.author-photo-anchor {
 	display: block;
