@@ -3685,7 +3685,7 @@ ul#masonry_list li .entry-empty-box {
 /* Album reviews */
 ul#masonry_list li.album_review a.entry-thumbnail {
 /* 	width: 266px; */
-/* 	height: 266px !important; */
+	height: 217px;
 }
 /* Gear */
 ul#masonry_list li.gear_post a.entry-thumbnail {
