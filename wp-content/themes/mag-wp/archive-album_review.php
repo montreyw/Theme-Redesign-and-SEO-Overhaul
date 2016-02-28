@@ -55,6 +55,7 @@ Template Name: Album Reviews - Archive
 							<?php
 								$post_thumbnail_id = get_post_thumbnail_id();
 								$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+								$review_rating = get_field('review_rating');
 							?>
 							<?php if ( has_post_thumbnail() ) { ?> 
 								<?php if ( get_the_post_thumbnail() ) { ?> 
@@ -106,6 +107,9 @@ Template Name: Album Reviews - Archive
 							if ($category) { 
 				            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
 						?>
+					</div>
+					<div class="earmilk-rating-bottle">
+						<span><?php echo $review_rating; ?></span>
 					</div>
 				</div>
 			

@@ -116,7 +116,7 @@
 									$post_thumbnail_id = get_post_thumbnail_id();
 									$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
 								?>
-								<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+								<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject" class="schema-image-obj">
 									<?php if ( get_the_post_thumbnail() ) { ?> 
 										<?php echo the_post_thumbnail('thumbnail-single-image'); ?>
 										<meta itemprop="url" content="<?php echo $post_thumbnail_url; ?>" />
@@ -126,13 +126,19 @@
 									<?php } // Post with messed up Thumbnail ?>
 									<meta itemprop="width" content="950" />
 									<meta itemprop="height" content="950" />
+									<div class="earmilk-rating-bottle">
+										<span><?php echo $review_rating; ?></span>
+									</div>
 								</div>
 							<?php } else { ?>
-								<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+								<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject" class="schema-image-obj">
 									<?php echo fallback_thumbnail_image(); ?>
 									<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
 									<meta itemprop="width" content="950" />
 									<meta itemprop="height" content="950" />
+									<div class="earmilk-rating-bottle">
+										<span><?php echo $review_rating; ?></span>
+									</div>
 								</div>
 							<?php } // Post Thumbnail ?> 
 			            <?php } ?>
