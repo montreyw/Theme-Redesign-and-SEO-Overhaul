@@ -50,16 +50,24 @@ Template Name: Gear - Archive
           <div class="clear"></div> 
 
 				<div class="article-category">
-					<div class="post-date date updated">
-						<?php if ( get_the_time('Y') == date('Y')) { ?> 
-							<span class="month"><?php the_time('M', '', '', true); ?></span> 
-							<span class="day"><?php the_time('d', '', '', true); ?></span>
-						<?php } else { ?> 
-							<span class="month"><?php the_time('M', '', '', true); ?></span> 
-							<span class="day"><?php the_time('d', '', '', true); ?></span>
-							<span class="year">'<?php the_time('y', '', '', true); ?></span>
-						<?php } ?>
-					</div>
+						<div class="post-date date updated">
+							<?php if ( get_the_time('Y') == date('Y')) { ?> 
+								<meta itemprop="datePublished" content="<?php the_time('c'); ?>"/>
+								<meta itemprop="dateModified" content="<?php the_time('c'); ?>"/>
+								<a href="<?php echo '/' . get_the_time('Y') . '/' . get_the_time('m') . '/'  ?>" title="">
+									<span class="month"><?php the_time('M', '', '', true); ?></span> 
+									<span class="day"><?php the_time('d', '', '', true); ?></span>
+								</a>
+							<?php } else { ?> 
+								<meta itemprop="datePublished" content="<?php the_time('c'); ?>"/>
+								<meta itemprop="dateModified" content="<?php the_time('c'); ?>"/>
+								<a href="<?php echo '/' . get_the_time('Y') . '/' . get_the_time('m') . '/'  ?>" title="">
+									<span class="month"><?php the_time('M', '', '', true); ?></span> 
+									<span class="day"><?php the_time('d', '', '', true); ?></span>
+									<span class="year">'<?php the_time('y', '', '', true); ?></span>
+								</a>
+							<?php } ?>
+						</div>
 					<span class="vcard author p-author h-card">
 						<span class="fn">
 							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">

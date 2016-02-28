@@ -79,14 +79,18 @@ Template Name: Album Reviews - Archive
 							<?php if ( get_the_time('Y') == date('Y')) { ?> 
 								<meta itemprop="datePublished" content="<?php the_time('c'); ?>"/>
 								<meta itemprop="dateModified" content="<?php the_time('c'); ?>"/>
-								<span class="month"><?php the_time('M', '', '', true); ?></span> 
-								<span class="day"><?php the_time('d', '', '', true); ?></span>
+								<a href="<?php echo '/' . get_the_time('Y') . '/' . get_the_time('m') . '/'  ?>" title="">
+									<span class="month"><?php the_time('M', '', '', true); ?></span> 
+									<span class="day"><?php the_time('d', '', '', true); ?></span>
+								</a>
 							<?php } else { ?> 
 								<meta itemprop="datePublished" content="<?php the_time('c'); ?>"/>
 								<meta itemprop="dateModified" content="<?php the_time('c'); ?>"/>
-								<span class="month"><?php the_time('M', '', '', true); ?></span> 
-								<span class="day"><?php the_time('d', '', '', true); ?></span>
-								<span class="year">'<?php the_time('y', '', '', true); ?></span>
+								<a href="<?php echo '/' . get_the_time('Y') . '/' . get_the_time('m') . '/'  ?>" title="">
+									<span class="month"><?php the_time('M', '', '', true); ?></span> 
+									<span class="day"><?php the_time('d', '', '', true); ?></span>
+									<span class="year">'<?php the_time('y', '', '', true); ?></span>
+								</a>
 							<?php } ?>
 						</div>
 						<span class="vcard author p-author h-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
