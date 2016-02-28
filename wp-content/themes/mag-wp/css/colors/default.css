@@ -468,7 +468,7 @@ footer .widget h3.title {
 	border-bottom: 4px solid #E34848;
 	color: #E34848 !important;
 	color: #000 !important;
-	font-style: italic;
+	/* font-style: italic; */
 	font-weight: 300;
 }
 
@@ -2373,8 +2373,6 @@ span.light {
 	-webkit-columns: 3 200px;
 	-moz-columns: 3 200px;
 	columns: 3 200px;
-	-moz-column-fill: auto;
-	column-fill: auto;
 	-webkit-column-gap: 0;
 	-moz-column-gap: 0;
 	column-gap: 0;
@@ -2383,15 +2381,11 @@ span.light {
 	-webkit-columns: 1 200px;
 	-moz-columns: 1 200px;
 	columns: 1 200px;
-	-moz-column-fill: auto;
-	column-fill: auto;
 }
 .about-page-content .earmilk-team > div.two-columns {
 	-webkit-columns: 2 200px;
 	-moz-columns: 2 200px;
 	columns: 2 200px;
-	-moz-column-fill: auto;
-	column-fill: auto;
 }
 .about-page-content .earmilk-team > div > div {
 	margin: 0 0 30px;
