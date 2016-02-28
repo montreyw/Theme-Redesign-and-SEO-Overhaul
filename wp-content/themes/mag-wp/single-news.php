@@ -1,7 +1,9 @@
 <?php get_header(); // add header ?>
 <?php
-    // Options from admin panel
-    global $smof_data;
+	// Options from admin panel
+	global $smof_data;
+	$site_logo = $smof_data['site_logo'];
+	if (empty($site_logo)) { $site_logo = get_template_directory_uri().'/images/logo.png'; }
 ?>
 <!-- Begin Content -->
 <div class="wrap-fullwidth hfeed h-feed" role="main">
@@ -39,7 +41,7 @@
 			<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 				<meta itemprop="name" content="EARMILK">
 				<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-					<meta itemprop="url" content="<?php echo ($site_logo); ?>">
+					<meta itemprop="url" content="<?php echo $site_logo; ?>">
 					<meta itemprop="width" content="229">
 					<meta itemprop="height" content="50">
 				</span>
