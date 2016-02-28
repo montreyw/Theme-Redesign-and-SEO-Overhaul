@@ -7,7 +7,7 @@ function theme_widgets_init() {
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => "</div>",
 		'before_title' => '<h3 class="title">',
-		'after_title' => '</h3><div class="arrow-down-widget"></div><div class="clear"></div>',
+		'after_title' => '</h3><div class="clear"></div>',
 	) );
     register_sidebar( array (
 		'name' => 'Footer Sidebar 1',
@@ -15,7 +15,7 @@ function theme_widgets_init() {
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => "</div>",
 		'before_title' => '<h3 class="title">',
-		'after_title' => '</h3><div class="arrow-down-widget"></div><div class="clear"></div>',
+		'after_title' => '</h3><div class="clear"></div>',
 	) );
     register_sidebar( array (
 		'name' => 'Footer Sidebar 2',
@@ -23,7 +23,7 @@ function theme_widgets_init() {
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => "</div>",
 		'before_title' => '<h3 class="title">',
-		'after_title' => '</h3><div class="arrow-down-widget"></div><div class="clear"></div>',
+		'after_title' => '</h3><div class="clear"></div>',
 	) );
     register_sidebar( array (
 		'name' => 'Footer Sidebar 3',
@@ -31,7 +31,7 @@ function theme_widgets_init() {
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => "</div>",
 		'before_title' => '<h3 class="title">',
-		'after_title' => '</h3><div class="arrow-down-widget"></div><div class="clear"></div>',
+		'after_title' => '</h3><div class="clear"></div>',
 	) );
     register_sidebar( array (
 		'name' => 'Footer Sidebar 4',
@@ -39,7 +39,7 @@ function theme_widgets_init() {
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => "</div>",
 		'before_title' => '<h3 class="title">',
-		'after_title' => '</h3><div class="arrow-down-widget"></div><div class="clear"></div>',
+		'after_title' => '</h3><div class="clear"></div>',
 	) );
 }
 add_action( 'init', 'theme_widgets_init' );
