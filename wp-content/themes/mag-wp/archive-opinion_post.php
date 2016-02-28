@@ -23,6 +23,10 @@ Template Name: VOICES - Archive
 
 		<div class="section-top-title">
 			<h3><?php _e('Latest EARMILK Op-ed Articles', 'anthemes'); ?></h3>
+			<!-- Top social icons. -->
+			<?php if (!empty($smof_data['top_icons'])) { ?>
+				<?php echo stripslashes($smof_data['top_icons']); ?>
+			<?php } ?>
 		</div>
 		<div class="clear"></div><!-- end .section-top-title -->
 
