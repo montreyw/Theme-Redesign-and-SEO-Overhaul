@@ -50,17 +50,17 @@ Earmilk redesign project
 - [x] Author Page pagination needs to be fixed
 - [x] Album Review Details custom Schema + HTML details table widget
 - [x] Change/improve gray section headers
-- [ ] Improve mobile font styles and sizes (atleast on i6-size)
-- [ ] Fix mobile width on Firefox
+- [x] Improve mobile font styles and sizes (atleast on i6-size)
+- [x] Fix mobile width on Firefox
 - [ ] Create and style basic List of Authors Page
 - [x] New styling for About Page
 - [x] Move all custom style CSS to style.css and disable call to theme-folder/css/colors/default.css
 - [x] Make Interview Question?Answer as buttons instead of dropdown menu items
-- [ ] Make article-category dates into an anchor on all archive pages
+- [x] Make article-category dates into an anchor on all archive pages
+- [x] Restructure post grids into post lists with much larger images
+- [x] Add EARMILK Album Review Rating bottle image to album review archive and single pages
 - [ ] Extend Related Posts function to include Category-related posts if there aren't enough in Tag-related posts
-- [ ] Restructure post grids into post lists with much larger images
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
-- [ ] Add Schema'd up breadcrumbs
 - [ ] Implement system to automatically color site elements (ie, image meta info color line) to match genre class
 - [ ] Improve Harlem Shake CSS animation timing
 - [ ] Develop some unifying site design elements
@@ -73,7 +73,8 @@ Earmilk redesign project
 - [ ] Add Schema to all single posts
 - [ ] Add Schema to all archive pages
 - [ ] Add Schema to all unique type posts (ie, events, reviews, news articles, music recordings, premieres, etc)
-- [ ] Fix ImageObject on all schemas
+- [x] Fix ImageObject on all schemas
+- [ ] Add Schema'd up breadcrumbs
 - [ ] Finish Schema.org markup
 - [ ] Add unique headers to individual category pages
 - [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
