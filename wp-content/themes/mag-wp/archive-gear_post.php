@@ -16,17 +16,17 @@ Template Name: Gear - Archive
 <!-- Begin Wrap Content -->
 <div class="wrap-fullwidth">
 
-  <!-- Begin Main Home Content 950px -->
-  <div class="home-content">
+	<!-- Begin Main Home Content 950px -->
+	<div class="home-content">
 
-    <div class="section-top-title">
-      <h3><?php _e('Latest Gear Reviews', 'anthemes'); ?></h3>
-      <!-- Top social icons. -->
-      <?php if (!empty($smof_data['top_icons'])) { ?>
-        <?php echo stripslashes($smof_data['top_icons']); ?>
-      <?php } ?>
-    </div><div class="arrow-down-widget"></div>
-    <div class="clear"></div><!-- end .section-top-title -->
+		<div class="section-top-title">
+			<h3><?php _e('Latest Gear Reviews', 'anthemes'); ?></h3>
+			<!-- Top social icons. -->
+			<?php if (!empty($smof_data['top_icons'])) { ?>
+				<?php echo stripslashes($smof_data['top_icons']); ?>
+			<?php } ?>
+		</div>
+		<div class="clear"></div><!-- end .section-top-title -->
 
     <ul id="masonry_list" class="classic-blog js-masonry"  data-masonry-options='{ "columnWidth": 0 }'> 
         <?php
