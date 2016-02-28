@@ -58,7 +58,7 @@ Template Name: News - Archive
 							?>
 							<?php if ( has_post_thumbnail() ) { ?> 
 								<?php if ( get_the_post_thumbnail() ) { ?> 
-									<?php echo the_post_thumbnail('thumbnail-blog'); ?>
+									<?php echo the_post_thumbnail('large'); ?>
 									<meta itemprop="url" content="<?php echo $post_thumbnail_url; ?>" />
 								<?php } else { ?>
 									<?php echo fallback_thumbnail_image(); ?>

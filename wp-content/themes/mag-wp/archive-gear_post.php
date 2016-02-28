@@ -40,7 +40,7 @@ Template Name: Gear - Archive
 			<?php if ( has_post_thumbnail()) { ?> 
 				<div class="entry-thumb-cont">
 					<a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
-						<?php echo the_post_thumbnail('thumbnail-masonry'); ?>
+						<?php echo the_post_thumbnail('large'); ?>
 					</a> 
 			<?php } else { ?>
 				<a href="<?php the_permalink(); ?>" class="entry-thumbnail">
