@@ -5153,6 +5153,58 @@ form#searchform {
 
 
 
+/* Category and genre colors */
+.genre-feature {
+    background-color: #2e2e2e !important;
+}
+.genre-dance {
+    background-color: #e2d059 !important;
+}
+.genre-hip-hop,
+.genre-hiphop {
+    background-color: #e99b37 !important;
+}
+.genre-electronic {
+    background-color: #48b9e3 !important;
+}
+.genre-experimental {
+    background-color: #754aab !important;
+}
+.genre-pop {
+    background-color: #469e6c !important;
+}
+.genre-mash-up {
+    background-color: #469e6c !important;
+}
+.genre-rap {
+    background-color: #e99b37 !important;
+}
+.genre-indie {
+    background-color: #e34848 !important;
+}
+.genre-alternative {
+    background-color: #e34848 !important;
+}
+.genre-blues {
+    background-color: #754aab !important;
+}
+.genre-rock {
+    background-color: #754aab !important;
+}
+.genre-downtempo {
+    background-color: #754aab !important;
+}
+.genre-dubstep {
+    background-color: #0a6b8f !important;
+}
+.genre-news {
+    background-color: #015ca9 !important;
+}
+.genre-reviews,
+.genre-album-review {
+    background-color: #7d1701 !important;
+}
+
 
 
 
