@@ -1280,6 +1280,8 @@ kbd.active {
 	padding: 4px 16px;
 	display: block;
 	line-height: 29px;
+	background: #fff;
+	color: #000;
 }
 .line-box .header_line .top a:hover {
 	background-color: #e34848;
@@ -2044,7 +2046,7 @@ ul#masonry_list li.opinion_post a.entry-thumbnail {
 /* News grid */
 ul#masonry_list li.news a.entry-thumbnail {
 /* 	width: 266px; */
-/* 	height: 127px; */
+	height: 217px;
 }
 
 
@@ -3502,8 +3504,10 @@ form#searchform {
     background-color: #2e2e2e !important;
 }
 .genre-dance,
+.genre-club,
 .genre-deep,
 .genre-deephouse,
+.genre-electro,
 .genre-bass {
     background-color: #e2d059 !important;
 }
@@ -3512,23 +3516,30 @@ form#searchform {
     background-color: #e99b37 !important;
 }
 .genre-electronic,
+.genre-acid,
 .genre-chillstep,
 .genre-ambient {
     background-color: #48b9e3 !important;
 }
-.genre-experimental {
+.genre-experimental,
+.genre-neoclassical {
     background-color: #754aab !important;
 }
-.genre-pop {
+.genre-pop,
+.genre-electropop,
+.genre-darkpop {
     background-color: #469e6c !important;
 }
 .genre-mash-up {
-    background-color: #469e6c !important;
+/*     background-color: #469e6c !important; */
+    background-color: #015ca9 !important;
 }
 .genre-rap {
     background-color: #e99b37 !important;
 }
-.genre-indie {
+.genre-indie,
+.genre-dreamwave,
+.genre-folkrock {
     background-color: #e34848 !important;
 }
 .genre-alternative {
@@ -3546,8 +3557,12 @@ form#searchform {
 .genre-dubstep {
     background-color: #0a6b8f !important;
 }
-.genre-news {
-    background-color: #015ca9 !important;
+.genre-news,
+.genre-gear,
+.genre-events,
+.genre-exclusive {
+/*     background-color: #015ca9 !important; */
+    background-color: #469e6c !important;
 }
 .genre-reviews,
 .genre-album-review {
