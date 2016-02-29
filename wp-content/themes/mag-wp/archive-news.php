@@ -104,7 +104,7 @@ Template Name: News - Archive
 						<?php 
 							$category = get_the_category(); 
 							if ($category) { 
-				            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
+				            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog genre-' . strtolower($category[0]->name) . '" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
 						?>
 					</div>
 				</div>
