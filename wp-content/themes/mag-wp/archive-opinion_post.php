@@ -104,8 +104,8 @@ Template Name: VOICES - Archive
 						</span>
 						<?php 
 							$category = get_the_category(); 
-							if ($category) { 
-				            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog genre-' . strtolower($category[0]->name) . '" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
+							if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
+							echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog ' . $cat_name . '" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';
 						?>
 					</div>
 				</div>
