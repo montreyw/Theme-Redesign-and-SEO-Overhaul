@@ -108,8 +108,8 @@ Template Name: Album Reviews - Archive
 				            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
 						?>
 					</div>
-					<div class="earmilk-rating-bottle">
-						<span><?php echo $review_rating; ?></span>
+					<div class="earmilk-rating-bottle rating-<?php echo round($review_rating); ?>">
+						<i class="earmilk-rating-<?php echo round($review_rating); ?>"><?php echo $review_rating; ?></i>
 					</div>
 				</div>
 			

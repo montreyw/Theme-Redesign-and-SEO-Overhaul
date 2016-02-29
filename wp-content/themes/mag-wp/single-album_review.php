@@ -126,8 +126,8 @@
 									<?php } // Post with messed up Thumbnail ?>
 									<meta itemprop="width" content="950" />
 									<meta itemprop="height" content="950" />
-									<div class="earmilk-rating-bottle">
-										<span><?php echo $review_rating; ?></span>
+									<div class="earmilk-rating-bottle rating-<?php echo round($review_rating); ?>">
+										<i class="earmilk-rating-<?php echo round($review_rating); ?>"><?php echo $review_rating; ?></i>
 									</div>
 								</div>
 							<?php } else { ?>
@@ -136,8 +136,8 @@
 									<meta itemprop="url" content="<?php echo fallback_thumbnail_image('src'); ?>" />
 									<meta itemprop="width" content="950" />
 									<meta itemprop="height" content="950" />
-									<div class="earmilk-rating-bottle">
-										<span><?php echo $review_rating; ?></span>
+									<div class="earmilk-rating-bottle rating-<?php echo round($review_rating); ?>">
+										<i class="earmilk-rating-<?php echo round($review_rating); ?>"><?php echo $review_rating; ?></i>
 									</div>
 								</div>
 							<?php } // Post Thumbnail ?> 
