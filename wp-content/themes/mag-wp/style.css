@@ -4236,32 +4236,61 @@ h6.post-answer .interviewee {
 	position: absolute;
 	right: -20px;
 	bottom: -20px;
-	width: 90px;
-	height: 90px;
-	background: #f5f5f5;
+	width: 72px;
+	height: 72px;
+	background: #fff;
 	border-radius: 50%;
 	z-index: 1;
+	-webkit-box-shadow: 0px 1px 2px #ccc;
+	-moz-box-shadow: 0px 1px 2px #ccc;
+	-o-box-shadow: 0px 1px 2px #ccc;
+	box-shadow: 0px 1px 2px #ccc;
 }
-.earmilk-rating-bottle img,
-.album_review .album-review-box .media-single-content .schema-image-obj .earmilk-rating-bottle img {
-	display: block;
-	width: 30px;
-	margin: 10px auto;
-}
-.earmilk-rating-bottle span,
-.album_review .album-review-box .media-single-content .schema-image-obj .earmilk-rating-bottle span {
-	font-size: 13px;
+.earmilk-rating-bottle i,
+.album_review .album-review-box .media-single-content .schema-image-obj .earmilk-rating-bottle i {
+	font-size: 10px;
 	font-weight: bold;
-	background-image: url('http://allmilknoduds.com/wp-content/themes/mag-wp/images/EARMILK_bottle.png');
-	background-size: 37%;
-	background-repeat: no-repeat;
-	background-position: center center;
+	font-style: normal;
 	display: block;
-	width: 90px;
-	height: 90px;
+	margin: 5px auto 0;
+	width: 60px;
+	height: 60px;
 	text-align: center;
 	vertical-align: middle;
-	line-height: 100px;
+	line-height: 70px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('http://earmilk.com/wp-content/themes/mag-wp/images/earmilk-ratings/EARMILK-rating_sprite_opt.png')
+}
+.earmilk-rating-1 {
+	background-position: 0 0;
+}
+.earmilk-rating-2 {
+	background-position: 0 -60px;
+}
+.earmilk-rating-3 {
+	background-position: 0 -120px;
+}
+.earmilk-rating-4 {
+	background-position: 0 -180px;
+}
+.earmilk-rating-5 {
+	background-position: 0 -240px;
+}
+.earmilk-rating-6 {
+	background-position: 0 -300px;
+}
+.earmilk-rating-7 {
+	background-position: 0 -360px;
+}
+.earmilk-rating-8 {
+	background-position: 0 -420px;
+}
+.earmilk-rating-9 {
+	background-position: 0 -480px;
+}
+.earmilk-rating-92 {
+	background-position: 0 -540px;
 }
 .earmilk-album-review table.table {
 	border-spacing: 0;
