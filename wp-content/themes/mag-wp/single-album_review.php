@@ -173,7 +173,8 @@
 									<th colspan="2">Album Name:</th>
 									<td colspan="3">
 										<div class="earmilk-review-album">
-											<?php echo $album_name; ?> <?php the_post_thumbnail( array( 18, 18 ) ); ?>
+											<span><?php echo $album_name; ?></span>
+											<?php the_post_thumbnail( array( 18, 18 ) ); ?>
 										</div>
 									</td>
 								</tr>

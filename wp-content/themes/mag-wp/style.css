@@ -4373,6 +4373,11 @@ h6.post-answer .interviewee {
 .table-hover > tfoot > tr:hover {
 	background-color: #f5f5f5;
 }
+.album_review .album-review-box .earmilk-album-review table.table .earmilk-review-album span,
+.album_review .album-review-box .earmilk-album-review table.table .earmilk-review-author .author-photo span {
+	display: inline-block;
+	width: 70%;
+}
 .album-review-number {
 	display: inline-block;
 	font-size: 13px;
