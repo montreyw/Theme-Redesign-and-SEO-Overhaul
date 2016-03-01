@@ -52,18 +52,19 @@ Earmilk redesign project
 - [x] Change/improve gray section headers
 - [x] Improve mobile font styles and sizes (atleast on i6-size)
 - [x] Fix mobile width on Firefox
-- [ ] Create and style basic List of Authors Page
+- [x] Create and style basic List of Authors Page
 - [x] New styling for About Page
 - [x] Move all custom style CSS to style.css and disable call to theme-folder/css/colors/default.css
 - [x] Make Interview Question?Answer as buttons instead of dropdown menu items
 - [x] Make article-category dates into an anchor on all archive pages
 - [x] Restructure post grids into post lists with much larger images
 - [x] Add EARMILK Album Review Rating bottle image to album review archive and single pages
+- [x] RSS feed to output images along with content
 - [ ] Extend Related Posts function to include Category-related posts if there aren't enough in Tag-related posts
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
-- [ ] Implement system to automatically color site elements (ie, image meta info color line) to match genre class
+- [x] Implement system to automatically color site elements (ie, image meta info color line) to match genre class
 - [ ] Improve Harlem Shake CSS animation timing
-- [ ] Develop some unifying site design elements
+- [x] Develop some unifying site design elements
 - [x] Add Schema to all standard `index.php` and `single.php` posts and pages (single and archive)
 - [x] Add Schema to `/events/` page (single and archive)
 - [x] Add Schema to `/news/` page (single and archive)
