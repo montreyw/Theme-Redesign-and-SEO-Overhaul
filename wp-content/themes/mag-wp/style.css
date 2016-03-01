@@ -1154,6 +1154,32 @@ div#placeholder {
 ::-webkit-input-placeholder {
     color: #eaeaea;
 }
+
+/* Ajax Navigation Loader */
+#ajax-page-loader {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 1000%;
+	height: 100%;
+	margin: -100%;
+}
+#ajax-page-loader div {
+	position: absolute;
+	top: 50%;
+	left: 37%;
+	color: #fff;
+	font-size: 30px;
+	font-style: italic;
+}
+#ajax-page-loader div i {
+	font-size: 40px;
+	vertical-align: middle;
+	margin: 0 7px 0;
+}
+
 /* Type Anywhere Search */
 #ta-search-container {
 	position: fixed;
