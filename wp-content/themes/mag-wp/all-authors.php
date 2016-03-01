@@ -25,6 +25,7 @@ Template Name: All Authors Page
 	<?php
 		// Get the authors from the database ordered by user nicename
 		$current_month = date('m');
+		$last_month = date('m', strtotime("-1 month"));
 		$current_year = date('Y');
 		$args = array(
 			//'role'         => 'author',
@@ -49,20 +50,21 @@ Template Name: All Authors Page
 				// Set default avatar (values = default, wavatar, identicon, monsterid)
 				$avatar = 'default';
 
+				$posts_last_month = count( get_posts('year=' . $current_year . '&monthnum=' . $last_month . '&author=' . $userID . '&posts_per_page=-1') );
 				$posts_this_month = count( get_posts('year=' . $current_year . '&monthnum=' . $current_month . '&author=' . $userID . '&posts_per_page=-1') );
-
 	?>
 
 				<div class="main authorbox">
 					<div class="authbox_left">
 						<a href="<?php echo $user_link; ?>" title="Articles by <?php echo $curauth->display_name; ?>">
-						<?php echo get_avatar($userID, '300'); ?></a>
+						<?php echo get_avatar($userID, '512'); ?></a>
 					</div>
 					<div class="authbox_right">
 						<h2>
 							<a href="<?php echo $user_link; ?>" title="Articles by <?php echo $curauth->display_name; ?>"><?php echo $curauth->display_name; ?></a>
 						</h2>
 						<div class="author-info">
+							<a class="author-link" href="<?php the_author_meta('url', $userID); ?>" target="_blank"><?php the_author_meta('url', $userID); ?></a>
 							<ul class="author-social-top">
 								<?php if(get_the_author_meta('facebook', $userID)) { ?><li class="facebook">
 									<a target="_blank" href="//facebook.com/<?php echo the_author_meta('facebook', $userID); ?>">
@@ -74,7 +76,6 @@ Template Name: All Authors Page
 									<a target="_blank" href="//plus.google.com/<?php echo the_author_meta('google', $userID); ?>?rel=author">
 										<i class="fa fa-google-plus"></i></a></li><?php } ?>
 							</ul>
-							<a class="author-link" href="<?php the_author_meta('url', $userID); ?>" target="_blank"><?php the_author_meta('url', $userID); ?></a><br />
 							<p><?php the_author_meta('description'); ?></p>
 						</div><!-- end .autor-info -->
 
@@ -83,8 +84,15 @@ Template Name: All Authors Page
 						<p><strong>Twitter: </strong><a href="<?php echo $curauth->jabber; ?>"><?php echo $curauth->jabber; ?></a></p>
 -->
 						<p><?php echo $curauth->description; ?></p>
-						<span class="author-post-count">Published Posts: <span><?php echo $post_count; ?></span></span>
-						<span class="author-monthly-post-count">Posts this month: <span><?php echo $posts_this_month; ?></span></span>
+						<div class="author-post-count this-month-count">
+							<span class="posts-count" title="<?php echo date('F'); ?> Posts Count"><?php echo $posts_this_month; ?></span>
+						</div>
+						<div class="author-post-count last-month-count">
+							<span class="posts-count" title="<?php echo date('F', strtotime("-1 month")); ?> Posts Count"><?php echo $posts_last_month; ?></span>
+						</div>
+						<div class="author-post-count total-post-count">
+							<span class="posts-count" title="Total Posts Count"><?php echo $post_count; ?></span>
+						</div>
 					</div>		
 					<div style="clear:both;"></div>
 				</div> <!-- end post -->
