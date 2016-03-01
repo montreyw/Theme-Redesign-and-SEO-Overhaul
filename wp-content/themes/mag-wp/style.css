@@ -1171,8 +1171,9 @@ div#placeholder {
 }
 #ajax-page-loader div {
 	position: fixed;
+	width: 100%;
 	top: 37%;
-	left: 43%;
+	left: 0;
 	color: #fff;
 	font-size: 47px;
 	text-align: center;
