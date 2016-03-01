@@ -3,6 +3,96 @@ jQuery( document ).ready( function( $ ) {
 
 
 	///////////////////////////////////////    
+	// AJAX Navigation - Andre
+	///////////////////////////////////////
+	// first, check if link is internal or external, and label them with a class - new method
+	function link_is_external(link_element) {
+		return (link_element.host !== window.location.host);
+	}
+	function processAjaxAnchors() {
+		$('a').each(function(){
+			if ( ( !link_is_external(this) ) || ( $(this).slice(0, 1) == '/' ) ) {
+				// a link that contains the current host           
+				$(this).addClass('internal-link');
+			}
+			else {
+				// a link that does not contain the current host
+				$(this).addClass('external-link');
+			}
+		});
+	}
+	processAjaxAnchors();
+	$('body').on('change', function() {
+		processAjaxAnchors();
+	});
+	// first, check if link is internal or external, and label them with a class - old method
+/*
+	var comp = new RegExp(location.host);
+	$('a').each(function(){
+		if ( comp.test( $(this).attr('href') ) ) {
+			// a link that contains the current host           
+			$(this).addClass('internal-link');
+		}
+		else {
+			// a link that does not contain the current host
+			$(this).addClass('external-link');
+		}
+	});
+*/
+	var mainContentContainer = $('#ajax-content');
+	function ajaxNavigation2() {
+		$(document).on('click', 'a.internal-link', function(e) {
+			e.preventDefault();
+			var ajaxPageLoader = '<div id="ajax-page-loader"><div><i class="fa fa-spinner fa-pulse"></i><span>Loading</span></div></div>';
+			mainContentContainer.prepend(ajaxPageLoader);
+			var navLinkUrl = $(this).attr('href');
+		    $('<div />').load(navLinkUrl + ' #ajax-content', function(data){
+			    var ajaxData = $(this);
+				var clickedPageHtml = ajaxData.html();
+				mainContentContainer.fadeOut('slow', function(){
+					mainContentContainer.html(clickedPageHtml).fadeIn('slow');
+					processAjaxAnchors();
+				});
+		    });
+			if (navLinkUrl != window.location) {
+				window.history.pushState({ path: navLinkUrl }, '', navLinkUrl);
+			}
+			return false;
+		})
+	}
+	//ajaxNavigation2();
+
+	function ajaxNavigation() {
+		$(document).on('click', 'a.internal-link', function(e){
+			e.preventDefault();
+			var pageurl = $(this).attr('href');
+			console.log('page container ===========', mainContentContainer);
+			$.ajax({
+				type: 'GET',
+				url: pageurl,
+				success: function(data) {
+					console.log(data);
+					var $ajaxContent = $(data).find('#ajax-content');
+					console.log('inner HTML ===========', $ajaxContent);
+					mainContentContainer.html($ajaxContent);
+					//mainContentContainer.html(data);
+				}
+			});
+			if (pageurl != window.location) {
+				window.history.pushState({path:pageurl},'',pageurl);
+			}
+			return false;
+		});
+	};
+	//ajaxNavigation();
+	
+
+
+
+
+
+
+	///////////////////////////////////////    
 	// Genre Bar - Andre
 	///////////////////////////////////////    
 	function genreBar() {
