@@ -1156,6 +1156,9 @@ div#placeholder {
 }
 
 /* Ajax Navigation Loader */
+#ajax-content {
+/* 	position: relative; */
+}
 #ajax-page-loader {
 	position: absolute;
 	z-index: 2;
@@ -1164,12 +1167,12 @@ div#placeholder {
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 1000%;
 	height: 100%;
-	margin: -100%;
+	margin: 0 -100%;
 }
 #ajax-page-loader div {
-	position: absolute;
+	position: fixed;
 	top: 50%;
-	left: 37%;
+	left: 43%;
 	color: #fff;
 	font-size: 30px;
 	font-style: italic;
