@@ -21,39 +21,38 @@ jQuery( document ).ready( function( $ ) {
 			}
 		});
 	}
-	processAjaxAnchors();
-	$('body').on('change', function() {
-		processAjaxAnchors();
-	});
-	// first, check if link is internal or external, and label them with a class - old method
-/*
-	var comp = new RegExp(location.host);
-	$('a').each(function(){
-		if ( comp.test( $(this).attr('href') ) ) {
-			// a link that contains the current host           
-			$(this).addClass('internal-link');
-		}
-		else {
-			// a link that does not contain the current host
-			$(this).addClass('external-link');
-		}
-	});
-*/
+	//processAjaxAnchors();
+	// store main #ajax-content container on current page as jQ object
 	var mainContentContainer = $('#ajax-content');
+	// initialize AJAX Nav engine
 	function ajaxNavigation2() {
+		// Attach on click event to all links labeled with class .internal-links
 		$(document).on('click', 'a.internal-link', function(e) {
+			// prevent default anchor action
 			e.preventDefault();
+			// store AJAX Loader spinner as html jQ object
 			var ajaxPageLoader = '<div id="ajax-page-loader"><div><i class="fa fa-spinner fa-pulse"></i><span>Loading</span></div></div>';
+			// prepend AJAX loader to page to show that a page is loading, since a link has been clicked
 			mainContentContainer.prepend(ajaxPageLoader);
+			// grab the href of the clicked link
 			var navLinkUrl = $(this).attr('href');
+			// load the data from the url of the clicked link
 		    $('<div />').load(navLinkUrl + ' #ajax-content', function(data){
+			    // store loaded ajax data as jQ object
 			    var ajaxData = $(this);
+			    // grab the html of the stored jQ object data
 				var clickedPageHtml = ajaxData.html();
+				// fade out main #ajax-content area in preparation for appending new data
 				mainContentContainer.fadeOut('slow', function(){
+					// fade in new data loaded from ajaxed page
 					mainContentContainer.html(clickedPageHtml).fadeIn('slow');
+					// process all the new anchors to prepare for next navigation
 					processAjaxAnchors();
+					// scroll window to top of new ajaxed page
+					window.scrollTo(0, 0);
 				});
 		    });
+		    // once a link is clicked, check the window URL of the browser and change it if it does not match the page to be loaded
 			if (navLinkUrl != window.location) {
 				window.history.pushState({ path: navLinkUrl }, '', navLinkUrl);
 			}
