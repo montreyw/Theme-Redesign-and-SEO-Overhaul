@@ -636,3 +636,19 @@ function andres_tinymce_button_register($buttons) {
 	array_push($buttons, 'andres_interview_question', 'andres_interview_answer' );
 	return $buttons;
 }
+
+// ---------------------------------------------------------------------------------------------------- 
+// Show image in RSS feed - Andre
+// ---------------------------------------------------------------------------------------------------- 
+function featured_image_in_feed( $content ) {
+	global $post;
+	if( is_feed() ) {
+		if ( has_post_thumbnail( $post->ID ) ){
+			$output = get_the_post_thumbnail( $post->ID, 'large' );
+			$content = $output . $content;
+		}
+	}
+	return $content;
+}
+add_filter( 'the_content_feed', 'featured_image_in_feed' );
+add_filter( 'the_excerpt_rss', 'featured_image_in_feed');
