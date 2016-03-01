@@ -1171,16 +1171,23 @@ div#placeholder {
 }
 #ajax-page-loader div {
 	position: fixed;
-	top: 50%;
+	top: 37%;
 	left: 43%;
 	color: #fff;
-	font-size: 30px;
-	font-style: italic;
+	font-size: 47px;
+	text-align: center;
+	line-height: 47px;
 }
 #ajax-page-loader div i {
 	font-size: 40px;
 	vertical-align: middle;
 	margin: 0 7px 0;
+}
+#ajax-page-loader div span {
+	display: block;
+	text-transform: uppercase;
+	margin: 23px 0 0;
+	font-weight: bold;
 }
 
 /* Type Anywhere Search */
