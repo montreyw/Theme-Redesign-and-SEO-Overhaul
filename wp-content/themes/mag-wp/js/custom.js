@@ -5,27 +5,27 @@ jQuery( document ).ready( function( $ ) {
 	///////////////////////////////////////    
 	// AJAX Navigation - Andre
 	///////////////////////////////////////
-	// first, check if link is internal or external, and label them with a class - new method
-	function link_is_external(link_element) {
-		return (link_element.host !== window.location.host);
-	}
-	function processAjaxAnchors() {
-		$('a').each(function(){
-			if ( ( !link_is_external(this) ) || ( $(this).slice(0, 1) == '/' ) ) {
-				// a link that contains the current host           
-				$(this).addClass('internal-link');
-			}
-			else {
-				// a link that does not contain the current host
-				$(this).addClass('external-link');
-			}
-		});
-	}
-	//processAjaxAnchors();
-	// store main #ajax-content container on current page as jQ object
-	var mainContentContainer = $('#ajax-content');
 	// initialize AJAX Nav engine
-	function ajaxNavigation2() {
+	function ajaxNavigation() {
+		// first, check if link is internal or external, and label them with a class - new method
+		function link_is_external(link_element) {
+			return (link_element.host !== window.location.host);
+		}
+		function processAjaxAnchors() {
+			$('a').each(function(){
+				if ( ( !link_is_external(this) ) || ( $(this).slice(0, 1) == '/' ) ) {
+					// a link that contains the current host           
+					$(this).addClass('internal-link');
+				}
+				else {
+					// a link that does not contain the current host
+					$(this).addClass('external-link');
+				}
+			});
+		}
+		processAjaxAnchors();
+		// store main #ajax-content container on current page as jQ object
+		var mainContentContainer = $('#ajax-content');
 		// Attach on click event to all links labeled with class .internal-links
 		$(document).on('click', 'a.internal-link', function(e) {
 			// prevent default anchor action
@@ -43,14 +43,15 @@ jQuery( document ).ready( function( $ ) {
 			    // grab the html of the stored jQ object data
 				var clickedPageHtml = ajaxData.html();
 				// fade out main #ajax-content area in preparation for appending new data
-				mainContentContainer.fadeOut('slow', function(){
-					// fade in new data loaded from ajaxed page
-					mainContentContainer.html(clickedPageHtml).fadeIn('slow');
+				mainContentContainer.removeClass('fade-in').addClass('fade-out');
+				setTimeout( function() {
+					// fade in new ajax-content
+					mainContentContainer.html(clickedPageHtml).removeClass('fade-out').addClass('fade-in');
 					// process all the new anchors to prepare for next navigation
 					processAjaxAnchors();
 					// scroll window to top of new ajaxed page
 					window.scrollTo(0, 0);
-				});
+				}, 357 );
 		    });
 		    // once a link is clicked, check the window URL of the browser and change it if it does not match the page to be loaded
 			if (navLinkUrl != window.location) {
@@ -59,32 +60,7 @@ jQuery( document ).ready( function( $ ) {
 			return false;
 		})
 	}
-	//ajaxNavigation2();
-
-	function ajaxNavigation() {
-		$(document).on('click', 'a.internal-link', function(e){
-			e.preventDefault();
-			var pageurl = $(this).attr('href');
-			console.log('page container ===========', mainContentContainer);
-			$.ajax({
-				type: 'GET',
-				url: pageurl,
-				success: function(data) {
-					console.log(data);
-					var $ajaxContent = $(data).find('#ajax-content');
-					console.log('inner HTML ===========', $ajaxContent);
-					mainContentContainer.html($ajaxContent);
-					//mainContentContainer.html(data);
-				}
-			});
-			if (pageurl != window.location) {
-				window.history.pushState({path:pageurl},'',pageurl);
-			}
-			return false;
-		});
-	};
 	//ajaxNavigation();
-	
 
 
 
