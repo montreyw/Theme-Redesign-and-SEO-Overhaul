@@ -51,6 +51,9 @@ jQuery( document ).ready( function( $ ) {
 					processAjaxAnchors();
 					// scroll window to top of new ajaxed page
 					window.scrollTo(0, 0);
+					if ($('.main-stage-split .big-thing-box .big-thing')) {
+						initCarouselSlider();
+					};
 				}, 357 );
 		    });
 		    // once a link is clicked, check the window URL of the browser and change it if it does not match the page to be loaded
@@ -61,9 +64,6 @@ jQuery( document ).ready( function( $ ) {
 		})
 	}
 	//ajaxNavigation();
-
-
-
 
 
 
@@ -126,96 +126,94 @@ jQuery( document ).ready( function( $ ) {
 	///////////////////////////////////////    
 	// Slider Featured Articles - Andre
 	///////////////////////////////////////    
-	var owl = jQuery('.big-thing');
-    owl.owlCarousel({
-        loop: true,
-        autoPlay: true,
-        autoPlayTimeout: 5000,
-        stopOnHover: true,
-        pagination: true,
-		singleItem:true,
-        navigation: true,
-        navigationText: [
-        	"<i class='fa fa-chevron-left'></i>",
-        	"<i class='fa fa-chevron-right'></i>"],
-        autoWidth:true,
-        afterInit: customOwl,
-        afterUpdate: customOwl
-    });
-	$(document.documentElement).keyup(function(event) {
-		if (event.keyCode == 37) {
-			owl.data('owlCarousel').prev();
-		} else if (event.keyCode == 39) {
-			owl.data('owlCarousel').next();
-		}
-	});
-	function customOwl() {
-
-		// proper fade-in fade-out effect for muscial loading equalizer animation and Main Stage
-		setTimeout( function(){ 
-			setTimeout( function(){ 
-				owl.addClass('carousel-visible'); 
-			}, 37);
-			$('#main-stage-loader').addClass('main-stage-loaded'); 
-			setTimeout( function(){ 
-				$('#main-stage-loader').remove();
-			}, 370);
-		}, 1370);
-
-		// Get Max height of variable length title boxes and set all boxes to this height 
-		// this ensures the titles will fade away under the nav arrows on small devices
-		var maxHeight = Math.max.apply(null, $("div.an-widget-title").map(function ()	{
-			return $(this).height();
-		}).get());
-		$("div.an-widget-title").height(maxHeight);
-		// Set the proper cooresponding height and top-position of nav arrows
-		var mainStageImg = $('.entry-thumb-cont');
-		var mainStageImgBtm = mainStageImg.position().top + mainStageImg.outerHeight(true);
-		$('.owl-buttons div').css({
-			'padding-top': '0',
-			'padding-bottom': '0',
-			'height': maxHeight - 1,
-			'top': mainStageImgBtm
+	function initCarouselSlider() {
+		var owl = jQuery('.big-thing');
+		owl.owlCarousel({
+			loop: true,
+			autoPlay: true,
+			autoPlayTimeout: 5000,
+			stopOnHover: true,
+			pagination: true,
+			singleItem:true,
+			navigation: true,
+			navigationText: [
+				"<i class='fa fa-chevron-left'></i>",
+				"<i class='fa fa-chevron-right'></i>"],
+			autoWidth:true,
+			afterInit: customOwl,
+			afterUpdate: customOwl
 		});
-		$('.owl-buttons div i').css({
-			'line-height': maxHeight+'px'
+		$(document.documentElement).keyup(function(event) {
+			if (event.keyCode == 37) {
+				owl.data('owlCarousel').prev();
+			} else if (event.keyCode == 39) {
+				owl.data('owlCarousel').next();
+			}
 		});
-
-		// Create and append thumbnail image pagination
-		$('.owl-controls .owl-page').append('<a class="item-link" href="#"/>');
-		var paginatorsLink = $('.owl-controls .item-link');
-		$.each(this.owl.userItems, function (i) {
-			$(paginatorsLink[i])
-			.css({
-				'background': 'url(' + $(this).find('img').attr('src') + ') center center no-repeat',
-				'-webkit-background-size': 'cover',
-				'-moz-background-size': 'cover',
-				'-o-background-size': 'cover',
-				'background-size': 'cover'
-			})
-			.click(function (e) {
-				e.preventDefault();
-				owl.trigger('owl.goTo', i);
+		function customOwl() {
+			// proper fade-in fade-out effect for muscial loading equalizer animation and Main Stage
+			setTimeout( function(){ 
+				setTimeout( function(){ 
+					owl.addClass('carousel-visible'); 
+				}, 37);
+				$('#main-stage-loader').addClass('main-stage-loaded'); 
+				setTimeout( function(){ 
+					$('#main-stage-loader').remove();
+				}, 370);
+			}, 1370);
+			// Get Max height of variable length title boxes and set all boxes to this height 
+			// this ensures the titles will fade away under the nav arrows on small devices
+			var maxHeight = Math.max.apply(null, $("div.an-widget-title").map(function ()	{
+				return $(this).height();
+			}).get());
+			$("div.an-widget-title").height(maxHeight);
+			// Set the proper cooresponding height and top-position of nav arrows
+			var mainStageImg = $('.entry-thumb-cont');
+			var mainStageImgBtm = mainStageImg.position().top + mainStageImg.outerHeight(true);
+			$('.owl-buttons div').css({
+				'padding-top': '0',
+				'padding-bottom': '0',
+				'height': maxHeight - 1,
+				'top': mainStageImgBtm
 			});
-		});
-        // add Custom PREV NEXT controls
-        //$('.owl-pagination').prepend('<a href="#prev" class="prev-owl"/>');
-        //$('.owl-pagination').append('<a href="#next" class="next-owl"/>');
-
-        // set Custom event for NEXT custom control
-/*
-		$(".next-owl").click(function () {
-			owl.trigger('owl.next');
-		});
-*/
-		
-		// set Custom event for PREV custom control
-/*
-		$(".prev-owl").click(function () {
-			owl.trigger('owl.prev');
-		});
-*/		
-	}
+			$('.owl-buttons div i').css({
+				'line-height': maxHeight+'px'
+			});
+			// Create and append thumbnail image pagination
+			$('.owl-controls .owl-page').append('<a class="item-link" href="#"/>');
+			var paginatorsLink = $('.owl-controls .item-link');
+			$.each(this.owl.userItems, function (i) {
+				$(paginatorsLink[i])
+				.css({
+					'background': 'url(' + $(this).find('img').attr('src') + ') center center no-repeat',
+					'-webkit-background-size': 'cover',
+					'-moz-background-size': 'cover',
+					'-o-background-size': 'cover',
+					'background-size': 'cover'
+				})
+				.click(function (e) {
+					e.preventDefault();
+					owl.trigger('owl.goTo', i);
+				});
+			});
+	        // add Custom PREV NEXT controls
+	        //$('.owl-pagination').prepend('<a href="#prev" class="prev-owl"/>');
+	        //$('.owl-pagination').append('<a href="#next" class="next-owl"/>');
+	        // set Custom event for NEXT custom control
+	/*
+			$(".next-owl").click(function () {
+				owl.trigger('owl.next');
+			});
+	*/
+			// set Custom event for PREV custom control
+	/*
+			$(".prev-owl").click(function () {
+				owl.trigger('owl.prev');
+			});
+	*/		
+		}
+	};
+	initCarouselSlider();
 
 
 
