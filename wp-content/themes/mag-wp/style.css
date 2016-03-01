@@ -333,6 +333,9 @@ ul.author-social-top li        {  font-size: 12px; display: inline-block;   }
 ul.author-social-top li a      { width: 20px; height: 20px; display: inline-block;  }
 ul.author-social-top li a:hover{ opacity: 0.7;}
 ul.author-social-top li a i    { padding-left: 3px;}
+ul.author-social-top li a i.fa-google-plus    { color: #dd4b39;}
+ul.author-social-top li a i.fa-twitter    { color: #55acee;}
+ul.author-social-top li a i.fa-facebook    { color: #3b5998;}
 
 /* -- Entry content style -- */
 .entry                     { width: 720px; height: auto; margin: 0 auto 30px auto;}
@@ -2504,26 +2507,31 @@ h6.post-answer .interviewee {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	border: 17px solid #eee;
+	border: 7px solid #eee;
 	box-sizing: border-box;
 }
 .authorbox.main:hover .authbox_left a img {
-    border: 7px solid #eee;
+/*     border: 7px solid #eee; */
 }
 .authorbox.main .authbox_right {
 	width: 50%;
 	margin: 0 0 0 30px;
 	width: calc( 100% - 237px );
+	position: relative;
 }
 .authorbox.main .authbox_right .author-info {
 	width: auto;
 	height: auto;
-	margin: 0;
+	margin: 7px 0;
 }
 .authorbox.main .authbox_right .author-info a.author-link {
 	text-decoration: none;
 	padding: 0;
 	font-size: 13px;
+}
+.authorbox.main .authbox_right .author-info ul.author-social-top {
+	display: inline-block;
+	margin-left: 12px;
 }
 .authorbox.main .authbox_right .author-info ul.author-social-top li {
 	text-align: center;
@@ -2534,13 +2542,41 @@ h6.post-answer .interviewee {
 .authorbox.main .authbox_right .author-info ul.author-social-top li a i {
 	padding: 0;
 }
-.authorbox.main .authbox_right .author-post-count,
-.authorbox.main .authbox_right .author-monthly-post-count {
-	margin: 0 auto 0 30px;
+.authorbox.main .authbox_right .author-post-count {
 	display: none;
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	right: 140px;
 }
-.logged-in .authorbox.main .authbox_right .author-post-count,
-.logged-in .authorbox.main .authbox_right .author-monthly-post-count {
+.authorbox.main .authbox_right .author-post-count.total-post-count {
+	right: 0;
+}
+.authorbox.main .authbox_right .author-post-count.last-month-count {
+	right: 70px;
+}
+.authorbox.main .authbox_right .author-post-count {
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	line-height: 40px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 50%;
+	padding: 10px;
+	font-size: 17px;
+}
+.authorbox.main .authbox_right .author-post-count.total-post-count {
+	background: rgba(72, 185, 227, 0.5);
+}
+.authorbox.main .authbox_right .author-post-count.this-month-count {
+	background: rgba(233, 155, 55, 0.5);
+}
+.authorbox.main .authbox_right .author-post-count.last-month-count {
+	background: rgba(70, 158, 108, 0.5);
+}
+.logged-in .authorbox.main .authbox_right .author-post-count {
 	display: initial;
 }
 
@@ -3516,6 +3552,8 @@ form#searchform {
     background-color: #e99b37 !important;
 }
 .genre-electronic,
+.genre-electronica,
+.genre-electrohop,
 .genre-acid,
 .genre-chillstep,
 .genre-ambient {
