@@ -354,42 +354,85 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 		<div class="wrap-center">
 			<?php //echo get_template_part('custom/region/left-big-thing'); ?>
 
- 				<div id="main-stage-split">
+			<div id="main-stage-split">
 
-	 				<div class="main-stage-left">
+				<div class="main-stage-left">
 
-						<div class="main-stage-latest latest-news hfeed h-feed">
-							<div class="line-box">
-								<div class="header_line">
-									<h2 class="top"><a href="/news/" titles="VOICES">SCOOPS</a></h2>
-								</div>
+					<div class="main-stage-latest latest-news hfeed h-feed">
+						<div class="line-box">
+							<div class="header_line">
+								<h2 class="top"><a href="/news/" titles="VOICES">SCOOPS</a></h2>
 							</div>
-							<ul>
-								<?php  
-									$args = array(
-								    'post_type' => array( 'news' ),
-								    'numberposts' => 3,
-								    'posts_per_page' => 3,
-								    'offset' => 0,
-								    'category' => 0,
-								    'orderby' => 'post_date',
-								    'order' => 'DESC');
-									query_posts( $args );  
-									$category = get_the_category(); 
-									if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
-								?> 
-								<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-									<li class="hentry h-entry <?php echo $cat_name; ?>">
-										<div class="entry-thumbnail"> 
-											<a href="<?php the_permalink(); ?>"> 
-												<?php echo the_post_thumbnail('small'); ?>
-											</a>
-										</div>
-										<div class="entry-title">
-											<h3>
-												<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-											</h3>
-										</div>
+						</div>
+						<ul>
+							<?php  
+								$args = array(
+							    'post_type' => array( 'news' ),
+							    'numberposts' => 3,
+							    'posts_per_page' => 3,
+							    'offset' => 0,
+							    'category' => 0,
+							    'orderby' => 'post_date',
+							    'order' => 'DESC');
+								query_posts( $args );  
+								$category = get_the_category(); 
+								if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
+							?> 
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
+								<li class="hentry h-entry <?php echo $cat_name; ?>">
+									<div class="entry-thumbnail"> 
+										<a href="<?php the_permalink(); ?>"> 
+											<?php echo the_post_thumbnail('small'); ?>
+										</a>
+									</div>
+									<div class="entry-title">
+										<h3>
+											<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+										</h3>
+									</div>
+						            <div class="entry-author-meta">
+							            <span class="time date updated"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
+							            <span class="author-meta-byline"><?php _e('by', 'anthemes'); ?>
+							            	<span class="vcard author p-author h-card">
+							            		<span class="fn"><?php the_author_posts_link(); ?></span>
+							            	</span>
+							            </span>
+						            </div>
+								</li>
+							<?php endwhile; endif; wp_reset_query();  ?> 
+						</ul>
+					</div>
+					<div class="main-stage-latest latest-voices hfeed h-feed">
+						<div class="line-box">
+							<div class="header_line">
+								<h2 class="top"><a href="/voices/" titles="VOICES">VOICES</a></h2>
+							</div>
+						</div>
+						<ul>
+							<?php  
+								$args = array(
+							    'post_type' => array( 'opinion_post' ),
+							    'numberposts' => 3,
+							    'posts_per_page' => 3,
+							    'offset' => 0,
+							    'category' => 0,
+							    'orderby' => 'post_date',
+							    'order' => 'DESC');
+								query_posts( $args );  
+								$category = get_the_category(); 
+								if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
+							?> 
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+								<li class="hentry h-entry <?php echo $cat_name ?>">
+									<div class="entry-thumbnail"> 
+										<a href="<?php the_permalink(); ?>"> 
+											<?php echo the_post_thumbnail('small'); ?>
+										</a>
+									</div>
+									<div class="entry-title">
+										<h3>
+											<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+										</h3>
 							            <div class="entry-author-meta">
 								            <span class="time date updated"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
 								            <span class="author-meta-byline"><?php _e('by', 'anthemes'); ?>
@@ -398,107 +441,63 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 								            	</span>
 								            </span>
 							            </div>
-									</li>
-								<?php endwhile; endif; wp_reset_query();  ?> 
-							</ul>
-						</div>
-						<div class="main-stage-latest latest-voices hfeed h-feed">
-							<div class="line-box">
-								<div class="header_line">
-									<h2 class="top"><a href="/voices/" titles="VOICES">VOICES</a></h2>
-								</div>
-							</div>
-							<ul>
-								<?php  
-									$args = array(
-								    'post_type' => array( 'opinion_post' ),
-								    'numberposts' => 3,
-								    'posts_per_page' => 3,
-								    'offset' => 0,
-								    'category' => 0,
-								    'orderby' => 'post_date',
-								    'order' => 'DESC');
-									query_posts( $args );  
-									$category = get_the_category(); 
-									if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
-								?> 
-								<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-									<li class="hentry h-entry <?php echo $cat_name ?>">
-										<div class="entry-thumbnail"> 
-											<a href="<?php the_permalink(); ?>"> 
-												<?php echo the_post_thumbnail('small'); ?>
-											</a>
-										</div>
-										<div class="entry-title">
-											<h3>
-												<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-											</h3>
-								            <div class="entry-author-meta">
-									            <span class="time date updated"><?php echo time_ago_anthemes(); ?> <?php _e('ago', 'anthemes'); ?></span>
-									            <span class="author-meta-byline"><?php _e('by', 'anthemes'); ?>
-									            	<span class="vcard author p-author h-card">
-									            		<span class="fn"><?php the_author_posts_link(); ?></span>
-									            	</span>
-									            </span>
-								            </div>
-										</div>
-									</li>
-								<?php endwhile; endif; wp_reset_query();  ?> 
-							</ul>
-						</div>
-	 				</div><!-- end .main-stage-left -->
-
-		            <div class="big-thing-box hfeed h-feed">
-						<img id="main-stage-loader" src="http://earmilk.com/wp-content/uploads/equalizer_bw.gif" alt="EARMILK Main Stage loading music equalizer">
-						<div class="line-box">
-							<div class="header_line">
-								<h1 class="top"><a href="/category/mainstage/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h1>
-							</div>
-						</div>
-			
-		                <ul class="big-thing" style="display:none;">
-		                  <?php  query_posts( array( 'post_type' => array( 'post', 'opinion_post', 'news'), 'category_name' => 'mainstage', 'posts_per_page' => $smof_data['current-posts'] ) );  ?> 
-		                  <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-		
-		                  <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
-								<div class="entry-thumb-cont">
-						            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
-										<span class="vertical-height-helper"></span>
-							            <?php echo the_post_thumbnail('full'); ?>
-						            </a> 
-									<div class="article-category">
-										<div class="post-date date updated">
-											<span class="month"><?php the_time('M', '', '', true); ?></span> 
-											<span class="day"><?php the_time('d', '', '', true); ?></span>
-										</div>
-										<span class="vcard author p-author h-card">
-											<span class="fn">
-												<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-													<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
-													<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
-												</a>
-											</span>
-										</span>
-										<?php 
-											$category = get_the_category(); 
-											if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
-								            echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog ' . $cat_name . '" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';
-										?>
 									</div>
-								</div>
-								<div class="an-widget-title">
-									<h3 class="article-title entry-title">
-										<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-									</h3>
-								</div>
-								<?php } ?> <div class="clear"></div>  
-							</li>
+								</li>
+							<?php endwhile; endif; wp_reset_query();  ?> 
+						</ul>
+					</div>
+				</div><!-- end .main-stage-left -->
+
+	            <div class="big-thing-box hfeed h-feed">
+					<img id="main-stage-loader" src="http://earmilk.com/wp-content/uploads/equalizer_bw.gif" alt="EARMILK Main Stage loading music equalizer">
+					<div class="line-box">
+						<div class="header_line">
+							<h1 class="top"><a href="/category/mainstage/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h1>
+						</div>
+					</div>
 		
-		                <?php endwhile; endif; wp_reset_query();  ?> 
-		                </ul><!-- end .big-thing -->
-					</div><!-- end .big-thing-box -->
-				</div><!-- end main-stage-split -->
-            </div><!-- end .big-thing-box -->
+	                <ul class="big-thing" style="display:none;">
+	                  <?php  query_posts( array( 'post_type' => array( 'post', 'opinion_post', 'news'), 'category_name' => 'mainstage', 'posts_per_page' => $smof_data['current-posts'] ) );  ?> 
+	                  <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
+	
+	                  <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
+							<div class="entry-thumb-cont">
+					            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
+									<span class="vertical-height-helper"></span>
+						            <?php echo the_post_thumbnail('full'); ?>
+					            </a> 
+								<div class="article-category">
+									<div class="post-date date updated">
+										<span class="month"><?php the_time('M', '', '', true); ?></span> 
+										<span class="day"><?php the_time('d', '', '', true); ?></span>
+									</div>
+									<span class="vcard author p-author h-card">
+										<span class="fn">
+											<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+												<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
+												<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
+											</a>
+										</span>
+									</span>
+									<?php 
+										$category = get_the_category(); 
+										if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
+							            echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog ' . $cat_name . '" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';
+									?>
+								</div>
+							</div>
+							<div class="an-widget-title">
+								<h3 class="article-title entry-title">
+									<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+								</h3>
+							</div>
+							<?php } ?> <div class="clear"></div>  
+						</li>
+	
+	                <?php endwhile; endif; wp_reset_query();  ?> 
+	                </ul><!-- end .big-thing -->
+				</div><!-- end .big-thing-box -->
+			</div><!-- end main-stage-split -->
         </div><!-- end .wrap-center -->
     </div><!-- end #featured-boxes -->
     <div class="clear"></div>
