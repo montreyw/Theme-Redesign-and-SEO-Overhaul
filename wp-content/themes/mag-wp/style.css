@@ -3309,6 +3309,7 @@ form#searchform {
 	width: 100%;
 	color: #aaa;
 	color: #848484;
+	box-sizing: content-box;
 }
 .genrebar ul li a:hover, 
 .genrebar ul li a.active {
