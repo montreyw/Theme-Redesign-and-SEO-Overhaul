@@ -70,9 +70,10 @@ Earmilk redesign project
 - [x] Add Schema to `/news/` page (single and archive)
 - [x] Add Schema to `/voices/` page (single and archive)
 - [x] Add Schema to `/album-reviews/` page (single and archive)
-- [ ] Add Schema to `/gear/` page (single and archive)
+- [x] Add Schema to `/gear/` page (archive)
+- [ ] Add Schema to `/gear/` page (single)
 - [ ] Add Schema to all single posts
-- [ ] Add Schema to all archive pages
+- [x] Add Schema to all archive pages
 - [ ] Add Schema to all unique type posts (ie, events, reviews, news articles, music recordings, premieres, etc)
 - [x] Fix ImageObject on all schemas
 - [ ] Add Schema'd up breadcrumbs
@@ -222,7 +223,8 @@ Earmilk redesign project
 17.  NewsArticle Schema added to [single-news.php](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/69d7d7d049d0d8ad1c4e971893dc12583ca3743d)
 18.  Added full BlogPosting list Schema to [archive-album_review.php / Album Review](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/bf9908ec8b3e7707492def5aaeab0a641132e0fb) Archive pages
 19.  Added full BlogPosting list Schema to [archive-opinion_post.php / VOICES / Opinion Post](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/cc6519405368f832ac83b052fbd761d41c0957ee) Archive pages
-20. ...
+20.  Added full BlogPosting list Schema to [archive-gear_post.php / VOICES / Opinion Post](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/59578cd58ebbacee7a8354563f68bf77d6ca5914) Archive pages
+21. ...
 
 
 
