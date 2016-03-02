@@ -268,7 +268,8 @@ Earmilk redesign project
 15.  Appended to functions.php to create [shortcodes](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f33505375951bc66573147e915b4c89da78b0463) which enable outpitting WordPress user meta info (eg, like name and photo) from within WordPress pposts or pages
 16.  [Transfered](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/7c66e1f690346f5333d296e0d20d2cbcd86f0093) all important CSS from default.css to style.css and [disabled](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/79acea579f9d02c4096d8f6cc45253cf09d86a5b) scripts.php registration and call to default.css
 17.  Developed custom TinyMCE Interview Question and Interview Answer buttons for content writers post editting view ([functions.PHP](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/ae60bd271c443b9febb279ffb6fd2d0521aabb31), [JS](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/74af7390af2b22c18a7284fb6abe3e21d6e15c18), [CSS](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/30a4bdc01a2f1bd0a08c007c6ca9841369966dd2))
-18.  ...
+18.  Custom [404](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/11d1e0f0b0d8a86e0bca3d1f3f5698d858862e78) page
+19.  ...
 
 
 
