@@ -1586,7 +1586,7 @@ ul.big-thing div.owl-item li .article-category .entry-author-last {
 }
 ul.big-thing div.owl-item li .article-category .tiptipBlog {
 	background-color: #e34848;
-	color: #000;
+	color: #000 !important;
 }
 ul.big-thing div.owl-item li .an-widget-title {
 	min-height: 86px;
