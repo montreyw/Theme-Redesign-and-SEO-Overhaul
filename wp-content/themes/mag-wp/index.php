@@ -136,11 +136,10 @@
 
 
 <!-- Begin Wrap Content -->
-<div class="wrap-fullwidth hfeed h-feed" role="main" 
-	itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+<div class="wrap-fullwidth hfeed h-feed" role="main">
 
 	<!-- Begin Main Home Content 950px -->
-	<div class="home-content">
+	<div class="home-content" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
 		<div class="section-top-title">
 			<?php if (is_author()): ?> 
 				<h3><?php _e('Freshest Pieces by', 'anthemes'); ?> <?php the_author(); ?></h3>
@@ -226,8 +225,8 @@
 					</span>
 					<?php 
 						$category = get_the_category(); 
-						if ($category) { 
-			            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog genre-' . strtolower($category[0]->name) . '" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
+						if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
+						echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog ' . $cat_name . '" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';
 					?>
 				</div>
 			</div>
@@ -325,8 +324,8 @@
 						</span>
 						<?php 
 							$category = get_the_category(); 
-							if ($category) { 
-				            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog genre-' . strtolower($category[0]->name) . '" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
+							if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
+							echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog ' . $cat_name . '" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';
 						?>
 					</div>
 				</div>
@@ -382,6 +381,10 @@
 
         
 <div class="clear"></div>
+
+    <?php custom_breadcrumbs(); ?>
+    <div class="clear"></div>
+
 </div><!-- end .wrap-fullwidth -->
 
 <?php get_footer(); // add footer  ?>
