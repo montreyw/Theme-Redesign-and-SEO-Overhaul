@@ -1586,6 +1586,7 @@ ul.big-thing div.owl-item li .article-category .entry-author-last {
 }
 ul.big-thing div.owl-item li .article-category .tiptipBlog {
 	background-color: #e34848;
+	color: #000;
 }
 ul.big-thing div.owl-item li .an-widget-title {
 	min-height: 86px;
@@ -1983,6 +1984,7 @@ ul#masonry_list li .article-category .entry-author-last {
 .home-content ul.classic-blog li .article-category .tiptipBlog,
 ul#masonry_list li .article-category .tiptipBlog {
 	background-color: #e34848;
+	color: #000;
 }
 .home-content ul.classic-blog li h2.article-title.entry-title,
 .home-content ul.classic-blog li .article-summary,
