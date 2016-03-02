@@ -273,6 +273,12 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 
 
 
+
+<div id="ajax-content">
+
+
+
+
 <!-- /11347700/Wallpaper -->
 <!--
 <div id='div-gpt-ad-1454727873765-4' style='height:1px; width:1px;'>
@@ -293,7 +299,7 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
       <?php  query_posts( array( 'post_type' => 'post', 'tag' => 'featured', 'posts_per_page' => $smof_data['featured-posts'] ) );  ?> 
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
 
-        <?php
+		<?php 
             $fullslider = rwmb_meta('anthemes_fullslider', true );
             $slider_title = rwmb_meta('anthemes_slider_title', true );
         ?> 
@@ -355,7 +361,7 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 						<div class="main-stage-latest latest-news hfeed h-feed">
 							<div class="line-box">
 								<div class="header_line">
-									<h2 class="top"><a href="/news/" titles="VOICES">SCOOPS</a></h4>
+									<h2 class="top"><a href="/news/" titles="VOICES">SCOOPS</a></h2>
 								</div>
 							</div>
 							<ul>
@@ -368,10 +374,12 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 								    'category' => 0,
 								    'orderby' => 'post_date',
 								    'order' => 'DESC');
-									query_posts( $args );  ?> 
+									query_posts( $args );  
+									$category = get_the_category(); 
+									if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
+								?> 
 								<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-									<li class="hentry h-entry <?php $category = get_the_category(); 
-											if ($category) {echo $category[0]->name ;} ?>">
+									<li class="hentry h-entry <?php echo $cat_name; ?>">
 										<div class="entry-thumbnail"> 
 											<a href="<?php the_permalink(); ?>"> 
 												<?php echo the_post_thumbnail('small'); ?>
@@ -397,7 +405,7 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 						<div class="main-stage-latest latest-voices hfeed h-feed">
 							<div class="line-box">
 								<div class="header_line">
-									<h2 class="top"><a href="/voices/" titles="VOICES">VOICES</a></h4>
+									<h2 class="top"><a href="/voices/" titles="VOICES">VOICES</a></h2>
 								</div>
 							</div>
 							<ul>
@@ -410,10 +418,12 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 								    'category' => 0,
 								    'orderby' => 'post_date',
 								    'order' => 'DESC');
-									query_posts( $args );  ?> 
-								<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-									<li class="hentry h-entry <?php $category = get_the_category(); 
-											if ($category) {echo $category[0]->name ;} ?>">
+									query_posts( $args );  
+									$category = get_the_category(); 
+									if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
+								?> 
+								<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+									<li class="hentry h-entry <?php echo $cat_name ?>">
 										<div class="entry-thumbnail"> 
 											<a href="<?php the_permalink(); ?>"> 
 												<?php echo the_post_thumbnail('small'); ?>
@@ -442,7 +452,7 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 						<img id="main-stage-loader" src="http://earmilk.com/wp-content/uploads/equalizer_bw.gif" alt="EARMILK Main Stage loading music equalizer">
 						<div class="line-box">
 							<div class="header_line">
-								<h1 class="top"><a href="/category/mainstage/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h4>
+								<h1 class="top"><a href="/category/mainstage/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h1>
 							</div>
 						</div>
 			
@@ -471,8 +481,8 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 										</span>
 										<?php 
 											$category = get_the_category(); 
-											if ($category) { 
-								            	echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';}  
+											if ($category) { $cat_name = 'genre-' . preg_replace('/\s+/', '', strtolower($category[0]->name)); };
+								            echo '<a href="' . get_category_link( $category[0]->term_id ) . '" class="tiptipBlog ' . $cat_name . '" title="' . sprintf( __( "View all posts in %s", "anthemes" ), $category[0]->name ) . '" rel="tag" ' . '>' . $category[0]->name.'</a> ';
 										?>
 									</div>
 								</div>
