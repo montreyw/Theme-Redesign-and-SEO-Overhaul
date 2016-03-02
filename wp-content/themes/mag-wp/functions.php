@@ -652,3 +652,14 @@ function featured_image_in_feed( $content ) {
 }
 add_filter( 'the_content_feed', 'featured_image_in_feed' );
 add_filter( 'the_excerpt_rss', 'featured_image_in_feed');
+
+// ---------------------------------------------------------------------------------------------------- 
+// Pull out SRC URLs from posts in the loop for use with iFrame embeds - Andre
+// ---------------------------------------------------------------------------------------------------- 
+function andre_get_iframe_src( $input ) {
+	preg_match_all("/<iframe[^>]*src=[\"|']([^'\"]+)[\"|'][^>]*>/i", $input, $output );
+	$return = array();
+	if( isset( $output[1][0] ) )
+		$return = $output[1];
+	return $return;
+}
