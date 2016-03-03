@@ -27,5 +27,9 @@ Template Name: Template - EVENTS Archive List Page
 	<?php  get_sidebar(); // add sidebar ?>
 	<!-- end #sidebar  (right) -->
 	<div class="clear"></div>
+
+    <?php custom_breadcrumbs(); ?>
+    <div class="clear"></div>
+
 </div><!-- end .wrap-fullwidth -->
 <?php get_footer(); // add footer  ?>

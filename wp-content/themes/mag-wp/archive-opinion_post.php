@@ -160,6 +160,10 @@ Template Name: VOICES - Archive
 
         
 <div class="clear"></div>
+
+    <?php custom_breadcrumbs(); ?>
+    <div class="clear"></div>
+
 </div><!-- end .wrap-fullwidth -->
 
 <?php get_footer(); // add footer  ?>
