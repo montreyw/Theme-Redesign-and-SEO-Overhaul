@@ -158,7 +158,9 @@ Earmilk redesign project
 42.  Album Review Single Post Details Box Redone ([HTML structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e3873b4ab17a27f04a10912c820dc38f488ca2d8), [CSS style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5c9f9aee696497d421ae3ee9eee749e7cf346654); [dynamic rating stars structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/519e3af0a3c7364c818b7e323e02b2a3e9fa4b58) and [dynamic rating stars style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/49d193117d5b21e55bff1f78d4e489c1a044b750))
 43.  Re-styled drab, gray [section headers](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/33d85cd362db70fe61bb88c529af447ee3b07a4a)
 44.  Styled up About Us page ([style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/e642287b398915bb0b675be6c44c9fa487b4fa00), [structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ebefc557c906f6240da0f0a3ac33bfec17b8bc58))
-45.  ...
+45.  Custom [404](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/11d1e0f0b0d8a86e0bca3d1f3f5698d858862e78) page
+46.  Styled up [Photo Journal Posts](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/4d6c85f33d751656d21b96613bbd198ae37172c4)
+47.  ...
 
 
 
@@ -269,7 +271,7 @@ Earmilk redesign project
 15.  Appended to functions.php to create [shortcodes](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/f33505375951bc66573147e915b4c89da78b0463) which enable outpitting WordPress user meta info (eg, like name and photo) from within WordPress pposts or pages
 16.  [Transfered](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/7c66e1f690346f5333d296e0d20d2cbcd86f0093) all important CSS from default.css to style.css and [disabled](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/79acea579f9d02c4096d8f6cc45253cf09d86a5b) scripts.php registration and call to default.css
 17.  Developed custom TinyMCE Interview Question and Interview Answer buttons for content writers post editting view ([functions.PHP](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/ae60bd271c443b9febb279ffb6fd2d0521aabb31), [JS](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/74af7390af2b22c18a7284fb6abe3e21d6e15c18), [CSS](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/30a4bdc01a2f1bd0a08c007c6ca9841369966dd2))
-18.  Custom [404](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/11d1e0f0b0d8a86e0bca3d1f3f5698d858862e78) page
+18.  New Related Posts function that first pulls tag-related posts, then category-related posts, up to 4 posts ([functions.php function](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/5930b2c37eeffe91ada92f2f650339a7c8f2ca61), [single-*.php template files reference call](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/0e1f98790d92c77f4d2544040639211f05b6a958))
 19.  ...
 
 
