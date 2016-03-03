@@ -401,5 +401,9 @@
     <?php  get_sidebar(); // add sidebar ?>
     <!-- end #sidebar  (right) -->
     <div class="clear"></div>
-</div><!-- end .wrap-fullwidth  -->
+
+    <?php custom_breadcrumbs(); ?>
+    <div class="clear"></div>
+
+</div><!-- end .wrap-fullwidth -->
 <?php get_footer(); // add footer  ?>
