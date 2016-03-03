@@ -59,6 +59,7 @@ Earmilk redesign project
 - [x] Make article-category dates into an anchor on all archive pages
 - [x] Restructure post grids into post lists with much larger images
 - [x] Add EARMILK Album Review Rating bottle image to album review archive and single pages
+- [x] prepend "Album Review: " to album review post titles for social sharing plugin's use
 - [x] RSS feed to output images along with content
 - [ ] Extend Related Posts function to include Category-related posts if there aren't enough in Tag-related posts
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
@@ -76,7 +77,7 @@ Earmilk redesign project
 - [x] Add Schema to all archive pages
 - [ ] Add Schema to all unique type posts (ie, events, reviews, news articles, music recordings, premieres, etc)
 - [x] Fix ImageObject on all schemas
-- [ ] Add Schema'd up breadcrumbs
+- [x] Add Schema'd up breadcrumbs
 - [ ] Finish Schema.org markup
 - [ ] Add unique headers to individual category pages
 - [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
@@ -240,7 +241,7 @@ Earmilk redesign project
 7.  Added robot.txt to `file2.` (Montrey) and `mooks.` subdomains to prevent caching unnecessary files 
 8.  WOOHOO! Auto-posting to [Google+](https://plus.google.com/+earmilk/posts) via [RSSFeed](http://earmilk/feed/) and [Hootsuite](https://hootsuite.com) finally setup!
 9.  Fixed RSS Feed so that now it [loads ALL post types](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/2b32148db9ff1b50da83af54533ccf17944e0a2d), including the custom types
-10.  Added func to functions.php to [append `"Album Review: "`](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7de8559dd9da33d16521e361c11a29caee611ecd) to Album Review custom post_type titles
+10.  Added func to functions.php to [prepend `"Album Review: "`](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7de8559dd9da33d16521e361c11a29caee611ecd) to Album Review custom post_type titles
 11.  ...
 
 
