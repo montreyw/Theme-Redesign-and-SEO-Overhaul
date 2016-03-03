@@ -2474,12 +2474,27 @@ h6.post-answer .interviewee {
 }
 
 
-
+.photos_post .justified-gallery {
+	max-width: none !important;
+	width: 100vw !important;
+	height: auto !important;
+	left: calc(-50vw + 50%) !important;
+}
+.photos_post .justified-gallery a {
+	height: auto !important;
+	position: relative;
+	width: 100vw !important;
+	left: calc(-50vw + 50%) !important;
+	top: initial !important;
+}
+.photos_post .justified-gallery img,
 .photos_post .media-single-content img {
-    position: relative;
-    width: 100vw;
-    left: calc(-50vw + 50%);
-    max-width: none;
+	position: relative;
+	height: auto !important;
+	width: 100vw !important;
+	left: calc(-50vw + 50%);
+	max-width: none;
+	margin: initial !important;
 }
 
 
