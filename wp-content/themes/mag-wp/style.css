@@ -3064,7 +3064,7 @@ div#customer_widget_main {
 /* Bradcrumbs */
 #breadcrumbs{
 	list-style:none;
-	margin:10px 0;
+	margin:10px;
 	overflow:hidden;
 }
 #breadcrumbs li{
