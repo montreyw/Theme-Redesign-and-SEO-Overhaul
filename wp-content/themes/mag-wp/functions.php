@@ -512,18 +512,18 @@ function andre_comments_evolved_number( $count ) {
 // ---------------------------------------------------------------------------------------------------- 
 // Album Review titles -- append "Album Review:" to titles - Andre
 // ---------------------------------------------------------------------------------------------------- 
-function append_album_review_to_title( $title ) {
-	global $post;
-	$text = 'Album Review: ';
-
-	if ( get_post_type( $post->ID ) == 'album_review' && in_the_loop() ){
-		return $text . $title;
-	}
-	else {
-		return $title;
-	}
+function append_album_review_to_title( $title, $id = NULL ) {
+	if ($id) {
+		if ( get_post_type( $id ) == 'album_review' ){
+		    return 'Album Review: ' . $title;
+		} else {
+		    return $title;
+		}
+	} else {
+	    return 'Album Review: ' . $title;
+	};
 }
-add_filter('the_title', 'append_album_review_to_title');
+add_filter('the_title', 'append_album_review_to_title', 10, 2);
 
 // ---------------------------------------------------------------------------------------------------- 
 // Fallback thumbnail image tag and src function  - Andre
