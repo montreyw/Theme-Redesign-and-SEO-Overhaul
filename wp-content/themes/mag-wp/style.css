@@ -2474,6 +2474,16 @@ h6.post-answer .interviewee {
 }
 
 
+
+.photos_post .media-single-content img {
+    position: relative;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    max-width: none;
+}
+
+
+
 /* Author Writer Page */
 .author-meta,
 .author-meta img.avatar,
