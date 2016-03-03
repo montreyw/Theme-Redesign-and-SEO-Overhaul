@@ -130,7 +130,10 @@
             <div class="one_half">
             <h3 class="title"><?php _e( 'Recent Articles', 'anthemes' ); ?></h3><div class="arrow-down-related"></div><div class="clear"></div>
             <ul class="article_list">
-            <?php $anposts = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 4 )); // number to display more / less ?>
+            <?php 
+	            $anposts = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 4 )); 
+	            $post_ids = wp_list_pluck( $anposts->posts, 'ID' ); 
+	        ?>
             <?php while ( $anposts->have_posts() ) : $anposts->the_post(); ?>
               <li>
                   <a href="<?php the_permalink(); ?>"> <?php echo the_post_thumbnail('thumbnail-widget-small'); ?> </a>
@@ -150,21 +153,9 @@
             <h3 class="title"><?php _e( 'Related Articles', 'anthemes' ); ?></h3><div class="arrow-down-related"></div><div class="clear"></div>
             <ul class="article_list">
                 <?php
-                    $orig_post = $post;
-                    global $post;
-                    $tags = wp_get_post_tags($post->ID);
-                    if ($tags) {
-                    $tag_ids = array();
-                    foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
-                    $args=array(
-                    'tag__in' => $tag_ids,
-                    'post__not_in' => array($post->ID),
-                    'posts_per_page'=>4, // Number of related posts to display.
-                    'ignore_sticky_posts'=>1
-                    );
-                    $my_query = new wp_query( $args );
-                    while( $my_query->have_posts() ) {
-                    $my_query->the_post();
+					$related_query = get_max_related_posts( $post_ids );
+                    while( $related_query->have_posts() ) {
+                    $related_query->the_post();
                 ?>
               <li>
                   <a href="<?php the_permalink(); ?>"> <?php echo the_post_thumbnail('thumbnail-widget-small'); ?> </a>
@@ -176,7 +167,7 @@
                     <span><?php _e('by', 'anthemes'); ?> <?php the_author_posts_link(); ?></span>
                   </div>
               </li>
-            <?php } } $post = $orig_post; wp_reset_query(); ?>
+            <?php } wp_reset_query(); ?>
             </ul>
             </div><!-- end .one_half_last Related -->
             <div class="clear"></div>
