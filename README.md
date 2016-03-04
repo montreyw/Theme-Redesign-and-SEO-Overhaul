@@ -272,7 +272,8 @@ Earmilk redesign project
 16.  [Transfered](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/7c66e1f690346f5333d296e0d20d2cbcd86f0093) all important CSS from default.css to style.css and [disabled](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/79acea579f9d02c4096d8f6cc45253cf09d86a5b) scripts.php registration and call to default.css
 17.  Developed custom TinyMCE Interview Question and Interview Answer buttons for content writers post editting view ([functions.PHP](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/ae60bd271c443b9febb279ffb6fd2d0521aabb31), [JS](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/74af7390af2b22c18a7284fb6abe3e21d6e15c18), [CSS](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/30a4bdc01a2f1bd0a08c007c6ca9841369966dd2))
 18.  New Related Posts function that first pulls tag-related posts, then category-related posts, up to 4 posts ([functions.php function](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/5930b2c37eeffe91ada92f2f650339a7c8f2ca61), [single-*.php template files reference call](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/0e1f98790d92c77f4d2544040639211f05b6a958))
-19.  ...
+19.  Disabled [WP Emoji Release JS](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/issues/41)
+20.  ...
 
 
 
