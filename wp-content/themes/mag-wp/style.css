@@ -2495,6 +2495,7 @@ h6.post-answer .interviewee {
 	width: 100vw !important;
 	left: calc(-50vw + 50%) !important;
 	top: initial !important;
+	opacity: 1;
 }
 .photos_post .justified-gallery img,
 .photos_post .media-single-content img {
