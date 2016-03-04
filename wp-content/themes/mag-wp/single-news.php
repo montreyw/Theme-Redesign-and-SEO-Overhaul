@@ -35,7 +35,9 @@
 					echo '<meta itemprop="description" content="' . $post_description . '" />'; }
 			?>
 			<meta itemprop="datePublished" content="<?php echo $post_date_iso ?>" />
+			<span class="date published"><?php echo $post_date_iso ?></span>
 			<meta itemprop="dateModified" content="<?php echo $post_modified_date_iso ?>" />
+			<span class="date updated"><?php echo $post_modified_date_iso ?></span>
 			<meta itemprop="url" content="<?php the_permalink(); ?>" />
 			<meta itemprop="mainEntityOfPage" content="<?php the_permalink(); ?>" />
 			<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
