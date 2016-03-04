@@ -2485,24 +2485,28 @@ h6.post-answer .interviewee {
 
 .photos_post .justified-gallery {
 	max-width: none !important;
-	width: 100vw !important;
+	width: 90vw !important;
 	height: auto !important;
-	left: calc(-50vw + 50%) !important;
+	left: calc(-45vw + 50%) !important;
 }
 .photos_post .justified-gallery a {
 	height: auto !important;
 	position: relative;
-	width: 100vw !important;
-	left: calc(-50vw + 50%) !important;
+	width: 100% !important;
 	top: initial !important;
 	opacity: 1;
+	margin: 0 auto 30px;
+	-webkit-box-shadow: 0px 2px 8px rgba(0,0,0,0.33);
+	-moz-box-shadow: 0px 2px 8px rgba(0,0,0,0.33);
+	box-shadow: 0px 2px 8px rgba(0,0,0,0.33);
+	line-height: 0;
 }
 .photos_post .justified-gallery img,
 .photos_post .media-single-content img {
 	position: relative;
 	height: auto !important;
-	width: 100vw !important;
-	left: calc(-50vw + 50%);
+	width: 100% !important;
+	left: 0;
 	max-width: none;
 	margin: initial !important;
 }
