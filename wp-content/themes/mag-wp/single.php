@@ -216,7 +216,7 @@
                     <span><?php _e('by', 'anthemes'); ?> <?php the_author_posts_link(); ?></span>
                   </div>
               </li>
-            <?php } $post = $orig_post; wp_reset_query(); ?>
+            <?php } wp_reset_query(); ?>
             </ul>
             </div><!-- end .one_half_last Related -->
             <div class="clear"></div>
