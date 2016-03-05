@@ -1325,6 +1325,13 @@ kbd.active {
 
 
 
+/* Schema meta */
+.schema-meta {
+	display: none;
+}
+
+
+
 /* Main Stage */
 /* Main Stage header line */
 .line-box { 
