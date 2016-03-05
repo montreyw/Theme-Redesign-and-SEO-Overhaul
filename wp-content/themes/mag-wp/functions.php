@@ -906,7 +906,7 @@ function custom_breadcrumbs() {
 // New function for Related Posts 
 // -- It picks from tags first, then categories, and excludes all posts from Recent Posts query - Andre
 // ---------------------------------------------------------------------------------------------------- 
-function get_max_related_posts( $recent_posts = [], $taxonomy_1 = 'post_tag', $taxonomy_2 = 'category', $total_posts = 4 ) {
+function get_max_related_posts( $recent_posts = array(), $taxonomy_1 = 'post_tag', $taxonomy_2 = 'category', $total_posts = 4 ) {
     // First, make sure we are on a single page, if not, bail
     if ( !is_single() )
         return false;
@@ -946,7 +946,7 @@ function get_max_related_posts( $recent_posts = [], $taxonomy_1 = 'post_tag', $t
         // Lets get the term ID's
         $term_1_ids = wp_list_pluck( $terms_1, 'term_id' );
 
-	    $exclude = array_merge( [$current_post->ID], $recent_posts );
+	    $exclude = array_merge( [$current_post->ID], [$recent_posts] );
 
         // Lets build the query to get related posts
         $args_1 = [
