@@ -19,6 +19,8 @@
 
 ?> 
 
+</div><!-- end #ajax-content -->
+
 <!-- Begin Footer -->
 <footer  role="contentinfo" 
 	itemprop="hasPart" itemscope itemtype="http://schema.org/WPFooter">
