@@ -940,18 +940,20 @@ function get_max_related_posts( $recent_posts = array(), $taxonomy_1 = 'post_tag
     $count = 0;
     // Set a variable to hold the results from query 1
     $q_1   = [];
+    // Set a variable to hold the exclusions
+    $sticky = get_option( 'sticky_posts' );
+    $exclude = array_merge( [$current_post->ID], [$sticky] );
+    $exclude = array_merge( [$exclude], [$recent_posts] );
 
     // Make sure we have terms
     if ( $terms_1 ) {
         // Lets get the term ID's
         $term_1_ids = wp_list_pluck( $terms_1, 'term_id' );
 
-	    $exclude = array_merge( [$current_post->ID], [$recent_posts] );
-
         // Lets build the query to get related posts
         $args_1 = [
             'post_type'      => $current_post->post_type,
-            'post__not_in'   => [$current_post->ID],
+            'post__not_in'   => $exclude,
             'posts_per_page' => $total_posts,
             'fields'         => 'ids',
             'tax_query'      => [
@@ -966,6 +968,8 @@ function get_max_related_posts( $recent_posts = array(), $taxonomy_1 = 'post_tag
 
         // Update our counter
         $count = count( $q_1 );
+        // Update our counter
+        $exclude = array_merge( $exclude, $q_1 );
     }
 
     // We will now run the second query if $count is less than $total_posts
@@ -978,13 +982,6 @@ function get_max_related_posts( $recent_posts = array(), $taxonomy_1 = 'post_tag
 
             // Calculate the amount of post to get
             $diff = $total_posts - $count;
-
-            // Create an array of post ID's to exclude
-            if ( $q_1 ) {
-                $exclude = array_merge( [$current_post->ID], $q_1 );
-            } else {
-                $exclude = [$current_post->ID];
-            }
 
             $args_2 = [
                 'post_type'      => $current_post->post_type,
@@ -1007,6 +1004,9 @@ function get_max_related_posts( $recent_posts = array(), $taxonomy_1 = 'post_tag
 
                 // Update our post counter
                 $count = count( $q_1 );
+
+		        // Update our counter
+		        $exclude = array_merge( $exclude, $q_2 );
             }
         }
     }
@@ -1015,13 +1015,6 @@ function get_max_related_posts( $recent_posts = array(), $taxonomy_1 = 'post_tag
     if ( $count < $total_posts ) {
         // Calculate the amount of post to get
         $diff = $total_posts - $count;
-
-        // Build an array of posts to exclude
-        if ( $q_1 ) {
-            $exclude = array_merge( [$current_post->ID], $q_1 );
-        } else {
-            $exclude = [$current_post->ID];
-        }
 
         $args_3 = [
             'post_type'      => $current_post->post_type,
