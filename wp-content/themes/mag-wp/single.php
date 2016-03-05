@@ -179,7 +179,10 @@
             <div class="one_half">
             <h3 class="title"><?php _e( 'Recent Articles', 'anthemes' ); ?></h3><div class="arrow-down-related"></div><div class="clear"></div>
             <ul class="article_list">
-            <?php $anposts = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 4 )); // number to display more / less ?>
+            <?php 
+	            $anposts = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 4 )); 
+	            $post_ids = wp_list_pluck( $anposts->posts, 'ID' ); 
+	        ?>
             <?php while ( $anposts->have_posts() ) : $anposts->the_post(); ?>
               <li>
                   <a href="<?php the_permalink(); ?>"> <?php echo the_post_thumbnail('thumbnail-widget-small'); ?> </a>
