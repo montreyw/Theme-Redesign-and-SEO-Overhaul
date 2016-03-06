@@ -468,12 +468,29 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 					            </a> 
 								<div class="article-category">
 									<div class="post-date date updated">
-										<span class="month"><?php the_time('M', '', '', true); ?></span> 
-										<span class="day"><?php the_time('d', '', '', true); ?></span>
+										<?php if ( get_the_time('Y') == date('Y')) { ?> 
+											<meta itemprop="datePublished" content="<?php the_time('c'); ?>"/>
+											<meta itemprop="dateModified" content="<?php the_time('c'); ?>"/>
+											<a href="<?php echo '/' . get_the_time('Y') . '/' . get_the_time('m') . '/'  ?>" 
+												title="<?php echo get_the_time('F') . ' ' . get_the_time('Y') . ' Archives'  ?>">
+												<span class="month"><?php the_time('M', '', '', true); ?></span> 
+												<span class="day"><?php the_time('d', '', '', true); ?></span>
+											</a>
+										<?php } else { ?> 
+											<meta itemprop="datePublished" content="<?php the_time('c'); ?>"/>
+											<meta itemprop="dateModified" content="<?php the_time('c'); ?>"/>
+											<a href="<?php echo '/' . get_the_time('Y') . '/' . get_the_time('m') . '/'  ?>" 
+												title="<?php echo get_the_time('F') . ' ' . get_the_time('Y') . ' Archives'  ?>">
+												<span class="month"><?php the_time('M', '', '', true); ?></span> 
+												<span class="day"><?php the_time('d', '', '', true); ?></span>
+												<span class="year">'<?php the_time('y', '', '', true); ?></span>
+											</a>
+										<?php } ?>
 									</div>
 									<span class="vcard author p-author h-card">
 										<span class="fn">
-											<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+											<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" 
+												title="View all posts by <?php the_author_meta('first_name'); ?>">
 												<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
 												<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
 											</a>
