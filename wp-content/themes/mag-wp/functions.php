@@ -1037,7 +1037,7 @@ function get_max_related_posts( $recent_posts = array(), $taxonomy_1 = 'post_tag
     // Run our last query, and output the results
     $final_args = [
         'ignore_sticky_posts' => 1,
-        'post_type'           => $current_post->post_type,
+        'post_type'           => 'any',
         'posts_per_page'      => count( $q_1 ),
         'post__in'            => $q_1,
         'order'               => 'ASC',
