@@ -942,8 +942,8 @@ function get_max_related_posts( $recent_posts = array(), $taxonomy_1 = 'post_tag
     $q_1   = [];
     // Set a variable to hold the exclusions
     $sticky = get_option( 'sticky_posts' );
-    $exclude = array_merge( [$current_post->ID], [$sticky] );
-    $exclude = array_merge( [$exclude], [$recent_posts] );
+    $exclude = array_merge( [$current_post->ID], $sticky );
+    $exclude = array_merge( $exclude, $recent_posts );
 
     // Make sure we have terms
     if ( $terms_1 ) {
