@@ -1027,6 +1027,19 @@ function get_max_related_posts( $recent_posts = array(), $taxonomy_1 = 'post_tag
         if ( $q_3 ) {
             // Merge the two results into one array of ID's
             $q_1 = array_merge( $q_1, $q_3 );
+        } else {
+	        $args_4 = [
+	            'post_type'      => 'any',
+	            'post__not_in'   => $exclude,
+	            'posts_per_page' => $diff,
+	            'fields'         => 'ids',
+	        ];
+	        $q_4 = get_posts( $args_4 );
+	
+	        if ( $q_4 ) {
+	            // Merge the two results into one array of ID's
+	            $q_1 = array_merge( $q_1, $q_4 );
+	        }
         }
     }
 
