@@ -1558,6 +1558,8 @@ ul.big-thing div.owl-item li .article-category .tiptipBlog {
 	display: inline-block;
 	text-transform: none;
 	color: #fff !important;
+	line-height: 17px;
+    height: 17px;
 }
 ul.big-thing div.owl-item li .article-category .author a {
 	padding: 7px 13px;
@@ -1565,10 +1567,10 @@ ul.big-thing div.owl-item li .article-category .author a {
 	display: block;
 	text-transform: none;
 	color: #fff !important;
-	color: #fff !important;
+	line-height: 17px;
+    height: 17px;
 }
 ul.big-thing div.owl-item li .article-category .post-date {
-    color: #FFF;
     float: none;
     width: auto;
     height: auto;
@@ -1578,6 +1580,10 @@ ul.big-thing div.owl-item li .article-category .post-date {
     margin: 0 !important;
 	background-color: #373737;
 	display: inline-block;
+    color: #FFF;
+}
+ul.big-thing div.owl-item li .article-category .post-date a {
+	color: #fff;
 }
 ul.big-thing div.owl-item li .article-category .post-date span.month {
     font-size: inherit;
@@ -2019,6 +2025,7 @@ ul#masonry_list li .article-summary {
 	position: relative;
 /* 	height: 218px; */
 	height: 100%;
+	height: auto;
 }
 .home-content ul.classic-blog li h2.article-title.entry-title,
 ul#masonry_list li h2.article-title.entry-title {
@@ -2041,7 +2048,7 @@ ul#masonry_list li h2.article-title.entry-title a {
 ul#masonry_list li .article-summary {
 	min-height: 87px;
 	vertical-align: middle;
-	margin: 13px auto 37px;
+	margin: 13px auto 34px;
 	font-size: 17px;
 	line-height: 18px;
 	color: #333;
@@ -4485,6 +4492,7 @@ body #responsive-menu #responsive-menu-title {
 	.home-content ul.classic-blog li > div, 
 	ul#masonry_list li > div {
 		width: 100%;
+		height: auto;
     }
 	div.wrap-fullwidth div.home-content ul.classic-blog li img {
 		width: 100%;
