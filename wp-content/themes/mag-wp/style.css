@@ -1950,10 +1950,12 @@ ul#masonry_list li .article-category:hover {
 .home-content ul.classic-blog li .article-category .tiptipBlog,
 ul#masonry_list li .article-category .post-date,
 ul#masonry_list li .article-category .tiptipBlog {
-	padding: 1px 11px;
+	padding: 7px 11px;
 	font-size: 10px;
 	display: inline-block;
 	text-transform: none;
+	line-height: 10px;
+	height: 10px;
 }
 .home-content ul.classic-blog li .article-category .post-date,
 ul#masonry_list li .article-category .post-date {
@@ -1994,10 +1996,12 @@ ul#masonry_list li .article-category .author {
 	color: #fff !important;
 }
 .home-content ul.classic-blog li .article-category .author a {
-	padding: 1px 11px;
+	padding: 7px 11px;
 	font-size: 10px;
 	text-transform: none;
 	display: block;
+	line-height: 10px;
+	height: 10px;
 }
 .home-content ul.classic-blog li .article-category .entry-author-last,
 ul#masonry_list li .article-category .entry-author-last {
