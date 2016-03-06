@@ -457,10 +457,16 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 					</div>
 		
 	                <ul class="big-thing" style="display:none;">
-	                  <?php  query_posts( array( 'post_type' => array( 'post', 'opinion_post', 'news'), 'category_name' => 'mainstage', 'posts_per_page' => $smof_data['current-posts'] ) );  ?> 
-	                  <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-	
-	                  <li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
+						<?php  
+							$slider_args = array( 
+								'post_type' => array( 'post', 'opinion_post', 'news'), 
+								'category_name' => 'mainstage', 
+								'posts_per_page' => $smof_data['current-posts'] 
+								);
+							query_posts( $slider_args );  ?> 
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
+						
+						<li class="hentry h-entry"><?php if ( has_post_thumbnail()) { ?> 
 							<div class="entry-thumb-cont">
 					            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
 									<span class="vertical-height-helper"></span>
