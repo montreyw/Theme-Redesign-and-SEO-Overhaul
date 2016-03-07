@@ -308,4 +308,4 @@ password:  [a truth we share]
 
 <h2 id="earmilk-license">EARMILK License</h2>
 
-Copyright (c) 2016 Earmilk.com
+Copyright (c) 2016 Earmilk.com. All rights reserved.
