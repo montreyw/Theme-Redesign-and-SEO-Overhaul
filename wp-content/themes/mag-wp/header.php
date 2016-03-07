@@ -382,7 +382,7 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 								<li class="hentry h-entry <?php echo $cat_name; ?>">
 									<div class="entry-thumbnail"> 
 										<a href="<?php the_permalink(); ?>"> 
-											<?php echo the_post_thumbnail('small'); ?>
+											<?php echo the_post_thumbnail('medium'); ?>
 										</a>
 									</div>
 									<div class="entry-title">
@@ -426,7 +426,7 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 								<li class="hentry h-entry <?php echo $cat_name ?>">
 									<div class="entry-thumbnail"> 
 										<a href="<?php the_permalink(); ?>"> 
-											<?php echo the_post_thumbnail('small'); ?>
+											<?php echo the_post_thumbnail('medium'); ?>
 										</a>
 									</div>
 									<div class="entry-title">
@@ -470,7 +470,7 @@ _atrk_opts = { atrk_acct:"PBGOm1aMp4Z3Y8", domain:"earmilk.com",dynamic: true};
 							<div class="entry-thumb-cont">
 					            <a href="<?php the_permalink(); ?>" class="entry-thumbnail"> 
 									<span class="vertical-height-helper"></span>
-						            <?php echo the_post_thumbnail('full'); ?>
+						            <?php echo the_post_thumbnail('large'); ?>
 					            </a> 
 								<div class="article-category">
 									<div class="post-date date updated">
