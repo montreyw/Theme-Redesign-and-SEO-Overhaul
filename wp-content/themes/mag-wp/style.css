@@ -2215,6 +2215,11 @@ div#twitter-like-btn iframe {
 	margin: 7px auto 0;
 	display: block;
 }
+#earmilk-snapcode img {
+	width: 60%;
+	margin: 37px auto 17px;
+	display: block;
+}
 .widget.widget_ultimate_posts {
     background: #fff;
 }
