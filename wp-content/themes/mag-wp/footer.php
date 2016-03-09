@@ -56,9 +56,12 @@
         <?php } ?>  
 		<div class="earmilk-copyright">
 			<span itemprop="creator copyrightHolder" itemscope itemtype="http://schema.org/Organization">
-			<span itemprop="name">EARMILK, Inc.</span><link itemprop="sameAs" href="//earmilk.com" />
-			</span> Trusted Since <span itemprop="copyrightYear">2009</span>
-		<img id="earmilky" src="/wp-content/themes/mag-wp/images/Milky-V3-shadow-73px.png" title="Turn down your speakers and Click me! Weee!" alt="Milky form Blur's Coffee and TV" >
+				<span itemprop="name">EARMILK, Inc.</span>
+				<link itemprop="sameAs" href="//earmilk.com" />
+			</span> 
+			Trusted Since 
+			<span itemprop="copyrightYear">2009</span>
+			<img id="earmilky" src="/wp-content/themes/mag-wp/images/Milky-V3-shadow-73px.png" title="Turn down your speakers and Click me! Weee!" alt="Milky form Blur's Coffee and TV" >
 		</div>
 		<div class="hosted-by">
 			<span>
