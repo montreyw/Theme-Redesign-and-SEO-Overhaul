@@ -286,23 +286,23 @@ Earmilk redesign project
 
 <h2 id="earmilk-links">EARMILK Links</h2>
 
-### Earmilk Development Enviornment Clone Site
+#### Earmilk Development Enviornment Clone Site
 -- [allmilknoduds.com](http://allmilknoduds.com)
 
 
-### Earmilk "throwaway" email account
+#### Earmilk "throwaway" email account
 login:  allmilknoduds@gmail.com  
 password:  [a truth we share]
 
 
-### Earmilk Asset Storage
+#### Earmilk Asset Storage
 -- [Earmilk project assets cloud folder](https://drive.google.com/open?id=0B_40KgH9jS_Nckt0SW5JTFo0Qnc)  
 -- [Mega.nz](http://mega.nz) (large; full site backup for safe keeping)  
 ----- Mega login:  allmilknoduds@gmail.com  
 ----- Mega password:  [a truth we share]
 
 
-### Earmilk GitHub
+#### Earmilk GitHub
 - https://github.com/iamandrebulatov/Earmilk
 
 - [Back to top ^](#table-of-contents)  
