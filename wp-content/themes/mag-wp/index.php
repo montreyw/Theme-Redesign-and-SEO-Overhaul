@@ -161,7 +161,7 @@
 	<ul class="classic-blog">  
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<li <?php post_class('hentry h-entry') ?> id="post-<?php the_ID(); ?>" itemscope itemprop="hasPart" itemtype="http://schema.org/BlogPosting">
-			<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="<?php the_permalink(); ?>"/>
+			<link itemprop="mainEntityOfPage" href="<?php the_permalink(); ?>"/>
 			<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 				<meta itemprop="name" content="EARMILK">
 				<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
@@ -218,7 +218,7 @@
 					<span class="vcard author p-author h-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
 						<span class="fn" itemprop="name">
 							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" itemprop="url">
-								<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
+								<span class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></span>
 								<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
 							</a>
 						</span>
@@ -317,7 +317,7 @@
 						<span class="vcard author p-author h-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
 							<span class="fn" itemprop="name">
 								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" itemprop="url">
-									<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
+									<span class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></span>
 									<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
 								</a>
 							</span>

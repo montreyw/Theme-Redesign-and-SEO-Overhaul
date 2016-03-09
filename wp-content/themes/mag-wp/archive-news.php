@@ -96,7 +96,7 @@ Template Name: News - Archive
 						<span class="vcard author p-author h-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
 							<span class="fn" itemprop="name">
 								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" itemprop="url">
-									<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
+									<span class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></span>
 									<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
 								</a>
 							</span>
