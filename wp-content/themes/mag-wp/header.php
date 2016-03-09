@@ -99,7 +99,7 @@
         }
     }
     </script>
-	<!-- Custom Favicons -- Andre -->
+	<!-- Custom Favicons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png?v=KmmqjE3jwP">
 	<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png?v=KmmqjE3jwP">
 	<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png?v=KmmqjE3jwP">
@@ -354,7 +354,7 @@
 					<div class="main-stage-latest latest-news hfeed h-feed">
 						<div class="line-box">
 							<div class="header_line">
-								<h2 class="top"><a href="/news/" titles="VOICES">SCOOPS</a></h2>
+								<h2 class="top"><a href="/news/" title="VOICES">SCOOPS</a></h2>
 							</div>
 						</div>
 						<ul>
@@ -398,7 +398,7 @@
 					<div class="main-stage-latest latest-voices hfeed h-feed">
 						<div class="line-box">
 							<div class="header_line">
-								<h2 class="top"><a href="/voices/" titles="VOICES">VOICES</a></h2>
+								<h2 class="top"><a href="/voices/" title="VOICES">VOICES</a></h2>
 							</div>
 						</div>
 						<ul>
@@ -445,7 +445,7 @@
 					<img id="main-stage-loader" src="http://earmilk.com/wp-content/uploads/equalizer_bw.gif" alt="EARMILK Main Stage loading music equalizer">
 					<div class="line-box">
 						<div class="header_line">
-							<h1 class="top"><a href="/category/mainstage/" titles="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h1>
+							<h1 class="top"><a href="/category/mainstage/" title="Main Stage"><?php _e('Main Stage', 'anthemes'); ?></a></h1>
 						</div>
 					</div>
 		
@@ -490,7 +490,7 @@
 										<span class="fn">
 											<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" 
 												title="View all posts by <?php the_author_meta('first_name'); ?>">
-												<spam class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></spam>
+												<span class="entry-author-first given-name"><?php the_author_meta('first_name'); ?></span>
 												<span class="entry-author-last family-name"><?php the_author_meta('last_name'); ?></span>
 											</a>
 										</span>
