@@ -27,6 +27,7 @@ Earmilk redesign project
 - [x] Fix sitemap (fixed but how?)
 - [x] Add Facebook Like Buttons to Social Sidebar
 - [x] Add Google+ Buttons to Social Sidebar
+- [x] Add Snapchat Snapcode
 - [x] Add Funtime Out Events Festivals to the nav menu
 - [x] Write a script that will make the first word interview/er/ee name bold on Interview Posts
 - [x] Add sliding slide out facebook like box (desktop)
@@ -274,7 +275,8 @@ Earmilk redesign project
 18.  New Related Posts function that first pulls tag-related posts, then category-related posts, up to 4 posts ([functions.php function](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/5930b2c37eeffe91ada92f2f650339a7c8f2ca61), [single-*.php template files reference call](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/0e1f98790d92c77f4d2544040639211f05b6a958))
 19.  Disabled [WP Emoji Release JS](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/issues/41)
 20.  Image sizes in a [variety of locations on the site](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/issues/42) have been properly re-defined, re-sized, re-scaled and pulled
-21.  ...
+21.  Reduced [W3C Validator](https://validator.w3.org/nu/) errors for `http://earmilk.com/` from 103 erros to 8 errors
+22.  ...
 
 
 
@@ -284,23 +286,23 @@ Earmilk redesign project
 
 <h2 id="earmilk-links">EARMILK Links</h2>
 
-##Earmilk Development Enviornment Clone Site
+### Earmilk Development Enviornment Clone Site
 -- [allmilknoduds.com](http://allmilknoduds.com)
 
 
-##Earmilk "throwaway" email account
+### Earmilk "throwaway" email account
 login:  allmilknoduds@gmail.com  
 password:  [a truth we share]
 
 
-##Earmilk Asset Storage
+### Earmilk Asset Storage
 -- [Earmilk project assets cloud folder](https://drive.google.com/open?id=0B_40KgH9jS_Nckt0SW5JTFo0Qnc)  
 -- [Mega.nz](http://mega.nz) (large; full site backup for safe keeping)  
 ----- Mega login:  allmilknoduds@gmail.com  
 ----- Mega password:  [a truth we share]
 
 
-##Earmilk GitHub
+### Earmilk GitHub
 - https://github.com/iamandrebulatov/Earmilk
 
 - [Back to top ^](#table-of-contents)  
