@@ -1927,7 +1927,7 @@ ul#masonry_list li a.entry-thumbnail img {
 	left: -100%;
 	right: -100%;
 	margin: auto;
-	height: auto;
+	height: 100%;
 }
 .home-content ul.classic-blog li .article-category,
 ul#masonry_list li .article-category {
