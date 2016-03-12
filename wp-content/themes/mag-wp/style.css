@@ -659,7 +659,7 @@ footer .widget a:hover        { opacity: 0.8;}
 footer .widget h3.title       { font-weight: bold; font-size: 13px; text-transform: uppercase;  padding: 2px 10px 1px 25px;  margin: 0 -25px 0 -25px; }
 
 /* -- Copyright -- */
-.copyright                    { width: 100%; height: auto; margin: 0 auto; padding: 25px 0 20px 0; text-align: center; }
+.sub-footer                    { width: 100%; height: auto; margin: 0 auto; padding: 25px 0 20px 0; text-align: center; }
 
 /* -- Footer Social Icons -- */
 ul.footer-social              { margin-left: auto; margin-right: auto; }
@@ -3206,15 +3206,19 @@ div#flags li a.notranslate.flag:after {
     font-size: 10px;
     left: -9px;
 }
-.copyright {
+.sub-footer {
 	background-color: #fff !important;
 }
-.copyright > div {
+.sub-footer > div {
 	display: inline-block;
 }
-.copyright img#earmilky {
+.sub-footer img#earmilky {
 	width: 43px;
 	vertical-align: middle;
+}
+.sub-footer .hosted-by a {
+	border: 0 !important;
+	color: #333 !important;
 }
 /* Footer - left Trending latest post widget */
 footer .wpp-list li {
