@@ -51,10 +51,6 @@
 
 	<!-- Meta Tags -->
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<!-- <title><?php wp_title(''); ?></title> -->
-	<!-- <me  ta name="description" content=""> -->
-	<!-- <link rel="publisher" href="https://plus.google.com/+earmilk/"> -->
-	<!-- <?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink() . '" />'; ?> -->
 	<link rel="alternate" href="<?php echo get_permalink(); ?>" hreflang="x-default">
 	<link rel="alternate" href="<?php echo get_permalink(); ?>" hreflang="en">
 	<link rel="alternate" href="<?php echo get_permalink(); ?>" hreflang="en-us">
@@ -70,7 +66,7 @@
         "@type": "Organization",
         "url": "http://earmilk.com",
         "name" : "EARMILK",
-        "alternateName" : "EARMILK.com",
+        "alternateName" : "EARMILK.COM",
         "description": "EARMILK is an online music publication that straddles the line between underground and mainstream. Covering Hip-Hop, Electronic, Indie and the in between. All Milk. No Duds.",
         "brand" : "EARMILK",
         "logo": "http://earmilk.com/wp-content/uploads/2016/02/EARMILK_logo_3.png",
@@ -82,7 +78,7 @@
             "https://facebook.com/earmilk",
             "https://twitter.com/earmilk",
             "https://plus.google.com/+earmilk",
-            "https://instagram.com/earmilkdotcom",
+            "https://instagram.com/earmilk",
             "https://www.youtube.com/c/earmilk"
         ],
 		"address": {
