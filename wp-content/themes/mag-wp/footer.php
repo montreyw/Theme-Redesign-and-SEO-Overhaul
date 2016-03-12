@@ -50,7 +50,7 @@
     </div>
 
 
-    <div class="copyright">
+    <div class="sub-footer">
         <?php if (!empty($smof_data['copyright_footer'])) { ?>
             <?php echo stripslashes($smof_data['copyright_footer']); ?>
         <?php } ?>  
