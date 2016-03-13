@@ -2,11 +2,60 @@
 <?php
     // Options from admin panel
     global $smof_data;
+	$site_logo = $smof_data['site_logo'];
+	if (empty($site_logo)) { $site_logo = get_template_directory_uri().'/images/logo.png'; }
 ?>
 <!-- Begin Content -->
-<div class="wrap-fullwidth hfeed h-feed" role="main" 
-	itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
-    <div class="single-content hentry h-entry">
+<div class="wrap-fullwidth hfeed h-feed" role="main">
+    <div class="single-content hentry h-entry" 
+		itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <span class="schema-meta">
+			<?php 
+				$post_date_human = get_the_date("F j, Y"); 
+				$post_date_iso = get_the_date("c");
+				$post_modified_date_human = get_the_modified_date("F j, Y");
+				$post_modified_date_iso = get_the_modified_date("c");
+				$post_tags_array = wp_get_post_tags($post->ID);
+				$post_kyewords = '';
+				foreach( $post_tags_array as $tag ) {
+					if ( $post_kyewords == '' ) { $post_kyewords .= $tag->name; } else { $post_kyewords .= ', ' . $tag->name; };
+				};
+				$post_categories_array = wp_get_post_categories($post->ID);
+				$post_sections = ''; 
+				foreach( $post_categories_array as $cats ) {
+					$cat = get_category( $cats );
+					if ( $post_sections == '' ) { $post_sections .= $cat->name; } else { $post_sections .= ', ' . $cat->name; };
+				};
+			?>
+            <meta itemprop="name headline" content="<?php the_title(); ?>" />
+			<?php 
+				if ( class_exists('WPSEO_Frontend') ) { 
+	 				$wp_seo_object = WPSEO_Frontend::get_instance();
+	 				$post_description = htmlentities( $wp_seo_object->metadesc( false ) ); 
+					echo '<meta itemprop="description" content="' . $post_description . '" />'; }
+			?>
+			<meta itemprop="datePublished" content="<?php echo $post_date_iso ?>" />
+			<span class="date published"><?php echo $post_date_iso ?></span>
+			<meta itemprop="dateModified" content="<?php echo $post_modified_date_iso ?>" />
+			<span class="date updated"><?php echo $post_modified_date_iso ?></span>
+			<meta itemprop="url" content="<?php the_permalink(); ?>" />
+			<meta itemprop="mainEntityOfPage" content="<?php the_permalink(); ?>" />
+			<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+				<meta itemprop="name" content="EARMILK">
+				<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+					<meta itemprop="url" content="<?php echo $site_logo; ?>">
+					<meta itemprop="width" content="229">
+					<meta itemprop="height" content="50">
+				</span>
+			</span>
+			<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+				<meta itemprop="url" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" />
+				<meta itemprop="image" content="<?php echo get_avatar_url( get_the_author_meta( 'user_email' ) ); ?>" />
+				<meta itemprop="name" content="<?php echo get_the_author_meta( 'display_name' ); ?>" />
+			</span>
+			<meta itemprop="articleSection" content="<?php echo $post_sections; ?>" />
+			<meta itemprop="keywords" content="<?php echo $post_kyewords; ?>" />
+        </span>
         <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
         <div class="entry-top">
             <h1 class="article-title entry-title p-name"><?php the_title(); ?></h1>
@@ -90,7 +139,7 @@
 			</div><!-- end .media-single-content -->
                     <div class="entry">
                         <!-- entry content -->
-                        <div class="p-first-letter" itemprop="reviewBody">
+                        <div class="p-first-letter" itemprop="articleBody">
                             <?php if (!empty($smof_data['ads_entry_top'])) { ?>
                             <?php } ?>
                             <?php if ( !empty( $post->post_excerpt ) ) : the_excerpt(); else : false; endif;  ?>
