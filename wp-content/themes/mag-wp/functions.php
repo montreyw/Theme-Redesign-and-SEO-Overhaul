@@ -500,6 +500,7 @@ add_action( 'init', 'register_genre_bar_menu' );
 // ---------------------------------------------------------------------------------------------------- 
 // Block Comments Evolved sneaky comment activity tracking
 remove_action('wp_insert_comment', 'track_comment_posted_event');
+// Get all comment counts via Comments Evolved, and use with native comments function
 function andre_comments_evolved_number( $count ) {
 	// Override the comment count
 	if( function_exists( 'comments_evolved_get_total_count' ) )
@@ -508,6 +509,19 @@ function andre_comments_evolved_number( $count ) {
 	return $count;
 }
 //add_filter( 'get_comments_number', 'andre_comments_evolved_number');
+function add_in_fb_comment_count( $count ) {
+    global $post;
+    $url = get_permalink($post->ID);
+
+    $filecontent = file_get_contents('https://graph.facebook.com/?ids=' . $url);
+    $json = json_decode($filecontent);
+    $count = $json->$url->comments;
+    if ($count == 0 || !isset($count)) {
+        $count = 0;
+    }
+	return $count;
+}
+//add_filter( 'get_comments_number', 'add_in_fb_comment_count');
 
 // ---------------------------------------------------------------------------------------------------- 
 // Album Review titles -- append "Album Review:" to titles - Andre
