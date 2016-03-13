@@ -73,13 +73,13 @@ Earmilk redesign project
 - [x] Add Schema to `/voices/` page (single and archive)
 - [x] Add Schema to `/album-reviews/` page (single and archive)
 - [x] Add Schema to `/gear/` page (archive)
-- [ ] Add Schema to `/gear/` page (single)
-- [ ] Add Schema to all single posts
+- [x] Add Schema to `/gear/` page (single)
+- [x] Add Schema to all single posts
 - [x] Add Schema to all archive pages
 - [ ] Add Schema to all unique type posts (ie, events, reviews, news articles, music recordings, premieres, etc)
 - [x] Fix ImageObject on all schemas
 - [x] Add Schema'd up breadcrumbs
-- [ ] Finish Schema.org markup
+- [x] Finish Schema.org markup
 - [ ] Add unique headers to individual category pages
 - [ ] Overhaul/improve/enahcne/tighten up/stlye/restyle/redesign/make hot/hot up [EARMILK MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) style
 - [ ] Re-style re-design [MP3 Player](http://earmilk.com/2012/10/02/zz-ward-cryin-wolf-feat-kendrick-lamar/) ([1](https://starslingeruk.bandcamp.com/album/sketchy-ep))
@@ -228,8 +228,8 @@ Earmilk redesign project
 18.  Added full BlogPosting list Schema to [archive-album_review.php / Album Review](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/bf9908ec8b3e7707492def5aaeab0a641132e0fb) Archive pages
 19.  Added full BlogPosting list Schema to [archive-opinion_post.php / VOICES / Opinion Post](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/cc6519405368f832ac83b052fbd761d41c0957ee) Archive pages
 20.  Added full BlogPosting list Schema to [archive-gear_post.php / VOICES / Opinion Post](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/59578cd58ebbacee7a8354563f68bf77d6ca5914) Archive pages
-21. ...
-
+21.  Basic BlogPosting Schema added to [single-gear_post.php](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/commit/28979f03f259354b45eb24d4b61f4066b54a6ac2) -- once [Issue #47](https://github.com/montreyw/Theme-Redesign-and-SEO-Overhaul/issues/47) is resolved, the Schema can be expanded to also include `Product / Offering` and `Review` schema itemscopes.
+22.  ...
 
 
 
