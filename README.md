@@ -62,7 +62,7 @@ Earmilk redesign project
 - [x] Add EARMILK Album Review Rating bottle image to album review archive and single pages
 - [x] prepend "Album Review: " to album review post titles for social sharing plugin's use
 - [x] RSS feed to output images along with content
-- [ ] Extend Related Posts function to include Category-related posts if there aren't enough in Tag-related posts
+- [x] Extend Related Posts function to include Category-related posts if there aren't enough in Tag-related posts
 - [ ] Implement RSS Feeds outputting post categories and tags with hashes (#s) in front of them
 - [x] Implement system to automatically color site elements (ie, image meta info color line) to match genre class
 - [ ] Improve Harlem Shake CSS animation timing
@@ -147,7 +147,7 @@ Earmilk redesign project
 30.  Added custom [thumbnail pagination](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/37dc7ba8d8782268cea3d0bbf0c0889143542ee6) to Main Stage Owl Carousel
 31.  Fixed and doped out the broken [transitional fade-in](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/ab81616d9761e61e8e4a146e668af656723ae609) of the Main Stage Owl Carousel
 32.  Added *hot* [animated loading thematic 'music equalizer' animation](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/574681198b2bed7a54d431f6a7b2b41449cee39a)  to the Main Stage as it initializes on page open
-33.  Added nifty Left Stage to the ... left of Main Stage on the front page ([Left Stage structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5240444a93de1c9fa2b2b412a9600db9b4af757c), [style(https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/574681198b2bed7a54d431f6a7b2b41449cee39a))
+33.  Added nifty Left Stage to the ... left of Main Stage on the front page ([Left Stage structure](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/5240444a93de1c9fa2b2b412a9600db9b4af757c), [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/574681198b2bed7a54d431f6a7b2b41449cee39a))
 34.  Coded a [basic function](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/88a8a4d822428c26e183dae080a66f94386f7283) to trigger Next and Previous of Owl Carousel with keyboard keys
 35.  New Interview Post question and answer [style](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/7acd32bc47f979a3fff4573bb407cafade2cfb2f)
 36.  New [404 page](https://github.com/iamandrebulatov/Theme-Redesign-and-SEO-Overhaul/commit/11d1e0f0b0d8a86e0bca3d1f3f5698d858862e78) according to design from [EARMILK 2.0](http://old.earmilk.com:81/favicon.ico2)
