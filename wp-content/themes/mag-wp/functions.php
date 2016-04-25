@@ -28,7 +28,8 @@
 // ----------------------------------------------
 // --------------- Load Custom ------------------
 // ---------------------------------------------- 
-   include("functions/custom/comments.php");
+ include("functions/custom/comments.php");
+ // include("functions/custom/cleanTitleEncoding.php");
   
 
 // ----------------------------------------------
@@ -1084,3 +1085,40 @@ remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+// ---------------------------------------------------------------------------------------------------- 
+// Remove WordPress' buggy ?ver query strings from CSS/JS to re-enable refreshing of new CSS -- Andre
+// ---------------------------------------------------------------------------------------------------- 
+// Not really working and not really tested due to issues with CloudFlare aggressive diskcache
+function remove_cssjs_ver( $src ) {
+	if( strpos( $src, '?ver=' ) )
+		$src = remove_query_arg( 'ver', $src );
+	return $src;
+}
+add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
+
+// ---------------------------------------------------------------------------------------------------- 
+// Decode htmlentities in AddThis Share titles back into their appropriate spcial characters -- Andre
+// ---------------------------------------------------------------------------------------------------- 
+function addthis_sharing_quotes_fix( $title ) {
+	$title = htmlspecialchars_decode($title);
+	return $title;
+}
+add_filter( 'addthis_sharing_buttons_title', 'addthis_sharing_quotes_fix', 10, 2 );
+
+
+// ----------------------------------------------------------------------------------------------------
+// Disable SSL Verify
+// ----------------------------------------------------------------------------------------------------
+add_filter('https_ssl_verify', '__return_false');
+
+// ----------------------------------------------------------------------------------------------------
+// Disable Smart Quotes
+// ----------------------------------------------------------------------------------------------------
+remove_filter(‘the_content’, ‘wptexturize’);
+remove_filter(‘comment_text’, ‘wptexturize’);
+remove_filter (‘single_post_title’, ‘wptexturize’);
+remove_filter (‘the_title’, ‘wptexturize’);
+remove_filter (‘wp_title’, ‘wptexturize’);
+
+
