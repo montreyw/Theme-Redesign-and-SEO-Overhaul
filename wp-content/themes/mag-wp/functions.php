@@ -1101,7 +1101,8 @@ add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
 // Decode htmlentities in AddThis Share titles back into their appropriate spcial characters -- Andre
 // ---------------------------------------------------------------------------------------------------- 
 function addthis_sharing_quotes_fix( $title ) {
-	$title = htmlspecialchars_decode($title);
+	//if ( is_plugin_active( 'addthis/addthis_social_widget.php' ) )
+		$title = htmlspecialchars_decode($title);
 	return $title;
 }
 add_filter( 'addthis_sharing_buttons_title', 'addthis_sharing_quotes_fix', 10, 2 );
