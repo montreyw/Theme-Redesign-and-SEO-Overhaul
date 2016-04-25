@@ -260,7 +260,7 @@ ul.classic-blog .arrow-down-cat   { margin: -10px 0 8px 10px; position: relative
 /* -- Pagination -- */
 .line-bottom                      { width: 950px; height: 1px; float: left; margin: 0 0 0 -25px; }
 .wp-pagenavi                      { float: none; width: 100%; text-align: center; padding: 20px 0; font-size: 15px; }
-.wp-pagenavi a, .wp-pagenavi span { display: inline-block; padding:5px 13px; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;  list-style: none;  margin: 0; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin-right:1px; font-size:12px; font-weight:bold; }
+.wp-pagenavi a, .wp-pagenavi span { display: inline-block; padding:5px 13px; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;  list-style: none;  margin: 0; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin-right:1px; font-size:12px; font-weight:bold;background-color:#171717!important;}
 .wp-pagenavi a:hover { border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; }
 .wp-pagenavi span.current         { border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
 
@@ -376,7 +376,7 @@ a.wp-img-bg-off    { background: none !important;}
 
 /* -- Lists -- */
 .entry th                  { padding: 0; margin-right: 2px; }
-.entry li                  { padding:3px 0 3px 5px; }
+.entry li                  { padding:3px 0 3px 5px;font-weight:bold; }
 .entry ul                  { margin:20px 40px; list-style-type: square;}
 .entry ol                  { margin:20px 40px; list-style-type: decimal;}
 
@@ -890,9 +890,9 @@ body > #header-filler {
 }
 #fixed-header #inner-header #logo-header #earmilk-logo #earmilk-logo-img {
     transition: all 370ms;
-    -webkit-filter: invert(1);
-    -ms-filter: invert(1);
-    filter: invert(1);
+    /* -webkit-filter: invert(1); */
+    /* -ms-filter: invert(1); */
+    /* filter: invert(1); */
     margin: 0;
 	height: auto;
 	width: 100%;
@@ -2011,6 +2011,7 @@ ul#masonry_list li .article-category .entry-author-last {
 ul#masonry_list li .article-category .tiptipBlog {
 	background-color: #e34848;
 	color: #000;
+        font-weight: bold;
 }
 .home-content ul.classic-blog li h2.article-title.entry-title,
 .home-content ul.classic-blog li .article-summary,
@@ -2197,9 +2198,14 @@ span._5mdd {
 }
 .sidebar .widget #facebook-like-btn {
 	margin: 0 13px 0 5px;
-	width: 58%;
 	display: inline-block;
 	height: 22px;
+	width: 55%;
+	margin: 0 auto;
+	display: block;
+}
+.sidebar .widget .addthis_toolbox {
+    margin: 20px auto;
 }
 .sidebar .widget #googleplus-like-btn {
 	width: 33%;
@@ -3157,6 +3163,7 @@ footer .widget {
     background-color: #fff;
 }
 footer .widget h3.title {
+	font-size: 20px;
 }
 ul.footer-social li a {
     color: #fff !important;
