@@ -314,7 +314,19 @@ jQuery( document ).ready( function( $ ) {
 	///////////////////////////////////////    
 	// Masonry style for sidebar
 	///////////////////////////////////////    
-    jQuery( window ).load( function( $ ) {"use strict"; var $container = jQuery('.sidebar'); $container.imagesLoaded( function(){ $container.masonry({ itemSelector : '' }); });});
+/*
+	jQuery( window ).load( function( $ ) {
+		"use strict"; 
+		var $container = jQuery('.sidebar'); 
+			$container.imagesLoaded( function(){ 
+				$container.masonry({ 
+					itemSelector : '.widget',
+					columnWidth: 700,
+					fitWidth: true
+			}); 
+		});
+	});
+*/
 
 
 
